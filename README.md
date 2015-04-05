@@ -1,7 +1,7 @@
 # Parrot
 New stylesheet for valadoc.
 
-See it [in action](http://i-hate-farms.github.io/parrot/index.htm) 
+See it [in action](http://i-hate-farms.github.io/parrot/) 
 
 Another sample: the documentation for [i-hate-farms/stacktrace](http://i-hate-farms.github.io/stacktrace/vala-stacktrace/index.htm)
 
