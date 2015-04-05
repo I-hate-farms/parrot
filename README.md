@@ -3,11 +3,13 @@ New stylesheet for valadoc.
 
 See it [in action](http://i-hate-farms.github.io/parrot/index.htm) 
 
+Another sample: the documentation for [i-hate-farms/stacktrace](http://i-hate-farms.github.io/stacktrace/vala-stacktrace/index.htm)
+
 ### Before 
-![before](./docs/before.png)
+![before](./doc/before.png)
 
 ### After
-![after](./docs/after.png)
+![after](./doc/after.png)
 
 # How to install
 
