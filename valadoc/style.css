@@ -179,7 +179,7 @@ background-position: center center;
 }
 li.package_index {
 list-style-type: none;
-line-height: 150%
+line-height: 200%
 }
 li.package_index:before {
 content: "";
@@ -202,7 +202,7 @@ background-position: center center;
 }
 li.errordomain {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.errordomain:before {
 content: "";
@@ -214,7 +214,7 @@ background-position: center center;
 }
 li.namespace {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.namespace:before {
 content: "";
@@ -237,7 +237,7 @@ background-position: center center;
 }
 li.struct {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.struct:before {
 content: "";
@@ -271,7 +271,7 @@ background-position: center center;
 }
 li.class {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.class:before {
 content: "";
@@ -283,7 +283,7 @@ background-position: center center;
 }
 li.enum {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.enum:before {
 content: "";
@@ -350,7 +350,7 @@ background-position: center center;
 }
 li.package {
 list-style-type: none;
-line-height: 150%;
+line-height: 200%;
 }
 li.package:before {
 content: "";
