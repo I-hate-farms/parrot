@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Object &ndash; gobject-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Object &ndash; gobject-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gobject-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Object</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Object.@new.html">@new</a></li>
+          <li class="static_method"><a href="GLib.Object.new_valist.html">new_valist</a></li>
+          <li class="static_method"><a href="GLib.Object.newv.html">newv</a></li>
+          <li class="creation_method"><a href="GLib.Object.Object.html">Object</a></li>
+          <li class="method"><a href="GLib.Object.@get.html">@get</a></li>
+          <li class="method"><a href="GLib.Object.@ref.html">@ref</a></li>
+          <li class="method"><a href="GLib.Object.@set.html">@set</a></li>
+          <li class="method"><a href="GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+          <li class="method"><a href="GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+          <li class="method"><a href="GLib.Object.bind_property.html">bind_property</a></li>
+          <li class="method"><a href="GLib.Object.connect.html">connect</a></li>
+          <li class="virtual_method"><a href="GLib.Object.constructed.html">constructed</a></li>
+          <li class="method"><a href="GLib.Object.disconnect.html">disconnect</a></li>
+          <li class="virtual_method"><a href="GLib.Object.dispose.html">dispose</a></li>
+          <li class="method"><a href="GLib.Object.freeze_notify.html">freeze_notify</a></li>
+          <li class="method"><a href="GLib.Object.get_class.html">get_class</a></li>
+          <li class="method"><a href="GLib.Object.get_data.html">get_data</a></li>
+          <li class="method"><a href="GLib.Object.get_property.html">get_property</a></li>
+          <li class="method"><a href="GLib.Object.get_qdata.html">get_qdata</a></li>
+          <li class="method"><a href="GLib.Object.get_type.html">get_type</a></li>
+          <li class="method"><a href="GLib.Object.notify_property.html">notify_property</a></li>
+          <li class="method"><a href="GLib.Object.ref_sink.html">ref_sink</a></li>
+          <li class="method"><a href="GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+          <li class="method"><a href="GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+          <li class="method"><a href="GLib.Object.set_data.html">set_data</a></li>
+          <li class="method"><a href="GLib.Object.set_data_full.html">set_data_full</a></li>
+          <li class="method"><a href="GLib.Object.set_property.html">set_property</a></li>
+          <li class="method"><a href="GLib.Object.set_qdata.html">set_qdata</a></li>
+          <li class="method"><a href="GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+          <li class="method"><a href="GLib.Object.steal_data.html">steal_data</a></li>
+          <li class="method"><a href="GLib.Object.steal_qdata.html">steal_qdata</a></li>
+          <li class="method"><a href="GLib.Object.thaw_notify.html">thaw_notify</a></li>
+          <li class="method"><a href="GLib.Object.unref.html">unref</a></li>
+          <li class="method"><a href="GLib.Object.weak_ref.html">weak_ref</a></li>
+          <li class="method"><a href="GLib.Object.weak_unref.html">weak_unref</a></li>
+          <li class="signal"><a href="GLib.Object.notify.html">notify</a></li>
+          <li class="field"><a href="GLib.Object.ref_count.html">ref_count</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Object</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Object" alt="Object hierarchy for Object" src="img/GLib.Object.png"/>
+
+      <map id="GLib.Object" name="GLib.Object">
+<area shape="rect" id="node1" href="GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Object</span></b>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known sub-classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-41')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-41">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="../gio-2.0/GLib.AppInfoMonitor.html">AppInfoMonitor</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.AppLaunchContext.html">AppLaunchContext</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Application.html">Application</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ApplicationCommandLine.html">ApplicationCommandLine</a></li>
+                  <li class="class"><a href="GLib.Binding.html">Binding</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.BufferedInputStream.html">BufferedInputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.BufferedOutputStream.html">BufferedOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.BytesIcon.html">BytesIcon</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Cancellable.html">Cancellable</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.CharsetConverter.html">CharsetConverter</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ConverterInputStream.html">ConverterInputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ConverterOutputStream.html">ConverterOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Credentials.html">Credentials</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusActionGroup.html">DBusActionGroup</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusAuthObserver.html">DBusAuthObserver</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusConnection.html">DBusConnection</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.DBusInterfaceSkeleton.html">DBusInterfaceSkeleton</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusMenuModel.html">DBusMenuModel</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusMessage.html">DBusMessage</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusMethodInvocation.html">DBusMethodInvocation</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusObjectManagerClient.html">DBusObjectManagerClient</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusObjectManagerServer.html">DBusObjectManagerServer</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusObjectProxy.html">DBusObjectProxy</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusObjectSkeleton.html">DBusObjectSkeleton</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusProxy.html">DBusProxy</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DBusServer.html">DBusServer</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DataInputStream.html">DataInputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.DataOutputStream.html">DataOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Emblem.html">Emblem</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.EmblemedIcon.html">EmblemedIcon</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FileEnumerator.html">FileEnumerator</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FileIOStream.html">FileIOStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FileIcon.html">FileIcon</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FileInfo.html">FileInfo</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="../gio-2.0/GLib.FileInputStream.html">FileInputStream</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.FileMonitor.html">FileMonitor</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FileOutputStream.html">FileOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.FilenameCompleter.html">FilenameCompleter</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.FilterInputStream.html">FilterInputStream</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.FilterOutputStream.html">FilterOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.IOModule.html">IOModule</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.IOStream.html">IOStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.InetAddress.html">InetAddress</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.InetAddressMask.html">InetAddressMask</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.InetSocketAddress.html">InetSocketAddress</a></li>
+                  <li class="class"><a href="GLib.InitiallyUnowned.html">InitiallyUnowned</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.InputStream.html">InputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ListStore.html">ListStore</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.MemoryInputStream.html">MemoryInputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.MemoryOutputStream.html">MemoryOutputStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Menu.html">Menu</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.MenuAttributeIter.html">MenuAttributeIter</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.MenuItem.html">MenuItem</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.MenuLinkIter.html">MenuLinkIter</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.MenuModel.html">MenuModel</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.MountOperation.html">MountOperation</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.NativeVolumeMonitor.html">NativeVolumeMonitor</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.NetworkAddress.html">NetworkAddress</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.NetworkService.html">NetworkService</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Notification.html">Notification</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.OutputStream.html">OutputStream</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.Permission.html">Permission</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.PropertyAction.html">PropertyAction</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ProxyAddress.html">ProxyAddress</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ProxyAddressEnumerator.html">ProxyAddressEnumerator</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Resolver.html">Resolver</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Settings.html">Settings</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SettingsBackend.html">SettingsBackend</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="../gio-2.0/GLib.SimpleAction.html">SimpleAction</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SimpleActionGroup.html">SimpleActionGroup</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SimpleAsyncResult.html">SimpleAsyncResult</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SimpleIOStream.html">SimpleIOStream</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SimplePermission.html">SimplePermission</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SimpleProxyResolver.html">SimpleProxyResolver</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Socket.html">Socket</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.SocketAddress.html">SocketAddress</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.SocketAddressEnumerator.html">SocketAddressEnumerator</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SocketClient.html">SocketClient</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SocketConnection.html">SocketConnection</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.SocketControlMessage.html">SocketControlMessage</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SocketListener.html">SocketListener</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SocketService.html">SocketService</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Subprocess.html">Subprocess</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.SubprocessLauncher.html">SubprocessLauncher</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Task.html">Task</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TcpConnection.html">TcpConnection</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TcpWrapperConnection.html">TcpWrapperConnection</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TestDBus.html">TestDBus</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ThemedIcon.html">ThemedIcon</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ThreadedSocketService.html">ThreadedSocketService</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TlsCertificate.html">TlsCertificate</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.TlsConnection.html">TlsConnection</a></li>
+                  <li class="abstract_class"><a href="../gio-2.0/GLib.TlsDatabase.html">TlsDatabase</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TlsInteraction.html">TlsInteraction</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.TlsPassword.html">TlsPassword</a></li>
+                  <li class="class"><a href="GLib.TypeModule.html">TypeModule</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.UnixFDList.html">UnixFDList</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.Vfs.html">Vfs</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.VolumeMonitor.html">VolumeMonitor</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ZlibCompressor.html">ZlibCompressor</a></li>
+                  <li class="class"><a href="../gio-2.0/GLib.ZlibDecompressor.html">ZlibDecompressor</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">Required by:</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-42')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-42">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="interface"><a href="../gio-2.0/GLib.Action.html">Action</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.ActionGroup.html">ActionGroup</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.ActionMap.html">ActionMap</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.AppInfo.html">AppInfo</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.AsyncInitable.html">AsyncInitable</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.AsyncResult.html">AsyncResult</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Converter.html">Converter</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.DBusInterface.html">DBusInterface</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.DBusObject.html">DBusObject</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="interface"><a href="../gio-2.0/GLib.DBusObjectManager.html">DBusObjectManager</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Drive.html">Drive</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.File.html">File</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Icon.html">Icon</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Initable.html">Initable</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.ListModel.html">ListModel</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.LoadableIcon.html">LoadableIcon</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Mount.html">Mount</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="interface"><a href="../gio-2.0/GLib.NetworkMonitor.html">NetworkMonitor</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Proxy.html">Proxy</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.ProxyResolver.html">ProxyResolver</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.RemoteActionGroup.html">RemoteActionGroup</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Seekable.html">Seekable</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.SocketConnectable.html">SocketConnectable</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.TlsBackend.html">TlsBackend</a></li>
+                    <li class="interface"><a href="../gio-2.0/GLib.Volume.html">Volume</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div><br/>
+            <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+            </div>
+            <div class="package_note"><b>Package:</b> <a href="index.htm">gobject-2.0</a>
+            </div>
+            <h2 class="main_title">Content:</h2>
+            <h3 class="main_title">Static methods:</h3>
+            <ul class="navi_inline">
+              <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.@new.html" class="static_method">@new</a></b> (<span class="main_type"><a href="GLib.Type.html" class="struct">Type</a></span> type, ...)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.newv.html" class="static_method">newv</a></b> (<span class="main_type"><a href="GLib.Type.html" class="struct">Type</a></span> type, <span class="main_type"><a href="GLib.Parameter.html" class="struct">Parameter</a></span>[] parameters)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.new_valist.html" class="static_method">new_valist</a></b> (<span class="main_type"><a href="GLib.Type.html" class="struct">Type</a></span> type, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? firstprop, <span class="main_type"><a href="../glib-2.0/va_list.html" class="struct">va_list</a></span> var_args)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+            </ul>
+            <h3 class="main_title">Creation methods:</h3>
+            <ul class="navi_inline">
+              <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Object.Object.html" class="creation_method">Object</a></b> (...)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+            </ul>
+            <h3 class="main_title">Methods:</h3>
+            <ul class="navi_inline">
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Type.html" class="struct">Type</a></span> <b><a href="GLib.Object.get_type.html" class="method">get_type</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><a href="GLib.ObjectClass.html" class="class">ObjectClass</a></span> <b><a href="GLib.Object.get_class.html" class="method">get_class</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.@ref.html" class="method">@ref</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.unref.html" class="method">unref</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.ref_sink.html" class="method">ref_sink</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.weak_ref.html" class="method">weak_ref</a></b> (<span class="main_type"><a href="GLib.WeakNotify.html" class="delegate">WeakNotify</a></span> notify)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.weak_unref.html" class="method">weak_unref</a></b> (<span class="main_type"><a href="GLib.WeakNotify.html" class="delegate">WeakNotify</a></span> notify)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.add_weak_pointer.html" class="method">add_weak_pointer</a></b> (<span class="main_keyword">void</span>** data)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.remove_weak_pointer.html" class="method">remove_weak_pointer</a></b> (<span class="main_keyword">void</span>** data)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.@get.html" class="method">@get</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> first_property_name, ...)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.@set.html" class="method">@set</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> first_property_name, ...)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.get_property.html" class="method">get_property</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property_name, <span class="main_keyword">ref</span> <span class="main_type"><a href="GLib.Value.html" class="struct">Value</a></span> value)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.set_property.html" class="method">set_property</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property_name, <span class="main_type"><a href="GLib.Value.html" class="struct">Value</a></span> value)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.Object.get_data.html" class="method">get_data</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.set_data.html" class="method">set_data</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_keyword">owned</span> <span class="main_type"><span>T</span></span> data)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.set_data_full.html" class="method">set_data_full</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_keyword">void</span>* data, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? destroy)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.Object.steal_data.html" class="method">steal_data</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.Object.get_qdata.html" class="method">get_qdata</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> quark)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.set_qdata.html" class="method">set_qdata</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> quark, <span class="main_keyword">owned</span> <span class="main_type"><span>T</span></span> data)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.set_qdata_full.html" class="method">set_qdata_full</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> quark, <span class="main_keyword">void</span>* data, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? destroy)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.Object.steal_qdata.html" class="method">steal_qdata</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> quark)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.freeze_notify.html" class="method">freeze_notify</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.thaw_notify.html" class="method">thaw_notify</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.dispose.html" class="virtual_method">dispose</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.constructed.html" class="virtual_method">constructed</a></b> ()
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.notify_property.html" class="method">notify_property</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property_name)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><span class="class">Object</span></span> <b><a href="GLib.Object.connect.html" class="method">connect</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> signal_spec, ...)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.disconnect.html" class="method">disconnect</a></b> (<span class="main_basic_type"><a href="../glib-2.0/ulong.html" class="struct">ulong</a></span> handler_id)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.add_toggle_ref.html" class="method">add_toggle_ref</a></b> (<span class="main_type"><a href="GLib.ToggleNotify.html" class="delegate">ToggleNotify</a></span> notify)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.remove_toggle_ref.html" class="method">remove_toggle_ref</a></b> (<span class="main_type"><a href="GLib.ToggleNotify.html" class="delegate">ToggleNotify</a></span> notify)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+              <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Binding.html" class="class">Binding</a></span> <b><a href="GLib.Object.bind_property.html" class="method">bind_property</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> source_property, <span class="main_type"><span class="class">Object</span></span> target, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> target_property, <span class="main_type"><a href="GLib.BindingFlags.html" class="enum">BindingFlags</a></span> flags = <b><a href="GLib.BindingFlags.DEFAULT.html" class="enumvalue">DEFAULT</a></b>, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.BindingTransformFunc.html" class="delegate">BindingTransformFunc</a></span>? transform_to = <span class="main_optional_parameter">null</span>, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.BindingTransformFunc.html" class="delegate">BindingTransformFunc</a></span>? transform_from = <span class="main_optional_parameter">null</span>)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+            </ul>
+            <h3 class="main_title">Signals:</h3>
+            <ul class="navi_inline">
+              <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Object.notify.html" class="signal">notify</a></b> (<span class="main_type"><a href="GLib.ParamSpec.html" class="class">ParamSpec</a></span> pspec)
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+            </ul>
+            <h3 class="main_title">Fields:</h3>
+            <ul class="navi_inline">
+              <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.Object.ref_count.html" class="field">ref_count</a></b>
+                </span>
+                <div class="leaf_brief_description">
+                </div></li>
+            </ul>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

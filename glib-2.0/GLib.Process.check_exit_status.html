@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Process.check_exit_status &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Process.check_exit_status &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.Process.html">Process</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><a href="GLib.Process.@signal.html">@signal</a></li>
+          <li class="method"><a href="GLib.Process.abort.html">abort</a></li>
+          <li class="method">check_exit_status</li>
+          <li class="method"><a href="GLib.Process.close_pid.html">close_pid</a></li>
+          <li class="method"><a href="GLib.Process.core_dump.html">core_dump</a></li>
+          <li class="method"><a href="GLib.Process.exit.html">exit</a></li>
+          <li class="method"><a href="GLib.Process.exit_status.html">exit_status</a></li>
+          <li class="method"><a href="GLib.Process.if_continued.html">if_continued</a></li>
+          <li class="method"><a href="GLib.Process.if_exited.html">if_exited</a></li>
+          <li class="method"><a href="GLib.Process.if_signaled.html">if_signaled</a></li>
+          <li class="method"><a href="GLib.Process.if_stopped.html">if_stopped</a></li>
+          <li class="method"><a href="GLib.Process.raise.html">raise</a></li>
+          <li class="method"><a href="GLib.Process.spawn_async.html">spawn_async</a></li>
+          <li class="method"><a href="GLib.Process.spawn_async_with_pipes.html">spawn_async_with_pipes</a></li>
+          <li class="method"><a href="GLib.Process.spawn_command_line_async.html">spawn_command_line_async</a></li>
+          <li class="method"><a href="GLib.Process.spawn_command_line_sync.html">spawn_command_line_sync</a></li>
+          <li class="method"><a href="GLib.Process.spawn_sync.html">spawn_sync</a></li>
+          <li class="method"><a href="GLib.Process.stop_sig.html">stop_sig</a></li>
+          <li class="method"><a href="GLib.Process.term_sig.html">term_sig</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">check_exit_status</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">check_exit_status</span></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> exit_status) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Set <span class="main_keyword">throws</span> if <code>exit_status</code> indicates the child exited abnormally (e.</p>
+          <p>g. with a nonzero exit code, or via a fatal signal).</p>
+          <p>The <a href="GLib.Process.spawn_sync.html" class="method">spawn_sync</a> and <code>g_child_watch_add</code> family of APIs return an exit
+             status for subprocesses encoded in a platform-specific way. On Unix, this is guaranteed to be in the same format <code>waitpid</code> 
+            returns, and on Windows it is guaranteed to be the result of <code>GetExitCodeProcess</code>.</p>
+          <p>Prior to the introduction of this function in GLib 2.34, interpreting <code>exit_status</code> required use of platform-specific APIs, 
+            which is problematic for software using GLib as a cross-platform layer.</p>
+          <p>Additionally, many programs simply want to determine whether or not the child exited successfully, and either propagate a 
+            <a href="GLib.Error.html" class="class">Error</a> or print a message to standard error. In that common case, this function can be used. 
+            Note that the error message in <span class="main_keyword">throws</span> will contain human-readable information about the exit status.</p>
+          <p>The <code>domain</code> and <code>code</code> of <span class="main_keyword">throws</span> have special semantics in the case where the 
+            process has an "exit code", as opposed to being killed by a signal. On Unix, this happens if 
+            <a href="GLib.Process.if_exited.html" class="method">if_exited</a> would be true of <code>exit_status</code>. On Windows, it is always the
+             case.</p>
+          <p>The special semantics are that the actual exit code will be the code set in <span class="main_keyword">throws</span>, and the domain will
+             be <span class="main_optional_parameter">g_spawn_exit_error</span>. This allows you to differentiate between different exit codes.</p>
+          <p>If the process was terminated by some means other than an exit status, the domain will be <span class="main_optional_parameter">
+              g_spawn_error</span>, and the code will be <span class="main_optional_parameter">g_spawn_error_failed</span>.</p>
+          <p>This function just offers convenience; you can of course also check the available platform via a macro such as 
+            <span class="main_optional_parameter">g_os_unix</span>, and use <a href="GLib.Process.if_exited.html" class="method">if_exited</a> and 
+            <a href="GLib.Process.exit_status.html" class="method">exit_status</a> on <code>exit_status</code> directly. Do not attempt to scan or 
+            parse the error message string; it may be translated and/or change in future versions of GLib.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">exit_status</td>
+              <td>
+                <p>An exit code as returned from <a href="GLib.Process.spawn_sync.html" class="method">spawn_sync</a></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if child exited successfully, <span class="main_optional_parameter">false</span> 
+                  otherwise (and  <span class="main_keyword">throws</span> will be set)</p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.Process.html">GLib.Process</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

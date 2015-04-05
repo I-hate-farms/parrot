@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TestCase.TestCase &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TestCase.TestCase &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.TestCase.html">TestCase</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method">TestCase</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">TestCase</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <b><span class="creation_method">TestCase</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> test_name, <span class="main_type"><a href="GLib.TestFunc.html" class="delegate">TestFunc</a></span> data_setup, <span class="main_type"><a href="GLib.TestFunc.html" class="delegate">TestFunc</a></span> data_func, <span class="main_type"><a href="GLib.TestFunc.html" class="delegate">TestFunc</a></span> data_teardown, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> data_size = <span class="main_optional_parameter">0</span>)
+        </div>
+        <div class="description">
+          <p>Create a new <a href="GLib.TestCase.html" class="class">TestCase</a>, named <code>test_name</code>, this API is fairly low level, calling
+             <code>g_test_add</code> or <a href="GLib.Test.add_func.html" class="method">add_func</a> is preferable.</p>
+          <p> When this test is executed, a fixture structure of size <code>data_size</code> will be allocated and filled with 0s. Then <code>
+              data_setup</code> is called to initialize the fixture. After fixture setup, the actual test function <code>data_test</code> is called. 
+            Once the test run completed, the fixture structure is torn down by calling <code>data_teardown</code> and after that the memory is 
+            released.</p>
+          <p>Splitting up a test run into fixture setup, test function and fixture teardown is most usful if the same fixture is used for multiple 
+            tests. In this cases, <span class="creation_method">TestCase</span> will be called with the same fixture, but varying <code>test_name
+            </code> and <code>data_test</code> arguments.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">test_name</td>
+              <td>
+                <p>the name for the test case</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">data_setup</td>
+              <td>
+                <p>the function to set up the fixture data</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">data_teardown</td>
+              <td>
+                <p>the function to teardown the fixture data</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">data_size</td>
+              <td>
+                <p>the size of the fixture data structure</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">data_test</td>
+              <td>
+                <p>the actual test function</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">test_data</td>
+              <td>
+                <p>test data argument for the test functions</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>a newly allocated <a href="GLib.TestCase.html" class="class">TestCase</a>.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.AppInfo &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.AppInfo &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">AppInfo</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.AppInfo.create_from_commandline.html">create_from_commandline</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_all.html">get_all</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_all_for_type.html">get_all_for_type</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_default_for_type.html">get_default_for_type</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_default_for_uri_scheme.html">get_default_for_uri_scheme</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_fallback_for_type.html">get_fallback_for_type</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.get_recommended_for_type.html">get_recommended_for_type</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.launch_default_for_uri.html">launch_default_for_uri</a></li>
+          <li class="static_method"><a href="GLib.AppInfo.reset_type_associations.html">reset_type_associations</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.@delete.html">@delete</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.add_supports_type.html">add_supports_type</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.can_delete.html">can_delete</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.can_remove_supports_type.html">can_remove_supports_type</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.dup.html">dup</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.equal.html">equal</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_commandline.html">get_commandline</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_description.html">get_description</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_display_name.html">get_display_name</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_executable.html">get_executable</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_icon.html">get_icon</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_id.html">get_id</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_name.html">get_name</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.get_supported_types.html">get_supported_types</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.launch.html">launch</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.launch_uris.html">launch_uris</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.remove_supports_type.html">remove_supports_type</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.set_as_default_for_extension.html">set_as_default_for_extension</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.set_as_default_for_type.html">set_as_default_for_type</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.set_as_last_used_for_type.html">set_as_last_used_for_type</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.should_show.html">should_show</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.supports_files.html">supports_files</a></li>
+          <li class="abstract_method"><a href="GLib.AppInfo.supports_uris.html">supports_uris</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">AppInfo</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.AppInfo" alt="Object hierarchy for AppInfo" src="img/GLib.AppInfo.png"/>
+
+      <map id="GLib.AppInfo" name="GLib.AppInfo">
+<area shape="rect" id="node1" href="GLib.AppInfo.html" title="GLib.AppInfo" alt="" coords="5,101,131,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="11,5,124,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span class="interface">AppInfo</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p><span class="interface">AppInfo</span> and <a href="GLib.AppLaunchContext.html" class="class">AppLaunchContext</a> are used for 
+            describing and launching applications installed on the system.</p>
+          <p>As of GLib 2.20, URIs will always be converted to POSIX paths (using <a href="GLib.File.get_path.html" class="abstract_method">get_path
+            </a>) when using <a href="GLib.AppInfo.launch.html" class="abstract_method">launch</a> even if the application requested an URI and not a 
+            POSIX path. For example for an desktop-file based application with Exec key `totem <span class="main_optional_parameter">u</span>` and a 
+            single URI, `sftp://foo/file.avi`, then `/home/user/.gvfs/sftp on foo/file.avi` will be passed. This will only work if a set of suitable 
+            GIO extensions (such as gvfs 2.26 compiled with FUSE support), is available and operational; if this is not the case, the URI will be 
+            passed unmodified to the application. Some URIs, such as `mailto:`, of course cannot be mapped to a POSIX path (in gvfs there's no FUSE 
+            mount for it); such URIs will be passed unmodified to the application.</p>
+          <p>Specifically for gvfs 2.26 and later, the POSIX URI will be mapped back to the GIO URI in the <a href="GLib.File.html" class="interface">
+              File</a> constructors (since gvfs implements the <a href="GLib.Vfs.html" class="class">Vfs</a> extension point). As such, if the 
+            application needs to examine the URI, it needs to use <a href="GLib.File.get_uri.html" class="abstract_method">get_uri</a> or similar on 
+            <a href="GLib.File.html" class="interface">File</a>. In other words, an application cannot assume that the URI passed to e.g. 
+            <a href="GLib.File.new_for_commandline_arg.html" class="static_method">new_for_commandline_arg</a> is equal to the result of 
+            <a href="GLib.File.get_uri.html" class="abstract_method">get_uri</a>. The following snippet illustrates this:</p>
+          <p><pre class="main_source">GFile *f;<br/>char *uri;<br/><br/>file = g_file_new_for_commandline_arg (uri_from_commandline);<br/><br/>uri = g_file_get_uri (file);<br/>strcmp (uri, uri_from_commandline) == 0;<br/>g_free (uri);<br/><br/>if (g_file_has_uri_scheme (file, "cdda"))<br/>  {<br/>    // do something special with uri<br/>  }<br/>g_object_unref (file);</pre>
+          </p>
+          <p>This code will work when both `cdda://sr0/Track 1.wav` and `/home/user/.gvfs/cdda on sr0/Track 1.wav` is passed to the application. It 
+            should be noted that it's generally not safe for applications to rely on the format of a particular URIs. Different launcher applications 
+            (e.g. file managers) may have different ideas of what a given URI means.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="interface">AppInfo</span></span> <b><a href="GLib.AppInfo.create_from_commandline.html" class="static_method">create_from_commandline</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> commandline, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? application_name, <span class="main_type"><a href="GLib.AppInfoCreateFlags.html" class="enum">AppInfoCreateFlags</a></span> flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="interface">AppInfo</span> from the given 
+                information.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="interface">AppInfo</span></span>&gt; <b><a href="GLib.AppInfo.get_all.html" class="static_method">get_all</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a list of all of the applications currently registered on this 
+                system.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="interface">AppInfo</span></span>&gt; <b><a href="GLib.AppInfo.get_all_for_type.html" class="static_method">get_all_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a list of all <span class="interface">AppInfo</span>s for a given
+                 content type, including the recommended and fallback <span class="interface">AppInfo</span>s.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="interface">AppInfo</span></span> <b><a href="GLib.AppInfo.get_default_for_type.html" class="static_method">get_default_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> must_support_uris)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the default <span class="interface">AppInfo</span> for a given 
+                content type.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="interface">AppInfo</span></span> <b><a href="GLib.AppInfo.get_default_for_uri_scheme.html" class="static_method">get_default_for_uri_scheme</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> uri_scheme)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the default application for handling URIs with the given URI 
+                scheme.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="interface">AppInfo</span></span>&gt; <b><a href="GLib.AppInfo.get_fallback_for_type.html" class="static_method">get_fallback_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a list of fallback <span class="interface">AppInfo</span>s for a 
+                given content type, i.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="interface">AppInfo</span></span>&gt; <b><a href="GLib.AppInfo.get_recommended_for_type.html" class="static_method">get_recommended_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a list of recommended <span class="interface">AppInfo</span>s for
+                 a given content type, i.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.launch_default_for_uri.html" class="static_method">launch_default_for_uri</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> uri, <span class="main_type"><a href="GLib.AppLaunchContext.html" class="class">AppLaunchContext</a></span>? launch_context) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Utility function that launches the default application registered to 
+                handle the specified uri.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="GLib.AppInfo.reset_type_associations.html" class="static_method">reset_type_associations</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes all changes to the type associations done by 
+                <a href="GLib.AppInfo.set_as_default_for_type.html" class="abstract_method">set_as_default_for_type</a>, 
+                <a href="GLib.AppInfo.set_as_default_for_extension.html" class="abstract_method">set_as_default_for_extension</a>, 
+                <a href="GLib.AppInfo.add_supports_type.html" class="abstract_method">add_supports_type</a> or 
+                <a href="GLib.AppInfo.remove_supports_type.html" class="abstract_method">remove_supports_type</a>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.add_supports_type.html" class="abstract_method">add_supports_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a content type to the application information to indicate the 
+                application is capable of opening files with the given content type.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.can_delete.html" class="abstract_method">can_delete</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Obtains the information whether the <span class="interface">AppInfo
+                </span> can be deleted.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.can_remove_supports_type.html" class="abstract_method">can_remove_supports_type</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a supported content type can be removed from an application.
+              </span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.@delete.html" class="abstract_method">@delete</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Tries to delete a <span class="interface">AppInfo</span>.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><span class="interface">AppInfo</span></span> <b><a href="GLib.AppInfo.dup.html" class="abstract_method">dup</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a duplicate of a <span class="interface">AppInfo</span>.
+              </span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.equal.html" class="abstract_method">equal</a></b> (<span class="main_type"><span class="interface">AppInfo</span></span> appinfo2)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if two <span class="interface">AppInfo</span>s are equal.
+              </span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_commandline.html" class="abstract_method">get_commandline</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the commandline with which the application will be started.
+              </span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_description.html" class="abstract_method">get_description</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a human-readable description of an installed application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_display_name.html" class="abstract_method">get_display_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the display name of the application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_executable.html" class="abstract_method">get_executable</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the executable's name for the installed application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Icon.html" class="interface">Icon</a></span> <b><a href="GLib.AppInfo.get_icon.html" class="abstract_method">get_icon</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the icon for the application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_id.html" class="abstract_method">get_id</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the ID of an application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.AppInfo.get_name.html" class="abstract_method">get_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the installed name of the application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.AppInfo.get_supported_types.html" class="abstract_method">get_supported_types</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Retrieves the list of content types that <code>app_info</code> claims 
+                to support.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.launch.html" class="abstract_method">launch</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><a href="GLib.File.html" class="interface">File</a></span>&gt;? files, <span class="main_type"><a href="GLib.AppLaunchContext.html" class="class">AppLaunchContext</a></span>? launch_context) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Launches the application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.launch_uris.html" class="abstract_method">launch_uris</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>&gt;? uris, <span class="main_type"><a href="GLib.AppLaunchContext.html" class="class">AppLaunchContext</a></span>? launch_context) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Launches the application.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.remove_supports_type.html" class="abstract_method">remove_supports_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes a supported type from an application, if possible.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.set_as_default_for_extension.html" class="abstract_method">set_as_default_for_extension</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> extension) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the application as the default handler for the given file 
+                extension.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.set_as_default_for_type.html" class="abstract_method">set_as_default_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the application as the default handler for a given type.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.set_as_last_used_for_type.html" class="abstract_method">set_as_last_used_for_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the application as the last used application for a given type.
+              </span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.should_show.html" class="abstract_method">should_show</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if the application info should be shown in menus that list 
+                available applications.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.supports_files.html" class="abstract_method">supports_files</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if the application accepts files as arguments.</span>
+            </div></li>
+          <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AppInfo.supports_uris.html" class="abstract_method">supports_uris</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if the application supports reading files and directories from 
+                URIs.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-273')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-273">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

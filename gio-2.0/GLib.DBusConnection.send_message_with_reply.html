@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusConnection.send_message_with_reply &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusConnection.send_message_with_reply &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.DBusConnection.html">DBusConnection</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusConnection.address.html">address</a></li>
+          <li class="property"><a href="GLib.DBusConnection.authentication_observer.html">authentication_observer</a></li>
+          <li class="property"><a href="GLib.DBusConnection.capabilities.html">capabilities</a></li>
+          <li class="property"><a href="GLib.DBusConnection.closed.html">closed</a></li>
+          <li class="property"><a href="GLib.DBusConnection.exit_on_close.html">exit_on_close</a></li>
+          <li class="property"><a href="GLib.DBusConnection.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusConnection.guid.html">guid</a></li>
+          <li class="property"><a href="GLib.DBusConnection.stream.html">stream</a></li>
+          <li class="property"><a href="GLib.DBusConnection.unique_name.html">unique_name</a></li>
+          <li class="static_method"><a href="GLib.DBusConnection.@new.html">@new</a></li>
+          <li class="static_method"><a href="GLib.DBusConnection.new_for_address.html">new_for_address</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.html">DBusConnection</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.for_address_sync.html">DBusConnection.for_address_sync</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.sync.html">DBusConnection.sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.add_filter.html">add_filter</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call.html">call</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_sync.html">call_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_with_unix_fd_list.html">call_with_unix_fd_list</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_with_unix_fd_list_sync.html">call_with_unix_fd_list_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.close.html">close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.close_sync.html">close_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.emit_signal.html">emit_signal</a></li>
+          <li class="method"><a href="GLib.DBusConnection.export_action_group.html">export_action_group</a></li>
+          <li class="method"><a href="GLib.DBusConnection.export_menu_model.html">export_menu_model</a></li>
+          <li class="method"><a href="GLib.DBusConnection.flush.html">flush</a></li>
+          <li class="method"><a href="GLib.DBusConnection.flush_sync.html">flush_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_capabilities.html">get_capabilities</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_exit_on_close.html">get_exit_on_close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_guid.html">get_guid</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_last_serial.html">get_last_serial</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_peer_credentials.html">get_peer_credentials</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_proxy.html">get_proxy</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_proxy_sync.html">get_proxy_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_stream.html">get_stream</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_unique_name.html">get_unique_name</a></li>
+          <li class="method"><a href="GLib.DBusConnection.is_closed.html">is_closed</a></li>
+          <li class="method"><a href="GLib.DBusConnection.register_object.html">register_object</a></li>
+          <li class="method"><a href="GLib.DBusConnection.register_subtree.html">register_subtree</a></li>
+          <li class="method"><a href="GLib.DBusConnection.remove_filter.html">remove_filter</a></li>
+          <li class="method"><a href="GLib.DBusConnection.send_message.html">send_message</a></li>
+          <li class="method">send_message_with_reply</li>
+          <li class="method"><a href="GLib.DBusConnection.send_message_with_reply_sync.html">send_message_with_reply_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.set_exit_on_close.html">set_exit_on_close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.signal_subscribe.html">signal_subscribe</a></li>
+          <li class="method"><a href="GLib.DBusConnection.signal_unsubscribe.html">signal_unsubscribe</a></li>
+          <li class="method"><a href="GLib.DBusConnection.start_message_processing.html">start_message_processing</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unexport_action_group.html">unexport_action_group</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unexport_menu_model.html">unexport_menu_model</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unregister_object.html">unregister_object</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unregister_subtree.html">unregister_subtree</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">send_message_with_reply</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> <b><span class="method">send_message_with_reply</span></b> (<span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> message, <span class="main_type"><a href="GLib.DBusSendMessageFlags.html" class="enum">DBusSendMessageFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span>* out_serial = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+        </div>
+        <div class="description">
+          <p>Asynchronously sends <code>message</code> to the peer represented by <span class="main_keyword">this</span>.</p>
+          <p>Unless <code>flags</code> contain the <span class="main_optional_parameter">g_dbus_send_message_flags_preserve_serial</span> flag, the 
+            serial number will be assigned by <span class="main_keyword">this</span> and set on <code>message</code> via 
+            <a href="GLib.DBusMessage.set_serial.html" class="method">set_serial</a>. If <code>out_serial</code> is not 
+            <span class="main_optional_parameter">null</span>, then the serial number used will be written to this location prior to submitting the 
+            message to the underlying transport.</p>
+          <p>If <span class="main_keyword">this</span> is closed then the operation will fail with <span class="main_optional_parameter">
+              g_io_error_closed</span>. If <code>cancellable</code> is canceled, the operation will fail with <span class="main_optional_parameter">
+              g_io_error_cancelled</span>. If <code>message</code> is not well-formed, the operation fails with <span class="main_optional_parameter">
+              g_io_error_invalid_argument</span>.</p>
+          <p>This is an asynchronous method. When the operation is finished, <code>callback</code> will be invoked in the <i>thread-default main 
+              context</i> of the thread you are calling this method from. You can then call <span class="method">send_message_with_reply.end</span> to
+             get the result of the operation. See <a href="GLib.DBusConnection.send_message_with_reply_sync.html" class="method">
+              send_message_with_reply_sync</a> for the synchronous version.</p>
+          <p>Note that <code>message</code> must be unlocked, unless <code>flags</code> contain the <span class="main_optional_parameter">
+              g_dbus_send_message_flags_preserve_serial</span> flag.</p>
+          <p>See this <i>server</i> and <i>client</i> for an example of how to use this low-level API to send and receive UNIX file descriptors.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.DBusConnection.html" class="class">DBusConnection</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">message</td>
+              <td>
+                <p>a <a href="GLib.DBusMessage.html" class="class">DBusMessage</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>flags affecting how the message is sent</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">timeout_msec</td>
+              <td>
+                <p>the timeout in milliseconds, -1 to use the default  timeout or <span class="main_optional_parameter">g_maxint</span> for no timeout
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">out_serial</td>
+              <td>
+                <p>return location for serial number assigned  to <code>message</code> when sending it or <span class="main_optional_parameter">null
+                  </span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>a <a href="GLib.Cancellable.html" class="class">Cancellable</a> or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">callback</td>
+              <td>
+                <p>a <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> to call when the request  is satisfied or 
+                  <span class="main_optional_parameter">null</span> if you don't care about the result</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>The data to pass to <code>callback</code></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

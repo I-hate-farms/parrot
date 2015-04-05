@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusInterfaceVTable &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusInterfaceVTable &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="struct">DBusInterfaceVTable</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="field"><a href="GLib.DBusInterfaceVTable.get_property.html">get_property</a></li>
+          <li class="field"><a href="GLib.DBusInterfaceVTable.method_call.html">method_call</a></li>
+          <li class="field"><a href="GLib.DBusInterfaceVTable.set_property.html">set_property</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">DBusInterfaceVTable</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.DBusInterfaceVTable" alt="Object hierarchy for DBusInterfaceVTable" src="img/GLib.DBusInterfaceVTable.png"/>
+      
+
+      <map id="GLib.DBusInterfaceVTable" name="GLib.DBusInterfaceVTable">
+<area shape="rect" id="node1" href="GLib.DBusInterfaceVTable.html" title="GLib.DBusInterfaceVTable" alt="" coords="4,5,227,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">struct</span> <b><span class="struct">DBusInterfaceVTable</span></b>
+        </div>
+        <div class="description">
+          <p>Virtual table for handling properties and method calls for a D-Bus interface.</p>
+          <p>Since 2.38, if you want to handle getting/setting D-Bus properties asynchronously, give <span class="main_optional_parameter">null</span>
+             as your <code>get_property</code> or <code>set_property</code> function. The D-Bus call will be directed to your <code>method_call</code>
+             function, with the provided <code>interface_name</code> set to "org.freedesktop.DBus.Properties".</p>
+          <p>The usual checks on the validity of the calls is performed. For `Get` calls, an error is automatically returned if the property does not 
+            exist or the permissions do not allow access. The same checks are performed for `Set` calls, and the provided value is also checked for 
+            being the correct type.</p>
+          <p>For both `Get` and `Set` calls, the <a href="GLib.DBusMethodInvocation.html" class="class">DBusMethodInvocation</a> passed to the <code>
+              method_call</code> handler can be queried with <a href="GLib.DBusMethodInvocation.get_property_info.html" class="method">
+              get_property_info</a> to get a pointer to the <a href="GLib.DBusPropertyInfo.html" class="class">DBusPropertyInfo</a> of the property.
+          </p>
+          <p>If you have readable properties specified in your interface info, you must ensure that you either provide a non-
+            <span class="main_optional_parameter">null</span> <code>get_property</code>() function or provide implementations of both the `Get` and 
+            `GetAll` methods on org.freedesktop.DBus.Properties interface in your <code>method_call</code> function. Note that the required return 
+            type of the `Get` call is `(v)`, not the type of the property. `GetAll` expects a return value of type `a{sv}`.</p>
+          <p>If you have writable properties specified in your interface info, you must ensure that you either provide a non-
+            <span class="main_optional_parameter">null</span> <code>set_property</code>() function or provide an implementation of the `Set` call. If 
+            implementing the call, you must return the value of type <span class="main_optional_parameter">g_variant_type_unit</span>.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.DBusInterfaceMethodCallFunc.html" class="delegate">DBusInterfaceMethodCallFunc</a></span> <b><a href="GLib.DBusInterfaceVTable.method_call.html" class="field">method_call</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.DBusInterfaceGetPropertyFunc.html" class="delegate">DBusInterfaceGetPropertyFunc</a></span> <b><a href="GLib.DBusInterfaceVTable.get_property.html" class="field">get_property</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.DBusInterfaceSetPropertyFunc.html" class="delegate">DBusInterfaceSetPropertyFunc</a></span> <b><a href="GLib.DBusInterfaceVTable.set_property.html" class="field">set_property</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

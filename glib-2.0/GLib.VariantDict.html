@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.VariantDict &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.VariantDict &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">VariantDict</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.VariantDict.VariantDict.html">VariantDict</a></li>
+          <li class="method"><a href="GLib.VariantDict.clear.html">clear</a></li>
+          <li class="method"><a href="GLib.VariantDict.contains.html">contains</a></li>
+          <li class="method"><a href="GLib.VariantDict.end.html">end</a></li>
+          <li class="method"><a href="GLib.VariantDict.insert.html">insert</a></li>
+          <li class="method"><a href="GLib.VariantDict.insert_value.html">insert_value</a></li>
+          <li class="method"><a href="GLib.VariantDict.lookup.html">lookup</a></li>
+          <li class="method"><a href="GLib.VariantDict.lookup_value.html">lookup_value</a></li>
+          <li class="method"><a href="GLib.VariantDict.remove.html">remove</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">VariantDict</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.VariantDict" alt="Object hierarchy for VariantDict" src="img/GLib.VariantDict.png"/>
+
+      <map id="GLib.VariantDict" name="GLib.VariantDict">
+<area shape="rect" id="node1" href="GLib.VariantDict.html" title="GLib.VariantDict" alt="" coords="5,5,155,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">VariantDict</span></b>
+        </div>
+        <div class="description">
+          <p><span class="class">VariantDict</span> is a mutable interface to <a href="GLib.Variant.html" class="class">Variant</a> dictionaries.</p>
+          <p>It can be used for doing a sequence of dictionary lookups in an efficient way on an existing <a href="GLib.Variant.html" class="class">
+              Variant</a> dictionary or it can be used to construct new dictionaries with a hashtable-like interface. It can also be used for taking 
+            existing dictionaries and modifying them in order to create new ones.</p>
+          <p><span class="class">VariantDict</span> can only be used with <span class="main_optional_parameter">g_variant_type_vardict</span> 
+            dictionaries.</p>
+          <p>It is possible to use <span class="class">VariantDict</span> allocated on the stack or on the heap. When using a stack-allocated 
+            <span class="class">VariantDict</span>, you begin with a call to <code>g_variant_dict_init</code> and free the resources with a call to 
+            <a href="GLib.VariantDict.clear.html" class="method">clear</a>.</p>
+          <p>Heap-allocated <span class="class">VariantDict</span> follows normal refcounting rules: you allocate it with 
+            <a href="GLib.VariantDict.VariantDict.html" class="creation_method">VariantDict</a> and use <code>g_variant_dict_ref</code> and <code>
+              g_variant_dict_unref</code>.</p>
+          <p><a href="GLib.VariantDict.end.html" class="method">end</a> is used to convert the <span class="class">VariantDict</span> back into a 
+            dictionary-type <a href="GLib.Variant.html" class="class">Variant</a>. When used with stack-allocated instances, this also implicitly 
+            frees all associated memory, but for heap-allocated instances, you must still call <code>g_variant_dict_unref</code> afterwards.</p>
+          <p>You will typically want to use a heap-allocated <span class="class">VariantDict</span> when you expose it as part of an API. For most 
+            other uses, the stack-allocated form will be more convenient.</p>
+          <p>Consider the following two examples that do the same thing in each style: take an existing dictionary and look up the "count" uint32 key,
+             adding 1 to it if it is found, or returning an error if the key is not found. Each returns the new dictionary as a floating 
+            <a href="GLib.Variant.html" class="class">Variant</a>.</p>
+          <h2> Using a stack-allocated GVariantDict</h2>
+          <p><pre class="main_source">  GVariant *<br/>  add_to_count (GVariant  *orig,<br/>                GError   **error)<br/>  {<br/>    GVariantDict dict;<br/>    guint32 count;<br/><br/>    g_variant_dict_init (&amp;dict, orig);<br/>    if (!g_variant_dict_lookup (&amp;dict, "count", "u", &amp;count))<br/>      {<br/>        g_set_error (...);<br/>        g_variant_dict_clear (&amp;dict);<br/>        return NULL;<br/>      }<br/><br/>    g_variant_dict_insert (&amp;dict, "count", "u", count + 1);<br/><br/>    return g_variant_dict_end (&amp;dict);<br/>  }</pre>
+          </p>
+          <h2> Using heap-allocated GVariantDict</h2>
+          <p><pre class="main_source">  GVariant *<br/>  add_to_count (GVariant  *orig,<br/>                GError   **error)<br/>  {<br/>    GVariantDict *dict;<br/>    GVariant *result;<br/>    guint32 count;<br/><br/>    dict = g_variant_dict_new (orig);<br/><br/>    if (g_variant_dict_lookup (dict, "count", "u", &amp;count))<br/>      {<br/>        g_variant_dict_insert (dict, "count", "u", count + 1);<br/>        result = g_variant_dict_end (dict);<br/>      }<br/>    else<br/>      {<br/>        g_set_error (...);<br/>        result = NULL;<br/>      }<br/><br/>    g_variant_dict_unref (dict);<br/><br/>    return result;<br/>  }</pre>
+          </p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantDict.VariantDict.html" class="creation_method">VariantDict</a></b> (<span class="main_type"><a href="GLib.Variant.html" class="class">Variant</a></span>? from_asv = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Allocates and initialises a new <span class="class">VariantDict</span>
+                .</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantDict.lookup.html" class="method">lookup</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up a value in a <span class="class">VariantDict</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.VariantDict.lookup_value.html" class="method">lookup_value</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span> expected_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up a value in a <span class="class">VariantDict</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantDict.contains.html" class="method">contains</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <code>key</code> exists in <span class="main_keyword">this
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.VariantDict.insert.html" class="method">insert</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Inserts a value into a <span class="class">VariantDict</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.VariantDict.insert_value.html" class="method">insert_value</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_type"><a href="GLib.Variant.html" class="class">Variant</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Inserts (or replaces) a key in a <span class="class">VariantDict
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantDict.remove.html" class="method">remove</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes a key and its associated value from a <span class="class">
+                  VariantDict</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.VariantDict.clear.html" class="method">clear</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Releases all memory associated with a <span class="class">VariantDict
+                </span> without freeing the <span class="class">VariantDict</span> structure itself.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.VariantDict.end.html" class="method">end</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the current value of <span class="main_keyword">this</span> as
+                 a <a href="GLib.Variant.html" class="class">Variant</a> of type <span class="main_optional_parameter">g_variant_type_vardict</span>, 
+                clearing it in the process.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

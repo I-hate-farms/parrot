@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusObjectManagerClient &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusObjectManagerClient &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">DBusObjectManagerClient</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusObjectManagerClient.bus_type.html">bus_type</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.connection.html">connection</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_destroy_notify.html">get_proxy_type_destroy_notify</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_func.html">get_proxy_type_func</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_user_data.html">get_proxy_type_user_data</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.name.html">name</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.name_owner.html">name_owner</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.object_path.html">object_path</a></li>
+          <li class="static_method"><a href="GLib.DBusObjectManagerClient.@new.html">@new</a></li>
+          <li class="static_method"><a href="GLib.DBusObjectManagerClient.new_for_bus.html">new_for_bus</a></li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.html">DBusObjectManagerClient</a></li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.for_bus_sync.html">
+              DBusObjectManagerClient.for_bus_sync</a></li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.sync.html">DBusObjectManagerClient.sync</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_connection.html">get_connection</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_name.html">get_name</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_name_owner.html">get_name_owner</a></li>
+          <li class="signal"><a href="GLib.DBusObjectManagerClient.interface_proxy_properties_changed.html">interface_proxy_properties_changed</a>
+          </li>
+          <li class="signal"><a href="GLib.DBusObjectManagerClient.interface_proxy_signal.html">interface_proxy_signal</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">DBusObjectManagerClient</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.DBusObjectManagerClient" alt="Object hierarchy for DBusObjectManagerClient" src="img/GLib.DBusObjectManagerClient.png"/>
+      
+
+      <map id="GLib.DBusObjectManagerClient" name="GLib.DBusObjectManagerClient">
+<area shape="rect" id="node1" href="GLib.DBusObjectManagerClient.html" title="GLib.DBusObjectManagerClient" alt="" coords="311,101,573,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.AsyncInitable.html" title="GLib.AsyncInitable" alt="" coords="142,5,308,53"/>
+<area shape="rect" id="node4" href="GLib.DBusObjectManager.html" title="GLib.DBusObjectManager" alt="" coords="333,5,552,53"/>
+<area shape="rect" id="node5" href="GLib.Initable.html" title="GLib.Initable" alt="" coords="576,5,696,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">DBusObjectManagerClient</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.AsyncInitable.html" class="interface">AsyncInitable</a></span>, <span class="main_type"><a href="GLib.DBusObjectManager.html" class="interface">DBusObjectManager</a></span>, <span class="main_type"><a href="GLib.Initable.html" class="interface">Initable</a></span>, <span class="main_type"><a href="GLib.AsyncInitable.html" class="interface">AsyncInitable</a></span>, <span class="main_type"><a href="GLib.DBusObjectManager.html" class="interface">DBusObjectManager</a></span>, <span class="main_type"><a href="GLib.Initable.html" class="interface">Initable</a></span>
+        </div>
+        <div class="description">
+          <p><span class="class">DBusObjectManagerClient</span> is used to create, monitor and delete object proxies for remote objects exported by a 
+            <a href="GLib.DBusObjectManagerServer.html" class="class">DBusObjectManagerServer</a> (or any code implementing the 
+            <a href="http://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-objectmanager">org.freedesktop.DBus.ObjectManager</a>
+             interface).</p>
+          <p>Once an instance of this type has been created, you can connect to the <a href="GLib.DBusObjectManager.object_added.html" class="signal">
+              object_added</a> and <a href="GLib.DBusObjectManager.object_removed.html" class="signal">object_removed</a> signals and inspect the 
+            <a href="GLib.DBusObjectProxy.html" class="class">DBusObjectProxy</a> objects returned by 
+            <a href="GLib.DBusObjectManager.get_objects.html" class="abstract_method">get_objects</a>.</p>
+          <p>If the name for a <span class="class">DBusObjectManagerClient</span> is not owned by anyone at object construction time, the default 
+            behavior is to request the message bus to launch an owner for the name. This behavior can be disabled using the 
+            <span class="main_optional_parameter">g_dbus_object_manager_client_flags_do_not_auto_start</span> flag. It's also worth noting that this 
+            only works if the name of interest is activatable in the first place. E.g. in some cases it is not possible to launch an owner for the 
+            requested name. In this case, <span class="class">DBusObjectManagerClient</span> object construction still succeeds but there will be no 
+            object proxies (e.g. <a href="GLib.DBusObjectManager.get_objects.html" class="abstract_method">get_objects</a> returns the empty list) and
+             the <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> property is 
+            <span class="main_optional_parameter">null</span>.</p>
+          <p>The owner of the requested name can come and go (for example consider a system service being restarted) – <span class="class">
+              DBusObjectManagerClient</span> handles this case too; simply connect to the 
+            <a href="../gobject-2.0/GLib.Object.notify.html" class="signal">notify</a> signal to watch for changes on the 
+            <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> property. When the name owner vanishes, the 
+            behavior is that <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> is set to 
+            <span class="main_optional_parameter">null</span> (this includes emission of the 
+            <a href="../gobject-2.0/GLib.Object.notify.html" class="signal">notify</a> signal) and then 
+            <a href="GLib.DBusObjectManager.object_removed.html" class="signal">object_removed</a> signals are synthesized for all currently existing 
+            object proxies. Since <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> is 
+            <span class="main_optional_parameter">null</span> when this happens, you can use this information to disambiguate a synthesized signal 
+            from a genuine signal caused by object removal on the remote <a href="GLib.DBusObjectManager.html" class="interface">DBusObjectManager</a>
+            . Similarly, when a new name owner appears, <a href="GLib.DBusObjectManager.object_added.html" class="signal">object_added</a> signals are
+             synthesized while <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> is still 
+            <span class="main_optional_parameter">null</span>. Only when all object proxies have been added, the 
+            <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> is set to the new name owner (this includes 
+            emission of the <a href="../gobject-2.0/GLib.Object.notify.html" class="signal">notify</a> signal). Furthermore, you are guaranteed that 
+            <a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a> will alternate between a name owner (e.g. `:1.42`) 
+            and <span class="main_optional_parameter">null</span> even in the case where the name of interest is atomically replaced</p>
+          <p>Ultimately, <span class="class">DBusObjectManagerClient</span> is used to obtain <a href="GLib.DBusProxy.html" class="class">DBusProxy
+            </a> instances. All signals (including the org.freedesktop.DBus.Properties:<code>GDBusObjectManagerClient:PropertiesChanged</code> signal)
+             delivered to <a href="GLib.DBusProxy.html" class="class">DBusProxy</a> instances are guaranteed to originate from the name owner. This 
+            guarantee along with the behavior described above, means that certain race conditions including the "half the proxy is from the old owner 
+            and the other half is from the new owner" problem cannot happen.</p>
+          <p>To avoid having the application connect to signals on the returned <a href="GLib.DBusObjectProxy.html" class="class">DBusObjectProxy</a> 
+            and <a href="GLib.DBusProxy.html" class="class">DBusProxy</a> objects, the <a href="GLib.DBusObject.interface_added.html" class="signal">
+              interface_added</a>, <a href="GLib.DBusObject.interface_removed.html" class="signal">interface_removed</a>, 
+            <a href="GLib.DBusProxy.g_properties_changed.html" class="signal">g_properties_changed</a> and 
+            <a href="GLib.DBusProxy.g_signal.html" class="signal">g_signal</a> signals are also emitted on the <span class="class">
+              DBusObjectManagerClient</span> instance managing these objects. The signals emitted are 
+            <a href="GLib.DBusObjectManager.interface_added.html" class="signal">interface_added</a>, 
+            <a href="GLib.DBusObjectManager.interface_removed.html" class="signal">interface_removed</a>, 
+            <a href="GLib.DBusObjectManagerClient.interface_proxy_properties_changed.html" class="signal">interface_proxy_properties_changed</a> and 
+            <a href="GLib.DBusObjectManagerClient.interface_proxy_signal.html" class="signal">interface_proxy_signal</a>.</p>
+          <p>Note that all callbacks and signals are emitted in the <i>thread-default main context</i> that the <span class="class">
+              DBusObjectManagerClient</span> object was constructed in. Additionally, the <a href="GLib.DBusObjectProxy.html" class="class">
+              DBusObjectProxy</a> and <a href="GLib.DBusProxy.html" class="class">DBusProxy</a> objects originating from the <span class="class">
+              DBusObjectManagerClient</span> object will be created in the same context and, consequently, will deliver signals in the same main loop.
+          </p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.BusType.html" class="enum">BusType</a></span> <b><a href="GLib.DBusObjectManagerClient.bus_type.html" class="property">bus_type</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If this property is not <span class="main_optional_parameter">
+                  g_bus_type_none</span>, then <a href="GLib.DBusObjectManagerClient.connection.html" class="property">connection</a> must be 
+                <span class="main_optional_parameter">null</span> and will be set to the <a href="GLib.DBusConnection.html" class="class">
+                  DBusConnection</a> obtained by calling <a href="GLib.Bus.@get.html" class="method">@get</a> with the value of this property.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> <b><a href="GLib.DBusObjectManagerClient.connection.html" class="property">connection</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <a href="GLib.DBusConnection.html" class="class">DBusConnection
+                </a> to use.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> <b><a href="GLib.DBusObjectManagerClient.flags.html" class="property">flags</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Flags from the 
+                <a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a> enumeration.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.DBusObjectManagerClient.get_proxy_type_destroy_notify.html" class="property">get_proxy_type_destroy_notify</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A <a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">
+                  DestroyNotify</a> for the <code>gpointer</code> user_data in 
+                <a href="GLib.DBusObjectManagerClient.get_proxy_type_user_data.html" class="property">get_proxy_type_user_data</a>.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.DBusObjectManagerClient.get_proxy_type_func.html" class="property">get_proxy_type_func</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <a href="GLib.DBusProxyTypeFunc.html" class="delegate">
+                  DBusProxyTypeFunc</a> to use when determining what <a href="../gobject-2.0/GLib.Type.html" class="struct">Type</a> to use for 
+                interface proxies or <span class="main_optional_parameter">null</span>.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.DBusObjectManagerClient.get_proxy_type_user_data.html" class="property">get_proxy_type_user_data</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <code>gpointer</code> user_data to pass to 
+                <a href="GLib.DBusObjectManagerClient.get_proxy_type_func.html" class="property">get_proxy_type_func</a>.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusObjectManagerClient.name.html" class="property">name</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The well-known name or unique name that the manager is for.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? <b><a href="GLib.DBusObjectManagerClient.name_owner.html" class="property">name_owner</a></b> { <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The unique name that owns 
+                <a href="GLib.DBusObjectManagerClient.name.html" class="property">name</a> or <span class="main_optional_parameter">null</span> if 
+                no-one is currently owning the name.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusObjectManagerClient.object_path.html" class="property">object_path</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The object path the manager is for.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">DBusObjectManagerClient</span></span> <b><a href="GLib.DBusObjectManagerClient.@new.html" class="static_method">@new</a></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection, <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a></span> get_proxy_type_func, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously creates a new <span class="class">
+                  DBusObjectManagerClient</span> object.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">DBusObjectManagerClient</span></span> <b><a href="GLib.DBusObjectManagerClient.new_for_bus.html" class="static_method">new_for_bus</a></b> (<span class="main_type"><a href="GLib.BusType.html" class="enum">BusType</a></span> bus_type, <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a></span> get_proxy_type_func, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Like 
+                <a href="GLib.DBusObjectManagerClient.@new.html" class="static_method">@new</a> but takes a <a href="GLib.BusType.html" class="enum">
+                  BusType</a> instead of a <a href="GLib.DBusConnection.html" class="class">DBusConnection</a>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.html" class="creation_method">DBusObjectManagerClient</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.for_bus_sync.html" class="creation_method">DBusObjectManagerClient.for_bus_sync</a></b> (<span class="main_type"><a href="GLib.BusType.html" class="enum">BusType</a></span> bus_type, <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a></span>? get_proxy_type_func, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Like 
+                <a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.sync.html" class="creation_method">DBusObjectManagerClient.sync</a> but 
+                takes a <a href="GLib.BusType.html" class="enum">BusType</a> instead of a <a href="GLib.DBusConnection.html" class="class">
+                  DBusConnection</a>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.sync.html" class="creation_method">DBusObjectManagerClient.sync</a></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection, <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a></span>? get_proxy_type_func, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">DBusObjectManagerClient</span> 
+                object.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> <b><a href="GLib.DBusObjectManagerClient.get_connection.html" class="method">get_connection</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the <a href="GLib.DBusConnection.html" class="class">
+                  DBusConnection</a> used by <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> <b><a href="GLib.DBusObjectManagerClient.get_flags.html" class="method">get_flags</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the flags that <span class="main_keyword">this</span> was 
+                constructed with.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusObjectManagerClient.get_name.html" class="method">get_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the name that <span class="main_keyword">this</span> is for, or 
+                <span class="main_optional_parameter">null</span> if not a message bus connection.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? <b><a href="GLib.DBusObjectManagerClient.get_name_owner.html" class="method">get_name_owner</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The unique name that owns the name that <span class="main_keyword">
+                  this</span> is for or <span class="main_optional_parameter">null</span> if no-one currently owns that name.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Signals:</h3>
+        <ul class="navi_inline">
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusObjectManagerClient.interface_proxy_properties_changed.html" class="signal">interface_proxy_properties_changed</a></b> (<span class="main_type"><a href="GLib.DBusObjectProxy.html" class="class">DBusObjectProxy</a></span> object_proxy, <span class="main_type"><a href="GLib.DBusProxy.html" class="class">DBusProxy</a></span> interface_proxy, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> changed_properties, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] invalidated_properties)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Emitted when one or more D-Bus properties on proxy changes.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusObjectManagerClient.interface_proxy_signal.html" class="signal">interface_proxy_signal</a></b> (<span class="main_type"><a href="GLib.DBusObjectProxy.html" class="class">DBusObjectProxy</a></span> object_proxy, <span class="main_type"><a href="GLib.DBusProxy.html" class="class">DBusProxy</a></span> interface_proxy, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> sender_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> signal_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> parameters)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Emitted when a D-Bus signal is received on <code>interface_proxy
+                </code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-93')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-93">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.AsyncInitable</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-94')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-94">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="GLib.AsyncInitable.new_async.html">new_async</a></li>
+                    <li class="static_method"><a href="GLib.AsyncInitable.new_valist_async.html">new_valist_async</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="GLib.AsyncInitable.newv_async.html">newv_async</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="virtual_method"><a href="GLib.AsyncInitable.init_async.html">init_async</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from interface GLib.DBusObjectManager</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-95')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-95">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.DBusObjectManager.get_interface.html">get_interface</a></li>
+                      <li class="abstract_method"><a href="GLib.DBusObjectManager.get_object.html">get_object</a></li>
+                      <li class="abstract_method"><a href="GLib.DBusObjectManager.get_object_path.html">get_object_path</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.DBusObjectManager.get_objects.html">get_objects</a></li>
+                      <li class="signal"><a href="GLib.DBusObjectManager.interface_added.html">interface_added</a></li>
+                      <li class="signal"><a href="GLib.DBusObjectManager.interface_removed.html">interface_removed</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="signal"><a href="GLib.DBusObjectManager.object_added.html">object_added</a></li>
+                      <li class="signal"><a href="GLib.DBusObjectManager.object_removed.html">object_removed</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="headline">
+                  <div class="text">All known members inherited from interface GLib.Initable</div>
+                  <div class="toggle">
+                    <img onclick="toggle_box  (this, 'box-content-96')" src="../coll_open.png">&nbsp;</div>
+                  </div>
+                  <div class="content" id="box-content-96">
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="static_method"><a href="GLib.Initable.@new.html">@new</a></li>
+                        <li class="static_method"><a href="GLib.Initable.new_valist.html">new_valist</a></li>
+                      </ul>
+                    </div>
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="static_method"><a href="GLib.Initable.newv.html">newv</a></li>
+                      </ul>
+                    </div>
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="abstract_method"><a href="GLib.Initable.init.html">init</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><br/>
+            <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+            </div>
+          </body>
+        </html>

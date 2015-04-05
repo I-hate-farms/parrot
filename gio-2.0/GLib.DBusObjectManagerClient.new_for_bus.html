@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusObjectManagerClient.new_for_bus &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusObjectManagerClient.new_for_bus &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.DBusObjectManagerClient.html">DBusObjectManagerClient</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusObjectManagerClient.bus_type.html">bus_type</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.connection.html">connection</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_destroy_notify.html">get_proxy_type_destroy_notify</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_func.html">get_proxy_type_func</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.get_proxy_type_user_data.html">get_proxy_type_user_data</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.name.html">name</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.name_owner.html">name_owner</a></li>
+          <li class="property"><a href="GLib.DBusObjectManagerClient.object_path.html">object_path</a></li>
+          <li class="static_method"><a href="GLib.DBusObjectManagerClient.@new.html">@new</a></li>
+          <li class="static_method">new_for_bus</li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.html">DBusObjectManagerClient</a></li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.for_bus_sync.html">
+              DBusObjectManagerClient.for_bus_sync</a></li>
+          <li class="creation_method"><a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.sync.html">DBusObjectManagerClient.sync</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_connection.html">get_connection</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_name.html">get_name</a></li>
+          <li class="method"><a href="GLib.DBusObjectManagerClient.get_name_owner.html">get_name_owner</a></li>
+          <li class="signal"><a href="GLib.DBusObjectManagerClient.interface_proxy_properties_changed.html">interface_proxy_properties_changed</a>
+          </li>
+          <li class="signal"><a href="GLib.DBusObjectManagerClient.interface_proxy_signal.html">interface_proxy_signal</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">new_for_bus</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><a href="GLib.DBusObjectManagerClient.html" class="class">DBusObjectManagerClient</a></span> <b><span class="static_method">new_for_bus</span></b> (<span class="main_type"><a href="GLib.BusType.html" class="enum">BusType</a></span> bus_type, <span class="main_type"><a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a></span> get_proxy_type_func, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Like <a href="GLib.DBusObjectManagerClient.@new.html" class="static_method">@new</a> but takes a 
+            <a href="GLib.BusType.html" class="enum">BusType</a> instead of a <a href="GLib.DBusConnection.html" class="class">DBusConnection</a>.</p>
+          <p>This is an asynchronous failable constructor. When the result is ready, <code>callback</code> will be invoked in the <i>thread-default 
+              main loop</i> of the thread you are calling this method from. You can then call <span class="static_method">new_for_bus.end</span> to 
+            get the result. See <a href="GLib.DBusObjectManagerClient.DBusObjectManagerClient.for_bus_sync.html" class="creation_method">
+              DBusObjectManagerClient.for_bus_sync</a> for the synchronous version.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">bus_type</td>
+              <td>
+                <p>A <a href="GLib.BusType.html" class="enum">BusType</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>Zero or more flags from the <a href="GLib.DBusObjectManagerClientFlags.html" class="enum">DBusObjectManagerClientFlags</a> 
+                  enumeration.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">name</td>
+              <td>
+                <p>The owner of the control object (unique or well-known name).</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">object_path</td>
+              <td>
+                <p>The object path of the control object.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">get_proxy_type_func</td>
+              <td>
+                <p>A <a href="GLib.DBusProxyTypeFunc.html" class="delegate">DBusProxyTypeFunc</a> function or <span class="main_optional_parameter">
+                    null</span> to always construct <a href="GLib.DBusProxy.html" class="class">DBusProxy</a> proxies.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>A <a href="GLib.Cancellable.html" class="class">Cancellable</a> or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">callback</td>
+              <td>
+                <p>A <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> to call when the request is satisfied.</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">get_proxy_type_destroy_notify</td>
+              <td>
+                <p>Free function for <code>get_proxy_type_user_data</code> or <span class="main_optional_parameter">null</span>.</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">get_proxy_type_user_data</td>
+              <td>
+                <p>User data to pass to <code>get_proxy_type_func</code>.</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>The data to pass to <code>callback</code>.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

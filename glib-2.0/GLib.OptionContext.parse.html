@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.OptionContext.parse &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.OptionContext.parse &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.OptionContext.html">OptionContext</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.OptionContext.OptionContext.html">OptionContext</a></li>
+          <li class="method"><a href="GLib.OptionContext.add_group.html">add_group</a></li>
+          <li class="method"><a href="GLib.OptionContext.add_main_entries.html">add_main_entries</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_description.html">get_description</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_help.html">get_help</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_help_enabled.html">get_help_enabled</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_ignore_unknown_options.html">get_ignore_unknown_options</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_main_group.html">get_main_group</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_strict_posix.html">get_strict_posix</a></li>
+          <li class="method"><a href="GLib.OptionContext.get_summary.html">get_summary</a></li>
+          <li class="method">parse</li>
+          <li class="method"><a href="GLib.OptionContext.parse_strv.html">parse_strv</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_description.html">set_description</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_help_enabled.html">set_help_enabled</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_ignore_unknown_options.html">set_ignore_unknown_options</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_main_group.html">set_main_group</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_strict_posix.html">set_strict_posix</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_summary.html">set_summary</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_translate_func.html">set_translate_func</a></li>
+          <li class="method"><a href="GLib.OptionContext.set_translation_domain.html">set_translation_domain</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">parse</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">parse</span></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] argv) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.OptionError.html" class="errordomain">OptionError</a></span>
+        </div>
+        <div class="description">
+          <p>Parses the command line arguments, recognizing options which have been added to <span class="main_keyword">this</span>.</p>
+          <p> A side-effect of calling this function is that <a href="GLib.Environment.set_prgname.html" class="method">set_prgname</a> will be 
+            called.</p>
+          <p>If the parsing is successful, any parsed arguments are removed from the array and <code>argv.length</code> and <code>argv</code> are 
+            updated accordingly. A '--' option is stripped from <code>argv</code> unless there are unparsed options before and after it, or some of 
+            the options after it start with '-'. In case of an error, <code>argv.length</code> and <code>argv</code> are left unmodified.</p>
+          <p>If automatic `--help` support is enabled (see <a href="GLib.OptionContext.set_help_enabled.html" class="method">set_help_enabled</a>), 
+            and the <code>argv</code> array contains one of the recognized help options, this function will produce help output to stdout and call 
+            `exit (0)`.</p>
+          <p>Note that function depends on the <i>current locale</i> for automatic character set conversion of string and filename arguments.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.OptionContext.html" class="class">OptionContext</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">argv</td>
+              <td>
+                <p>a pointer to the array of command line arguments</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">argc</td>
+              <td>
+                <p>a pointer to the number of command line arguments</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the parsing was successful,  <span class="main_optional_parameter">false
+                  </span> if an error occurred</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

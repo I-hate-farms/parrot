@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TimeZone.TimeZone &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TimeZone.TimeZone &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.TimeZone.html">TimeZone</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method">TimeZone</li>
+          <li class="creation_method"><a href="GLib.TimeZone.TimeZone.local.html">TimeZone.local</a></li>
+          <li class="creation_method"><a href="GLib.TimeZone.TimeZone.utc.html">TimeZone.utc</a></li>
+          <li class="method"><a href="GLib.TimeZone.adjust_time.html">adjust_time</a></li>
+          <li class="method"><a href="GLib.TimeZone.find_interval.html">find_interval</a></li>
+          <li class="method"><a href="GLib.TimeZone.get_abbreviation.html">get_abbreviation</a></li>
+          <li class="method"><a href="GLib.TimeZone.get_offset.html">get_offset</a></li>
+          <li class="method"><a href="GLib.TimeZone.is_dst.html">is_dst</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">TimeZone</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <b><span class="creation_method">TimeZone</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> identifier)
+        </div>
+        <div class="description">
+          <p>Creates a <a href="GLib.TimeZone.html" class="class">TimeZone</a> corresponding to <code>identifier</code>.</p>
+          <p><code>identifier</code> can either be an RFC3339/ISO 8601 time offset or something that would pass as a valid value for the `TZ` 
+            environment variable (including <span class="main_optional_parameter">null</span>).</p>
+          <p>In Windows, <code>identifier</code> can also be the unlocalized name of a time zone for standard time, for example "Pacific Standard 
+            Time".</p>
+          <p>Valid RFC3339 time offsets are `"Z"` (for UTC) or `"±hh:mm"`. ISO 8601 additionally specifies `"±hhmm"` and `"±hh"`. Offsets are time 
+            values to be added to Coordinated Universal Time (UTC) to get the local time.</p>
+          <p>In UNIX, the `TZ` environment variable typically corresponds to the name of a file in the zoneinfo database, or string in "std offset [
+            dst [offset],start[/time],end[/time]]" (POSIX) format. There are no spaces in the specification. The name of standard and daylight savings
+             time zone must be three or more alphabetic characters. Offsets are time values to be added to local time to get Coordinated Universal 
+            Time (UTC) and should be `"[±]hh[[:]mm[<code>GTimeZone:ss</code>s]]"`. Dates are either `"Jn"` (Julian day with n between 1 and 365, leap
+             years not counted), `"n"` (zero-based Julian day with n between 0 and 365) or `"Mm.w.d"` (day d (0 &lt;= d &lt;= 6) of week w (1 &lt;= w 
+            &lt;= 5) of month m (1 &lt;= m &lt;= 12), day 0 is a Sunday). Times are in local wall clock time, the default is 02:00:00.</p>
+          <p>In Windows, the "tzn[+|–]hh<i><code>GTimeZone:mm</code>[<code>GTimeZone:ss</code>s]</i>" format is used, but also accepts POSIX format.
+             The Windows format uses US rules for all time zones; daylight savings time is 60 minutes behind the standard time with date and time of 
+            change taken from Pacific Standard Time. Offsets are time values to be added to the local time to get Coordinated Universal Time (UTC).
+          </p>
+          <p><a href="GLib.TimeZone.TimeZone.local.html" class="creation_method">TimeZone.local</a> calls this function with the value of the `TZ` 
+            environment variable. This function itself is independent of the value of `TZ`, but if <code>identifier</code> is 
+            <span class="main_optional_parameter">null</span> then `/etc/localtime` will be consulted to discover the correct time zone on UNIX and 
+            the registry will be consulted or <code>GetTimeZoneInformation</code> will be used to get the local time zone on Windows.</p>
+          <p>If intervals are not available, only time zone rules from `TZ` environment variable or other means, then they will be computed from year 
+            1900 to 2037. If the maximum year for the rules is available and it is greater than 2037, then it will followed instead.</p>
+          <p>See [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339<code>section</code>-5.6) for a precise definition of valid RFC3339 time offsets (
+            the `time-offset` expansion) and ISO 8601 for the full list of valid time offsets. See 
+            <a href="http://www.gnu.org/s/libc/manual/html_node/TZ-Variable.html">The GNU C Library manual</a> for an explanation of the possible 
+            values of the `TZ` environment variable. See [Microsoft Time Zone Index Values](http://msdn.microsoft.com/en-us/library/ms912391
+            <span class="main_optional_parameter">28</span>v=winembedded.11<span class="main_optional_parameter">29</span>.aspx) for the list of time 
+            zones on Windows.</p>
+          <p>You should release the return value by calling <code>g_time_zone_unref</code> when you are done with it.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">identifier</td>
+              <td>
+                <p>a timezone identifier</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>the requested timezone</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

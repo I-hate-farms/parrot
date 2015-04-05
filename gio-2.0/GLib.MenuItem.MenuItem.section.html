@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MenuItem.MenuItem.section &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MenuItem.MenuItem.section &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.MenuItem.html">MenuItem</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.html">MenuItem</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.from_model.html">MenuItem.from_model</a></li>
+          <li class="creation_method">MenuItem.section</li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.submenu.html">MenuItem.submenu</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_attribute_value.html">get_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_link.html">get_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_action_and_target.html">set_action_and_target</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_action_and_target_value.html">set_action_and_target_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_attribute.html">set_attribute</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_attribute_value.html">set_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_detailed_action.html">set_detailed_action</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_icon.html">set_icon</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_label.html">set_label</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_link.html">set_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_section.html">set_section</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_submenu.html">set_submenu</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">MenuItem.section</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <b><span class="creation_method">MenuItem.section</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? label, <span class="main_type"><a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a></span> section)
+        </div>
+        <div class="description">
+          <p>Creates a new <a href="GLib.MenuItem.html" class="class">MenuItem</a> representing a section.</p>
+          <p>This is a convenience API around <a href="GLib.MenuItem.MenuItem.html" class="creation_method">MenuItem</a> and 
+            <a href="GLib.MenuItem.set_section.html" class="method">set_section</a>.</p>
+          <p>The effect of having one menu appear as a section of another is exactly as it sounds: the items from <code>section</code> become a direct
+             part of the menu that <code>menu_item</code> is added to.</p>
+          <p>Visual separation is typically displayed between two non-empty sections. If <code>label</code> is non-
+            <span class="main_optional_parameter">null</span> then it will be encorporated into this visual indication. This allows for labeled 
+            subsections of a menu.</p>
+          <p>As a simple example, consider a typical "Edit" menu from a simple program. It probably contains an "Undo" and "Redo" item, followed by a 
+            separator, followed by "Cut", "Copy" and "Paste".</p>
+          <p>This would be accomplished by creating three <a href="GLib.Menu.html" class="class">Menu</a> instances. The first would be populated with
+             the "Undo" and "Redo" items, and the second with the "Cut", "Copy" and "Paste" items. The first and second menus would then be added as 
+            submenus of the third. In XML format, this would look something like the following: <pre class="main_source">&lt;menu id='edit-menu'&gt;<br/>  &lt;section&gt;<br/>    &lt;item label='Undo'/&gt;<br/>    &lt;item label='Redo'/&gt;<br/>  &lt;/section&gt;<br/>  &lt;section&gt;<br/>    &lt;item label='Cut'/&gt;<br/>    &lt;item label='Copy'/&gt;<br/>    &lt;item label='Paste'/&gt;<br/>  &lt;/section&gt;<br/>&lt;/menu&gt;</pre>
+          </p>
+          <p>The following example is exactly equivalent. It is more illustrative of the exact relationship between the menus and items (keeping in 
+            mind that the 'link' element defines a new menu that is linked to the containing one). The style of the second example is more verbose and
+             difficult to read (and therefore not recommended except for the purpose of understanding what is really going on). <pre class="main_source">&lt;menu id='edit-menu'&gt;<br/>  &lt;item&gt;<br/>    &lt;link name='section'&gt;<br/>      &lt;item label='Undo'/&gt;<br/>      &lt;item label='Redo'/&gt;<br/>    &lt;/link&gt;<br/>  &lt;/item&gt;<br/>  &lt;item&gt;<br/>    &lt;link name='section'&gt;<br/>      &lt;item label='Cut'/&gt;<br/>      &lt;item label='Copy'/&gt;<br/>      &lt;item label='Paste'/&gt;<br/>    &lt;/link&gt;<br/>  &lt;/item&gt;<br/>&lt;/menu&gt;</pre>
+          </p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">label</td>
+              <td>
+                <p>the section label, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">section</td>
+              <td>
+                <p>a <a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a> with the items of the section</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>a new <a href="GLib.MenuItem.html" class="class">MenuItem</a></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

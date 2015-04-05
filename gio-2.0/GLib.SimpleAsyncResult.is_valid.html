@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SimpleAsyncResult.is_valid &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SimpleAsyncResult.is_valid &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.SimpleAsyncResult.html">SimpleAsyncResult</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method">is_valid</li>
+          <li class="static_method"><a href="GLib.SimpleAsyncResult.report_gerror_in_idle.html">report_gerror_in_idle</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.html">SimpleAsyncResult</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.error.html">SimpleAsyncResult.error</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.from_error.html">SimpleAsyncResult.from_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.complete.html">complete</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.complete_in_idle.html">complete_in_idle</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gboolean.html">get_op_res_gboolean</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gpointer.html">get_op_res_gpointer</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gssize.html">get_op_res_gssize</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_source_tag.html">get_source_tag</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.propagate_error.html">propagate_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.run_in_thread.html">run_in_thread</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_check_cancellable.html">set_check_cancellable</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_error.html">set_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_error_va.html">set_error_va</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_from_error.html">set_from_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_handle_cancellation.html">set_handle_cancellation</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gboolean.html">set_op_res_gboolean</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gpointer.html">set_op_res_gpointer</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gssize.html">set_op_res_gssize</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.take_error.html">take_error</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">is_valid</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="static_method">is_valid</span></b> (<span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span> result, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source, <span class="main_keyword">void</span>* source_tag)
+        </div>
+        <div class="description">
+          <p>Ensures that the data passed to the _finish function of an async operation is consistent.</p>
+          <p> Three checks are performed.</p>
+          <p>First, <code>result</code> is checked to ensure that it is really a <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult
+            </a>. Second, <code>source</code> is checked to ensure that it matches the source object of <code>result</code>. Third, <code>source_tag
+            </code> is checked to ensure that it is equal to the <code>source_tag</code> argument given to 
+            <a href="GLib.SimpleAsyncResult.SimpleAsyncResult.html" class="creation_method">SimpleAsyncResult</a> (which, by convention, is a pointer 
+            to the _async function corresponding to the _finish function from which this function is called). (Alternatively, if either <code>
+              source_tag</code> or <code>result</code>'s source tag is <span class="main_optional_parameter">null</span>, then the source tag check is
+             skipped.)</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">result</td>
+              <td>
+                <p>the <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a> passed to the _finish function.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">source</td>
+              <td>
+                <p>the <a href="../gobject-2.0/GLib.Object.html" class="class">Object</a> passed to the _finish function.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">source_tag</td>
+              <td>
+                <p>the asynchronous function.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><code>TRUE</code> if all checks passed or <code>FALSE</code> if any failed.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

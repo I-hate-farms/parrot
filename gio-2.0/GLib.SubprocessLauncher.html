@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SubprocessLauncher &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SubprocessLauncher &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">SubprocessLauncher</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.SubprocessLauncher.flags.html">flags</a></li>
+          <li class="creation_method"><a href="GLib.SubprocessLauncher.SubprocessLauncher.html">SubprocessLauncher</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.getenv.html">getenv</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_child_setup.html">set_child_setup</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_cwd.html">set_cwd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_environ.html">set_environ</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stderr_file_path.html">set_stderr_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stdin_file_path.html">set_stdin_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stdout_file_path.html">set_stdout_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.setenv.html">setenv</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.spawnv.html">spawnv</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_fd.html">take_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stderr_fd.html">take_stderr_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stdin_fd.html">take_stdin_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stdout_fd.html">take_stdout_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.unsetenv.html">unsetenv</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">SubprocessLauncher</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.SubprocessLauncher" alt="Object hierarchy for SubprocessLauncher" src="img/GLib.SubprocessLauncher.png"/>
+      
+
+      <map id="GLib.SubprocessLauncher" name="GLib.SubprocessLauncher">
+<area shape="rect" id="node1" href="GLib.SubprocessLauncher.html" title="GLib.SubprocessLauncher" alt="" coords="5,101,219,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="55,5,168,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">SubprocessLauncher</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p>This class contains a set of options for launching child processes, such as where its standard input and output will be directed, the 
+            argument list, the environment, and more.</p>
+          <p>While the <a href="GLib.Subprocess.html" class="class">Subprocess</a> class has high level functions covering popular cases, use of this 
+            class allows access to more advanced options. It can also be used to launch multiple subprocesses with a similar configuration.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.SubprocessFlags.html" class="enum">SubprocessFlags</a></span> <b><a href="GLib.SubprocessLauncher.flags.html" class="property">flags</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.SubprocessLauncher.SubprocessLauncher.html" class="creation_method">SubprocessLauncher</a></b> (<span class="main_type"><a href="GLib.SubprocessFlags.html" class="enum">SubprocessFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">SubprocessLauncher</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.SubprocessLauncher.getenv.html" class="method">getenv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> variable)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the value of the environment variable <code>variable</code> in
+                 the environment of processes launched from this launcher.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_child_setup.html" class="method">set_child_setup</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><a href="../glib-2.0/GLib.SpawnChildSetupFunc.html" class="delegate">SpawnChildSetupFunc</a></span> child_setup)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets up a child setup function.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_cwd.html" class="method">set_cwd</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> cwd)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the current working directory that processes will be launched 
+                with.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_environ.html" class="method">set_environ</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> env)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Replace the entire environment of processes launched from this 
+                launcher with the given 'environ' variable.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_flags.html" class="method">set_flags</a></b> (<span class="main_type"><a href="GLib.SubprocessFlags.html" class="enum">SubprocessFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the flags on the launcher.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_stderr_file_path.html" class="method">set_stderr_file_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file path to use as the stderr for spawned processes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_stdin_file_path.html" class="method">set_stdin_file_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file path to use as the stdin for spawned processes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.set_stdout_file_path.html" class="method">set_stdout_file_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file path to use as the stdout for spawned processes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.setenv.html" class="method">setenv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> variable, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> value, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> overwrite)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the environment variable <code>variable</code> in the environment
+                 of processes launched from this launcher.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Subprocess.html" class="class">Subprocess</a></span> <b><a href="GLib.SubprocessLauncher.spawnv.html" class="method">spawnv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] argv) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <a href="GLib.Subprocess.html" class="class">Subprocess</a> 
+                given a provided array of arguments.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.take_fd.html" class="method">take_fd</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> source_fd, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> target_fd)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Transfer an arbitrary file descriptor from parent process to the 
+                child.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.take_stderr_fd.html" class="method">take_stderr_fd</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> fd)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file descriptor to use as the stderr for spawned processes.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.take_stdin_fd.html" class="method">take_stdin_fd</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> fd)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file descriptor to use as the stdin for spawned processes.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.take_stdout_fd.html" class="method">take_stdout_fd</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> fd)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file descriptor to use as the stdout for spawned processes.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SubprocessLauncher.unsetenv.html" class="method">unsetenv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> variable)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes the environment variable <code>variable</code> from the 
+                environment of processes launched from this launcher.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-233')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-233">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

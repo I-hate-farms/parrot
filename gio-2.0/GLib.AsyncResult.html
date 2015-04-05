@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.AsyncResult &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.AsyncResult &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">AsyncResult</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_method"><a href="GLib.AsyncResult.get_source_object.html">get_source_object</a></li>
+          <li class="abstract_method"><a href="GLib.AsyncResult.get_user_data.html">get_user_data</a></li>
+          <li class="abstract_method"><a href="GLib.AsyncResult.is_tagged.html">is_tagged</a></li>
+          <li class="method"><a href="GLib.AsyncResult.legacy_propagate_error.html">legacy_propagate_error</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">AsyncResult</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.AsyncResult" alt="Object hierarchy for AsyncResult" src="img/GLib.AsyncResult.png"/>
+
+      <map id="GLib.AsyncResult" name="GLib.AsyncResult">
+<area shape="rect" id="node1" href="GLib.AsyncResult.html" title="GLib.AsyncResult" alt="" coords="5,101,163,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="27,5,140,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span class="interface">AsyncResult</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p>Provides a base class for implementing asynchronous function results.</p>
+          <p>Asynchronous operations are broken up into two separate operations which are chained together by a 
+            <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a>. To begin an asynchronous operation, provide a 
+            <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> to the asynchronous function. This callback will be 
+            triggered when the operation has completed, and will be passed a <span class="interface">AsyncResult</span> instance filled with the 
+            details of the operation's success or failure, the object the asynchronous function was started for and any error codes returned. The 
+            asynchronous callback function is then expected to call the corresponding "_finish()" function, passing the object the function was called
+             for, the <span class="interface">AsyncResult</span> instance, and (optionally) an <code>error</code> to grab any error conditions that 
+            may have occurred.</p>
+          <p>The "_finish()" function for an operation takes the generic result (of type <span class="interface">AsyncResult</span>) and returns the 
+            specific result that the operation in question yields (e.g. a <a href="GLib.FileEnumerator.html" class="class">FileEnumerator</a> for a 
+            "enumerate children" operation). If the result or error status of the operation is not needed, there is no need to call the "_finish()" 
+            function; GIO will take care of cleaning up the result and error information after the 
+            <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> returns. You can pass 
+            <span class="main_optional_parameter">null</span> for the <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> 
+            if you don't need to take any action at all after the operation completes. Applications may also take a reference to the 
+            <span class="interface">AsyncResult</span> and call "_finish()" later; however, the "_finish()" function may be called at most once.</p>
+          <p>Example of a typical asynchronous operation flow: <pre class="main_source">void _theoretical_frobnitz_async (Theoretical         *t,<br/>                                  GCancellable        *c,<br/>                                  GAsyncReadyCallback  cb,<br/>                                  gpointer             u);<br/><br/>gboolean _theoretical_frobnitz_finish (Theoretical   *t,<br/>                                       GAsyncResult  *res,<br/>                                       GError       **e);<br/><br/>static void<br/>frobnitz_result_func (GObject      *source_object,<br/>		 GAsyncResult *res,<br/>		 gpointer      user_data)<br/>{<br/>  gboolean success = FALSE;<br/><br/>  success = _theoretical_frobnitz_finish (source_object, res, NULL);<br/><br/>  if (success)<br/>    g_printf ("Hurray!\n");<br/>  else<br/>    g_printf ("Uh oh!\n");<br/><br/>  ...<br/><br/>}<br/><br/>int main (int argc, void *argv[])<br/>{<br/>   ...<br/><br/>   _theoretical_frobnitz_async (theoretical_data,<br/>                                NULL,<br/>                                frobnitz_result_func,<br/>                                NULL);<br/><br/>   ...<br/>}</pre>
+          </p>
+          <p>The callback for an asynchronous operation is called only once, and is always called, even in the case of a cancelled operation. On 
+            cancellation the result is a <span class="main_optional_parameter">g_io_error_cancelled</span> error.</p>
+          <h2> I/O Priority # {<code>io</code>-priority}</h2>
+          <p>Many I/O-related asynchronous operations have a priority parameter, which is used in certain cases to determine the order in which 
+            operations are executed. They are not used to determine system-wide I/O scheduling. Priorities are integers, with lower numbers indicating
+             higher priority. It is recommended to choose priorities between <span class="main_optional_parameter">g_priority_low</span> and 
+            <span class="main_optional_parameter">g_priority_high</span>, with <span class="main_optional_parameter">g_priority_default</span> as a 
+            default.</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known implementing classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-276')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-276">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.SimpleAsyncResult.html">SimpleAsyncResult</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.Task.html">Task</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                </ul>
+              </div>
+            </div>
+          </div><br/>
+          <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+          </div>
+          <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+          </div>
+          <h2 class="main_title">Content:</h2>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> <b><a href="GLib.AsyncResult.get_source_object.html" class="abstract_method">get_source_object</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets the source object from a <span class="interface">AsyncResult
+                  </span>.</span>
+              </div></li>
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">void</span>* <b><a href="GLib.AsyncResult.get_user_data.html" class="abstract_method">get_user_data</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets the user data from a <span class="interface">AsyncResult</span>
+                  .</span>
+              </div></li>
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AsyncResult.is_tagged.html" class="abstract_method">is_tagged</a></b> (<span class="main_keyword">void</span>* source_tag)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> has the given 
+                  <code>source_tag</code> (generally a function pointer indicating the function <span class="main_keyword">this</span> was created by)
+                  .</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.AsyncResult.legacy_propagate_error.html" class="method">legacy_propagate_error</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">If <span class="main_keyword">this</span> is a 
+                  <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a>, this is equivalent to 
+                  <a href="GLib.SimpleAsyncResult.propagate_error.html" class="method">propagate_error</a>.</span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Inherited Members:</h3>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class GLib.Object</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-277')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-277">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                    <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                    <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

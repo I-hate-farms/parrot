@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Application.add_main_option &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Application.add_main_option &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Application.html">Application</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Application.action_group.html">action_group</a></li>
+          <li class="property"><a href="GLib.Application.application_id.html">application_id</a></li>
+          <li class="property"><a href="GLib.Application.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.Application.inactivity_timeout.html">inactivity_timeout</a></li>
+          <li class="property"><a href="GLib.Application.is_busy.html">is_busy</a></li>
+          <li class="property"><a href="GLib.Application.is_registered.html">is_registered</a></li>
+          <li class="property"><a href="GLib.Application.is_remote.html">is_remote</a></li>
+          <li class="property"><a href="GLib.Application.resource_base_path.html">resource_base_path</a></li>
+          <li class="static_method"><a href="GLib.Application.get_default.html">get_default</a></li>
+          <li class="static_method"><a href="GLib.Application.id_is_valid.html">id_is_valid</a></li>
+          <li class="creation_method"><a href="GLib.Application.Application.html">Application</a></li>
+          <li class="method">add_main_option</li>
+          <li class="method"><a href="GLib.Application.add_main_option_entries.html">add_main_option_entries</a></li>
+          <li class="method"><a href="GLib.Application.add_option_group.html">add_option_group</a></li>
+          <li class="virtual_method"><a href="GLib.Application.add_platform_data.html">add_platform_data</a></li>
+          <li class="virtual_method"><a href="GLib.Application.after_emit.html">after_emit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.before_emit.html">before_emit</a></li>
+          <li class="method"><a href="GLib.Application.bind_busy_property.html">bind_busy_property</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_register.html">dbus_register</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_unregister.html">dbus_unregister</a></li>
+          <li class="method"><a href="GLib.Application.get_application_id.html">get_application_id</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_connection.html">get_dbus_connection</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_object_path.html">get_dbus_object_path</a></li>
+          <li class="method"><a href="GLib.Application.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.Application.get_inactivity_timeout.html">get_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.get_is_busy.html">get_is_busy</a></li>
+          <li class="method"><a href="GLib.Application.get_is_registered.html">get_is_registered</a></li>
+          <li class="method"><a href="GLib.Application.get_is_remote.html">get_is_remote</a></li>
+          <li class="method"><a href="GLib.Application.get_resource_base_path.html">get_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.hold.html">hold</a></li>
+          <li class="virtual_method"><a href="GLib.Application.local_command_line.html">local_command_line</a></li>
+          <li class="method"><a href="GLib.Application.mark_busy.html">mark_busy</a></li>
+          <li class="method"><a href="GLib.Application.quit.html">quit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.quit_mainloop.html">quit_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.register.html">register</a></li>
+          <li class="method"><a href="GLib.Application.release.html">release</a></li>
+          <li class="method"><a href="GLib.Application.run.html">run</a></li>
+          <li class="virtual_method"><a href="GLib.Application.run_mainloop.html">run_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.send_notification.html">send_notification</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Application.set_action_group.html">set_action_group</a></span></li>
+          <li class="method"><a href="GLib.Application.set_application_id.html">set_application_id</a></li>
+          <li class="method"><a href="GLib.Application.set_default.html">set_default</a></li>
+          <li class="method"><a href="GLib.Application.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.Application.set_inactivity_timeout.html">set_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.set_resource_base_path.html">set_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.unbind_busy_property.html">unbind_busy_property</a></li>
+          <li class="method"><a href="GLib.Application.unmark_busy.html">unmark_busy</a></li>
+          <li class="method"><a href="GLib.Application.withdraw_notification.html">withdraw_notification</a></li>
+          <li class="signal"><a href="GLib.Application.activate.html">activate</a></li>
+          <li class="signal"><a href="GLib.Application.command_line.html">command_line</a></li>
+          <li class="signal"><a href="GLib.Application.handle_local_options.html">handle_local_options</a></li>
+          <li class="signal"><a href="GLib.Application.open.html">open</a></li>
+          <li class="signal"><a href="GLib.Application.shutdown.html">shutdown</a></li>
+          <li class="signal"><a href="GLib.Application.startup.html">startup</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">add_main_option</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">add_main_option</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> long_name, <span class="main_basic_type"><a href="../glib-2.0/char.html" class="struct">char</a></span> short_name, <span class="main_type"><a href="../glib-2.0/GLib.OptionFlags.html" class="enum">OptionFlags</a></span> flags, <span class="main_type"><a href="../glib-2.0/GLib.OptionArg.html" class="enum">OptionArg</a></span> arg, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> description, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? arg_description)
+        </div>
+        <div class="description">
+          <p>Add an option to be handled by <span class="main_keyword">this</span>.</p>
+          <p>Calling this function is the equivalent of calling <a href="GLib.Application.add_main_option_entries.html" class="method">
+              add_main_option_entries</a> with a single <a href="../glib-2.0/GLib.OptionEntry.html" class="struct">OptionEntry</a> that has its 
+            arg_data member set to <span class="main_optional_parameter">null</span>.</p>
+          <p>The parsed arguments will be packed into a <a href="../glib-2.0/GLib.VariantDict.html" class="class">VariantDict</a> which is passed to 
+            <a href="GLib.Application.handle_local_options.html" class="signal">handle_local_options</a>. If <span class="main_optional_parameter">
+              g_application_handles_command_line</span> is set, then it will also be sent to the primary instance. See 
+            <a href="GLib.Application.add_main_option_entries.html" class="method">add_main_option_entries</a> for more details.</p>
+          <p>See <a href="../glib-2.0/GLib.OptionEntry.html" class="struct">OptionEntry</a> for more documentation of the arguments.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>the <a href="GLib.Application.html" class="class">Application</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">long_name</td>
+              <td>
+                <p>the long name of an option used to specify it in a commandline</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">short_name</td>
+              <td>
+                <p>the short name of an option</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>flags from <a href="../glib-2.0/GLib.OptionFlags.html" class="enum">OptionFlags</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">arg</td>
+              <td>
+                <p>the type of the option, as a <a href="../glib-2.0/GLib.OptionArg.html" class="enum">OptionArg</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">description</td>
+              <td>
+                <p>the description for the option in `--help` output</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">arg_description</td>
+              <td>
+                <p>the placeholder to use for the extra argument  parsed by the option in `--help` output</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

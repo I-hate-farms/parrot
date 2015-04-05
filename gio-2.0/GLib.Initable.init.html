@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Initable.init &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Initable.init &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface"><a href="GLib.Initable.html">Initable</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Initable.@new.html">@new</a></li>
+          <li class="static_method"><a href="GLib.Initable.new_valist.html">new_valist</a></li>
+          <li class="static_method"><a href="GLib.Initable.newv.html">newv</a></li>
+          <li class="abstract_method">init</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">init</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="abstract_method">init</span></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Initializes the object implementing the interface.</p>
+          <p>The object must be initialized before any real use after initial construction, either with this function or 
+            <a href="GLib.AsyncInitable.init_async.html" class="virtual_method">init_async</a>.</p>
+          <p>Implementations may also support cancellation. If <code>cancellable</code> is not <span class="main_optional_parameter">null</span>, then
+             initialization can be cancelled by triggering the cancellable object from another thread. If the operation was cancelled, the error 
+            <span class="main_optional_parameter">g_io_error_cancelled</span> will be returned. If <code>cancellable</code> is not 
+            <span class="main_optional_parameter">null</span> and the object doesn't support cancellable initialization the error 
+            <span class="main_optional_parameter">g_io_error_not_supported</span> will be returned.</p>
+          <p>If the object is not initialized, or initialization returns with an error, then all operations on the object except 
+            <a href="../gobject-2.0/GLib.Object.@ref.html" class="method">@ref</a> and <a href="../gobject-2.0/GLib.Object.unref.html" class="method">
+              unref</a> are considered to be invalid, and have undefined behaviour. See the <i>introduction</i> for more details.</p>
+          <p>Implementations of this method must be idempotent, i.e. multiple calls to this function with the same argument should return the same 
+            results. Only the first call initializes the object, further calls return the result of the first call. This is so that it's safe to 
+            implement the singleton pattern in the GObject constructor function.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Initable.html" class="interface">Initable</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>optional <a href="GLib.Cancellable.html" class="class">Cancellable</a> object, <span class="main_optional_parameter">null</span> to
+                   ignore.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if successful. If an error has occurred, this function will  return 
+                  <span class="main_optional_parameter">false</span> and set <span class="main_keyword">throws</span> appropriately if present.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusServer.DBusServer.sync &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusServer.DBusServer.sync &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.DBusServer.html">DBusServer</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusServer.active.html">active</a></li>
+          <li class="property"><a href="GLib.DBusServer.address.html">address</a></li>
+          <li class="property"><a href="GLib.DBusServer.authentication_observer.html">authentication_observer</a></li>
+          <li class="property"><a href="GLib.DBusServer.client_address.html">client_address</a></li>
+          <li class="property"><a href="GLib.DBusServer.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusServer.guid.html">guid</a></li>
+          <li class="creation_method"><a href="GLib.DBusServer.DBusServer.html">DBusServer</a></li>
+          <li class="creation_method">DBusServer.sync</li>
+          <li class="method"><a href="GLib.DBusServer.get_client_address.html">get_client_address</a></li>
+          <li class="method"><a href="GLib.DBusServer.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.DBusServer.get_guid.html">get_guid</a></li>
+          <li class="method"><a href="GLib.DBusServer.is_active.html">is_active</a></li>
+          <li class="method"><a href="GLib.DBusServer.start.html">start</a></li>
+          <li class="method"><a href="GLib.DBusServer.stop.html">stop</a></li>
+          <li class="signal"><a href="GLib.DBusServer.new_connection.html">new_connection</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">DBusServer.sync</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <b><span class="creation_method">DBusServer.sync</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> address, <span class="main_type"><a href="GLib.DBusServerFlags.html" class="enum">DBusServerFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> guid, <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span>? observer = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Creates a new D-Bus server that listens on the first address in <code>address</code> that works.</p>
+          <p>Once constructed, you can use <a href="GLib.DBusServer.get_client_address.html" class="method">get_client_address</a> to get a D-Bus 
+            address string that clients can use to connect.</p>
+          <p>Connect to the <a href="GLib.DBusServer.new_connection.html" class="signal">new_connection</a> signal to handle incoming connections.</p>
+          <p>The returned <a href="GLib.DBusServer.html" class="class">DBusServer</a> isn't active - you have to start it with 
+            <a href="GLib.DBusServer.start.html" class="method">start</a>.</p>
+          <p><a href="GLib.DBusServer.html" class="class">DBusServer</a> is used in this <i>example</i>.</p>
+          <p>This is a synchronous failable constructor. See <a href="GLib.DBusServer.DBusServer.html" class="creation_method">DBusServer</a> for the 
+            asynchronous version.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">address</td>
+              <td>
+                <p>A D-Bus address.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>Flags from the <a href="GLib.DBusServerFlags.html" class="enum">DBusServerFlags</a> enumeration.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">guid</td>
+              <td>
+                <p>A D-Bus GUID.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">observer</td>
+              <td>
+                <p>A <a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a> or <span class="main_optional_parameter">null</span>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>A <a href="GLib.Cancellable.html" class="class">Cancellable</a> or <span class="main_optional_parameter">null</span>.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>A <a href="GLib.DBusServer.html" class="class">DBusServer</a> or <span class="main_optional_parameter">null</span> if 
+                  <span class="main_keyword">throws</span> is set. Free with <a href="../gobject-2.0/GLib.Object.unref.html" class="method">unref</a>.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

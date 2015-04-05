@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MenuItem.set_action_and_target_value &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MenuItem.set_action_and_target_value &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.MenuItem.html">MenuItem</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.html">MenuItem</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.from_model.html">MenuItem.from_model</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.section.html">MenuItem.section</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.submenu.html">MenuItem.submenu</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_attribute_value.html">get_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_link.html">get_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_action_and_target.html">set_action_and_target</a></li>
+          <li class="method">set_action_and_target_value</li>
+          <li class="method"><a href="GLib.MenuItem.set_attribute.html">set_attribute</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_attribute_value.html">set_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_detailed_action.html">set_detailed_action</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_icon.html">set_icon</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_label.html">set_label</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_link.html">set_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_section.html">set_section</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_submenu.html">set_submenu</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">set_action_and_target_value</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">set_action_and_target_value</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? action, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? target_value)
+        </div>
+        <div class="description">
+          <p>Sets or unsets the "action" and "target" attributes of <span class="main_keyword">this</span>.</p>
+          <p>If <code>action</code> is <span class="main_optional_parameter">null</span> then both the "action" and "target" attributes are unset (and
+             <code>target_value</code> is ignored).</p>
+          <p>If <code>action</code> is non-<span class="main_optional_parameter">null</span> then the "action" attribute is set. The "target" 
+            attribute is then set to the value of <code>target_value</code> if it is non-<span class="main_optional_parameter">null</span> or unset 
+            otherwise.</p>
+          <p>Normal menu items (ie: not submenu, section or other custom item types) are expected to have the "action" attribute set to identify the 
+            action that they are associated with. The state type of the action help to determine the disposition of the menu item. See 
+            <a href="GLib.Action.html" class="interface">Action</a> and <a href="GLib.ActionGroup.html" class="interface">ActionGroup</a> for an 
+            overview of actions.</p>
+          <p>In general, clicking on the menu item will result in activation of the named action with the "target" attribute given as the parameter to
+             the action invocation. If the "target" attribute is not set then the action is invoked with no parameter.</p>
+          <p>If the action has no state then the menu item is usually drawn as a plain menu item (ie: with no additional decoration).</p>
+          <p>If the action has a boolean state then the menu item is usually drawn as a toggle menu item (ie: with a checkmark or equivalent 
+            indication). The item should be marked as 'toggled' or 'checked' when the boolean state is <span class="main_optional_parameter">true
+            </span>.</p>
+          <p>If the action has a string state then the menu item is usually drawn as a radio menu item (ie: with a radio bullet or equivalent 
+            indication). The item should be marked as 'selected' when the string state is equal to the value of the <code>target</code> property.</p>
+          <p>See <a href="GLib.MenuItem.set_action_and_target.html" class="method">set_action_and_target</a> or 
+            <a href="GLib.MenuItem.set_detailed_action.html" class="method">set_detailed_action</a> for two equivalent calls that are probably more 
+            convenient for most uses.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.MenuItem.html" class="class">MenuItem</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">action</td>
+              <td>
+                <p>the name of the action for this item</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">target_value</td>
+              <td>
+                <p>a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> to use as the action target</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

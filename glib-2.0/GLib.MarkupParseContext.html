@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MarkupParseContext &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MarkupParseContext &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">MarkupParseContext</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MarkupParseContext.MarkupParseContext.html">MarkupParseContext</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.end_parse.html">end_parse</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_element.html">get_element</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_element_stack.html">get_element_stack</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_position.html">get_position</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_user_data.html">get_user_data</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.parse.html">parse</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.pop.html">pop</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.push.html">push</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">MarkupParseContext</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.MarkupParseContext" alt="Object hierarchy for MarkupParseContext" src="img/GLib.MarkupParseContext.png"/>
+      
+
+      <map id="GLib.MarkupParseContext" name="GLib.MarkupParseContext">
+<area shape="rect" id="node1" href="GLib.MarkupParseContext.html" title="GLib.MarkupParseContext" alt="" coords="5,5,224,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">MarkupParseContext</span></b>
+        </div>
+        <div class="description">
+          <p>A parse context is used to parse a stream of bytes that you expect to contain marked-up text.</p>
+          <p>See <a href="GLib.MarkupParseContext.MarkupParseContext.html" class="creation_method">MarkupParseContext</a>, 
+            <a href="GLib.MarkupParser.html" class="struct">MarkupParser</a>, and so on for more details.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.MarkupParseContext.MarkupParseContext.html" class="creation_method">MarkupParseContext</a></b> (<span class="main_type"><a href="GLib.MarkupParser.html" class="struct">MarkupParser</a></span> parser, <span class="main_type"><a href="GLib.MarkupParseFlags.html" class="enum">MarkupParseFlags</a></span> _flags, <span class="main_keyword">void</span>* user_data, <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? user_data_dnotify)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new parse context.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.MarkupParseContext.parse.html" class="method">parse</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> text, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> text_len) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Feed some data to the <span class="class">MarkupParseContext</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.MarkupParseContext.end_parse.html" class="method">end_parse</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Signals to the <span class="class">MarkupParseContext</span> that all 
+                data has been fed into the parse context with <a href="GLib.MarkupParseContext.parse.html" class="method">parse</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.MarkupParseContext.get_element.html" class="method">get_element</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Retrieves the name of the currently open element.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><a href="GLib.SList.html" class="class">SList</a></span>&lt;<span class="main_basic_type"><a href="string.html" class="class">string</a></span>&gt; <b><a href="GLib.MarkupParseContext.get_element_stack.html" class="method">get_element_stack</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Retrieves the element stack from the internal state of the parser.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParseContext.get_position.html" class="method">get_position</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> line_number, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> char_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Retrieves the current line number and the number of the character on 
+                that line.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParseContext.push.html" class="method">push</a></b> (<span class="main_type"><a href="GLib.MarkupParser.html" class="struct">MarkupParser</a></span> parser, <span class="main_keyword">void</span>* user_data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Temporarily redirects markup data to a sub-parser.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.MarkupParseContext.pop.html" class="method">pop</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Completes the process of a temporary sub-parser redirection.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.MarkupParseContext.get_user_data.html" class="method">get_user_data</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the user_data associated with <span class="main_keyword">this
+                </span>.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

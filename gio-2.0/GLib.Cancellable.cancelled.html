@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Cancellable.cancelled &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Cancellable.cancelled &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Cancellable.html">Cancellable</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Cancellable.get_current.html">get_current</a></li>
+          <li class="creation_method"><a href="GLib.Cancellable.Cancellable.html">Cancellable</a></li>
+          <li class="method"><a href="GLib.Cancellable.cancel.html">cancel</a></li>
+          <li class="method"><a href="GLib.Cancellable.connect.html">connect</a></li>
+          <li class="method"><a href="GLib.Cancellable.disconnect.html">disconnect</a></li>
+          <li class="method"><a href="GLib.Cancellable.get_fd.html">get_fd</a></li>
+          <li class="method"><a href="GLib.Cancellable.is_cancelled.html">is_cancelled</a></li>
+          <li class="method"><a href="GLib.Cancellable.make_pollfd.html">make_pollfd</a></li>
+          <li class="method"><a href="GLib.Cancellable.pop_current.html">pop_current</a></li>
+          <li class="method"><a href="GLib.Cancellable.push_current.html">push_current</a></li>
+          <li class="method"><a href="GLib.Cancellable.release_fd.html">release_fd</a></li>
+          <li class="method"><a href="GLib.Cancellable.reset.html">reset</a></li>
+          <li class="method"><a href="GLib.Cancellable.set_error_if_cancelled.html">set_error_if_cancelled</a></li>
+          <li class="method"><a href="GLib.Cancellable.source_new.html">source_new</a></li>
+          <li class="signal">cancelled</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">cancelled</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><span class="signal">cancelled</span></b> ()
+        </div>
+        <div class="description">
+          <p>Emitted when the operation has been cancelled.</p>
+          <p>Can be used by implementations of cancellable operations. If the operation is cancelled from another thread, the signal will be emitted 
+            in the thread that cancelled the operation, not the thread that is running the operation.</p>
+          <p>Note that disconnecting from this signal (or any signal) in a multi-threaded program is prone to race conditions. For instance it is 
+            possible that a signal handler may be invoked even after a call to 
+            <a href="../gobject-2.0/GLib.SignalHandler.disconnect.html" class="method">disconnect</a> for that handler has already returned.</p>
+          <p>There is also a problem when cancellation happens right before connecting to the signal. If this happens the signal will unexpectedly not
+             be emitted, and checking before connecting to the signal leaves a race condition where this is still happening.</p>
+          <p>In order to make it safe and easy to connect handlers there are two helper functions: 
+            <a href="GLib.Cancellable.connect.html" class="method">connect</a> and <a href="GLib.Cancellable.disconnect.html" class="method">
+              disconnect</a> which protect against problems like this.</p>
+          <p>An example of how to us this: <pre class="main_source">    // Make sure we don't do unnecessary work if already cancelled<br/>    if (g_cancellable_set_error_if_cancelled (cancellable, error))<br/>      return;<br/><br/>    // Set up all the data needed to be able to handle cancellation<br/>    // of the operation<br/>    my_data = my_data_new (...);<br/><br/>    id = 0;<br/>    if (cancellable)<br/>      id = g_cancellable_connect (cancellable,<br/>    			      G_CALLBACK (cancelled_handler)<br/>    			      data, NULL);<br/><br/>    // cancellable operation here...<br/><br/>    g_cancellable_disconnect (cancellable, id);<br/><br/>    // cancelled_handler is never called after this, it is now safe<br/>    // to free the data<br/>    my_data_free (my_data);</pre>
+          </p>
+          <p>Note that the cancelled signal is emitted in the thread that the user cancelled from, which may be the main thread. So, the cancellable 
+            signal should not do something that can block.</p>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

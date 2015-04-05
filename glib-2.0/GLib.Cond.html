@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Cond &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Cond &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><span class="deprecated">Cond</span></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.Cond.Cond.html">Cond</a></li>
+          <li class="method"><a href="GLib.Cond.@signal.html">@signal</a></li>
+          <li class="method"><a href="GLib.Cond.broadcast.html">broadcast</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Cond.timed_wait.html">timed_wait</a></span></li>
+          <li class="method"><a href="GLib.Cond.wait.html">wait</a></li>
+          <li class="method"><a href="GLib.Cond.wait_until.html">wait_until</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Cond</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Cond" alt="Object hierarchy for Cond" src="img/GLib.Cond.png"/>
+
+      <map id="GLib.Cond" name="GLib.Cond">
+<area shape="rect" id="node1" href="GLib.Cond.html" title="GLib.Cond" alt="" coords="5,5,109,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/>[ <span class="main_type">Deprecated</span> ( since = <span class="main_optional_parameter">"glib-2.32"</span> ,  replacement = <span class="main_optional_parameter">"Cond (with --target-glib=2.32)"</span> ) ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Cond</span></b>
+        </div>
+        <div class="description">
+          <p><b>Warning:</b> Cond is deprecated. Use "Cond (with --target-glib=2.32)".</p>
+          <p>The <span class="class">Cond</span> struct is an opaque data structure that represents a condition.</p>
+          <p> Threads can block on a <span class="class">Cond</span> if they find a certain condition to be false. If other threads change the state 
+            of this condition they signal the <span class="class">Cond</span>, and that causes the waiting threads to be woken up.</p>
+          <p>Consider the following example of a shared variable. One or more threads can wait for data to be published to the variable and when 
+            another thread publishes the data, it can signal one of the waiting threads to wake up to collect the data.</p>
+          <p>Here is an example for using GCond to block a thread until a condition is satisfied: <pre class="main_source">  gpointer current_data = NULL;<br/>  GMutex data_mutex;<br/>  GCond data_cond;<br/><br/>  void<br/>  push_data (gpointer data)<br/>  {<br/>    g_mutex_lock (&amp;data_mutex);<br/>    current_data = data;<br/>    g_cond_signal (&amp;data_cond);<br/>    g_mutex_unlock (&amp;data_mutex);<br/>  }<br/><br/>  gpointer<br/>  pop_data (void)<br/>  {<br/>    gpointer data;<br/><br/>    g_mutex_lock (&amp;data_mutex);<br/>    while (!current_data)<br/>      g_cond_wait (&amp;data_cond, &amp;data_mutex);<br/>    data = current_data;<br/>    current_data = NULL;<br/>    g_mutex_unlock (&amp;data_mutex);<br/><br/>    return data;<br/>  }</pre>
+             Whenever a thread calls <code>pop_data</code> now, it will wait until current_data is non-<span class="main_optional_parameter">null
+            </span>, i.e. until some other thread has called <code>push_data</code>.</p>
+          <p>The example shows that use of a condition variable must always be paired with a mutex. Without the use of a mutex, there would be a race 
+            between the check of <code>current_data</code> by the while loop in <code>pop_data</code> and waiting. Specifically, another thread could 
+            set <code>current_data</code> after the check, and signal the cond (with nobody waiting on it) before the first thread goes to sleep. 
+            <span class="class">Cond</span> is specifically useful for its ability to release the mutex and go to sleep atomically.</p>
+          <p>It is also important to use the <a href="GLib.Cond.wait.html" class="method">wait</a> and 
+            <a href="GLib.Cond.wait_until.html" class="method">wait_until</a> functions only inside a loop which checks for the condition to be true. 
+            See <a href="GLib.Cond.wait.html" class="method">wait</a> for an explanation of why the condition may not be true even after it returns.
+          </p>
+          <p>If a <span class="class">Cond</span> is allocated in static storage then it can be used without initialisation. Otherwise, you should 
+            call <code>g_cond_init</code> on it and <code>g_cond_clear</code> when done.</p>
+          <p>A <span class="class">Cond</span> should only be accessed via the g_cond_ functions.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Cond.Cond.html" class="creation_method">Cond</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Cond.@signal.html" class="method">@signal</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If threads are waiting for <span class="main_keyword">this</span>, at 
+                least one of them is unblocked.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Cond.broadcast.html" class="method">broadcast</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If threads are waiting for <span class="main_keyword">this</span>, all
+                 of them are unblocked.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Cond.wait.html" class="method">wait</a></b> (<span class="main_type"><a href="GLib.Mutex.html" class="class">Mutex</a></span> mutex)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Atomically releases <code>mutex</code> and waits until 
+                <span class="main_keyword">this</span> is signalled.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Cond.timed_wait.html" class="method">timed_wait</a></b> (<span class="main_type"><a href="GLib.Mutex.html" class="class">Mutex</a></span> mutex, <span class="main_type"><a href="GLib.TimeVal.html" class="struct">TimeVal</a></span> abs_time)
+              </span></span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Cond.wait_until.html" class="method">wait_until</a></b> (<span class="main_type"><a href="GLib.Mutex.html" class="class">Mutex</a></span> mutex, <span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> end_time)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Waits until either <span class="main_keyword">this</span> is signalled
+                 or <code>end_time</code> has passed.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

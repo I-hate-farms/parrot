@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SubprocessLauncher.take_fd &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SubprocessLauncher.take_fd &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.SubprocessLauncher.html">SubprocessLauncher</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.SubprocessLauncher.flags.html">flags</a></li>
+          <li class="creation_method"><a href="GLib.SubprocessLauncher.SubprocessLauncher.html">SubprocessLauncher</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.getenv.html">getenv</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_child_setup.html">set_child_setup</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_cwd.html">set_cwd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_environ.html">set_environ</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stderr_file_path.html">set_stderr_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stdin_file_path.html">set_stdin_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.set_stdout_file_path.html">set_stdout_file_path</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.setenv.html">setenv</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.spawnv.html">spawnv</a></li>
+          <li class="method">take_fd</li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stderr_fd.html">take_stderr_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stdin_fd.html">take_stdin_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.take_stdout_fd.html">take_stdout_fd</a></li>
+          <li class="method"><a href="GLib.SubprocessLauncher.unsetenv.html">unsetenv</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">take_fd</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">take_fd</span></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> source_fd, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> target_fd)
+        </div>
+        <div class="description">
+          <p>Transfer an arbitrary file descriptor from parent process to the child.</p>
+          <p> This function takes "ownership" of the fd; it will be closed in the parent when <span class="main_keyword">this</span> is freed.</p>
+          <p>By default, all file descriptors from the parent will be closed. This function allows you to create (for example) a custom <code>pipe
+            </code> or <code>socketpair</code> before launching the process, and choose the target descriptor in the child.</p>
+          <p>An example use case is GNUPG, which has a command line argument --passphrase-fd providing a file descriptor number where it expects the 
+            passphrase to be written.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.SubprocessLauncher.html" class="class">SubprocessLauncher</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">source_fd</td>
+              <td>
+                <p>File descriptor in parent process</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">target_fd</td>
+              <td>
+                <p>Target descriptor for child process</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

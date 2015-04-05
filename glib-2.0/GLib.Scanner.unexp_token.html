@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Scanner.unexp_token &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Scanner.unexp_token &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Scanner.html">Scanner</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.Scanner.Scanner.html">Scanner</a></li>
+          <li class="method"><a href="GLib.Scanner.cur_line.html">cur_line</a></li>
+          <li class="method"><a href="GLib.Scanner.cur_position.html">cur_position</a></li>
+          <li class="method"><a href="GLib.Scanner.cur_token.html">cur_token</a></li>
+          <li class="method"><a href="GLib.Scanner.cur_value.html">cur_value</a></li>
+          <li class="method"><a href="GLib.Scanner.eof.html">eof</a></li>
+          <li class="method"><a href="GLib.Scanner.error.html">error</a></li>
+          <li class="method"><a href="GLib.Scanner.get_next_token.html">get_next_token</a></li>
+          <li class="method"><a href="GLib.Scanner.input_file.html">input_file</a></li>
+          <li class="method"><a href="GLib.Scanner.input_text.html">input_text</a></li>
+          <li class="method"><a href="GLib.Scanner.lookup_symbol.html">lookup_symbol</a></li>
+          <li class="method"><a href="GLib.Scanner.peek_next_token.html">peek_next_token</a></li>
+          <li class="method"><a href="GLib.Scanner.scope_add_symbol.html">scope_add_symbol</a></li>
+          <li class="method"><a href="GLib.Scanner.scope_foreach_symbol.html">scope_foreach_symbol</a></li>
+          <li class="method"><a href="GLib.Scanner.scope_lookup_symbol.html">scope_lookup_symbol</a></li>
+          <li class="method"><a href="GLib.Scanner.scope_remove_symbol.html">scope_remove_symbol</a></li>
+          <li class="method"><a href="GLib.Scanner.set_scope.html">set_scope</a></li>
+          <li class="method"><a href="GLib.Scanner.sync_file_offset.html">sync_file_offset</a></li>
+          <li class="method">unexp_token</li>
+          <li class="method"><a href="GLib.Scanner.warn.html">warn</a></li>
+          <li class="field"><a href="GLib.Scanner.config.html">config</a></li>
+          <li class="field"><a href="GLib.Scanner.input_name.html">input_name</a></li>
+          <li class="field"><a href="GLib.Scanner.line.html">line</a></li>
+          <li class="field"><a href="GLib.Scanner.msg_handler.html">msg_handler</a></li>
+          <li class="field"><a href="GLib.Scanner.next_line.html">next_line</a></li>
+          <li class="field"><a href="GLib.Scanner.next_position.html">next_position</a></li>
+          <li class="field"><a href="GLib.Scanner.next_token.html">next_token</a></li>
+          <li class="field"><a href="GLib.Scanner.next_value.html">next_value</a></li>
+          <li class="field"><a href="GLib.Scanner.position.html">position</a></li>
+          <li class="field"><a href="GLib.Scanner.token.html">token</a></li>
+          <li class="field"><a href="GLib.Scanner.value.html">value</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">unexp_token</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">unexp_token</span></b> (<span class="main_type"><a href="GLib.TokenType.html" class="enum">TokenType</a></span> expected_token, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>? identifier_spec, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>? symbol_spec, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>? symbol_name, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>? message, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> is_error)
+        </div>
+        <div class="description">
+          <p>Outputs a message through the scanner's msg_handler, resulting from an unexpected token in the input stream.</p>
+          <p> Note that you should not call <a href="GLib.Scanner.peek_next_token.html" class="method">peek_next_token</a> followed by 
+            <span class="method">unexp_token</span> without an intermediate call to <a href="GLib.Scanner.get_next_token.html" class="method">
+              get_next_token</a>, as <span class="method">unexp_token</span> evaluates the scanner's current token (not the peeked token) to construct
+             part of the message.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Scanner.html" class="class">Scanner</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">expected_token</td>
+              <td>
+                <p>the expected token</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">identifier_spec</td>
+              <td>
+                <p>a string describing how the scanner's user  refers to identifiers (<span class="main_optional_parameter">null</span> defaults to 
+                  "identifier").  This is used if <code>expected_token</code> is <span class="main_optional_parameter">g_token_identifier</span> or  
+                  <span class="main_optional_parameter">g_token_identifier_null</span>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">symbol_spec</td>
+              <td>
+                <p>a string describing how the scanner's user refers  to symbols (<span class="main_optional_parameter">null</span> defaults to 
+                  "symbol"). This is used if  <code>expected_token</code> is <span class="main_optional_parameter">g_token_symbol</span> or any token 
+                  value greater  than <span class="main_optional_parameter">g_token_last</span>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">symbol_name</td>
+              <td>
+                <p>the name of the symbol, if the scanner's current  token is a symbol.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">message</td>
+              <td>
+                <p>a message string to output at the end of the  warning/error, or <span class="main_optional_parameter">null</span>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">is_error</td>
+              <td>
+                <p>if <span class="main_optional_parameter">true</span> it is output as an error. If <span class="main_optional_parameter">false
+                  </span> it is  output as a warning.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

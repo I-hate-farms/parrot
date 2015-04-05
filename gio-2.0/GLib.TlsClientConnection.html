@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TlsClientConnection &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TlsClientConnection &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">TlsClientConnection</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_property"><a href="GLib.TlsClientConnection.accepted_cas.html">accepted_cas</a></li>
+          <li class="abstract_property"><a href="GLib.TlsClientConnection.server_identity.html">server_identity</a></li>
+          <li class="abstract_property"><a href="GLib.TlsClientConnection.use_ssl3.html">use_ssl3</a></li>
+          <li class="abstract_property"><a href="GLib.TlsClientConnection.validation_flags.html">validation_flags</a></li>
+          <li class="static_method"><a href="GLib.TlsClientConnection.@new.html">@new</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.get_accepted_cas.html">get_accepted_cas</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.get_server_identity.html">get_server_identity</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.get_use_ssl3.html">get_use_ssl3</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.get_validation_flags.html">get_validation_flags</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.set_server_identity.html">set_server_identity</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.set_use_ssl3.html">set_use_ssl3</a></li>
+          <li class="method"><a href="GLib.TlsClientConnection.set_validation_flags.html">set_validation_flags</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">TlsClientConnection</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.TlsClientConnection" alt="Object hierarchy for TlsClientConnection" src="img/GLib.TlsClientConnection.png"/>
+      
+
+      <map id="GLib.TlsClientConnection" name="GLib.TlsClientConnection">
+<area shape="rect" id="node1" href="GLib.TlsClientConnection.html" title="GLib.TlsClientConnection" alt="" coords="5,293,219,341"/>
+<area shape="rect" id="node2" href="GLib.TlsConnection.html" title="GLib.TlsConnection" alt="" coords="27,197,197,245"/>
+<area shape="rect" id="node3" href="GLib.IOStream.html" title="GLib.IOStream" alt="" coords="44,101,179,149"/>
+<area shape="rect" id="node4" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="55,5,168,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span class="interface">TlsClientConnection</span></b> : <span class="main_type"><a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a></span>
+        </div>
+        <div class="description">
+          <p><span class="interface">TlsClientConnection</span> is the client-side subclass of 
+            <a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a>, representing a client-side TLS connection.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><a href="../glib-2.0/GLib.ByteArray.html" class="class">ByteArray</a></span>&gt; <b><a href="GLib.TlsClientConnection.accepted_cas.html" class="abstract_property">accepted_cas</a></b> { <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A list of the distinguished names of the Certificate Authorities that 
+                the server will accept client certificates signed by.</span>
+            </div></li>
+          <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span> <b><a href="GLib.TlsClientConnection.server_identity.html" class="abstract_property">server_identity</a></b> { <span class="main_keyword">construct</span> <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A <a href="GLib.SocketConnectable.html" class="interface">
+                  SocketConnectable</a> describing the identity of the server that is expected on the other end of the connection.</span>
+            </div></li>
+          <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.TlsClientConnection.use_ssl3.html" class="abstract_property">use_ssl3</a></b> { <span class="main_keyword">construct</span> <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If <span class="main_optional_parameter">true</span>, tells the 
+                connection to use SSL 3.0 rather than trying to negotiate the best version of TLS or SSL to use.</span>
+            </div></li>
+          <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a></span> <b><a href="GLib.TlsClientConnection.validation_flags.html" class="abstract_property">validation_flags</a></b> { <span class="main_keyword">construct</span> <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">What steps to perform when validating a certificate received from a 
+                server.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="interface">TlsClientConnection</span></span>? <b><a href="GLib.TlsClientConnection.@new.html" class="static_method">@new</a></b> (<span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> base_io_stream, <span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span>? server_identity) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="interface">TlsClientConnection</span> 
+                wrapping <code>base_io_stream</code> (which must have pollable input and output streams) which is assumed to communicate with the 
+                server identified by <code>server_identity</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><a href="../glib-2.0/GLib.ByteArray.html" class="class">ByteArray</a></span>&gt; <b><a href="GLib.TlsClientConnection.get_accepted_cas.html" class="method">get_accepted_cas</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the list of distinguished names of the Certificate Authorities 
+                that the server will accept certificates from.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span> <b><a href="GLib.TlsClientConnection.get_server_identity.html" class="method">get_server_identity</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s expected server identity
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.TlsClientConnection.get_use_ssl3.html" class="method">get_use_ssl3</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets whether <span class="main_keyword">this</span> will use SSL 3.0 
+                rather than the highest-supported version of TLS; see <a href="GLib.TlsClientConnection.set_use_ssl3.html" class="method">set_use_ssl3
+                </a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a></span> <b><a href="GLib.TlsClientConnection.get_validation_flags.html" class="method">get_validation_flags</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s validation flags</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.TlsClientConnection.set_server_identity.html" class="method">set_server_identity</a></b> (<span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span> identity)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s expected server 
+                identity, which is used both to tell servers on virtual hosts which certificate to present, and also to let 
+                <span class="main_keyword">this</span> know what name to look for in the certificate when performing 
+                <span class="main_optional_parameter">g_tls_certificate_bad_identity</span> validation, if enabled.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.TlsClientConnection.set_use_ssl3.html" class="method">set_use_ssl3</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> use_ssl3)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If <code>use_ssl3</code> is <span class="main_optional_parameter">true
+                </span>, this forces <span class="main_keyword">this</span> to use SSL 3.0 rather than trying to properly negotiate the right version 
+                of TLS or SSL to use.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.TlsClientConnection.set_validation_flags.html" class="method">set_validation_flags</a></b> (<span class="main_type"><a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s validation flags, to 
+                override the default set of checks performed when validating a server certificate.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.TlsConnection</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-319')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-319">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="property"><a href="GLib.TlsConnection.base_io_stream.html">base_io_stream</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.certificate.html">certificate</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.database.html">database</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.interaction.html">interaction</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.peer_certificate.html">peer_certificate</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.peer_certificate_errors.html">peer_certificate_errors</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.rehandshake_mode.html">rehandshake_mode</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.require_close_notify.html">require_close_notify</a></li>
+                  <li class="property"><a href="GLib.TlsConnection.use_system_certdb.html">use_system_certdb</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="GLib.TlsConnection.emit_accept_certificate.html">emit_accept_certificate</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_certificate.html">get_certificate</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_database.html">get_database</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_interaction.html">get_interaction</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_peer_certificate.html">get_peer_certificate</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_peer_certificate_errors.html">get_peer_certificate_errors</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_rehandshake_mode.html">get_rehandshake_mode</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_require_close_notify.html">get_require_close_notify</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.get_use_system_certdb.html">get_use_system_certdb</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="virtual_method"><a href="GLib.TlsConnection.handshake.html">handshake</a></li>
+                  <li class="virtual_method"><a href="GLib.TlsConnection.handshake_async.html">handshake_async</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_certificate.html">set_certificate</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_database.html">set_database</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_interaction.html">set_interaction</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_rehandshake_mode.html">set_rehandshake_mode</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_require_close_notify.html">set_require_close_notify</a></li>
+                  <li class="method"><a href="GLib.TlsConnection.set_use_system_certdb.html">set_use_system_certdb</a></li>
+                  <li class="signal"><a href="GLib.TlsConnection.accept_certificate.html">accept_certificate</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class GLib.IOStream</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-320')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-320">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="property"><a href="GLib.IOStream.closed.html">closed</a></li>
+                    <li class="abstract_property"><a href="GLib.IOStream.input_stream.html">input_stream</a></li>
+                    <li class="abstract_property"><a href="GLib.IOStream.output_stream.html">output_stream</a></li>
+                    <li class="method"><a href="GLib.IOStream.clear_pending.html">clear_pending</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="virtual_method"><a href="GLib.IOStream.close.html">close</a></li>
+                    <li class="virtual_method"><a href="GLib.IOStream.close_async.html">close_async</a></li>
+                    <li class="virtual_method"><a href="GLib.IOStream.get_input_stream.html">get_input_stream</a></li>
+                    <li class="virtual_method"><a href="GLib.IOStream.get_output_stream.html">get_output_stream</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="GLib.IOStream.has_pending.html">has_pending</a></li>
+                    <li class="method"><a href="GLib.IOStream.is_closed.html">is_closed</a></li>
+                    <li class="method"><a href="GLib.IOStream.set_pending.html">set_pending</a></li>
+                    <li class="method"><a href="GLib.IOStream.splice_async.html">splice_async</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from class GLib.Object</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-321')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-321">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                      <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                      <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+          </div>
+        </body>
+      </html>

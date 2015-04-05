@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusConnection &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusConnection &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">DBusConnection</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusConnection.address.html">address</a></li>
+          <li class="property"><a href="GLib.DBusConnection.authentication_observer.html">authentication_observer</a></li>
+          <li class="property"><a href="GLib.DBusConnection.capabilities.html">capabilities</a></li>
+          <li class="property"><a href="GLib.DBusConnection.closed.html">closed</a></li>
+          <li class="property"><a href="GLib.DBusConnection.exit_on_close.html">exit_on_close</a></li>
+          <li class="property"><a href="GLib.DBusConnection.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusConnection.guid.html">guid</a></li>
+          <li class="property"><a href="GLib.DBusConnection.stream.html">stream</a></li>
+          <li class="property"><a href="GLib.DBusConnection.unique_name.html">unique_name</a></li>
+          <li class="static_method"><a href="GLib.DBusConnection.@new.html">@new</a></li>
+          <li class="static_method"><a href="GLib.DBusConnection.new_for_address.html">new_for_address</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.html">DBusConnection</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.for_address_sync.html">DBusConnection.for_address_sync</a></li>
+          <li class="creation_method"><a href="GLib.DBusConnection.DBusConnection.sync.html">DBusConnection.sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.add_filter.html">add_filter</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call.html">call</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_sync.html">call_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_with_unix_fd_list.html">call_with_unix_fd_list</a></li>
+          <li class="method"><a href="GLib.DBusConnection.call_with_unix_fd_list_sync.html">call_with_unix_fd_list_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.close.html">close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.close_sync.html">close_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.emit_signal.html">emit_signal</a></li>
+          <li class="method"><a href="GLib.DBusConnection.export_action_group.html">export_action_group</a></li>
+          <li class="method"><a href="GLib.DBusConnection.export_menu_model.html">export_menu_model</a></li>
+          <li class="method"><a href="GLib.DBusConnection.flush.html">flush</a></li>
+          <li class="method"><a href="GLib.DBusConnection.flush_sync.html">flush_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_capabilities.html">get_capabilities</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_exit_on_close.html">get_exit_on_close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_guid.html">get_guid</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_last_serial.html">get_last_serial</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_peer_credentials.html">get_peer_credentials</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_proxy.html">get_proxy</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_proxy_sync.html">get_proxy_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_stream.html">get_stream</a></li>
+          <li class="method"><a href="GLib.DBusConnection.get_unique_name.html">get_unique_name</a></li>
+          <li class="method"><a href="GLib.DBusConnection.is_closed.html">is_closed</a></li>
+          <li class="method"><a href="GLib.DBusConnection.register_object.html">register_object</a></li>
+          <li class="method"><a href="GLib.DBusConnection.register_subtree.html">register_subtree</a></li>
+          <li class="method"><a href="GLib.DBusConnection.remove_filter.html">remove_filter</a></li>
+          <li class="method"><a href="GLib.DBusConnection.send_message.html">send_message</a></li>
+          <li class="method"><a href="GLib.DBusConnection.send_message_with_reply.html">send_message_with_reply</a></li>
+          <li class="method"><a href="GLib.DBusConnection.send_message_with_reply_sync.html">send_message_with_reply_sync</a></li>
+          <li class="method"><a href="GLib.DBusConnection.set_exit_on_close.html">set_exit_on_close</a></li>
+          <li class="method"><a href="GLib.DBusConnection.signal_subscribe.html">signal_subscribe</a></li>
+          <li class="method"><a href="GLib.DBusConnection.signal_unsubscribe.html">signal_unsubscribe</a></li>
+          <li class="method"><a href="GLib.DBusConnection.start_message_processing.html">start_message_processing</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unexport_action_group.html">unexport_action_group</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unexport_menu_model.html">unexport_menu_model</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unregister_object.html">unregister_object</a></li>
+          <li class="method"><a href="GLib.DBusConnection.unregister_subtree.html">unregister_subtree</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">DBusConnection</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.DBusConnection" alt="Object hierarchy for DBusConnection" src="img/GLib.DBusConnection.png"/>
+
+      <map id="GLib.DBusConnection" name="GLib.DBusConnection">
+<area shape="rect" id="node1" href="GLib.DBusConnection.html" title="GLib.DBusConnection" alt="" coords="131,101,320,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.AsyncInitable.html" title="GLib.AsyncInitable" alt="" coords="142,5,308,53"/>
+<area shape="rect" id="node4" href="GLib.Initable.html" title="GLib.Initable" alt="" coords="333,5,453,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">DBusConnection</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.AsyncInitable.html" class="interface">AsyncInitable</a></span>, <span class="main_type"><a href="GLib.Initable.html" class="interface">Initable</a></span>, <span class="main_type"><a href="GLib.AsyncInitable.html" class="interface">AsyncInitable</a></span>, <span class="main_type"><a href="GLib.Initable.html" class="interface">Initable</a></span>
+        </div>
+        <div class="description">
+          <p>The <span class="class">DBusConnection</span> type is used for D-Bus connections to remote peers such as a message buses.</p>
+          <p> It is a low-level API that offers a lot of flexibility. For instance, it lets you establish a connection over any transport that can by 
+            represented as an <a href="GLib.IOStream.html" class="abstract_class">IOStream</a>.</p>
+          <p>This class is rarely used directly in D-Bus clients. If you are writing a D-Bus client, it is often easier to use the <code>
+              g_bus_own_name</code>, <code>g_bus_watch_name</code> or <a href="GLib.DBusProxy.create_for_bus.html" class="static_method">
+              create_for_bus</a> APIs.</p>
+          <p>As an exception to the usual GLib rule that a particular object must not be used by two threads at the same time, <span class="class">
+              DBusConnection</span>'s methods may be called from any thread. This is so that <a href="GLib.Bus.@get.html" class="method">@get</a> and 
+            <a href="GLib.Bus.get_sync.html" class="method">get_sync</a> can safely return the same <span class="class">DBusConnection</span> when 
+            called from any thread.</p>
+          <p>Most of the ways to obtain a <span class="class">DBusConnection</span> automatically initialize it (i.e. connect to D-Bus): for instance,
+             <a href="GLib.DBusConnection.@new.html" class="static_method">@new</a> and <a href="GLib.Bus.@get.html" class="method">@get</a>, and the 
+            synchronous versions of those methods, give you an initialized connection. Language bindings for GIO should use 
+            <a href="GLib.Initable.@new.html" class="static_method">@new</a> or <a href="GLib.AsyncInitable.new_async.html" class="static_method">
+              new_async</a>, which also initialize the connection.</p>
+          <p>If you construct an uninitialized <span class="class">DBusConnection</span>, such as via 
+            <a href="../gobject-2.0/GLib.Object.@new.html" class="static_method">@new</a>, you must initialize it via 
+            <a href="GLib.Initable.init.html" class="abstract_method">init</a> or <a href="GLib.AsyncInitable.init_async.html" class="virtual_method">
+              init_async</a> before using its methods or properties. Calling methods or accessing properties on a <span class="class">DBusConnection
+            </span> that has not completed initialization successfully is considered to be invalid, and leads to undefined behaviour. In particular, 
+            if initialization fails with a <a href="../glib-2.0/GLib.Error.html" class="class">Error</a>, the only valid thing you can do with that 
+            <span class="class">DBusConnection</span> is to free it with <a href="../gobject-2.0/GLib.Object.unref.html" class="method">unref</a>.</p>
+          <h2> An example D-Bus server # {<code>gdbus</code>s-server}</h2>
+          <p>Here is an example for a D-Bus server: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gdbus-example-server.c">
+              gdbus-example-server.c</a></p>
+          <h2> An example for exporting a subtree # {<code>gdbus</code>s-subtree-server}</h2>
+          <p>Here is an example for exporting a subtree: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gdbus-example-subtree.c">
+              gdbus-example-subtree.c</a></p>
+          <h2> An example for file descriptor passing # {<code>gdbus</code>s-unix-fd-client}</h2>
+          <p>Here is an example for passing UNIX file descriptors: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gdbus-unix-fd-client.c">
+              gdbus-unix-fd-client.c</a></p>
+          <h2> An example for exporting a GObject # {<code>gdbus</code>s-export}</h2>
+          <p>Here is an example for exporting a <a href="../gobject-2.0/GLib.Object.html" class="class">Object</a>: 
+            <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gdbus-example-export.c">gdbus-example-export.c</a></p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusConnection.address.html" class="property">address</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A D-Bus address specifying potential endpoints that can be used when 
+                establishing the connection.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span> <b><a href="GLib.DBusConnection.authentication_observer.html" class="property">authentication_observer</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A <a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver
+                </a> object to assist in the authentication process or <span class="main_optional_parameter">null</span>.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusCapabilityFlags.html" class="enum">DBusCapabilityFlags</a></span> <b><a href="GLib.DBusConnection.capabilities.html" class="property">capabilities</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Flags from the <a href="GLib.DBusCapabilityFlags.html" class="enum">
+                  DBusCapabilityFlags</a> enumeration representing connection features negotiated with the other peer.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.closed.html" class="property">closed</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A boolean specifying whether the connection has been closed.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.exit_on_close.html" class="property">exit_on_close</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A boolean specifying whether the process will be terminated (by 
+                calling `raise(SIGTERM)`) if the connection is closed by the remote peer.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusConnectionFlags.html" class="enum">DBusConnectionFlags</a></span> <b><a href="GLib.DBusConnection.flags.html" class="property">flags</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Flags from the <a href="GLib.DBusConnectionFlags.html" class="enum">
+                  DBusConnectionFlags</a> enumeration.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusConnection.guid.html" class="property">guid</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The GUID of the peer performing the role of server when 
+                authenticating.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> <b><a href="GLib.DBusConnection.stream.html" class="property">stream</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The underlying <a href="GLib.IOStream.html" class="abstract_class">
+                  IOStream</a> used for I/O.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusConnection.unique_name.html" class="property">unique_name</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The unique name as assigned by the message bus or 
+                <span class="main_optional_parameter">null</span> if the connection is not open or not a message bus connection.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">DBusConnection</span></span> <b><a href="GLib.DBusConnection.@new.html" class="static_method">@new</a></b> (<span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> stream, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> guid, <span class="main_type"><a href="GLib.DBusConnectionFlags.html" class="enum">DBusConnectionFlags</a></span> flags, <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span>? observer = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously sets up a D-Bus connection for exchanging D-Bus 
+                messages with the end represented by <code>stream</code>.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">DBusConnection</span></span> <b><a href="GLib.DBusConnection.new_for_address.html" class="static_method">new_for_address</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> address, <span class="main_type"><a href="GLib.DBusConnectionFlags.html" class="enum">DBusConnectionFlags</a></span> flags, <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span>? observer = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously connects and sets up a D-Bus client connection for 
+                exchanging D-Bus messages with an endpoint specified by <code>address</code> which must be in the D-Bus address format.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.DBusConnection.DBusConnection.html" class="creation_method">DBusConnection</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.DBusConnection.DBusConnection.for_address_sync.html" class="creation_method">DBusConnection.for_address_sync</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> address, <span class="main_type"><a href="GLib.DBusConnectionFlags.html" class="enum">DBusConnectionFlags</a></span> flags, <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span>? observer = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously connects and sets up a D-Bus client connection for 
+                exchanging D-Bus messages with an endpoint specified by <code>address</code> which must be in the D-Bus address format.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.DBusConnection.DBusConnection.sync.html" class="creation_method">DBusConnection.sync</a></b> (<span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> stream, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? guid, <span class="main_type"><a href="GLib.DBusConnectionFlags.html" class="enum">DBusConnectionFlags</a></span> flags, <span class="main_type"><a href="GLib.DBusAuthObserver.html" class="class">DBusAuthObserver</a></span>? observer = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously sets up a D-Bus connection for exchanging D-Bus messages
+                 with the end represented by <code>stream</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.add_filter.html" class="method">add_filter</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusMessageFilterFunction.html" class="delegate">DBusMessageFilterFunction</a></span> filter_function)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a message filter.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.DBusConnection.call.html" class="method">call</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? bus_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> method_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameters, <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? reply_type, <span class="main_type"><a href="GLib.DBusCallFlags.html" class="enum">DBusCallFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously invokes the <code>method_name</code> method on the 
+                <code>interface_name</code> D-Bus interface on the remote object at <code>object_path</code> owned by <code>bus_name</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.DBusConnection.call_sync.html" class="method">call_sync</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? bus_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> method_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameters, <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? reply_type, <span class="main_type"><a href="GLib.DBusCallFlags.html" class="enum">DBusCallFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously invokes the <code>method_name</code> method on the 
+                <code>interface_name</code> D-Bus interface on the remote object at <code>object_path</code> owned by <code>bus_name</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.DBusConnection.call_with_unix_fd_list.html" class="method">call_with_unix_fd_list</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? bus_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> method_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameters, <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? reply_type, <span class="main_type"><a href="GLib.DBusCallFlags.html" class="enum">DBusCallFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_type"><a href="GLib.UnixFDList.html" class="class">UnixFDList</a></span>? fd_list = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>, <span class="main_keyword">out</span> <span class="main_type"><a href="GLib.UnixFDList.html" class="class">UnixFDList</a></span>? out_fd_list = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Like <a href="GLib.DBusConnection.call.html" class="method">call</a> 
+                but also takes a <a href="GLib.UnixFDList.html" class="class">UnixFDList</a> object.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.DBusConnection.call_with_unix_fd_list_sync.html" class="method">call_with_unix_fd_list_sync</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? bus_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> method_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameters, <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? reply_type, <span class="main_type"><a href="GLib.DBusCallFlags.html" class="enum">DBusCallFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_type"><a href="GLib.UnixFDList.html" class="class">UnixFDList</a></span>? fd_list = <span class="main_optional_parameter">null</span>, <span class="main_keyword">out</span> <span class="main_type"><a href="GLib.UnixFDList.html" class="class">UnixFDList</a></span>? out_fd_list = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Like <a href="GLib.DBusConnection.call_sync.html" class="method">
+                  call_sync</a> but also takes and returns <a href="GLib.UnixFDList.html" class="class">UnixFDList</a> objects.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.close.html" class="method">close</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Closes <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.close_sync.html" class="method">close_sync</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously closees <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.emit_signal.html" class="method">emit_signal</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? destination_bus_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> signal_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameters) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Emits a signal.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.export_action_group.html" class="method">export_action_group</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><a href="GLib.ActionGroup.html" class="interface">ActionGroup</a></span> action_group) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Exports <code>action_group</code> on <span class="main_keyword">this
+                </span> at <code>object_path</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.export_menu_model.html" class="method">export_menu_model</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a></span> menu) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Exports <code>menu</code> on <span class="main_keyword">this</span> at
+                 <code>object_path</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.flush.html" class="method">flush</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously flushes <span class="main_keyword">this</span>, that 
+                is, writes all queued outgoing message to the transport and then flushes the transport (using 
+                <a href="GLib.OutputStream.flush_async.html" class="virtual_method">flush_async</a>).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.flush_sync.html" class="method">flush_sync</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously flushes <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusCapabilityFlags.html" class="enum">DBusCapabilityFlags</a></span> <b><a href="GLib.DBusConnection.get_capabilities.html" class="method">get_capabilities</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the capabilities negotiated with the remote peer</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.get_exit_on_close.html" class="method">get_exit_on_close</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets whether the process is terminated when 
+                <span class="main_keyword">this</span> is closed by the remote peer.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusConnection.get_guid.html" class="method">get_guid</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The GUID of the peer performing the role of server when 
+                authenticating.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> <b><a href="GLib.DBusConnection.get_last_serial.html" class="method">get_last_serial</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Retrieves the last serial number assigned to a 
+                <a href="GLib.DBusMessage.html" class="class">DBusMessage</a> on the current thread.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Credentials.html" class="class">Credentials</a></span> <b><a href="GLib.DBusConnection.get_peer_credentials.html" class="method">get_peer_credentials</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the credentials of the authenticated peer.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.DBusConnection.get_proxy.html" class="method">get_proxy</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><a href="GLib.DBusProxyFlags.html" class="enum">DBusProxyFlags</a></span> flags = <span class="main_optional_parameter">0</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.DBusConnection.get_proxy_sync.html" class="method">get_proxy_sync</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><a href="GLib.DBusProxyFlags.html" class="enum">DBusProxyFlags</a></span> flags = <span class="main_optional_parameter">0</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> <b><a href="GLib.DBusConnection.get_stream.html" class="method">get_stream</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the underlying stream used for IO.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.DBusConnection.get_unique_name.html" class="method">get_unique_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the unique name of <span class="main_keyword">this</span> as 
+                assigned by the message bus.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.is_closed.html" class="method">is_closed</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets whether <span class="main_keyword">this</span> is closed.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.register_object.html" class="method">register_object</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><span>T</span></span> object) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Registers callbacks for exported objects at <code>object_path</code> 
+                with the D-Bus interface that is described in <code>interface_info</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.register_subtree.html" class="method">register_subtree</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path, <span class="main_type"><a href="GLib.DBusSubtreeVTable.html" class="struct">DBusSubtreeVTable</a></span> vtable, <span class="main_type"><a href="GLib.DBusSubtreeFlags.html" class="enum">DBusSubtreeFlags</a></span> flags, <span class="main_keyword">void</span>* user_data, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span> user_data_free_func) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Registers a whole subtree of dynamic objects.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.remove_filter.html" class="method">remove_filter</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> filter_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes a filter.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.send_message.html" class="method">send_message</a></b> (<span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> message, <span class="main_type"><a href="GLib.DBusSendMessageFlags.html" class="enum">DBusSendMessageFlags</a></span> flags, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> out_serial) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously sends <code>message</code> to the peer represented by 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> <b><a href="GLib.DBusConnection.send_message_with_reply.html" class="method">send_message_with_reply</a></b> (<span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> message, <span class="main_type"><a href="GLib.DBusSendMessageFlags.html" class="enum">DBusSendMessageFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span>* out_serial = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously sends <code>message</code> to the peer represented by 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> <b><a href="GLib.DBusConnection.send_message_with_reply_sync.html" class="method">send_message_with_reply_sync</a></b> (<span class="main_type"><a href="GLib.DBusMessage.html" class="class">DBusMessage</a></span> message, <span class="main_type"><a href="GLib.DBusSendMessageFlags.html" class="enum">DBusSendMessageFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> timeout_msec, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> out_serial = <span class="main_optional_parameter">null</span>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Synchronously sends <code>message</code> to the peer represented by 
+                <span class="main_keyword">this</span> and blocks the calling thread until a reply is received or the timeout is reached.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.set_exit_on_close.html" class="method">set_exit_on_close</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> exit_on_close)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets whether the process should be terminated when 
+                <span class="main_keyword">this</span> is closed by the remote peer.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.DBusConnection.signal_subscribe.html" class="method">signal_subscribe</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? sender, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? interface_name, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? member, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? object_path, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? arg0, <span class="main_type"><a href="GLib.DBusSignalFlags.html" class="enum">DBusSignalFlags</a></span> flags, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.DBusSignalCallback.html" class="delegate">DBusSignalCallback</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Subscribes to signals on <span class="main_keyword">this</span> and 
+                invokes <code>callback</code> with a whenever the signal is received.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.signal_unsubscribe.html" class="method">signal_unsubscribe</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> subscription_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unsubscribes from signals.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.start_message_processing.html" class="method">start_message_processing</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If <span class="main_keyword">this</span> was created with 
+                <span class="main_optional_parameter">g_dbus_connection_flags_delay_message_processing</span>, this method starts processing messages.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.unexport_action_group.html" class="method">unexport_action_group</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> export_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reverses the effect of a previous call to 
+                <a href="GLib.DBusConnection.export_action_group.html" class="method">export_action_group</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.DBusConnection.unexport_menu_model.html" class="method">unexport_menu_model</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> export_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reverses the effect of a previous call to 
+                <a href="GLib.DBusConnection.export_menu_model.html" class="method">export_menu_model</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.unregister_object.html" class="method">unregister_object</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> registration_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unregisters an object.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.DBusConnection.unregister_subtree.html" class="method">unregister_subtree</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> registration_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unregisters a subtree.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-84')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-84">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.AsyncInitable</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-85')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-85">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="GLib.AsyncInitable.new_async.html">new_async</a></li>
+                    <li class="static_method"><a href="GLib.AsyncInitable.new_valist_async.html">new_valist_async</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="GLib.AsyncInitable.newv_async.html">newv_async</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="virtual_method"><a href="GLib.AsyncInitable.init_async.html">init_async</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from interface GLib.Initable</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-86')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-86">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="static_method"><a href="GLib.Initable.@new.html">@new</a></li>
+                      <li class="static_method"><a href="GLib.Initable.new_valist.html">new_valist</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="static_method"><a href="GLib.Initable.newv.html">newv</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.Initable.init.html">init</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+          </div>
+        </body>
+      </html>

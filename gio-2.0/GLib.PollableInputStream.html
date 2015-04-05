@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.PollableInputStream &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.PollableInputStream &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">PollableInputStream</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_method"><a href="GLib.PollableInputStream.can_poll.html">can_poll</a></li>
+          <li class="abstract_method"><a href="GLib.PollableInputStream.create_source.html">create_source</a></li>
+          <li class="abstract_method"><a href="GLib.PollableInputStream.is_readable.html">is_readable</a></li>
+          <li class="method"><a href="GLib.PollableInputStream.read_nonblocking.html">read_nonblocking</a></li>
+          <li class="abstract_method"><a href="GLib.PollableInputStream.read_nonblocking_fn.html">read_nonblocking_fn</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">PollableInputStream</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.PollableInputStream" alt="Object hierarchy for PollableInputStream" src="img/GLib.PollableInputStream.png"/>
+      
+
+      <map id="GLib.PollableInputStream" name="GLib.PollableInputStream">
+<area shape="rect" id="node1" href="GLib.PollableInputStream.html" title="GLib.PollableInputStream" alt="" coords="5,197,219,245"/>
+<area shape="rect" id="node2" href="GLib.InputStream.html" title="GLib.InputStream" alt="" coords="35,101,188,149"/>
+<area shape="rect" id="node3" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="55,5,168,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span class="interface">PollableInputStream</span></b> : <span class="main_type"><a href="GLib.InputStream.html" class="abstract_class">InputStream</a></span>
+        </div>
+        <div class="description">
+          <p><span class="interface">PollableInputStream</span> is implemented by <a href="GLib.InputStream.html" class="abstract_class">InputStream
+            </a>s that can be polled for readiness to read.</p>
+          <p> This can be used when interfacing with a non-GIO API that expects UNIX-file-descriptor-style asynchronous I/O rather than GIO-style.</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known implementing classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-302')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-302">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.ConverterInputStream.html">ConverterInputStream</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.MemoryInputStream.html">MemoryInputStream</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                </ul>
+              </div>
+            </div>
+          </div><br/>
+          <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+          </div>
+          <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+          </div>
+          <h2 class="main_title">Content:</h2>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.PollableInputStream.can_poll.html" class="abstract_method">can_poll</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is actually 
+                  pollable.</span>
+              </div></li>
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="GLib.PollableSource.html" class="class">PollableSource</a></span> <b><a href="GLib.PollableInputStream.create_source.html" class="abstract_method">create_source</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Creates a <a href="GLib.SocketSource.html" class="class">
+                    SocketSource</a> that triggers when <span class="main_keyword">this</span> can be read, or <code>cancellable</code> is triggered 
+                  or an error occurs.</span>
+              </div></li>
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.PollableInputStream.is_readable.html" class="abstract_method">is_readable</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> can be read.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.PollableInputStream.read_nonblocking.html" class="method">read_nonblocking</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint8.html" class="struct">uint8</a></span>[] buffer, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Attempts to read up to <code>buffer.length</code> bytes from 
+                  <span class="main_keyword">this</span> into <code>buffer</code>, as with 
+                  <a href="GLib.InputStream.read.html" class="abstract_method">read</a>.</span>
+              </div></li>
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.PollableInputStream.read_nonblocking_fn.html" class="abstract_method">read_nonblocking_fn</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint8.html" class="struct">uint8</a></span>[] buffer) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <h3 class="main_title">Inherited Members:</h3>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class GLib.InputStream</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-303')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-303">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="GLib.InputStream.clear_pending.html">clear_pending</a></li>
+                    <li class="abstract_method"><a href="GLib.InputStream.close.html">close</a></li>
+                    <li class="virtual_method"><a href="GLib.InputStream.close_async.html">close_async</a></li>
+                    <li class="method"><a href="GLib.InputStream.has_pending.html">has_pending</a></li>
+                    <li class="method"><a href="GLib.InputStream.is_closed.html">is_closed</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.InputStream.read.html">read</a></li>
+                    <li class="method"><a href="GLib.InputStream.read_all.html">read_all</a></li>
+                    <li class="method"><a href="GLib.InputStream.read_all_async.html">read_all_async</a></li>
+                    <li class="virtual_method"><a href="GLib.InputStream.read_async.html">read_async</a></li>
+                    <li class="method"><a href="GLib.InputStream.read_bytes.html">read_bytes</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="GLib.InputStream.read_bytes_async.html">read_bytes_async</a></li>
+                    <li class="method"><a href="GLib.InputStream.set_pending.html">set_pending</a></li>
+                    <li class="virtual_method"><a href="GLib.InputStream.skip.html">skip</a></li>
+                    <li class="virtual_method"><a href="GLib.InputStream.skip_async.html">skip_async</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from class GLib.Object</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-304')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-304">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                      <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                      <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+          </div>
+        </body>
+      </html>

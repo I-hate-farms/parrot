@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace">GLib</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.AtomicInt.html">AtomicInt</a></li>
+          <li class="namespace"><a href="GLib.AtomicPointer.html">AtomicPointer</a></li>
+          <li class="namespace"><a href="GLib.Base64.html">Base64</a></li>
+          <li class="namespace"><a href="GLib.Bit.html">Bit</a></li>
+          <li class="namespace"><a href="GLib.CharacterSet.html">CharacterSet</a></li>
+          <li class="namespace"><a href="GLib.ChildWatch.html">ChildWatch</a></li>
+          <li class="namespace"><a href="GLib.DirUtils.html">DirUtils</a></li>
+          <li class="namespace"><a href="GLib.Environ.html">Environ</a></li>
+          <li class="namespace"><a href="GLib.Environment.html">Environment</a></li>
+          <li class="namespace"><a href="GLib.FileUtils.html">FileUtils</a></li>
+          <li class="namespace"><a href="GLib.Filename.html">Filename</a></li>
+          <li class="namespace"><a href="GLib.Idle.html">Idle</a></li>
+          <li class="namespace"><a href="GLib.Intl.html">Intl</a></li>
+          <li class="namespace"><a href="GLib.KeyFileDesktop.html">KeyFileDesktop</a></li>
+          <li class="namespace"><a href="GLib.Log.html">Log</a></li>
+          <li class="namespace"><a href="GLib.Markup.html">Markup</a></li>
+          <li class="namespace"><a href="GLib.Math.html">Math</a></li>
+          <li class="namespace"><a href="GLib.Memory.html">Memory</a></li>
+          <li class="namespace"><a href="GLib.Path.html">Path</a></li>
+          <li class="namespace"><a href="GLib.Priority.html">Priority</a></li>
+          <li class="namespace"><a href="GLib.Process.html">Process</a></li>
+          <li class="namespace"><a href="GLib.Random.html">Random</a></li>
+          <li class="namespace"><a href="GLib.Shell.html">Shell</a></li>
+          <li class="namespace"><a href="GLib.Slice.html">Slice</a></li>
+          <li class="namespace"><a href="GLib.SpacedPrimes.html">SpacedPrimes</a></li>
+          <li class="namespace"><a href="GLib.Test.html">Test</a></li>
+          <li class="namespace"><a href="GLib.Timeout.html">Timeout</a></li>
+          <li class="namespace"><a href="GLib.Unix.html">Unix</a></li>
+          <li class="namespace"><a href="GLib.Uri.html">Uri</a></li>
+          <li class="namespace"><a href="GLib.Version.html">Version</a></li>
+          <li class="namespace"><a href="GLib.Win32.html">Win32</a></li>
+          <li class="enum"><a href="GLib.ByteOrder.html">ByteOrder</a></li>
+          <li class="enum"><a href="GLib.ChecksumType.html">ChecksumType</a></li>
+          <li class="enum"><a href="GLib.DateDMY.html">DateDMY</a></li>
+          <li class="enum"><a href="GLib.DateMonth.html">DateMonth</a></li>
+          <li class="enum"><a href="GLib.DateWeekday.html">DateWeekday</a></li>
+          <li class="enum"><a href="GLib.ErrorType.html">ErrorType</a></li>
+          <li class="enum"><a href="GLib.FileSeek.html">FileSeek</a></li>
+          <li class="enum"><a href="GLib.FileTest.html">FileTest</a></li>
+          <li class="enum"><a href="GLib.FormatSizeFlags.html">FormatSizeFlags</a></li>
+          <li class="enum"><a href="GLib.IOCondition.html">IOCondition</a></li>
+          <li class="enum"><a href="GLib.IOFlags.html">IOFlags</a></li>
+          <li class="enum"><a href="GLib.IOStatus.html">IOStatus</a></li>
+          <li class="enum"><a href="GLib.KeyFileFlags.html">KeyFileFlags</a></li>
+          <li class="enum"><a href="GLib.LocaleCategory.html">LocaleCategory</a></li>
+          <li class="enum"><a href="GLib.LogLevelFlags.html">LogLevelFlags</a></li>
+          <li class="enum"><a href="GLib.MarkupParseFlags.html">MarkupParseFlags</a></li>
+          <li class="enum"><a href="GLib.NormalizeMode.html">NormalizeMode</a></li>
+          <li class="enum"><a href="GLib.OnceStatus.html">OnceStatus</a></li>
+          <li class="enum"><a href="GLib.OptionArg.html">OptionArg</a></li>
+          <li class="enum"><a href="GLib.OptionFlags.html">OptionFlags</a></li>
+          <li class="enum"><a href="GLib.ProcessSignal.html">ProcessSignal</a></li>
+          <li class="enum"><a href="GLib.RegexCompileFlags.html">RegexCompileFlags</a></li>
+          <li class="enum"><a href="GLib.RegexMatchFlags.html">RegexMatchFlags</a></li>
+          <li class="enum"><a href="GLib.SeekType.html">SeekType</a></li>
+          <li class="enum"><a href="GLib.SliceConfig.html">SliceConfig</a></li>
+          <li class="enum"><a href="GLib.SpawnFlags.html">SpawnFlags</a></li>
+          <li class="enum"><a href="GLib.TestSubprocessFlags.html">TestSubprocessFlags</a></li>
+          <li class="enum"><a href="GLib.TestTrapFlags.html">TestTrapFlags</a></li>
+          <li class="enum"><a href="GLib.ThreadPriority.html">ThreadPriority</a></li>
+          <li class="enum"><a href="GLib.TimeType.html">TimeType</a></li>
+          <li class="enum"><a href="GLib.TokenType.html">TokenType</a></li>
+          <li class="enum"><a href="GLib.TraverseFlags.html">TraverseFlags</a></li>
+          <li class="enum"><a href="GLib.TraverseType.html">TraverseType</a></li>
+          <li class="enum"><a href="GLib.UnicodeBreakType.html">UnicodeBreakType</a></li>
+          <li class="enum"><a href="GLib.UnicodeScript.html">UnicodeScript</a></li>
+          <li class="enum"><a href="GLib.UnicodeType.html">UnicodeType</a></li>
+          <li class="enum"><a href="GLib.UserDirectory.html">UserDirectory</a></li>
+          <li class="class"><a href="GLib.Array.html">Array</a></li>
+          <li class="class"><a href="GLib.AsyncQueue.html">AsyncQueue</a></li>
+          <li class="class"><a href="GLib.BookmarkFile.html">BookmarkFile</a></li>
+          <li class="class"><a href="GLib.BusName.html">BusName</a></li>
+          <li class="class"><a href="GLib.ByteArray.html">ByteArray</a></li>
+          <li class="class"><a href="GLib.Bytes.html">Bytes</a></li>
+          <li class="class"><a href="GLib.Checksum.html">Checksum</a></li>
+          <li class="class"><a href="GLib.ChildWatchSource.html">ChildWatchSource</a></li>
+          <li class="class"><span class="deprecated"><a href="GLib.Completion.html">Completion</a></span></li>
+          <li class="class"><span class="deprecated"><a href="GLib.Cond.html">Cond</a></span></li>
+          <li class="class"><a href="GLib.DateTime.html">DateTime</a></li>
+          <li class="class"><a href="GLib.Dir.html">Dir</a></li>
+          <li class="class"><a href="GLib.Error.html">Error</a></li>
+          <li class="class"><a href="GLib.FileStream.html">FileStream</a></li>
+          <li class="class"><a href="GLib.GenericArray.html">GenericArray</a></li>
+          <li class="class"><a href="GLib.GenericSet.html">GenericSet</a></li>
+          <li class="class"><a href="GLib.HashTable.html">HashTable</a></li>
+          <li class="class"><a href="GLib.Hmac.html">Hmac</a></li>
+          <li class="class"><a href="GLib.IOChannel.html">IOChannel</a></li>
+          <li class="class"><a href="GLib.IOSource.html">IOSource</a></li>
+          <li class="class"><a href="GLib.IdleSource.html">IdleSource</a></li>
+          <li class="class"><a href="GLib.KeyFile.html">KeyFile</a></li>
+          <li class="class"><a href="GLib.List.html">List</a></li>
+          <li class="class"><a href="GLib.MainContext.html">MainContext</a></li>
+          <li class="class"><a href="GLib.MainLoop.html">MainLoop</a></li>
+          <li class="class"><a href="GLib.MappedFile.html">MappedFile</a></li>
+          <li class="class"><a href="GLib.MarkupParseContext.html">MarkupParseContext</a></li>
+          <li class="class"><a href="GLib.MatchInfo.html">MatchInfo</a></li>
+          <li class="class"><a href="GLib.MemVTable.html">MemVTable</a></li>
+          <li class="class"><span class="deprecated"><a href="GLib.Mutex.html">Mutex</a></span></li>
+          <li class="class"><a href="GLib.Node.html">Node</a></li>
+          <li class="class"><a href="GLib.ObjectPath.html">ObjectPath</a></li>
+          <li class="class"><a href="GLib.OptionContext.html">OptionContext</a></li>
+          <li class="class"><a href="GLib.OptionGroup.html">OptionGroup</a></li>
+          <li class="class"><a href="GLib.PatternSpec.html">PatternSpec</a></li>
+          <li class="class"><a href="GLib.Private.html">Private</a></li>
+          <li class="class"><span class="deprecated"><a href="GLib.PtrArray.html">PtrArray</a></span></li>
+          <li class="class"><a href="GLib.Queue.html">Queue</a></li>
+          <li class="class"><a href="GLib.Rand.html">Rand</a></li>
+          <li class="class"><a href="GLib.Regex.html">Regex</a></li>
+          <li class="class"><a href="GLib.SList.html">SList</a></li>
+          <li class="class"><a href="GLib.Scanner.html">Scanner</a></li>
+          <li class="class"><a href="GLib.Sequence.html">Sequence</a></li>
+          <li class="class"><a href="GLib.SequenceIter.html">SequenceIter</a></li>
+          <li class="abstract_class"><a href="GLib.Source.html">Source</a></li>
+          <li class="class"><a href="GLib.SourceCallbackFuncs.html">SourceCallbackFuncs</a></li>
+          <li class="class"><a href="GLib.StringBuilder.html">StringBuilder</a></li>
+          <li class="class"><a href="GLib.StringChunk.html">StringChunk</a></li>
+          <li class="class"><a href="GLib.TestCase.html">TestCase</a></li>
+          <li class="class"><a href="GLib.TestSuite.html">TestSuite</a></li>
+          <li class="class"><a href="GLib.Thread.html">Thread</a></li>
+          <li class="class"><a href="GLib.ThreadPool.html">ThreadPool</a></li>
+          <li class="class"><a href="GLib.TimeZone.html">TimeZone</a></li>
+          <li class="class"><a href="GLib.TimeoutSource.html">TimeoutSource</a></li>
+          <li class="class"><a href="GLib.Timer.html">Timer</a></li>
+          <li class="class"><a href="GLib.Tree.html">Tree</a></li>
+          <li class="class"><a href="GLib.Variant.html">Variant</a></li>
+          <li class="class"><a href="GLib.VariantBuilder.html">VariantBuilder</a></li>
+          <li class="class"><a href="GLib.VariantDict.html">VariantDict</a></li>
+          <li class="class"><a href="GLib.VariantIter.html">VariantIter</a></li>
+          <li class="class"><a href="GLib.VariantType.html">VariantType</a></li>
+          <li class="struct"><a href="GLib.Datalist.html">Datalist</a></li>
+          <li class="struct"><a href="GLib.Date.html">Date</a></li>
+          <li class="struct"><a href="GLib.DateDay.html">DateDay</a></li>
+          <li class="struct"><a href="GLib.DateYear.html">DateYear</a></li>
+          <li class="struct"><a href="GLib.DebugKey.html">DebugKey</a></li>
+          <li class="struct"><a href="GLib.GenericSetIter.html">GenericSetIter</a></li>
+          <li class="struct"><a href="GLib.HashTableIter.html">HashTableIter</a></li>
+          <li class="struct"><a href="GLib.IConv.html">IConv</a></li>
+          <li class="struct"><a href="GLib.MarkupParser.html">MarkupParser</a></li>
+          <li class="struct"><a href="GLib.Once.html">Once</a></li>
+          <li class="struct"><a href="GLib.OptionEntry.html">OptionEntry</a></li>
+          <li class="struct"><a href="GLib.Pid.html">Pid</a></li>
+          <li class="struct"><a href="GLib.PollFD.html">PollFD</a></li>
+          <li class="struct"><a href="GLib.Quark.html">Quark</a></li>
+          <li class="struct"><a href="GLib.RWLock.html">RWLock</a></li>
+          <li class="struct"><a href="GLib.RecMutex.html">RecMutex</a></li>
+          <li class="struct"><a href="GLib.ScannerConfig.html">ScannerConfig</a></li>
+          <li class="struct"><a href="GLib.SourceFuncs.html">SourceFuncs</a></li>
+          <li class="struct"><a href="GLib.Stat.html">Stat</a></li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticMutex.html">StaticMutex</a></span></li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticPrivate.html">StaticPrivate</a></span></li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticRWLock.html">StaticRWLock</a></span></li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticRecMutex.html">StaticRecMutex</a></span></li>
+          <li class="struct"><a href="GLib.Time.html">Time</a></li>
+          <li class="struct"><a href="GLib.TimeSpan.html">TimeSpan</a></li>
+          <li class="struct"><a href="GLib.TimeVal.html">TimeVal</a></li>
+          <li class="struct"><a href="GLib.TokenValue.html">TokenValue</a></li>
+          <li class="struct"><a href="GLib.UTimBuf.html">UTimBuf</a></li>
+          <li class="constant"><a href="GLib.BYTE_ORDER.html">BYTE_ORDER</a></li>
+          <li class="delegate"><a href="GLib.ChildWatchFunc.html">ChildWatchFunc</a></li>
+          <li class="delegate"><a href="GLib.CompareDataFunc.html">CompareDataFunc</a></li>
+          <li class="delegate"><a href="GLib.CompareFunc.html">CompareFunc</a></li>
+          <li class="delegate"><a href="GLib.CompletionFunc.html">CompletionFunc</a></li>
+          <li class="delegate"><a href="GLib.CompletionStrncmpFunc.html">CompletionStrncmpFunc</a></li>
+          <li class="delegate"><a href="GLib.DataForeachFunc.html">DataForeachFunc</a></li>
+          <li class="delegate"><a href="GLib.DestroyNotify.html">DestroyNotify</a></li>
+          <li class="delegate"><a href="GLib.EqualFunc.html">EqualFunc</a></li>
+          <li class="delegate"><a href="GLib.FreeFunc.html">FreeFunc</a></li>
+          <li class="delegate"><a href="GLib.Func.html">Func</a></li>
+          <li class="delegate"><a href="GLib.HFunc.html">HFunc</a></li>
+          <li class="delegate"><a href="GLib.HRFunc.html">HRFunc</a></li>
+          <li class="delegate"><a href="GLib.HashFunc.html">HashFunc</a></li>
+          <li class="delegate"><a href="GLib.IOFunc.html">IOFunc</a></li>
+          <li class="delegate"><a href="GLib.LogFatalFunc.html">LogFatalFunc</a></li>
+          <li class="delegate"><a href="GLib.LogFunc.html">LogFunc</a></li>
+          <li class="delegate"><a href="GLib.MarkupParserEndElementFunc.html">MarkupParserEndElementFunc</a></li>
+          <li class="delegate"><a href="GLib.MarkupParserErrorFunc.html">MarkupParserErrorFunc</a></li>
+          <li class="delegate"><a href="GLib.MarkupParserPassthroughFunc.html">MarkupParserPassthroughFunc</a></li>
+          <li class="delegate"><a href="GLib.MarkupParserStartElementFunc.html">MarkupParserStartElementFunc</a></li>
+          <li class="delegate"><a href="GLib.MarkupParserTextFunc.html">MarkupParserTextFunc</a></li>
+          <li class="delegate"><a href="GLib.NodeForeachFunc.html">NodeForeachFunc</a></li>
+          <li class="delegate"><a href="GLib.NodeTraverseFunc.html">NodeTraverseFunc</a></li>
+          <li class="delegate"><a href="GLib.OnceFunc.html">OnceFunc</a></li>
+          <li class="delegate"><a href="GLib.OptionErrorFunc.html">OptionErrorFunc</a></li>
+          <li class="delegate"><a href="GLib.OptionParseFunc.html">OptionParseFunc</a></li>
+          <li class="delegate"><a href="GLib.PollFunc.html">PollFunc</a></li>
+          <li class="delegate"><a href="GLib.PrintFunc.html">PrintFunc</a></li>
+          <li class="delegate"><a href="GLib.RegexEvalCallback.html">RegexEvalCallback</a></li>
+          <li class="delegate"><a href="GLib.ScannerMsgFunc.html">ScannerMsgFunc</a></li>
+          <li class="delegate"><a href="GLib.SearchFunc.html">SearchFunc</a></li>
+          <li class="delegate"><a href="GLib.SequenceIterCompareFunc.html">SequenceIterCompareFunc</a></li>
+          <li class="delegate"><a href="GLib.SignalHandlerFunc.html">SignalHandlerFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceCallbackGetFunc.html">SourceCallbackGetFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceCallbackRefFunc.html">SourceCallbackRefFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceCallbackUnrefFunc.html">SourceCallbackUnrefFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceCheckFunc.html">SourceCheckFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceDispatchFunc.html">SourceDispatchFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceDummyMarshal.html">SourceDummyMarshal</a></li>
+          <li class="delegate"><a href="GLib.SourceFinalizeFunc.html">SourceFinalizeFunc</a></li>
+          <li class="delegate"><a href="GLib.SourceFunc.html">SourceFunc</a></li>
+          <li class="delegate"><a href="GLib.SourcePrepareFunc.html">SourcePrepareFunc</a></li>
+          <li class="delegate"><a href="GLib.SpawnChildSetupFunc.html">SpawnChildSetupFunc</a></li>
+          <li class="delegate"><a href="GLib.TestDataFunc.html">TestDataFunc</a></li>
+          <li class="delegate"><a href="GLib.TestFunc.html">TestFunc</a></li>
+          <li class="delegate"><a href="GLib.ThreadFunc.html">ThreadFunc</a></li>
+          <li class="delegate"><a href="GLib.ThreadPoolFunc.html">ThreadPoolFunc</a></li>
+          <li class="delegate"><a href="GLib.TranslateFunc.html">TranslateFunc</a></li>
+          <li class="delegate"><a href="GLib.TraverseFunc.html">TraverseFunc</a></li>
+          <li class="delegate"><a href="GLib.TreeSearchFunc.html">TreeSearchFunc</a></li>
+          <li class="delegate"><a href="GLib.VoidFunc.html">VoidFunc</a></li>
+          <li class="method"><a href="GLib.C_.html">C_</a></li>
+          <li class="method"><a href="GLib.NC_.html">NC_</a></li>
+          <li class="method"><a href="GLib.N_.html">N_</a></li>
+          <li class="method"><a href="GLib.Q_.html">Q_</a></li>
+          <li class="method"><a href="GLib._.html">_</a></li>
+          <li class="method"><a href="GLib.assert.html">assert</a></li>
+          <li class="method"><a href="GLib.assert_false.html">assert_false</a></li>
+          <li class="method"><a href="GLib.assert_nonnull.html">assert_nonnull</a></li>
+          <li class="method"><a href="GLib.assert_not_reached.html">assert_not_reached</a></li>
+          <li class="method"><a href="GLib.assert_null.html">assert_null</a></li>
+          <li class="method"><a href="GLib.assert_true.html">assert_true</a></li>
+          <li class="method"><a href="GLib.breakpoint.html">breakpoint</a></li>
+          <li class="method"><a href="GLib.convert.html">convert</a></li>
+          <li class="method"><a href="GLib.critical.html">critical</a></li>
+          <li class="method"><a href="GLib.dcgettext.html">dcgettext</a></li>
+          <li class="method"><a href="GLib.debug.html">debug</a></li>
+          <li class="method"><a href="GLib.dgettext.html">dgettext</a></li>
+          <li class="method"><a href="GLib.dngettext.html">dngettext</a></li>
+          <li class="method"><a href="GLib.dpgettext.html">dpgettext</a></li>
+          <li class="method"><a href="GLib.dpgettext2.html">dpgettext2</a></li>
+          <li class="method"><a href="GLib.error.html">error</a></li>
+          <li class="method"><a href="GLib.format_size.html">format_size</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.format_size_for_display.html">format_size_for_display</a></span></li>
+          <li class="method"><a href="GLib.free.html">free</a></li>
+          <li class="method"><a href="GLib.get_charset.html">get_charset</a></li>
+          <li class="method"><a href="GLib.get_filename_charsets.html">get_filename_charsets</a></li>
+          <li class="method"><a href="GLib.get_monotonic_time.html">get_monotonic_time</a></li>
+          <li class="method"><a href="GLib.get_num_processors.html">get_num_processors</a></li>
+          <li class="method"><a href="GLib.get_real_time.html">get_real_time</a></li>
+          <li class="method"><a href="GLib.info.html">info</a></li>
+          <li class="method"><a href="GLib.likely.html">likely</a></li>
+          <li class="method"><a href="GLib.log.html">log</a></li>
+          <li class="method"><a href="GLib.logv.html">logv</a></li>
+          <li class="method"><a href="GLib.malloc.html">malloc</a></li>
+          <li class="method"><a href="GLib.malloc0.html">malloc0</a></li>
+          <li class="method"><a href="GLib.mem_profile.html">mem_profile</a></li>
+          <li class="method"><a href="GLib.mem_set_vtable.html">mem_set_vtable</a></li>
+          <li class="method"><a href="GLib.message.html">message</a></li>
+          <li class="method"><a href="GLib.ngettext.html">ngettext</a></li>
+          <li class="method"><a href="GLib.on_error_query.html">on_error_query</a></li>
+          <li class="method"><a href="GLib.on_error_stack_trace.html">on_error_stack_trace</a></li>
+          <li class="method"><a href="GLib.parse_debug_string.html">parse_debug_string</a></li>
+          <li class="method"><a href="GLib.print.html">print</a></li>
+          <li class="method"><a href="GLib.printerr.html">printerr</a></li>
+          <li class="method"><a href="GLib.qsort_with_data.html">qsort_with_data</a></li>
+          <li class="method"><a href="GLib.realloc.html">realloc</a></li>
+          <li class="method"><a href="GLib.return_if_fail.html">return_if_fail</a></li>
+          <li class="method"><a href="GLib.return_if_reached.html">return_if_reached</a></li>
+          <li class="method"><a href="GLib.return_val_if_fail.html">return_val_if_fail</a></li>
+          <li class="method"><a href="GLib.return_val_if_reached.html">return_val_if_reached</a></li>
+          <li class="method"><a href="GLib.set_print_handler.html">set_print_handler</a></li>
+          <li class="method"><a href="GLib.set_printerr_handler.html">set_printerr_handler</a></li>
+          <li class="method"><a href="GLib.static_assert.html">static_assert</a></li>
+          <li class="method"><a href="GLib.strerror.html">strerror</a></li>
+          <li class="method"><a href="GLib.strfreev.html">strfreev</a></li>
+          <li class="method"><a href="GLib.strsignal.html">strsignal</a></li>
+          <li class="method"><a href="GLib.strv_contains.html">strv_contains</a></li>
+          <li class="method"><a href="GLib.strv_length.html">strv_length</a></li>
+          <li class="method"><a href="GLib.try_malloc.html">try_malloc</a></li>
+          <li class="method"><a href="GLib.try_malloc0.html">try_malloc0</a></li>
+          <li class="method"><a href="GLib.try_realloc.html">try_realloc</a></li>
+          <li class="method"><a href="GLib.unlikely.html">unlikely</a></li>
+          <li class="method"><a href="GLib.warn_if_fail.html">warn_if_fail</a></li>
+          <li class="method"><a href="GLib.warn_if_reached.html">warn_if_reached</a></li>
+          <li class="method"><a href="GLib.warning.html">warning</a></li>
+          <li class="field"><a href="GLib.direct_equal.html">direct_equal</a></li>
+          <li class="field"><a href="GLib.direct_hash.html">direct_hash</a></li>
+          <li class="field"><a href="GLib.errno.html">errno</a></li>
+          <li class="field"><a href="GLib.g_free.html">g_free</a></li>
+          <li class="field"><a href="GLib.g_list_free.html">g_list_free</a></li>
+          <li class="field"><a href="GLib.g_object_unref.html">g_object_unref</a></li>
+          <li class="field"><a href="GLib.g_variant_unref.html">g_variant_unref</a></li>
+          <li class="field"><a href="GLib.int64_equal.html">int64_equal</a></li>
+          <li class="field"><a href="GLib.int64_hash.html">int64_hash</a></li>
+          <li class="field"><a href="GLib.int_equal.html">int_equal</a></li>
+          <li class="field"><a href="GLib.int_hash.html">int_hash</a></li>
+          <li class="field"><a href="GLib.mem_profiler_table.html">mem_profiler_table</a></li>
+          <li class="field"><a href="GLib.stderr.html">stderr</a></li>
+          <li class="field"><a href="GLib.stdin.html">stdin</a></li>
+          <li class="field"><a href="GLib.stdout.html">stdout</a></li>
+          <li class="field"><a href="GLib.str_equal.html">str_equal</a></li>
+          <li class="field"><a href="GLib.str_hash.html">str_hash</a></li>
+          <li class="field"><a href="GLib.strcmp.html">strcmp</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">GLib</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Namespaces:</h3>
+        <ul class="navi_inline">
+          <li class="namespace"><a href="GLib.AtomicInt.html">AtomicInt</a> - </li>
+          <li class="namespace"><a href="GLib.AtomicPointer.html">AtomicPointer</a> - </li>
+          <li class="namespace"><a href="GLib.Base64.html">Base64</a> - </li>
+          <li class="namespace"><a href="GLib.Bit.html">Bit</a> - </li>
+          <li class="namespace"><a href="GLib.CharacterSet.html">CharacterSet</a> - </li>
+          <li class="namespace"><a href="GLib.ChildWatch.html">ChildWatch</a> - </li>
+          <li class="namespace"><a href="GLib.DirUtils.html">DirUtils</a> - </li>
+          <li class="namespace"><a href="GLib.Environ.html">Environ</a> - </li>
+          <li class="namespace"><a href="GLib.Environment.html">Environment</a> - </li>
+          <li class="namespace"><a href="GLib.FileUtils.html">FileUtils</a> - </li>
+          <li class="namespace"><a href="GLib.Filename.html">Filename</a> - </li>
+          <li class="namespace"><a href="GLib.Idle.html">Idle</a> - </li>
+          <li class="namespace"><a href="GLib.Intl.html">Intl</a> - </li>
+          <li class="namespace"><a href="GLib.KeyFileDesktop.html">KeyFileDesktop</a> - </li>
+          <li class="namespace"><a href="GLib.Log.html">Log</a> - </li>
+          <li class="namespace"><a href="GLib.Markup.html">Markup</a> - </li>
+          <li class="namespace"><a href="GLib.Math.html">Math</a> - </li>
+          <li class="namespace"><a href="GLib.Memory.html">Memory</a> - </li>
+          <li class="namespace"><a href="GLib.Path.html">Path</a> - </li>
+          <li class="namespace"><a href="GLib.Priority.html">Priority</a> - </li>
+          <li class="namespace"><a href="GLib.Process.html">Process</a> - </li>
+          <li class="namespace"><a href="GLib.Random.html">Random</a> - </li>
+          <li class="namespace"><a href="GLib.Shell.html">Shell</a> - </li>
+          <li class="namespace"><a href="GLib.Slice.html">Slice</a> - </li>
+          <li class="namespace"><a href="GLib.SpacedPrimes.html">SpacedPrimes</a> - </li>
+          <li class="namespace"><a href="GLib.Test.html">Test</a> - </li>
+          <li class="namespace"><a href="GLib.Timeout.html">Timeout</a> - </li>
+          <li class="namespace"><a href="GLib.Unix.html">Unix</a> - </li>
+          <li class="namespace"><a href="GLib.Uri.html">Uri</a> - </li>
+          <li class="namespace"><a href="GLib.Version.html">Version</a> - </li>
+          <li class="namespace"><a href="GLib.Win32.html">Win32</a> - </li>
+        </ul>
+        <h3 class="main_title">Classes:</h3>
+        <ul class="navi_inline">
+          <li class="class"><a href="GLib.MainLoop.html">MainLoop</a> - <span class="brief_description">The `GMainLoop` struct is an opaque data type 
+              representing the main event loop of a GLib or GTK+ application.</span></li>
+          <li class="class"><a href="GLib.MainContext.html">MainContext</a> - <span class="brief_description">The `GMainContext` struct is an opaque 
+              data type representing a set of sources to be handled in a main loop.</span></li>
+          <li class="class"><a href="GLib.TimeoutSource.html">TimeoutSource</a> - </li>
+          <li class="class"><a href="GLib.IdleSource.html">IdleSource</a> - </li>
+          <li class="class"><a href="GLib.ChildWatchSource.html">ChildWatchSource</a> - </li>
+          <li class="abstract_class"><a href="GLib.Source.html">Source</a> - </li>
+          <li class="class"><a href="GLib.SourceCallbackFuncs.html">SourceCallbackFuncs</a> - <span class="brief_description">The 
+              `GSourceCallbackFuncs` struct contains functions for managing callback objects.</span></li>
+          <li class="class"><a href="GLib.Thread.html">Thread</a> - <span class="brief_description">The <span class="class">Thread</span> struct 
+              represents a running thread.</span></li>
+          <li class="class"><span class="deprecated"><a href="GLib.Mutex.html">Mutex</a></span> - <span class="brief_description">The 
+              <span class="class">Mutex</span> struct is an opaque data structure to represent a mutex (mutual exclusion).</span></li>
+          <li class="class"><a href="GLib.Private.html">Private</a> - </li>
+          <li class="class"><span class="deprecated"><a href="GLib.Cond.html">Cond</a></span> - <span class="brief_description">The 
+              <span class="class">Cond</span> struct is an opaque data structure that represents a condition.</span></li>
+          <li class="class"><a href="GLib.ThreadPool.html">ThreadPool</a> - <span class="brief_description">The <span class="class">ThreadPool</span> 
+              struct represents a thread pool.</span></li>
+          <li class="class"><a href="GLib.AsyncQueue.html">AsyncQueue</a> - <span class="brief_description">The GAsyncQueue struct is an opaque data 
+              structure which represents an asynchronous queue.</span></li>
+          <li class="class"><a href="GLib.MemVTable.html">MemVTable</a> - <span class="brief_description">A set of functions used to perform memory 
+              allocation.</span></li>
+          <li class="class"><a href="GLib.IOChannel.html">IOChannel</a> - <span class="brief_description">A data structure representing an IO Channel.
+            </span></li>
+          <li class="class"><a href="GLib.IOSource.html">IOSource</a> - </li>
+          <li class="class"><a href="GLib.Error.html">Error</a> - <span class="brief_description">The `GError` structure contains information about an
+               error that has occurred.</span></li>
+          <li class="class"><a href="GLib.Checksum.html">Checksum</a> - <span class="brief_description">An opaque structure representing a 
+              checksumming operation.</span></li>
+          <li class="class"><a href="GLib.Hmac.html">Hmac</a> - <span class="brief_description">An opaque structure representing a HMAC operation.
+            </span></li>
+          <li class="class"><a href="GLib.DateTime.html">DateTime</a> - <span class="brief_description">`GDateTime` is an opaque structure whose 
+              members cannot be accessed directly.</span></li>
+          <li class="class"><a href="GLib.TimeZone.html">TimeZone</a> - <span class="brief_description"><span class="class">TimeZone</span> is an 
+              opaque structure whose members cannot be accessed directly.</span></li>
+          <li class="class"><a href="GLib.Rand.html">Rand</a> - <span class="brief_description">The GRand struct is an opaque data structure.</span>
+          </li>
+          <li class="class"><a href="GLib.Scanner.html">Scanner</a> - <span class="brief_description">The data structure representing a lexical 
+              scanner.</span></li>
+          <li class="class"><span class="deprecated"><a href="GLib.Completion.html">Completion</a></span> - </li>
+          <li class="class"><a href="GLib.Timer.html">Timer</a> - <span class="brief_description">Opaque datatype that records a start time.</span>
+          </li>
+          <li class="class"><a href="GLib.FileStream.html">FileStream</a> - </li>
+          <li class="class"><a href="GLib.Dir.html">Dir</a> - <span class="brief_description">An opaque structure representing an opened directory.
+            </span></li>
+          <li class="class"><a href="GLib.MappedFile.html">MappedFile</a> - <span class="brief_description">The <span class="class">MappedFile</span> 
+              represents a file mapping created with <a href="GLib.MappedFile.MappedFile.html" class="creation_method">MappedFile</a>.</span></li>
+          <li class="class"><a href="GLib.OptionContext.html">OptionContext</a> - <span class="brief_description">A `GOptionContext` struct defines 
+              which options are accepted by the commandline option parser.</span></li>
+          <li class="class"><a href="GLib.OptionGroup.html">OptionGroup</a> - <span class="brief_description">A `GOptionGroup` struct defines the 
+              options in a single group.</span></li>
+          <li class="class"><a href="GLib.Regex.html">Regex</a> - <span class="brief_description">The g_regex_*() functions implement regular 
+              expression pattern matching using syntax and semantics similar to Perl regular expression.</span></li>
+          <li class="class"><a href="GLib.MatchInfo.html">MatchInfo</a> - <span class="brief_description">A GMatchInfo is an opaque struct used to 
+              return information about matches.</span></li>
+          <li class="class"><a href="GLib.MarkupParseContext.html">MarkupParseContext</a> - <span class="brief_description">A parse context is used to
+               parse a stream of bytes that you expect to contain marked-up text.</span></li>
+          <li class="class"><a href="GLib.KeyFile.html">KeyFile</a> - <span class="brief_description">The GKeyFile struct contains only private data 
+              and should not be accessed directly.</span></li>
+          <li class="class"><a href="GLib.BookmarkFile.html">BookmarkFile</a> - <span class="brief_description">The `GBookmarkFile` structure contains
+               only private data and should not be directly accessed.</span></li>
+          <li class="class"><a href="GLib.TestCase.html">TestCase</a> - <span class="brief_description">An opaque structure representing a test case.
+            </span></li>
+          <li class="class"><a href="GLib.TestSuite.html">TestSuite</a> - <span class="brief_description">An opaque structure representing a test 
+              suite.</span></li>
+          <li class="class"><a href="GLib.List.html">List</a> - <span class="brief_description">The <span class="class">List</span> struct is used for
+               each element in a doubly-linked list.</span></li>
+          <li class="class"><a href="GLib.SList.html">SList</a> - <span class="brief_description">The <span class="class">SList</span> struct is used 
+              for each element in the singly-linked list.</span></li>
+          <li class="class"><a href="GLib.Queue.html">Queue</a> - <span class="brief_description">Contains the public fields of a <i>Queue</i>.</span>
+          </li>
+          <li class="class"><a href="GLib.Sequence.html">Sequence</a> - <span class="brief_description">The <span class="class">Sequence</span> struct
+               is an opaque data type representing a <i>sequence</i> data type.</span></li>
+          <li class="class"><a href="GLib.SequenceIter.html">SequenceIter</a> - <span class="brief_description">The <span class="class">SequenceIter
+              </span> struct is an opaque data type representing an iterator pointing into a <a href="GLib.Sequence.html" class="class">Sequence</a>.
+            </span></li>
+          <li class="class"><a href="GLib.HashTable.html">HashTable</a> - </li>
+          <li class="class"><a href="GLib.GenericSet.html">GenericSet</a> - <span class="brief_description">The <span class="class">GenericSet</span> 
+              struct is an opaque data structure to represent a <i>Hash Table</i>.</span></li>
+          <li class="class"><a href="GLib.StringBuilder.html">StringBuilder</a> - <span class="brief_description">The GString struct contains the 
+              public fields of a GString.</span></li>
+          <li class="class"><a href="GLib.StringChunk.html">StringChunk</a> - <span class="brief_description">An opaque data structure representing 
+              String Chunks.</span></li>
+          <li class="class"><span class="deprecated"><a href="GLib.PtrArray.html">PtrArray</a></span> - </li>
+          <li class="class"><a href="GLib.GenericArray.html">GenericArray</a> - <span class="brief_description">Contains the public fields of a 
+              pointer array.</span></li>
+          <li class="class"><a href="GLib.Bytes.html">Bytes</a> - <span class="brief_description">A simple refcounted data type representing an 
+              immutable sequence of zero or more bytes from an unspecified origin.</span></li>
+          <li class="class"><a href="GLib.ByteArray.html">ByteArray</a> - <span class="brief_description">Contains the public fields of a GByteArray.
+            </span></li>
+          <li class="class"><a href="GLib.Node.html">Node</a> - <span class="brief_description">The <span class="class">Node</span> struct represents 
+              one node in a <i>n-ary tree</i>.</span></li>
+          <li class="class"><a href="GLib.Array.html">Array</a> - <span class="brief_description">Contains the public fields of a GArray.</span></li>
+          <li class="class"><a href="GLib.Tree.html">Tree</a> - <span class="brief_description">The GTree struct is an opaque data structure 
+              representing a <i>balanced binary tree</i>.</span></li>
+          <li class="class"><a href="GLib.PatternSpec.html">PatternSpec</a> - <span class="brief_description">A GPatternSpec struct is the 'compiled' 
+              form of a pattern.</span></li>
+          <li class="class"><a href="GLib.VariantType.html">VariantType</a> - <span class="brief_description">This section introduces the GVariant 
+              type system.</span></li>
+          <li class="class"><a href="GLib.Variant.html">Variant</a> - <span class="brief_description"><span class="class">Variant</span> is a variant 
+              datatype; it stores a value along with information about the type of that value.</span></li>
+          <li class="class"><a href="GLib.VariantIter.html">VariantIter</a> - <span class="brief_description"><span class="class">VariantIter</span> 
+              is an opaque data structure and can only be accessed using the following functions.</span></li>
+          <li class="class"><a href="GLib.VariantBuilder.html">VariantBuilder</a> - <span class="brief_description">A utility type for constructing 
+              container-type <a href="GLib.Variant.html" class="class">Variant</a> instances.</span></li>
+          <li class="class"><a href="GLib.VariantDict.html">VariantDict</a> - <span class="brief_description"><span class="class">VariantDict</span> 
+              is a mutable interface to <a href="GLib.Variant.html" class="class">Variant</a> dictionaries.</span></li>
+          <li class="class"><a href="GLib.ObjectPath.html">ObjectPath</a> - </li>
+          <li class="class"><a href="GLib.BusName.html">BusName</a> - </li>
+        </ul>
+        <h3 class="main_title">Structs:</h3>
+        <ul class="navi_inline">
+          <li class="struct"><a href="GLib.Pid.html">Pid</a> - <span class="brief_description">A type which is used to hold a process identification.
+            </span></li>
+          <li class="struct"><a href="GLib.PollFD.html">PollFD</a> - <span class="brief_description">Represents a file descriptor, which events to 
+              poll for, and which events occurred.</span></li>
+          <li class="struct"><a href="GLib.SourceFuncs.html">SourceFuncs</a> - <span class="brief_description">The `GSourceFuncs` struct contains a 
+              table of functions used to handle event sources in a generic manner.</span></li>
+          <li class="struct"><a href="GLib.RecMutex.html">RecMutex</a> - <span class="brief_description">The GRecMutex struct is an opaque data 
+              structure to represent a recursive mutex.</span></li>
+          <li class="struct"><a href="GLib.RWLock.html">RWLock</a> - <span class="brief_description">The GRWLock struct is an opaque data structure to
+               represent a reader-writer lock.</span></li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticMutex.html">StaticMutex</a></span> - </li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticRecMutex.html">StaticRecMutex</a></span> - </li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticRWLock.html">StaticRWLock</a></span> - </li>
+          <li class="struct"><span class="deprecated"><a href="GLib.StaticPrivate.html">StaticPrivate</a></span> - </li>
+          <li class="struct"><a href="GLib.Once.html">Once</a> - <span class="brief_description">A <span class="struct">Once</span> struct controls a 
+              one-time initialization function.</span></li>
+          <li class="struct"><a href="GLib.DebugKey.html">DebugKey</a> - <span class="brief_description">Associates a string with a bit flag.</span>
+          </li>
+          <li class="struct"><a href="GLib.IConv.html">IConv</a> - <span class="brief_description">The GIConv struct wraps an <code>iconv</code> 
+              conversion descriptor.</span></li>
+          <li class="struct"><a href="GLib.TimeVal.html">TimeVal</a> - <span class="brief_description">Represents a precise time, with seconds and 
+              microseconds.</span></li>
+          <li class="struct"><a href="GLib.DateDay.html">DateDay</a> - <span class="brief_description">Integer representing a day of the month; 
+              between 1 and 31.</span></li>
+          <li class="struct"><a href="GLib.DateYear.html">DateYear</a> - <span class="brief_description">Integer representing a year; 
+              <a href="GLib.DateYear.BAD_YEAR.html" class="field">BAD_YEAR</a> is the invalid value.</span></li>
+          <li class="struct"><a href="GLib.Date.html">Date</a> - <span class="brief_description">Represents a day between January 1, Year 1 and a few 
+              thousand years in the future.</span></li>
+          <li class="struct"><a href="GLib.Time.html">Time</a> - </li>
+          <li class="struct"><a href="GLib.TimeSpan.html">TimeSpan</a> - <span class="brief_description">A value representing an interval of time, in 
+              microseconds.</span></li>
+          <li class="struct"><a href="GLib.ScannerConfig.html">ScannerConfig</a> - <span class="brief_description">Specifies the 
+              <a href="GLib.Scanner.html" class="class">Scanner</a> parser configuration.</span></li>
+          <li class="struct"><a href="GLib.TokenValue.html">TokenValue</a> - <span class="brief_description">A union holding the value of the token.
+            </span></li>
+          <li class="struct"><a href="GLib.UTimBuf.html">UTimBuf</a> - </li>
+          <li class="struct"><a href="GLib.Stat.html">Stat</a> - </li>
+          <li class="struct"><a href="GLib.OptionEntry.html">OptionEntry</a> - <span class="brief_description">A GOptionEntry struct defines a single 
+              option.</span></li>
+          <li class="struct"><a href="GLib.MarkupParser.html">MarkupParser</a> - <span class="brief_description">Any of the fields in 
+              <span class="struct">MarkupParser</span> can be <span class="main_optional_parameter">null</span>, in which case they will be ignored.
+            </span></li>
+          <li class="struct"><a href="GLib.HashTableIter.html">HashTableIter</a> - </li>
+          <li class="struct"><a href="GLib.GenericSetIter.html">GenericSetIter</a> - <span class="brief_description">A GHashTableIter structure 
+              represents an iterator that can be used to iterate over the elements of a <a href="GLib.GenericSet.html" class="class">GenericSet</a>.
+            </span></li>
+          <li class="struct"><a href="GLib.Quark.html">Quark</a> - <span class="brief_description">A GQuark is a non-zero integer which uniquely 
+              identifies a particular string.</span></li>
+          <li class="struct"><a href="GLib.Datalist.html">Datalist</a> - </li>
+        </ul>
+        <h3 class="main_title">Enums:</h3>
+        <ul class="navi_inline">
+          <li class="enum"><a href="GLib.ByteOrder.html">ByteOrder</a> - </li>
+          <li class="enum"><a href="GLib.ThreadPriority.html">ThreadPriority</a> - </li>
+          <li class="enum"><a href="GLib.OnceStatus.html">OnceStatus</a> - <span class="brief_description">The possible statuses of a one-time 
+              initialization function controlled by a <a href="GLib.Once.html" class="struct">Once</a> struct.</span></li>
+          <li class="enum"><a href="GLib.SliceConfig.html">SliceConfig</a> - </li>
+          <li class="enum"><a href="GLib.SeekType.html">SeekType</a> - <span class="brief_description">An enumeration specifying the base position for
+               a <a href="GLib.IOChannel.seek_position.html" class="method">seek_position</a> operation.</span></li>
+          <li class="enum"><a href="GLib.IOStatus.html">IOStatus</a> - <span class="brief_description">Stati returned by most of the 
+              <a href="GLib.IOFunc.html" class="delegate">IOFunc</a>s functions.</span></li>
+          <li class="enum"><a href="GLib.IOCondition.html">IOCondition</a> - <span class="brief_description">A bitwise combination representing a 
+              condition to watch for on an event source.</span></li>
+          <li class="enum"><a href="GLib.IOFlags.html">IOFlags</a> - <span class="brief_description">Specifies properties of a 
+              <a href="GLib.IOChannel.html" class="class">IOChannel</a>.</span></li>
+          <li class="enum"><a href="GLib.LogLevelFlags.html">LogLevelFlags</a> - <span class="brief_description">Flags specifying the level of log 
+              messages.</span></li>
+          <li class="enum"><a href="GLib.ChecksumType.html">ChecksumType</a> - <span class="brief_description">The hashing algorithm to be used by 
+              <a href="GLib.Checksum.html" class="class">Checksum</a> when performing the digest of some data.</span></li>
+          <li class="enum"><a href="GLib.DateMonth.html">DateMonth</a> - <span class="brief_description">Enumeration representing a month; values are 
+              <a href="GLib.DateMonth.JANUARY.html" class="enumvalue">JANUARY</a>, <a href="GLib.DateMonth.FEBRUARY.html" class="enumvalue">FEBRUARY
+              </a>, etc.</span></li>
+          <li class="enum"><a href="GLib.DateWeekday.html">DateWeekday</a> - <span class="brief_description">Enumeration representing a day of the 
+              week; <a href="GLib.DateWeekday.MONDAY.html" class="enumvalue">MONDAY</a>, <a href="GLib.DateWeekday.TUESDAY.html" class="enumvalue">
+                TUESDAY</a>, etc.</span></li>
+          <li class="enum"><a href="GLib.DateDMY.html">DateDMY</a> - <span class="brief_description">This enumeration isn't used in the API, but may 
+              be useful if you need to mark a number as a day, month, or year.</span></li>
+          <li class="enum"><a href="GLib.TimeType.html">TimeType</a> - <span class="brief_description">Disambiguates a given time in two ways.</span>
+          </li>
+          <li class="enum"><a href="GLib.UserDirectory.html">UserDirectory</a> - <span class="brief_description">These are logical ids for special 
+              directories which are defined depending on the platform used.</span></li>
+          <li class="enum"><a href="GLib.FormatSizeFlags.html">FormatSizeFlags</a> - <span class="brief_description">Flags to modify the format of the
+               string returned by <a href="GLib.format_size.html" class="method">format_size</a>.</span></li>
+          <li class="enum"><a href="GLib.TokenType.html">TokenType</a> - <span class="brief_description">The possible types of token returned from 
+              each <a href="GLib.Scanner.get_next_token.html" class="method">get_next_token</a> call.</span></li>
+          <li class="enum"><a href="GLib.ErrorType.html">ErrorType</a> - <span class="brief_description">The possible errors, used in the <code>
+                v_error</code> field of <a href="GLib.TokenValue.html" class="struct">TokenValue</a>, when the token is a 
+              <span class="main_optional_parameter">g_token_error</span>.</span></li>
+          <li class="enum"><a href="GLib.SpawnFlags.html">SpawnFlags</a> - <span class="brief_description">Flags passed to 
+              <a href="GLib.Process.spawn_sync.html" class="method">spawn_sync</a>, <a href="GLib.Process.spawn_async.html" class="method">spawn_async
+              </a> and <a href="GLib.Process.spawn_async_with_pipes.html" class="method">spawn_async_with_pipes</a>.</span></li>
+          <li class="enum"><a href="GLib.ProcessSignal.html">ProcessSignal</a> - </li>
+          <li class="enum"><a href="GLib.FileTest.html">FileTest</a> - <span class="brief_description">A test to perform on a file using 
+              <a href="GLib.FileUtils.test.html" class="method">test</a>.</span></li>
+          <li class="enum"><a href="GLib.FileSeek.html">FileSeek</a> - </li>
+          <li class="enum"><a href="GLib.OptionArg.html">OptionArg</a> - <span class="brief_description">The <span class="enum">OptionArg</span> enum 
+              values determine which type of extra argument the options expect to find.</span></li>
+          <li class="enum"><a href="GLib.OptionFlags.html">OptionFlags</a> - <span class="brief_description">Flags which modify individual options.
+            </span></li>
+          <li class="enum"><a href="GLib.RegexCompileFlags.html">RegexCompileFlags</a> - <span class="brief_description">Flags specifying compile-time
+               options.</span></li>
+          <li class="enum"><a href="GLib.RegexMatchFlags.html">RegexMatchFlags</a> - <span class="brief_description">Flags specifying match-time 
+              options.</span></li>
+          <li class="enum"><a href="GLib.MarkupParseFlags.html">MarkupParseFlags</a> - <span class="brief_description">Flags that affect the behaviour
+               of the parser.</span></li>
+          <li class="enum"><a href="GLib.KeyFileFlags.html">KeyFileFlags</a> - <span class="brief_description">Flags which influence the parsing.
+            </span></li>
+          <li class="enum"><a href="GLib.TestSubprocessFlags.html">TestSubprocessFlags</a> - <span class="brief_description">Flags to pass to 
+              <a href="GLib.Test.trap_subprocess.html" class="method">trap_subprocess</a> to control input and output.</span></li>
+          <li class="enum"><a href="GLib.TestTrapFlags.html">TestTrapFlags</a> - <span class="brief_description">Test traps are guards around forked 
+              tests.</span></li>
+          <li class="enum"><a href="GLib.TraverseFlags.html">TraverseFlags</a> - <span class="brief_description">Specifies which nodes are visited 
+              during several of the tree functions, including <a href="GLib.Node.traverse.html" class="method">traverse</a> and 
+              <a href="GLib.Node.find.html" class="method">find</a>.</span></li>
+          <li class="enum"><a href="GLib.TraverseType.html">TraverseType</a> - <span class="brief_description">Specifies the type of traveral 
+              performed by <code>g_tree_traverse</code>, <a href="GLib.Node.traverse.html" class="method">traverse</a> and 
+              <a href="GLib.Node.find.html" class="method">find</a>.</span></li>
+          <li class="enum"><a href="GLib.LocaleCategory.html">LocaleCategory</a> - </li>
+          <li class="enum"><a href="GLib.UnicodeScript.html">UnicodeScript</a> - <span class="brief_description">The <span class="enum">UnicodeScript
+              </span> enumeration identifies different writing systems.</span></li>
+          <li class="enum"><a href="GLib.UnicodeType.html">UnicodeType</a> - <span class="brief_description">These are the possible character 
+              classifications from the Unicode specification.</span></li>
+          <li class="enum"><a href="GLib.UnicodeBreakType.html">UnicodeBreakType</a> - <span class="brief_description">These are the possible line 
+              break classifications.</span></li>
+          <li class="enum"><a href="GLib.NormalizeMode.html">NormalizeMode</a> - <span class="brief_description">Defines how a Unicode string is 
+              transformed in a canonical form, standardizing such issues as whether a character with an accent is represented as a base character and 
+              combining accent or as a single precomposed character.</span></li>
+        </ul>
+        <h3 class="main_title">Error domains:</h3>
+        <ul class="navi_inline">
+          <li class="errordomain"><a href="GLib.ThreadError.html">ThreadError</a> - <span class="brief_description">Possible errors of thread related 
+              functions.</span></li>
+          <li class="errordomain"><a href="GLib.IOChannelError.html">IOChannelError</a> - <span class="brief_description">Error codes returned by 
+              <a href="GLib.IOChannel.html" class="class">IOChannel</a> operations.</span></li>
+          <li class="errordomain"><a href="GLib.ConvertError.html">ConvertError</a> - <span class="brief_description">Error codes returned by 
+              character set conversion routines.</span></li>
+          <li class="errordomain"><a href="GLib.SpawnError.html">SpawnError</a> - <span class="brief_description">Error codes returned by spawning 
+              processes.</span></li>
+          <li class="errordomain"><a href="GLib.FileError.html">FileError</a> - <span class="brief_description">Values corresponding to <code>errno
+              </code> codes returned from file operations on UNIX.</span></li>
+          <li class="errordomain"><a href="GLib.ShellError.html">ShellError</a> - <span class="brief_description">Error codes returned by shell 
+              functions.</span></li>
+          <li class="errordomain"><a href="GLib.OptionError.html">OptionError</a> - <span class="brief_description">Error codes returned by option 
+              parsing.</span></li>
+          <li class="errordomain"><a href="GLib.RegexError.html">RegexError</a> - <span class="brief_description">Error codes returned by regular 
+              expressions functions.</span></li>
+          <li class="errordomain"><a href="GLib.MarkupError.html">MarkupError</a> - <span class="brief_description">Error codes returned by markup 
+              parsing.</span></li>
+          <li class="errordomain"><a href="GLib.KeyFileError.html">KeyFileError</a> - <span class="brief_description">Error codes returned by key file
+               parsing.</span></li>
+          <li class="errordomain"><a href="GLib.BookmarkFileError.html">BookmarkFileError</a> - <span class="brief_description">Error codes returned 
+              by bookmark file parsing.</span></li>
+          <li class="errordomain"><a href="GLib.VariantParseError.html">VariantParseError</a> - <span class="brief_description">Error codes returned 
+              by parsing text-format GVariants.</span></li>
+        </ul>
+        <h3 class="main_title">Constants:</h3>
+        <ul class="navi_inline">
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_type"><a href="GLib.ByteOrder.html" class="enum">ByteOrder</a></span> <b><a href="GLib.BYTE_ORDER.html" class="constant">BYTE_ORDER</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Delegates:</h3>
+        <ul class="navi_inline">
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.PollFunc.html" class="delegate">PollFunc</a></b> (<span class="main_type"><a href="GLib.PollFD.html" class="struct">PollFD</a></span>[] ufds, <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> timeout_)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to 
+                <a href="GLib.MainContext.set_poll_func.html" class="method">set_poll_func</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.ChildWatchFunc.html" class="delegate">ChildWatchFunc</a></b> (<span class="main_type"><a href="GLib.Pid.html" class="struct">Pid</a></span> pid, <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> status)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Prototype of a <code>GChildWatchSource</code> callback, called when a 
+                child process has exited.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SourceDummyMarshal.html" class="delegate">SourceDummyMarshal</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This is just a placeholder for 
+                <a href="../gobject-2.0/GLib.ClosureMarshal.html" class="delegate">ClosureMarshal</a>, which cannot be used here for dependency 
+                reasons.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.SourcePrepareFunc.html" class="delegate">SourcePrepareFunc</a></b> (<span class="main_type"><a href="GLib.Source.html" class="abstract_class">Source</a></span> source, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> timeout_)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.SourceCheckFunc.html" class="delegate">SourceCheckFunc</a></b> (<span class="main_type"><a href="GLib.Source.html" class="abstract_class">Source</a></span> source)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.SourceDispatchFunc.html" class="delegate">SourceDispatchFunc</a></b> (<span class="main_type"><a href="GLib.Source.html" class="abstract_class">Source</a></span> source, <span class="main_type"><a href="GLib.SourceFunc.html" class="delegate">SourceFunc</a></span> _callback)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SourceFinalizeFunc.html" class="delegate">SourceFinalizeFunc</a></b> (<span class="main_type"><a href="GLib.Source.html" class="abstract_class">Source</a></span> source)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SourceCallbackRefFunc.html" class="delegate">SourceCallbackRefFunc</a></b> (<span class="main_keyword">void</span>* cb_data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SourceCallbackUnrefFunc.html" class="delegate">SourceCallbackUnrefFunc</a></b> (<span class="main_keyword">void</span>* cb_data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SourceCallbackGetFunc.html" class="delegate">SourceCallbackGetFunc</a></b> (<span class="main_keyword">void</span>* cb_data, <span class="main_type"><a href="GLib.Source.html" class="abstract_class">Source</a></span> source, <span class="main_type"><a href="GLib.SourceFunc.html" class="delegate">SourceFunc</a></span> func)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.SourceFunc.html" class="delegate">SourceFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to <code>g_timeout_add</code>, 
+                <a href="GLib.Timeout.add_full.html" class="method">add_full</a>, <code>g_idle_add</code>, and 
+                <a href="GLib.Idle.add_full.html" class="method">add_full</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_type"><span>G</span></span> <b><a href="GLib.ThreadFunc.html" class="delegate">ThreadFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.Func.html" class="delegate">Func</a></b> (<span class="main_type"><span>G</span></span> data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_type"><span>G</span></span> <b><a href="GLib.OnceFunc.html" class="delegate">OnceFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the <code>func</code> functions passed to <code>
+                  g_thread_new</code> or <code>g_thread_try_new</code>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.ThreadPoolFunc.html" class="delegate">ThreadPoolFunc</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><span>G</span></span> data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of functions passed to 
+                <a href="GLib.List.@foreach.html" class="method">@foreach</a> and <a href="GLib.SList.@foreach.html" class="method">@foreach</a>.
+              </span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.IOFunc.html" class="delegate">IOFunc</a></b> (<span class="main_type"><a href="GLib.IOChannel.html" class="class">IOChannel</a></span> source, <span class="main_type"><a href="GLib.IOCondition.html" class="enum">IOCondition</a></span> condition)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to 
+                <a href="GLib.IOChannel.add_watch.html" class="method">add_watch</a> or <a href="GLib.IOChannel.add_watch_full.html" class="method">
+                  add_watch_full</a>, which is called when the requested condition on a <a href="GLib.IOChannel.html" class="class">IOChannel</a> is 
+                satisfied.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.PrintFunc.html" class="delegate">PrintFunc</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> text)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the print handler functions.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.LogFunc.html" class="delegate">LogFunc</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? log_domain, <span class="main_type"><a href="GLib.LogLevelFlags.html" class="enum">LogLevelFlags</a></span> log_levels, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> message)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the prototype of log handler functions.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.FreeFunc.html" class="delegate">FreeFunc</a></b> (<span class="main_keyword">void</span>* data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Declares a type of function which takes an arbitrary data pointer 
+                argument and has no return value.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.VoidFunc.html" class="delegate">VoidFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Declares a type of function which takes no arguments and has no return
+                 value.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.ScannerMsgFunc.html" class="delegate">ScannerMsgFunc</a></b> (<span class="main_type"><a href="GLib.Scanner.html" class="class">Scanner</a></span> scanner, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> message, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the message handler function.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.CompletionFunc.html" class="delegate">CompletionFunc</a></b> (<span class="main_keyword">void</span>* item)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.CompletionStrncmpFunc.html" class="delegate">CompletionStrncmpFunc</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> s1, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> s2, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SpawnChildSetupFunc.html" class="delegate">SpawnChildSetupFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the setup function passed to 
+                <a href="GLib.Process.spawn_async.html" class="method">spawn_async</a>, <a href="GLib.Process.spawn_sync.html" class="method">
+                  spawn_sync</a> and <a href="GLib.Process.spawn_async_with_pipes.html" class="method">spawn_async_with_pipes</a>, which can, in very 
+                limited ways, be used to affect the child's execution.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.SignalHandlerFunc.html" class="delegate">SignalHandlerFunc</a></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> signum)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.TranslateFunc.html" class="delegate">TranslateFunc</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The type of functions which are used to translate user-visible 
+                strings, for &lt;option&gt;--help&lt;/option&gt; output.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.OptionParseFunc.html" class="delegate">OptionParseFunc</a></b> (<span class="main_type"><a href="GLib.OptionContext.html" class="class">OptionContext</a></span> context, <span class="main_type"><a href="GLib.OptionGroup.html" class="class">OptionGroup</a></span> group, <span class="main_keyword">void</span>* data) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.OptionError.html" class="errordomain">OptionError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The type of function that can be called before and after parsing.
+              </span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.OptionErrorFunc.html" class="delegate">OptionErrorFunc</a></b> (<span class="main_type"><a href="GLib.OptionContext.html" class="class">OptionContext</a></span> context, <span class="main_type"><a href="GLib.OptionGroup.html" class="class">OptionGroup</a></span> group, <span class="main_keyword">void</span>* data, <span class="main_keyword">ref</span> <span class="main_type"><a href="GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The type of function to be used as callback when a parse error occurs.
+              </span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.RegexEvalCallback.html" class="delegate">RegexEvalCallback</a></b> (<span class="main_type"><a href="GLib.MatchInfo.html" class="class">MatchInfo</a></span> match_info, <span class="main_type"><a href="GLib.StringBuilder.html" class="class">StringBuilder</a></span> result)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the function passed to 
+                <a href="GLib.Regex.replace_eval.html" class="method">replace_eval</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParserStartElementFunc.html" class="delegate">MarkupParserStartElementFunc</a></b> (<span class="main_type"><a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> element_name, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] attribute_names, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] attribute_values) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParserEndElementFunc.html" class="delegate">MarkupParserEndElementFunc</a></b> (<span class="main_type"><a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> element_name) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParserTextFunc.html" class="delegate">MarkupParserTextFunc</a></b> (<span class="main_type"><a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> text, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> text_len) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParserPassthroughFunc.html" class="delegate">MarkupParserPassthroughFunc</a></b> (<span class="main_type"><a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> passthrough_text, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> text_len) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.MarkupParserErrorFunc.html" class="delegate">MarkupParserErrorFunc</a></b> (<span class="main_type"><a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></span> context, <span class="main_type"><a href="GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.LogFatalFunc.html" class="delegate">LogFatalFunc</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? log_domain, <span class="main_type"><a href="GLib.LogLevelFlags.html" class="enum">LogLevelFlags</a></span> log_levels, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> message)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.TestFunc.html" class="delegate">TestFunc</a></b> (<span class="main_keyword">void</span>* fixture)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The type used for test case functions.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.TestDataFunc.html" class="delegate">TestDataFunc</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The type used for test case functions that take an extra pointer 
+                argument.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.CompareFunc.html" class="delegate">CompareFunc</a></b> (<span class="main_type"><span>G</span></span> a, <span class="main_type"><span>G</span></span> b)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.CompareDataFunc.html" class="delegate">CompareDataFunc</a></b> (<span class="main_type"><span>G</span></span> a, <span class="main_type"><span>G</span></span> b)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of a comparison function used to compare two 
+                values.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.SearchFunc.html" class="delegate">SearchFunc</a></b> (<span class="main_type"><span>G</span></span> a, <span class="main_type"><span>T</span></span> b)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of a comparison function used to compare two 
+                values.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.SequenceIterCompareFunc.html" class="delegate">SequenceIterCompareFunc</a></b> (<span class="main_type"><a href="GLib.SequenceIter.html" class="class">SequenceIter</a></span>&lt;<span class="main_type"><span>G</span></span>&gt; a, <span class="main_type"><a href="GLib.SequenceIter.html" class="class">SequenceIter</a></span>&lt;<span class="main_type"><span>G</span></span>&gt; b)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A <span class="delegate">SequenceIterCompareFunc</span> is a function 
+                used to compare iterators.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.HashFunc.html" class="delegate">HashFunc</a></b> (<span class="main_type"><span>K</span></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the hash function which is passed to <code>
+                  g_hash_table_new</code> when a <a href="GLib.GenericSet.html" class="class">GenericSet</a> is created.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.EqualFunc.html" class="delegate">EqualFunc</a></b> (<span class="main_type"><span>G</span></span> a, <span class="main_type"><span>G</span></span> b)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of a function used to test two values for equality.
+              </span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.HFunc.html" class="delegate">HFunc</a></b> (<span class="main_type"><span>K</span></span> key, <span class="main_type"><span>V</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the function passed to 
+                <a href="GLib.HashTable.for_each.html" class="method">for_each</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.HRFunc.html" class="delegate">HRFunc</a></b> (<span class="main_type"><span>K</span></span> key, <span class="main_type"><span>V</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of the function passed to 
+                <a href="GLib.HashTable.foreach_remove.html" class="method">foreach_remove</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></b> (<span class="main_keyword">void</span>* data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function which is called when a data element is 
+                destroyed.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.NodeTraverseFunc.html" class="delegate">NodeTraverseFunc</a></b> (<span class="main_type"><a href="GLib.Node.html" class="class">Node</a></span> node)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to 
+                <a href="GLib.Node.traverse.html" class="method">traverse</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.NodeForeachFunc.html" class="delegate">NodeForeachFunc</a></b> (<span class="main_type"><a href="GLib.Node.html" class="class">Node</a></span> node)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to 
+                <a href="GLib.Node.children_foreach.html" class="method">children_foreach</a>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="GLib.DataForeachFunc.html" class="delegate">DataForeachFunc</a></b> (<span class="main_type"><a href="GLib.Quark.html" class="struct">Quark</a></span> key_id, <span class="main_type"><span>G</span></span> data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to <code>g_dataset_foreach
+                </code>.</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.TraverseFunc.html" class="delegate">TraverseFunc</a></b> (<span class="main_type"><span>K</span></span> key, <span class="main_type"><span>V</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Specifies the type of function passed to <code>g_tree_traverse</code>.
+              </span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.TreeSearchFunc.html" class="delegate">TreeSearchFunc</a></b> (<span class="main_type"><span>K</span></span> key)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Functions:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.get_num_processors.html" class="method">get_num_processors</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determine the approximate number of threads that the system will 
+                schedule simultaneously for this process.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.malloc.html" class="method">malloc</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Allocates <code>n_bytes</code> bytes of memory.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.malloc0.html" class="method">malloc0</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Allocates <code>n_bytes</code> bytes of memory, initialized to 0's.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.realloc.html" class="method">realloc</a></b> (<span class="main_keyword">void</span>* mem, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reallocates the memory pointed to by <code>mem</code>, so that it now 
+                has space for <code>n_bytes</code> bytes of memory.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.try_malloc.html" class="method">try_malloc</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Attempts to allocate <code>n_bytes</code>, and returns 
+                <span class="main_optional_parameter">null</span> on failure.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.try_malloc0.html" class="method">try_malloc0</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Attempts to allocate <code>n_bytes</code>, initialized to 0's, and 
+                returns <span class="main_optional_parameter">null</span> on failure.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.try_realloc.html" class="method">try_realloc</a></b> (<span class="main_keyword">void</span>* mem, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> n_bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Attempts to realloc <code>mem</code> to a new size, <code>n_bytes
+                </code>, and returns <span class="main_optional_parameter">null</span> on failure.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.free.html" class="method">free</a></b> (<span class="main_keyword">void</span>* mem)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.mem_set_vtable.html" class="method">mem_set_vtable</a></b> (<span class="main_type"><a href="GLib.MemVTable.html" class="class">MemVTable</a></span> vtable)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <a href="GLib.MemVTable.html" class="class">MemVTable</a> to 
+                use for memory allocation.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.mem_profile.html" class="method">mem_profile</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Outputs a summary of memory usage.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.print.html" class="method">print</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Outputs a formatted message via the print handler.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.set_print_handler.html" class="method">set_print_handler</a></b> (<span class="main_type"><a href="GLib.PrintFunc.html" class="delegate">PrintFunc</a></span> func)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the print handler.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.printerr.html" class="method">printerr</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Outputs a formatted message via the error message handler.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.set_printerr_handler.html" class="method">set_printerr_handler</a></b> (<span class="main_type"><a href="GLib.PrintFunc.html" class="delegate">PrintFunc</a></span> func)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the handler for printing error messages.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.return_if_fail.html" class="method">return_if_fail</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.return_val_if_fail.html" class="method">return_val_if_fail</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.return_if_reached.html" class="method">return_if_reached</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.return_val_if_reached.html" class="method">return_val_if_reached</a></b> (...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.warn_if_fail.html" class="method">warn_if_fail</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.warn_if_reached.html" class="method">warn_if_reached</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert.html" class="method">assert</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert_false.html" class="method">assert_false</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert_true.html" class="method">assert_true</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert_null.html" class="method">assert_null</a></b> (<span class="main_keyword">void</span>* expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert_nonnull.html" class="method">assert_nonnull</a></b> (<span class="main_keyword">void</span>* expr)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.assert_not_reached.html" class="method">assert_not_reached</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.on_error_query.html" class="method">on_error_query</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? prg_name = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Prompts the user with `[E]xit, [H]alt, show [S]tack trace or [P]
+                roceed`.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.on_error_stack_trace.html" class="method">on_error_stack_trace</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? prg_name = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Invokes gdb, which attaches to the current process and shows a stack 
+                trace.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.breakpoint.html" class="method">breakpoint</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.logv.html" class="method">logv</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? log_domain, <span class="main_type"><a href="GLib.LogLevelFlags.html" class="enum">LogLevelFlags</a></span> log_level, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, <span class="main_type"><a href="va_list.html" class="struct">va_list</a></span> args)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Logs an error or debugging message.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.log.html" class="method">log</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? log_domain, <span class="main_type"><a href="GLib.LogLevelFlags.html" class="enum">LogLevelFlags</a></span> log_level, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Logs an error or debugging message.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.message.html" class="method">message</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.warning.html" class="method">warning</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.critical.html" class="method">critical</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.error.html" class="method">error</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.debug.html" class="method">debug</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.info.html" class="method">info</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.parse_debug_string.html" class="method">parse_debug_string</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? debug_string, <span class="main_type"><a href="GLib.DebugKey.html" class="struct">DebugKey</a></span>[] keys)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parses a string containing debugging options into a 
+                <span class="main_optional_parameter">guint</span> containing bit flags.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.strfreev.html" class="method">strfreev</a></b> (<span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>** str_array)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Frees a <span class="main_optional_parameter">null</span>-terminated 
+                array of strings, and the array itself.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.strv_length.html" class="method">strv_length</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] str_array)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the length of the given <span class="main_optional_parameter">
+                  null</span>-terminated string array <code>str_array</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.strv_contains.html" class="method">strv_contains</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] str_array, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.strerror.html" class="method">strerror</a></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> errnum)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns a string corresponding to the given error code, e.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.convert.html" class="method">convert</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> to_codeset, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> from_codeset, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> bytes_read = <span class="main_optional_parameter">null</span>, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> bytes_written = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.ConvertError.html" class="errordomain">ConvertError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a string from one character set to another.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.get_charset.html" class="method">get_charset</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> charset)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Obtains the character set for the <i>current locale</i>; you might use
+                 this character set as an argument to <a href="GLib.convert.html" class="method">convert</a>, to convert from the current locale's 
+                encoding to some other encoding.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.get_filename_charsets.html" class="method">get_filename_charsets</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] charsets)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the preferred character sets used for filenames.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> <b><a href="GLib.get_monotonic_time.html" class="method">get_monotonic_time</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Queries the system monotonic time.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> <b><a href="GLib.get_real_time.html" class="method">get_real_time</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Queries the system wall-clock time.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.format_size_for_display.html" class="method">format_size_for_display</a></b> (<span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> size)
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description">Formats a size (for example the size of a file) into a human readable 
+                string.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.format_size.html" class="method">format_size</a></b> (<span class="main_basic_type"><a href="uint64.html" class="struct">uint64</a></span> size, <span class="main_type"><a href="GLib.FormatSizeFlags.html" class="enum">FormatSizeFlags</a></span> flags = <b><a href="GLib.FormatSizeFlags.DEFAULT.html" class="enumvalue">DEFAULT</a></b>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Formats a size.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.strsignal.html" class="method">strsignal</a></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> signum)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns a string describing the given signal, e.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib._.html" class="method">_</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Q_.html" class="method">Q_</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.N_.html" class="method">N_</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.C_.html" class="method">C_</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.NC_.html" class="method">NC_</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.ngettext.html" class="method">ngettext</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid_plural, <span class="main_basic_type"><a href="ulong.html" class="struct">ulong</a></span> n)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.dgettext.html" class="method">dgettext</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? domain, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is a wrapper of <span class="method">dgettext</span> 
+                which does not translate the message if the default domain as set with <a href="GLib.Intl.textdomain.html" class="method">textdomain
+                </a> has no translations for the current locale.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.dcgettext.html" class="method">dcgettext</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? domain, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid, <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> category)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This is a variant of <a href="GLib.dgettext.html" class="method">
+                  dgettext</a> that allows specifying a locale category instead of always using `LC_MESSAGES`.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.dngettext.html" class="method">dngettext</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? domain, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid_plural, <span class="main_basic_type"><a href="ulong.html" class="struct">ulong</a></span> n)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is a wrapper of <code>dngettext</code> which does not 
+                translate the message if the default domain as set with <a href="GLib.Intl.textdomain.html" class="method">textdomain</a> has no 
+                translations for the current locale.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.dpgettext.html" class="method">dpgettext</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? domain, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgctxid, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> msgidoffset)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is a variant of 
+                <a href="GLib.dgettext.html" class="method">dgettext</a> which supports a disambiguating message context.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.dpgettext2.html" class="method">dpgettext2</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? domain, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> context, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> msgid)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is a variant of 
+                <a href="GLib.dgettext.html" class="method">dgettext</a> which supports a disambiguating message context.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.likely.html" class="method">likely</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expression)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.unlikely.html" class="method">unlikely</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expression)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.static_assert.html" class="method">static_assert</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> expression)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.qsort_with_data.html" class="method">qsort_with_data</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><span>T</span></span>[] elems, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> size, <span class="main_type"><a href="GLib.CompareDataFunc.html" class="delegate">CompareDataFunc</a></span>&lt;<span class="main_type"><span>T</span></span>&gt; compare_func)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.MemVTable.html" class="class">MemVTable</a></span> <b><a href="GLib.mem_profiler_table.html" class="field">mem_profiler_table</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.errno.html" class="field">errno</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileStream.html" class="class">FileStream</a></span> <b><a href="GLib.stdin.html" class="field">stdin</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileStream.html" class="class">FileStream</a></span> <b><a href="GLib.stdout.html" class="field">stdout</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileStream.html" class="class">FileStream</a></span> <b><a href="GLib.stderr.html" class="field">stderr</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.CompareFunc.html" class="delegate">CompareFunc</a></span>&lt;<span class="main_basic_type"><a href="string.html" class="class">string</a></span>&gt; <b><a href="GLib.strcmp.html" class="field">strcmp</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares <code>str1</code> and <code>str2</code> like <code>strcmp
+                </code>.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.HashFunc.html" class="delegate">HashFunc</a></span>&lt;<span class="main_keyword">void</span>*&gt; <b><a href="GLib.direct_hash.html" class="field">direct_hash</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a gpointer to a hash value.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.EqualFunc.html" class="delegate">EqualFunc</a></span>&lt;<span class="main_keyword">void</span>*&gt; <b><a href="GLib.direct_equal.html" class="field">direct_equal</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares two <code>gpointer</code> arguments and returns 
+                <span class="main_optional_parameter">true</span> if they are equal.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.HashFunc.html" class="delegate">HashFunc</a></span>&lt;<span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span>?&gt; <b><a href="GLib.int64_hash.html" class="field">int64_hash</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a pointer to a <a href="int64.html" class="struct">int64</a> 
+                to a hash value.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.EqualFunc.html" class="delegate">EqualFunc</a></span>&lt;<span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span>?&gt; <b><a href="GLib.int64_equal.html" class="field">int64_equal</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares the two <a href="int64.html" class="struct">int64</a> values 
+                being pointed to and returns <span class="main_optional_parameter">true</span> if they are equal.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.HashFunc.html" class="delegate">HashFunc</a></span>&lt;<span class="main_basic_type"><a href="int.html" class="struct">int</a></span>?&gt; <b><a href="GLib.int_hash.html" class="field">int_hash</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a pointer to a <a href="int.html" class="struct">int</a> to a
+                 hash value.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.EqualFunc.html" class="delegate">EqualFunc</a></span>&lt;<span class="main_basic_type"><a href="int.html" class="struct">int</a></span>?&gt; <b><a href="GLib.int_equal.html" class="field">int_equal</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares the two <a href="int.html" class="struct">int</a> values 
+                being pointed to and returns <span class="main_optional_parameter">true</span> if they are equal.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.HashFunc.html" class="delegate">HashFunc</a></span>&lt;<span class="main_basic_type"><a href="string.html" class="class">string</a></span>&gt; <b><a href="GLib.str_hash.html" class="field">str_hash</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a string to a hash value.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.EqualFunc.html" class="delegate">EqualFunc</a></span>&lt;<span class="main_basic_type"><a href="string.html" class="class">string</a></span>&gt; <b><a href="GLib.str_equal.html" class="field">str_equal</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares two strings for byte-by-byte equality and returns 
+                <span class="main_optional_parameter">true</span> if they are equal.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span> <b><a href="GLib.g_free.html" class="field">g_free</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Frees the memory pointed to by <code>mem</code>.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span> <b><a href="GLib.g_object_unref.html" class="field">g_object_unref</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span> <b><a href="GLib.g_list_free.html" class="field">g_list_free</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span> <b><a href="GLib.g_variant_unref.html" class="field">g_variant_unref</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

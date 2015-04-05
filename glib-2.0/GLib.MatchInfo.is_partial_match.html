@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MatchInfo.is_partial_match &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MatchInfo.is_partial_match &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.MatchInfo.html">MatchInfo</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><a href="GLib.MatchInfo.expand_references.html">expand_references</a></li>
+          <li class="method"><a href="GLib.MatchInfo.fetch.html">fetch</a></li>
+          <li class="method"><a href="GLib.MatchInfo.fetch_all.html">fetch_all</a></li>
+          <li class="method"><a href="GLib.MatchInfo.fetch_named.html">fetch_named</a></li>
+          <li class="method"><a href="GLib.MatchInfo.fetch_named_pos.html">fetch_named_pos</a></li>
+          <li class="method"><a href="GLib.MatchInfo.fetch_pos.html">fetch_pos</a></li>
+          <li class="method"><a href="GLib.MatchInfo.get_match_count.html">get_match_count</a></li>
+          <li class="method"><a href="GLib.MatchInfo.get_regex.html">get_regex</a></li>
+          <li class="method"><a href="GLib.MatchInfo.get_string.html">get_string</a></li>
+          <li class="method">is_partial_match</li>
+          <li class="method"><a href="GLib.MatchInfo.matches.html">matches</a></li>
+          <li class="method"><a href="GLib.MatchInfo.next.html">next</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">is_partial_match</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">is_partial_match</span></b> ()
+        </div>
+        <div class="description">
+          <p>Usually if the string passed to g_regex_match*() matches as far as it goes, but is too short to match the entire pattern, 
+            <span class="main_optional_parameter">false</span> is returned.</p>
+          <p> There are circumstances where it might be helpful to distinguish this case from other cases in which there is no match.</p>
+          <p>Consider, for example, an application where a human is required to type in data for a field with specific formatting requirements. An 
+            example might be a date in the form ddmmmyy, defined by the pattern "^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$". If the
+             application sees the user’s keystrokes one by one, and can check that what has been typed so far is potentially valid, it is able to 
+            raise an error as soon as a mistake is made.</p>
+          <p>GRegex supports the concept of partial matching by means of the <a href="GLib.RegexMatchFlags.PARTIAL_SOFT.html" class="enumvalue">
+              PARTIAL_SOFT</a> and <a href="GLib.RegexMatchFlags.PARTIAL_HARD.html" class="enumvalue">PARTIAL_HARD</a> flags. When they are used, the 
+            return code for <a href="GLib.Regex.match.html" class="method">match</a> or <a href="GLib.Regex.match_full.html" class="method">match_full
+            </a> is, as usual, <span class="main_optional_parameter">true</span> for a complete match, <span class="main_optional_parameter">false
+            </span> otherwise. But, when these functions return <span class="main_optional_parameter">false</span>, you can check if the match was 
+            partial calling <span class="method">is_partial_match</span>.</p>
+          <p>The difference between <a href="GLib.RegexMatchFlags.PARTIAL_SOFT.html" class="enumvalue">PARTIAL_SOFT</a> and 
+            <a href="GLib.RegexMatchFlags.PARTIAL_HARD.html" class="enumvalue">PARTIAL_HARD</a> is that when a partial match is encountered with 
+            <a href="GLib.RegexMatchFlags.PARTIAL_SOFT.html" class="enumvalue">PARTIAL_SOFT</a>, matching continues to search for a possible complete 
+            match, while with <a href="GLib.RegexMatchFlags.PARTIAL_HARD.html" class="enumvalue">PARTIAL_HARD</a> matching stops at the partial match.
+             When both <a href="GLib.RegexMatchFlags.PARTIAL_SOFT.html" class="enumvalue">PARTIAL_SOFT</a> and 
+            <a href="GLib.RegexMatchFlags.PARTIAL_HARD.html" class="enumvalue">PARTIAL_HARD</a> are set, the latter takes precedence.</p>
+          <p>There were formerly some restrictions on the pattern for partial matching. The restrictions no longer apply.</p>
+          <p>See pcrepartial(3) for more information on partial matching.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.MatchInfo.html" class="class">MatchInfo</a> structure</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the match was partial, <span class="main_optional_parameter">false</span> 
+                  otherwise</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Application.run &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Application.run &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Application.html">Application</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Application.action_group.html">action_group</a></li>
+          <li class="property"><a href="GLib.Application.application_id.html">application_id</a></li>
+          <li class="property"><a href="GLib.Application.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.Application.inactivity_timeout.html">inactivity_timeout</a></li>
+          <li class="property"><a href="GLib.Application.is_busy.html">is_busy</a></li>
+          <li class="property"><a href="GLib.Application.is_registered.html">is_registered</a></li>
+          <li class="property"><a href="GLib.Application.is_remote.html">is_remote</a></li>
+          <li class="property"><a href="GLib.Application.resource_base_path.html">resource_base_path</a></li>
+          <li class="static_method"><a href="GLib.Application.get_default.html">get_default</a></li>
+          <li class="static_method"><a href="GLib.Application.id_is_valid.html">id_is_valid</a></li>
+          <li class="creation_method"><a href="GLib.Application.Application.html">Application</a></li>
+          <li class="method"><a href="GLib.Application.add_main_option.html">add_main_option</a></li>
+          <li class="method"><a href="GLib.Application.add_main_option_entries.html">add_main_option_entries</a></li>
+          <li class="method"><a href="GLib.Application.add_option_group.html">add_option_group</a></li>
+          <li class="virtual_method"><a href="GLib.Application.add_platform_data.html">add_platform_data</a></li>
+          <li class="virtual_method"><a href="GLib.Application.after_emit.html">after_emit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.before_emit.html">before_emit</a></li>
+          <li class="method"><a href="GLib.Application.bind_busy_property.html">bind_busy_property</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_register.html">dbus_register</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_unregister.html">dbus_unregister</a></li>
+          <li class="method"><a href="GLib.Application.get_application_id.html">get_application_id</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_connection.html">get_dbus_connection</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_object_path.html">get_dbus_object_path</a></li>
+          <li class="method"><a href="GLib.Application.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.Application.get_inactivity_timeout.html">get_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.get_is_busy.html">get_is_busy</a></li>
+          <li class="method"><a href="GLib.Application.get_is_registered.html">get_is_registered</a></li>
+          <li class="method"><a href="GLib.Application.get_is_remote.html">get_is_remote</a></li>
+          <li class="method"><a href="GLib.Application.get_resource_base_path.html">get_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.hold.html">hold</a></li>
+          <li class="virtual_method"><a href="GLib.Application.local_command_line.html">local_command_line</a></li>
+          <li class="method"><a href="GLib.Application.mark_busy.html">mark_busy</a></li>
+          <li class="method"><a href="GLib.Application.quit.html">quit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.quit_mainloop.html">quit_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.register.html">register</a></li>
+          <li class="method"><a href="GLib.Application.release.html">release</a></li>
+          <li class="method">run</li>
+          <li class="virtual_method"><a href="GLib.Application.run_mainloop.html">run_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.send_notification.html">send_notification</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Application.set_action_group.html">set_action_group</a></span></li>
+          <li class="method"><a href="GLib.Application.set_application_id.html">set_application_id</a></li>
+          <li class="method"><a href="GLib.Application.set_default.html">set_default</a></li>
+          <li class="method"><a href="GLib.Application.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.Application.set_inactivity_timeout.html">set_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.set_resource_base_path.html">set_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.unbind_busy_property.html">unbind_busy_property</a></li>
+          <li class="method"><a href="GLib.Application.unmark_busy.html">unmark_busy</a></li>
+          <li class="method"><a href="GLib.Application.withdraw_notification.html">withdraw_notification</a></li>
+          <li class="signal"><a href="GLib.Application.activate.html">activate</a></li>
+          <li class="signal"><a href="GLib.Application.command_line.html">command_line</a></li>
+          <li class="signal"><a href="GLib.Application.handle_local_options.html">handle_local_options</a></li>
+          <li class="signal"><a href="GLib.Application.open.html">open</a></li>
+          <li class="signal"><a href="GLib.Application.shutdown.html">shutdown</a></li>
+          <li class="signal"><a href="GLib.Application.startup.html">startup</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">run</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><span class="method">run</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[]? argv = <span class="main_optional_parameter">null</span>)
+        </div>
+        <div class="description">
+          <p>Runs the application.</p>
+          <p>This function is intended to be run from <code>main</code> and its return value is intended to be returned by <code>main</code>. Although
+             you are expected to pass the <code>argv.length</code>, <code>argv</code> parameters from <code>main</code> to this function, it is 
+            possible to pass <span class="main_optional_parameter">null</span> if <code>argv</code> is not available or commandline handling is not 
+            required. Note that on Windows, <code>argv.length</code> and <code>argv</code> are ignored, and 
+            <a href="../glib-2.0/GLib.Win32.get_command_line.html" class="method">get_command_line</a> is called internally (for proper support of 
+            Unicode commandline arguments).</p>
+          <p><a href="GLib.Application.html" class="class">Application</a> will attempt to parse the commandline arguments. You can add commandline 
+            flags to the list of recognised options by way of <a href="GLib.Application.add_main_option_entries.html" class="method">
+              add_main_option_entries</a>. After this, the <a href="GLib.Application.handle_local_options.html" class="signal">handle_local_options
+            </a> signal is emitted, from which the application can inspect the values of its 
+            <a href="../glib-2.0/GLib.OptionEntry.html" class="struct">OptionEntry</a>s.</p>
+          <p><a href="GLib.Application.handle_local_options.html" class="signal">handle_local_options</a> is a good place to handle options such as 
+            `--version`, where an immediate reply from the local process is desired (instead of communicating with an already-running instance). A 
+            <a href="GLib.Application.handle_local_options.html" class="signal">handle_local_options</a> handler can stop further processing by 
+            returning a non-negative value, which then becomes the exit status of the process.</p>
+          <p>What happens next depends on the flags: if <span class="main_optional_parameter">g_application_handles_command_line</span> was specified 
+            then the remaining commandline arguments are sent to the primary instance, where a 
+            <a href="GLib.Application.command_line.html" class="signal">command_line</a> signal is emitted. Otherwise, the remaining commandline 
+            arguments are assumed to be a list of files. If there are no files listed, the application is activated via the 
+            <a href="GLib.Application.activate.html" class="signal">activate</a> signal. If there are one or more files, and 
+            <span class="main_optional_parameter">g_application_handles_open</span> was specified then the files are opened via the 
+            <a href="GLib.Application.open.html" class="signal">open</a> signal.</p>
+          <p>If you are interested in doing more complicated local handling of the commandline then you should implement your own 
+            <a href="GLib.Application.html" class="class">Application</a> subclass and override <code>local_command_line</code>. In this case, you 
+            most likely want to return <span class="main_optional_parameter">true</span> from your <code>local_command_line</code> implementation to 
+            suppress the default handling. See <i>gapplication-example-cmdline2.c</i> for an example.</p>
+          <p>If, after the above is done, the use count of the application is zero then the exit status is returned immediately. If the use count is 
+            non-zero then the default main context is iterated until the use count falls to zero, at which point 0 is returned.</p>
+          <p>If the <span class="main_optional_parameter">g_application_is_service</span> flag is set, then the service will run for as much as 10 
+            seconds with a use count of zero while waiting for the message that caused the activation to arrive. After that, if the use count falls to
+             zero the application will exit immediately, except in the case that 
+            <a href="GLib.Application.set_inactivity_timeout.html" class="method">set_inactivity_timeout</a> is in use.</p>
+          <p>This function sets the prgname (<a href="../glib-2.0/GLib.Environment.set_prgname.html" class="method">set_prgname</a>), if not already 
+            set, to the basename of argv[0]. Since 2.38, if <span class="main_optional_parameter">g_application_is_service</span> is specified, the 
+            prgname is set to the application ID. The main impact of this is is that the wmclass of windows created by Gtk+ will be set accordingly, 
+            which helps the window manager determine which application is showing the window.</p>
+          <p>Since 2.40, applications that are not explicitly flagged as services or launchers (ie: neither <span class="main_optional_parameter">
+              g_application_is_service</span> or <span class="main_optional_parameter">g_application_is_launcher</span> are given as flags) will check
+             (from the default handler for local_command_line) if "--gapplication-service" was given in the command line. If this flag is present then
+             normal commandline processing is interrupted and the <span class="main_optional_parameter">g_application_is_service</span> flag is set. 
+            This provides a "compromise" solution whereby running an application directly from the commandline will invoke it in the normal way (which
+             can be useful for debugging) while still allowing applications to be D-Bus activated in service mode. The D-Bus service file should 
+            invoke the executable with "--gapplication-service" as the sole commandline argument. This approach is suitable for use by most graphical 
+            applications but should not be used from applications like editors that need precise control over when processes invoked via the 
+            commandline will exit and what their exit status will be.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Application.html" class="class">Application</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">argv</td>
+              <td>
+                <p>the argv from <code>main</code>, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">argc</td>
+              <td>
+                <p>the argc from <code>main</code> (or 0 if <code>argv</code> is <span class="main_optional_parameter">null</span>)</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>the exit status</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

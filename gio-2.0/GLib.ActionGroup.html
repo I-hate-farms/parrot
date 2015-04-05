@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.ActionGroup &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.ActionGroup &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">ActionGroup</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_method"><a href="GLib.ActionGroup.activate_action.html">activate_action</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.change_action_state.html">change_action_state</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.get_action_enabled.html">get_action_enabled</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.get_action_parameter_type.html">get_action_parameter_type</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state.html">get_action_state</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state_hint.html">get_action_state_hint</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state_type.html">get_action_state_type</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.has_action.html">has_action</a></li>
+          <li class="abstract_method"><a href="GLib.ActionGroup.list_actions.html">list_actions</a></li>
+          <li class="virtual_method"><a href="GLib.ActionGroup.query_action.html">query_action</a></li>
+          <li class="signal"><a href="GLib.ActionGroup.action_added.html">action_added</a></li>
+          <li class="signal"><a href="GLib.ActionGroup.action_enabled_changed.html">action_enabled_changed</a></li>
+          <li class="signal"><a href="GLib.ActionGroup.action_removed.html">action_removed</a></li>
+          <li class="signal"><a href="GLib.ActionGroup.action_state_changed.html">action_state_changed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">ActionGroup</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.ActionGroup" alt="Object hierarchy for ActionGroup" src="img/GLib.ActionGroup.png"/>
+
+      <map id="GLib.ActionGroup" name="GLib.ActionGroup">
+<area shape="rect" id="node1" href="GLib.ActionGroup.html" title="GLib.ActionGroup" alt="" coords="4,101,163,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="27,5,140,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span class="interface">ActionGroup</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p><span class="interface">ActionGroup</span> represents a group of actions.</p>
+          <p> Actions can be used to expose functionality in a structured way, either from one part of a program to another, or to the outside world. 
+            Action groups are often used together with a <a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a> that provides additional 
+            representation data for displaying the actions to the user, e.g. in a menu.</p>
+          <p>The main way to interact with the actions in a GActionGroup is to activate them with 
+            <a href="GLib.ActionGroup.activate_action.html" class="abstract_method">activate_action</a>. Activating an action may require a 
+            <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> parameter. The required type of the parameter can be inquired with 
+            <a href="GLib.ActionGroup.get_action_parameter_type.html" class="abstract_method">get_action_parameter_type</a>. Actions may be disabled, 
+            see <a href="GLib.ActionGroup.get_action_enabled.html" class="abstract_method">get_action_enabled</a>. Activating a disabled action has no
+             effect.</p>
+          <p>Actions may optionally have a state in the form of a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a>. The current state
+             of an action can be inquired with <a href="GLib.ActionGroup.get_action_state.html" class="abstract_method">get_action_state</a>. 
+            Activating a stateful action may change its state, but it is also possible to set the state by calling 
+            <a href="GLib.ActionGroup.change_action_state.html" class="abstract_method">change_action_state</a>.</p>
+          <p>As typical example, consider a text editing application which has an option to change the current font to 'bold'. A good way to represent
+             this would be a stateful action, with a boolean state. Activating the action would toggle the state.</p>
+          <p>Each action in the group has a unique name (which is a string). All method calls, except 
+            <a href="GLib.ActionGroup.list_actions.html" class="abstract_method">list_actions</a> take the name of an action as an argument.</p>
+          <p>The <span class="interface">ActionGroup</span> API is meant to be the 'public' API to the action group. The calls here are exactly the 
+            interaction that 'external forces' (eg: UI, incoming D-Bus messages, etc.) are supposed to have with actions. 'Internal' APIs (ie: ones 
+            meant only to be accessed by the action group implementation) are found on subclasses. This is why you will find - for example - 
+            <a href="GLib.ActionGroup.get_action_enabled.html" class="abstract_method">get_action_enabled</a> but not an equivalent <code>set</code> 
+            call.</p>
+          <p>Signals are emitted on the action group in response to state changes on individual actions.</p>
+          <p>Implementations of <span class="interface">ActionGroup</span> should provide implementations for the virtual functions 
+            <a href="GLib.ActionGroup.list_actions.html" class="abstract_method">list_actions</a> and 
+            <a href="GLib.ActionGroup.query_action.html" class="virtual_method">query_action</a>. The other virtual functions should not be 
+            implemented - their "wrappers" are actually implemented with calls to <a href="GLib.ActionGroup.query_action.html" class="virtual_method">
+              query_action</a>.</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known implementing classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-268')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-268">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.Application.html">Application</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.DBusActionGroup.html">DBusActionGroup</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.SimpleActionGroup.html">SimpleActionGroup</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known sub-interfaces:</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-269')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-269">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="interface"><a href="GLib.RemoteActionGroup.html">RemoteActionGroup</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                  </ul>
+                </div>
+              </div>
+            </div><br/>
+            <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+            </div>
+            <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+            </div>
+            <h2 class="main_title">Content:</h2>
+            <h3 class="main_title">Methods:</h3>
+            <ul class="navi_inline">
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.activate_action.html" class="abstract_method">activate_action</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? parameter)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Activate the named action within <span class="main_keyword">this
+                    </span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.change_action_state.html" class="abstract_method">change_action_state</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> value)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Request for the state of the named action within 
+                    <span class="main_keyword">this</span> to be changed to <code>value</code>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.ActionGroup.get_action_enabled.html" class="abstract_method">get_action_enabled</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Checks if the named action within <span class="main_keyword">this
+                    </span> is currently enabled.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? <b><a href="GLib.ActionGroup.get_action_parameter_type.html" class="abstract_method">get_action_parameter_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Queries the type of the parameter that must be given when 
+                    activating the named action within <span class="main_keyword">this</span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? <b><a href="GLib.ActionGroup.get_action_state.html" class="abstract_method">get_action_state</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Queries the current state of the named action within 
+                    <span class="main_keyword">this</span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? <b><a href="GLib.ActionGroup.get_action_state_hint.html" class="abstract_method">get_action_state_hint</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Requests a hint about the valid range of values for the state of 
+                    the named action within <span class="main_keyword">this</span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">unowned</span> <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? <b><a href="GLib.ActionGroup.get_action_state_type.html" class="abstract_method">get_action_state_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Queries the type of the state of the named action within 
+                    <span class="main_keyword">this</span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.ActionGroup.has_action.html" class="abstract_method">has_action</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Checks if the named action exists within 
+                    <span class="main_keyword">this</span>.</span>
+                </div></li>
+              <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.ActionGroup.list_actions.html" class="abstract_method">list_actions</a></b> ()
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Lists the actions contained within <span class="main_keyword">this
+                    </span>.</span>
+                </div></li>
+              <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.ActionGroup.query_action.html" class="virtual_method">query_action</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> enabled, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span> parameter_type, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span> state_type, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> state_hint, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> state)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Queries all aspects of the named action within an 
+                    <span class="main_keyword">this</span>.</span>
+                </div></li>
+            </ul>
+            <h3 class="main_title">Signals:</h3>
+            <ul class="navi_inline">
+              <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.action_added.html" class="signal">action_added</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Signals that a new action was just added to the group.</span>
+                </div></li>
+              <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.action_enabled_changed.html" class="signal">action_enabled_changed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> enabled)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Signals that the enabled status of the named action has changed.
+                  </span>
+                </div></li>
+              <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.action_removed.html" class="signal">action_removed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Signals that an action is just about to be removed from the group.
+                  </span>
+                </div></li>
+              <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.ActionGroup.action_state_changed.html" class="signal">action_state_changed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> state)
+                </span>
+                <div class="leaf_brief_description"><span class="brief_description">Signals that the state of the named action has changed.</span>
+                </div></li>
+            </ul>
+            <h3 class="main_title">Inherited Members:</h3>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from class GLib.Object</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-270')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-270">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                      <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                      <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                      <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                      <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                      <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+          </div>
+        </body>
+      </html>

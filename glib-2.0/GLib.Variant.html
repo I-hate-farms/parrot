@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Variant &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Variant &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Variant</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enum"><a href="GLib.Variant.Class.html">Class</a></li>
+          <li class="static_method"><a href="GLib.Variant.is_object_path.html">is_object_path</a></li>
+          <li class="static_method"><a href="GLib.Variant.is_signature.html">is_signature</a></li>
+          <li class="static_method"><a href="GLib.Variant.new_fixed_array.html">new_fixed_array</a></li>
+          <li class="static_method"><a href="GLib.Variant.new_from_data.html">new_from_data</a></li>
+          <li class="static_method"><a href="GLib.Variant.parse.html">parse</a></li>
+          <li class="static_method"><a href="GLib.Variant.parse_error_print_context.html">parse_error_print_context</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.html">Variant</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.array.html">Variant.array</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.boolean.html">Variant.boolean</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.byte.html">Variant.byte</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.bytestring.html">Variant.bytestring</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.bytestring_array.html">Variant.bytestring_array</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.dict_entry.html">Variant.dict_entry</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.double.html">Variant.double</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.from_bytes.html">Variant.from_bytes</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.handle.html">Variant.handle</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.int16.html">Variant.int16</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.int32.html">Variant.int32</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.int64.html">Variant.int64</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.maybe.html">Variant.maybe</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.object_path.html">Variant.object_path</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.parsed.html">Variant.parsed</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.printf.html">Variant.printf</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.signature.html">Variant.signature</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.string.html">Variant.string</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.strv.html">Variant.strv</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.take_string.html">Variant.take_string</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.tuple.html">Variant.tuple</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.uint16.html">Variant.uint16</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.uint32.html">Variant.uint32</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.uint64.html">Variant.uint64</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.va.html">Variant.va</a></li>
+          <li class="creation_method"><a href="GLib.Variant.Variant.variant.html">Variant.variant</a></li>
+          <li class="method"><a href="GLib.Variant.@get.html">@get</a></li>
+          <li class="method"><a href="GLib.Variant.byteswap.html">byteswap</a></li>
+          <li class="method"><a href="GLib.Variant.check_format_string.html">check_format_string</a></li>
+          <li class="method"><a href="GLib.Variant.classify.html">classify</a></li>
+          <li class="method"><a href="GLib.Variant.compare.html">compare</a></li>
+          <li class="method"><a href="GLib.Variant.dup_bytestring.html">dup_bytestring</a></li>
+          <li class="method"><a href="GLib.Variant.dup_bytestring_array.html">dup_bytestring_array</a></li>
+          <li class="method"><a href="GLib.Variant.dup_string.html">dup_string</a></li>
+          <li class="method"><a href="GLib.Variant.dup_strv.html">dup_strv</a></li>
+          <li class="method"><a href="GLib.Variant.equal.html">equal</a></li>
+          <li class="method"><a href="GLib.Variant.get_boolean.html">get_boolean</a></li>
+          <li class="method"><a href="GLib.Variant.get_byte.html">get_byte</a></li>
+          <li class="method"><a href="GLib.Variant.get_bytestring.html">get_bytestring</a></li>
+          <li class="method"><a href="GLib.Variant.get_bytestring_array.html">get_bytestring_array</a></li>
+          <li class="method"><a href="GLib.Variant.get_child.html">get_child</a></li>
+          <li class="method"><a href="GLib.Variant.get_child_value.html">get_child_value</a></li>
+          <li class="method"><a href="GLib.Variant.get_data.html">get_data</a></li>
+          <li class="method"><a href="GLib.Variant.get_data_as_bytes.html">get_data_as_bytes</a></li>
+          <li class="method"><a href="GLib.Variant.get_double.html">get_double</a></li>
+          <li class="method"><a href="GLib.Variant.get_handle.html">get_handle</a></li>
+          <li class="method"><a href="GLib.Variant.get_int16.html">get_int16</a></li>
+          <li class="method"><a href="GLib.Variant.get_int32.html">get_int32</a></li>
+          <li class="method"><a href="GLib.Variant.get_int64.html">get_int64</a></li>
+          <li class="method"><a href="GLib.Variant.get_maybe.html">get_maybe</a></li>
+          <li class="method"><a href="GLib.Variant.get_normal_form.html">get_normal_form</a></li>
+          <li class="method"><a href="GLib.Variant.get_size.html">get_size</a></li>
+          <li class="method"><a href="GLib.Variant.get_string.html">get_string</a></li>
+          <li class="method"><a href="GLib.Variant.get_strv.html">get_strv</a></li>
+          <li class="method"><a href="GLib.Variant.get_type.html">get_type</a></li>
+          <li class="method"><a href="GLib.Variant.get_type_string.html">get_type_string</a></li>
+          <li class="method"><a href="GLib.Variant.get_uint16.html">get_uint16</a></li>
+          <li class="method"><a href="GLib.Variant.get_uint32.html">get_uint32</a></li>
+          <li class="method"><a href="GLib.Variant.get_uint64.html">get_uint64</a></li>
+          <li class="method"><a href="GLib.Variant.get_va.html">get_va</a></li>
+          <li class="method"><a href="GLib.Variant.get_variant.html">get_variant</a></li>
+          <li class="method"><a href="GLib.Variant.hash.html">hash</a></li>
+          <li class="method"><a href="GLib.Variant.is_container.html">is_container</a></li>
+          <li class="method"><a href="GLib.Variant.is_floating.html">is_floating</a></li>
+          <li class="method"><a href="GLib.Variant.is_normal_form.html">is_normal_form</a></li>
+          <li class="method"><a href="GLib.Variant.is_of_type.html">is_of_type</a></li>
+          <li class="method"><a href="GLib.Variant.iterator.html">iterator</a></li>
+          <li class="method"><a href="GLib.Variant.lookup.html">lookup</a></li>
+          <li class="method"><a href="GLib.Variant.lookup_value.html">lookup_value</a></li>
+          <li class="method"><a href="GLib.Variant.n_children.html">n_children</a></li>
+          <li class="method"><a href="GLib.Variant.print.html">print</a></li>
+          <li class="method"><a href="GLib.Variant.print_string.html">print_string</a></li>
+          <li class="method"><a href="GLib.Variant.store.html">store</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Variant</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Variant" alt="Object hierarchy for Variant" src="img/GLib.Variant.png"/>
+
+      <map id="GLib.Variant" name="GLib.Variant">
+<area shape="rect" id="node1" href="GLib.Variant.html" title="GLib.Variant" alt="" coords="5,5,123,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Variant</span></b>
+        </div>
+        <div class="description">
+          <p><span class="class">Variant</span> is a variant datatype; it stores a value along with information about the type of that value.</p>
+          <p> The range of possible values is determined by the type. The type system used by <span class="class">Variant</span> is 
+            <a href="GLib.VariantType.html" class="class">VariantType</a>.</p>
+          <p><span class="class">Variant</span> instances always have a type and a value (which are given at construction time). The type and value of
+             a <span class="class">Variant</span> instance can never change other than by the <span class="class">Variant</span> itself being 
+            destroyed. A <span class="class">Variant</span> cannot contain a pointer.</p>
+          <p><span class="class">Variant</span> is reference counted using <code>g_variant_ref</code> and <code>g_variant_unref</code>. 
+            <span class="class">Variant</span> also has floating reference counts -- see <code>g_variant_ref_sink</code>.</p>
+          <p><span class="class">Variant</span> is completely threadsafe. A <span class="class">Variant</span> instance can be concurrently accessed 
+            in any way from any number of threads without problems.</p>
+          <p><span class="class">Variant</span> is heavily optimised for dealing with data in serialised form. It works particularly well with data 
+            located in memory-mapped files. It can perform nearly all deserialisation operations in a small constant time, usually touching only a 
+            single memory page. Serialised <span class="class">Variant</span> data can also be sent over the network.</p>
+          <p><span class="class">Variant</span> is largely compatible with D-Bus. Almost all types of <span class="class">Variant</span> instances can
+             be sent over D-Bus. See <a href="GLib.VariantType.html" class="class">VariantType</a> for exceptions. (However, <span class="class">
+              Variant</span>'s serialisation format is not the same as the serialisation format of a D-Bus message body: use 
+            <a href="../gio-2.0/GLib.DBusMessage.html" class="class">DBusMessage</a>, in the gio library, for those.)</p>
+          <p>For space-efficiency, the <span class="class">Variant</span> serialisation format does not automatically include the variant's length, 
+            type or endianness, which must either be implied from context (such as knowledge that a particular file format always contains a 
+            little-endian <span class="main_optional_parameter">g_variant_type_variant</span> which occupies the whole length of the file) or supplied
+             out-of-band (for instance, a length, type and/or endianness indicator could be placed at the beginning of a file, network message or 
+            network stream).</p>
+          <p>A <span class="class">Variant</span>'s size is limited mainly by any lower level operating system constraints, such as the number of bits
+             in <a href="size_t.html" class="struct">size_t</a>. For example, it is reasonable to have a 2GB file mapped into memory with 
+            <a href="GLib.MappedFile.html" class="class">MappedFile</a>, and call <a href="GLib.Variant.new_from_data.html" class="static_method">
+              new_from_data</a> on it.</p>
+          <p>For convenience to C programmers, <span class="class">Variant</span> features powerful varargs-based value construction and destruction. 
+            This feature is designed to be embedded in other libraries.</p>
+          <p>There is a Python-inspired text language for describing <span class="class">Variant</span> values. <span class="class">Variant</span> 
+            includes a printer for this language and a parser with type inferencing.</p>
+          <h2> Memory Use</h2>
+          <p><span class="class">Variant</span> tries to be quite efficient with respect to memory use. This section gives a rough idea of how much 
+            memory is used by the current implementation. The information here is subject to change in the future.</p>
+          <p>The memory allocated by <span class="class">Variant</span> can be grouped into 4 broad purposes: memory for serialised data, memory for 
+            the type information cache, buffer management memory and memory for the <span class="class">Variant</span> structure itself.</p>
+          <h2> Serialised Data Memory</h2>
+          <p>This is the memory that is used for storing GVariant data in serialised form. This is what would be sent over the network or what would 
+            end up on disk, not counting any indicator of the endianness, or of the length or type of the top-level variant.</p>
+          <p>The amount of memory required to store a boolean is 1 byte. 16, 32 and 64 bit integers and double precision floating point numbers use 
+            their "natural" size. Strings (including object path and signature strings) are stored with a nul terminator, and as such use the length 
+            of the string plus 1 byte.</p>
+          <p>Maybe types use no space at all to represent the null value and use the same amount of space (sometimes plus one byte) as the equivalent 
+            non-maybe-typed value to represent the non-null case.</p>
+          <p>Arrays use the amount of space required to store each of their members, concatenated. Additionally, if the items stored in an array are 
+            not of a fixed-size (ie: strings, other arrays, etc) then an additional framing offset is stored for each item. The size of this offset is
+             either 1, 2 or 4 bytes depending on the overall size of the container. Additionally, extra padding bytes are added as required for 
+            alignment of child values.</p>
+          <p>Tuples (including dictionary entries) use the amount of space required to store each of their members, concatenated, plus one framing 
+            offset (as per arrays) for each non-fixed-sized item in the tuple, except for the last one. Additionally, extra padding bytes are added as
+             required for alignment of child values.</p>
+          <p>Variants use the same amount of space as the item inside of the variant, plus 1 byte, plus the length of the type string for the item 
+            inside the variant.</p>
+          <p>As an example, consider a dictionary mapping strings to variants. In the case that the dictionary is empty, 0 bytes are required for the 
+            serialisation.</p>
+          <p>If we add an item "width" that maps to the int32 value of 500 then we will use 4 byte to store the int32 (so 6 for the variant containing
+             it) and 6 bytes for the string. The variant must be aligned to 8 after the 6 bytes of the string, so that's 2 extra bytes. 6 (string) + 2
+             (padding) + 6 (variant) is 14 bytes used for the dictionary entry. An additional 1 byte is added to the array as a framing offset making 
+            a total of 15 bytes.</p>
+          <p>If we add another entry, "title" that maps to a nullable string that happens to have a value of null, then we use 0 bytes for the null 
+            value (and 3 bytes for the variant to contain it along with its type string) plus 6 bytes for the string. Again, we need 2 padding bytes. 
+            That makes a total of 6 + 2 + 3 = 11 bytes.</p>
+          <p>We now require extra padding between the two items in the array. After the 14 bytes of the first item, that's 2 bytes required. We now 
+            require 2 framing offsets for an extra two bytes. 14 + 2 + 11 + 2 = 29 bytes to encode the entire two-item dictionary.</p>
+          <h2> Type Information Cache</h2>
+          <p>For each GVariant type that currently exists in the program a type information structure is kept in the type information cache. The type 
+            information structure is required for rapid deserialisation.</p>
+          <p>Continuing with the above example, if a <span class="class">Variant</span> exists with the type "a{sv}" then a type information struct 
+            will exist for "a{sv}", "{sv}", "s", and "v". Multiple uses of the same type will share the same type information. Additionally, all 
+            single-digit types are stored in read-only static memory and do not contribute to the writable memory footprint of a program using 
+            <span class="class">Variant</span>.</p>
+          <p>Aside from the type information structures stored in read-only memory, there are two forms of type information. One is used for container
+             types where there is a single element type: arrays and maybe types. The other is used for container types where there are multiple 
+            element types: tuples and dictionary entries.</p>
+          <p>Array type info structures are 6 * sizeof (void *), plus the memory required to store the type string itself. This means that on 32-bit 
+            systems, the cache entry for "a{sv}" would require 30 bytes of memory (plus malloc overhead).</p>
+          <p>Tuple type info structures are 6 * sizeof (void *), plus 4 * sizeof (void *) for each item in the tuple, plus the memory required to 
+            store the type string itself. A 2-item tuple, for example, would have a type information structure that consumed writable memory in the 
+            size of 14 * sizeof (void *) (plus type string) This means that on 32-bit systems, the cache entry for "{sv}" would require 61 bytes of 
+            memory (plus malloc overhead).</p>
+          <p>This means that in total, for our "a{sv}" example, 91 bytes of type information would be allocated.</p>
+          <p>The type information cache, additionally, uses a <a href="GLib.GenericSet.html" class="class">GenericSet</a> to store and lookup the 
+            cached items and stores a pointer to this hash table in static storage. The hash table is freed when there are zero items in the type 
+            cache.</p>
+          <p>Although these sizes may seem large it is important to remember that a program will probably only have a very small number of different 
+            types of values in it and that only one type information structure is required for many different values of the same type.</p>
+          <h2> Buffer Management Memory</h2>
+          <p><span class="class">Variant</span> uses an internal buffer management structure to deal with the various different possible sources of 
+            serialised data that it uses. The buffer is responsible for ensuring that the correct call is made when the data is no longer in use by 
+            <span class="class">Variant</span>. This may involve a <a href="GLib.g_free.html" class="field">g_free</a> or a <code>g_slice_free</code> 
+            or even <code>g_mapped_file_unref</code>.</p>
+          <p>One buffer management structure is used for each chunk of serialised data. The size of the buffer management structure is 4 * (void *). 
+            On 32-bit systems, that's 16 bytes.</p>
+          <h2> GVariant structure</h2>
+          <p>The size of a <span class="class">Variant</span> structure is 6 * (void *). On 32-bit systems, that's 24 bytes.</p>
+          <p><span class="class">Variant</span> structures only exist if they are explicitly created with API calls. For example, if a 
+            <span class="class">Variant</span> is constructed out of serialised data for the example given above (with the dictionary) then although 
+            there are 9 individual values that comprise the entire dictionary (two keys, two values, two variants containing the values, two 
+            dictionary entries, plus the dictionary itself), only 1 <span class="class">Variant</span> instance exists -- the one referring to the 
+            dictionary.</p>
+          <p>If calls are made to start accessing the other values then <span class="class">Variant</span> instances will exist for those values only 
+            for as long as they are in use (ie: until you call <code>g_variant_unref</code>). The type information is shared. The serialised data and 
+            the buffer management structure for that serialised data is shared by the child.</p>
+          <h2> Summary</h2>
+          <p>To put the entire example together, for our dictionary mapping strings to variants (with two entries, as given above), we are using 91 
+            bytes of memory for type information, 29 byes of memory for the serialised data, 16 bytes for buffer management and 24 bytes for the 
+            <span class="class">Variant</span> instance, or a total of 160 bytes, plus malloc overhead. If we were to use 
+            <a href="GLib.Variant.get_child_value.html" class="method">get_child_value</a> to access the two dictionary entries, we would use an 
+            additional 48 bytes. If we were to have other dictionaries of the same type, we would use more memory for the serialised data and buffer 
+            management for those dictionaries, but the type information would be shared.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Enums:</h3>
+        <ul class="navi_inline">
+          <li class="enum"><a href="GLib.Variant.Class.html">Class</a> - <span class="brief_description">The range of possible top-level types of 
+              <span class="class">Variant</span> instances.</span></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_object_path.html" class="static_method">is_object_path</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> object_path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if a given string is a valid D-Bus object path.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_signature.html" class="static_method">is_signature</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> signature)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if a given string is a valid D-Bus type signature.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.new_fixed_array.html" class="static_method">new_fixed_array</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span>? element_type, <span class="main_type"><span>T</span></span>[] elements, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> element_size)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Provides access to the serialised data for an array of fixed-sized 
+                items.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.new_from_data.html" class="static_method">new_from_data</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span> type, <span class="main_basic_type"><a href="uchar.html" class="struct">uchar</a></span>[] data, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> trusted, <span class="main_keyword">owned</span> <span class="main_type"><span>T</span></span> owner = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Variant</span> instance from 
+                serialised data.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.parse.html" class="static_method">parse</a></b> (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span>? type, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> text, <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>* limit = <span class="main_optional_parameter">null</span>, <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>** endptr = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.VariantParseError.html" class="errordomain">VariantParseError</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parses a <span class="class">Variant</span> from a text 
+                representation.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="GLib.Variant.parse_error_print_context.html" class="static_method">parse_error_print_context</a></b> (<span class="main_type"><a href="GLib.VariantParseError.html" class="errordomain">VariantParseError</a></span> error, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> source_str)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Pretty-prints a message showing the context of a <span class="class">
+                  Variant</span> parse error within the string for which parsing was attempted.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.boolean.html" class="creation_method">Variant.boolean</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new boolean <span class="class">Variant</span> instance -- 
+                either <span class="main_optional_parameter">true</span> or <span class="main_optional_parameter">false</span>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.byte.html" class="creation_method">Variant.byte</a></b> (<span class="main_basic_type"><a href="uchar.html" class="struct">uchar</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new byte <span class="class">Variant</span> instance.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.int16.html" class="creation_method">Variant.int16</a></b> (<span class="main_basic_type"><a href="int16.html" class="struct">int16</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new int16 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.uint16.html" class="creation_method">Variant.uint16</a></b> (<span class="main_basic_type"><a href="uint16.html" class="struct">uint16</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new uint16 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.int32.html" class="creation_method">Variant.int32</a></b> (<span class="main_basic_type"><a href="int32.html" class="struct">int32</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new int32 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.uint32.html" class="creation_method">Variant.uint32</a></b> (<span class="main_basic_type"><a href="uint32.html" class="struct">uint32</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new uint32 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.int64.html" class="creation_method">Variant.int64</a></b> (<span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new int64 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.uint64.html" class="creation_method">Variant.uint64</a></b> (<span class="main_basic_type"><a href="uint64.html" class="struct">uint64</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new uint64 <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.handle.html" class="creation_method">Variant.handle</a></b> (<span class="main_basic_type"><a href="int32.html" class="struct">int32</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new handle <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.double.html" class="creation_method">Variant.double</a></b> (<span class="main_basic_type"><a href="double.html" class="struct">double</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new double <span class="class">Variant</span> instance.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.string.html" class="creation_method">Variant.string</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a string <span class="class">Variant</span> with the contents 
+                of <code>string</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.bytestring.html" class="creation_method">Variant.bytestring</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates an array-of-bytes <span class="class">Variant</span> with the 
+                contents of <code>string</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.object_path.html" class="creation_method">Variant.object_path</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> object_path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a D-Bus object path <span class="class">Variant</span> with 
+                the contents of <code>string</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.signature.html" class="creation_method">Variant.signature</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> signature)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a D-Bus type signature <span class="class">Variant</span> with
+                 the contents of <code>string</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.strv.html" class="creation_method">Variant.strv</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs an array of strings <span class="class">Variant</span> from
+                 the given array of strings.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.bytestring_array.html" class="creation_method">Variant.bytestring_array</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs an array of bytestring <span class="class">Variant</span> 
+                from the given array of strings.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.html" class="creation_method">Variant</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Variant</span> instance.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.va.html" class="creation_method">Variant.va</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>** end_ptr, <span class="main_type"><a href="va_list.html" class="struct">va_list</a></span>* app)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is intended to be used by libraries based on 
+                <span class="class">Variant</span> that want to provide <a href="GLib.Variant.Variant.html" class="creation_method">Variant</a>-like 
+                functionality to their users.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.variant.html" class="creation_method">Variant.variant</a></b> (<span class="main_type"><span class="class">Variant</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Boxes <code>value</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.maybe.html" class="creation_method">Variant.maybe</a></b> (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span>? child_type, <span class="main_type"><span class="class">Variant</span></span>? child)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Depending on if <code>child</code> is 
+                <span class="main_optional_parameter">null</span>, either wraps <code>child</code> inside of a maybe container or creates a Nothing 
+                instance for the given <code>type</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.array.html" class="creation_method">Variant.array</a></b> (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span>? child_type, <span class="main_type"><span class="class">Variant</span></span>[] children)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Variant</span> array from <code>
+                  children</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.tuple.html" class="creation_method">Variant.tuple</a></b> (<span class="main_type"><span class="class">Variant</span></span>[] children)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new tuple <span class="class">Variant</span> out of the 
+                items in <code>children</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.dict_entry.html" class="creation_method">Variant.dict_entry</a></b> (<span class="main_type"><span class="class">Variant</span></span> key, <span class="main_type"><span class="class">Variant</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new dictionary entry <span class="class">Variant</span>.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.parsed.html" class="creation_method">Variant.parsed</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parses <code>format</code> and returns the result.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.from_bytes.html" class="creation_method">Variant.from_bytes</a></b> (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span> type, <span class="main_type"><a href="GLib.Bytes.html" class="class">Bytes</a></span> bytes, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> trusted)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs a new serialised-mode <span class="class">Variant</span> 
+                instance.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.printf.html" class="creation_method">Variant.printf</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a string-type GVariant using printf formatting.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Variant.Variant.take_string.html" class="creation_method">Variant.take_string</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> str)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a string <span class="class">Variant</span> with the contents 
+                of <code>string</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span> <b><a href="GLib.Variant.get_type.html" class="method">get_type</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the type of <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.get_type_string.html" class="method">get_type_string</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the type string of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_of_type.html" class="method">is_of_type</a></b> (<span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span> type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a value has a type matching the provided type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_container.html" class="method">is_container</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is a container.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_floating.html" class="method">is_floating</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks whether <span class="main_keyword">this</span> has a floating 
+                reference count.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Variant.Class.html" class="enum">Class</a></span> <b><a href="GLib.Variant.classify.html" class="method">classify</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Classifies <span class="main_keyword">this</span> according to its 
+                top-level type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.Variant.compare.html" class="method">compare</a></b> (<span class="main_type"><span class="class">Variant</span></span> other)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares <span class="main_keyword">this</span> and <code>two</code>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.get_boolean.html" class="method">get_boolean</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the boolean value of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span> <b><a href="GLib.Variant.get_byte.html" class="method">get_byte</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the byte value of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int16.html" class="struct">int16</a></span> <b><a href="GLib.Variant.get_int16.html" class="method">get_int16</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 16-bit signed integer value of <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint16.html" class="struct">uint16</a></span> <b><a href="GLib.Variant.get_uint16.html" class="method">get_uint16</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 16-bit unsigned integer value of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int32.html" class="struct">int32</a></span> <b><a href="GLib.Variant.get_int32.html" class="method">get_int32</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 32-bit signed integer value of <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint32.html" class="struct">uint32</a></span> <b><a href="GLib.Variant.get_uint32.html" class="method">get_uint32</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 32-bit unsigned integer value of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int64.html" class="struct">int64</a></span> <b><a href="GLib.Variant.get_int64.html" class="method">get_int64</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 64-bit signed integer value of <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint64.html" class="struct">uint64</a></span> <b><a href="GLib.Variant.get_uint64.html" class="method">get_uint64</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 64-bit unsigned integer value of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int32.html" class="struct">int32</a></span> <b><a href="GLib.Variant.get_handle.html" class="method">get_handle</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the 32-bit signed integer value of <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="double.html" class="struct">double</a></span> <b><a href="GLib.Variant.get_double.html" class="method">get_double</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the double precision floating point value of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.get_string.html" class="method">get_string</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> length = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the string value of a <span class="class">Variant</span> 
+                instance with a string type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.dup_string.html" class="method">dup_string</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> length = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Similar to <a href="GLib.Variant.get_string.html" class="method">
+                  get_string</a> except that instead of returning a constant string, the string is duplicated.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.get_bytestring.html" class="method">get_bytestring</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the string value of a <span class="class">Variant</span> 
+                instance with an array-of-bytes type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.dup_bytestring.html" class="method">dup_bytestring</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> length)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Similar to <a href="GLib.Variant.get_bytestring.html" class="method">
+                  get_bytestring</a> except that instead of returning a constant string, the string is duplicated.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> (<span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>)[] <b><a href="GLib.Variant.get_strv.html" class="method">get_strv</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the contents of an array of strings <span class="class">Variant
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] <b><a href="GLib.Variant.dup_strv.html" class="method">dup_strv</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the contents of an array of strings <span class="class">Variant
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> (<span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>)[] <b><a href="GLib.Variant.get_bytestring_array.html" class="method">get_bytestring_array</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the contents of an array of array of bytes <span class="class">
+                  Variant</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] <b><a href="GLib.Variant.dup_bytestring_array.html" class="method">dup_bytestring_array</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the contents of an array of array of bytes <span class="class">
+                  Variant</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Variant.@get.html" class="method">@get</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Deconstructs a <span class="class">Variant</span> instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Variant.get_va.html" class="method">get_va</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>** end_ptr, <span class="main_type"><a href="va_list.html" class="struct">va_list</a></span>* app)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This function is intended to be used by libraries based on 
+                <span class="class">Variant</span> that want to provide <a href="GLib.Variant.@get.html" class="method">@get</a>-like functionality to
+                 their users.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.get_variant.html" class="method">get_variant</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unboxes <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span>? <b><a href="GLib.Variant.get_maybe.html" class="method">get_maybe</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Given a maybe-typed <span class="class">Variant</span> instance, 
+                extract its value.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> <b><a href="GLib.Variant.n_children.html" class="method">n_children</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the number of children in a container <span class="class">
+                  Variant</span> instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.get_child_value.html" class="method">get_child_value</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> index)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reads a child item out of a container <span class="class">Variant
+                </span> instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Variant.get_child.html" class="method">get_child</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> index, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reads a child item out of a container <span class="class">Variant
+                </span> instance and deconstructs it according to <code>format_string</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span>? <b><a href="GLib.Variant.lookup_value.html" class="method">lookup_value</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_type"><a href="GLib.VariantType.html" class="class">VariantType</a></span>? expected_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up a value in a dictionary <span class="class">Variant</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.lookup.html" class="method">lookup</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up a value in a dictionary <span class="class">Variant</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> <b><a href="GLib.Variant.get_size.html" class="method">get_size</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the number of bytes that would be required to store 
+                <span class="main_keyword">this</span> with <a href="GLib.Variant.store.html" class="method">store</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.Variant.get_data.html" class="method">get_data</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns a pointer to the serialised form of a <span class="class">
+                  Variant</span> instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Variant.store.html" class="method">store</a></b> (<span class="main_keyword">void</span>* data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Stores the serialised form of <span class="main_keyword">this</span> 
+                at <code>data</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.Variant.print.html" class="method">print</a></b> (<span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> type_annotate)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Pretty-prints <span class="main_keyword">this</span> in the format 
+                understood by <a href="GLib.Variant.parse.html" class="static_method">parse</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.StringBuilder.html" class="class">StringBuilder</a></span> <b><a href="GLib.Variant.print_string.html" class="method">print_string</a></b> (<span class="main_type"><a href="GLib.StringBuilder.html" class="class">StringBuilder</a></span>? builder, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> type_annotate)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Behaves as <a href="GLib.Variant.print.html" class="method">print</a>,
+                 but operates on a <a href="GLib.StringBuilder.html" class="class">StringBuilder</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.Variant.hash.html" class="method">hash</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Generates a hash value for a <span class="class">Variant</span> 
+                instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.equal.html" class="method">equal</a></b> (<span class="main_type"><span class="class">Variant</span></span> other)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> and <code>two</code> 
+                have the same type and value.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.byteswap.html" class="method">byteswap</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Performs a byteswapping operation on the contents of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Variant</span></span> <b><a href="GLib.Variant.get_normal_form.html" class="method">get_normal_form</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a <span class="class">Variant</span> instance that has the same 
+                value as <span class="main_keyword">this</span> and is trusted to be in normal form.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.is_normal_form.html" class="method">is_normal_form</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is in normal form.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.VariantIter.html" class="class">VariantIter</a></span> <b><a href="GLib.Variant.iterator.html" class="method">iterator</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Variant.check_format_string.html" class="method">check_format_string</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format_string, <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> copy_only)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if calling <a href="GLib.Variant.@get.html" class="method">@get
+                </a> with <code>format_string</code> on <span class="main_keyword">this</span> would be valid from a type-compatibility standpoint.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Bytes.html" class="class">Bytes</a></span> <b><a href="GLib.Variant.get_data_as_bytes.html" class="method">get_data_as_bytes</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns a pointer to the serialised form of a <span class="class">
+                  Variant</span> instance.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.FileInfo &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.FileInfo &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">FileInfo</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.FileInfo.FileInfo.html">FileInfo</a></li>
+          <li class="method"><a href="GLib.FileInfo.clear_status.html">clear_status</a></li>
+          <li class="method"><a href="GLib.FileInfo.copy_into.html">copy_into</a></li>
+          <li class="method"><a href="GLib.FileInfo.dup.html">dup</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_as_string.html">get_attribute_as_string</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_boolean.html">get_attribute_boolean</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_byte_string.html">get_attribute_byte_string</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_data.html">get_attribute_data</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_int32.html">get_attribute_int32</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_int64.html">get_attribute_int64</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_object.html">get_attribute_object</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_status.html">get_attribute_status</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_string.html">get_attribute_string</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_stringv.html">get_attribute_stringv</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_type.html">get_attribute_type</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_uint32.html">get_attribute_uint32</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_attribute_uint64.html">get_attribute_uint64</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_content_type.html">get_content_type</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_deletion_date.html">get_deletion_date</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_display_name.html">get_display_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_edit_name.html">get_edit_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_etag.html">get_etag</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_file_type.html">get_file_type</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_icon.html">get_icon</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_is_backup.html">get_is_backup</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_is_hidden.html">get_is_hidden</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_is_symlink.html">get_is_symlink</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_modification_time.html">get_modification_time</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_name.html">get_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_size.html">get_size</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_sort_order.html">get_sort_order</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_symbolic_icon.html">get_symbolic_icon</a></li>
+          <li class="method"><a href="GLib.FileInfo.get_symlink_target.html">get_symlink_target</a></li>
+          <li class="method"><a href="GLib.FileInfo.has_attribute.html">has_attribute</a></li>
+          <li class="method"><a href="GLib.FileInfo.has_namespace.html">has_namespace</a></li>
+          <li class="method"><a href="GLib.FileInfo.list_attributes.html">list_attributes</a></li>
+          <li class="method"><a href="GLib.FileInfo.remove_attribute.html">remove_attribute</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute.html">set_attribute</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_boolean.html">set_attribute_boolean</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_byte_string.html">set_attribute_byte_string</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_int32.html">set_attribute_int32</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_int64.html">set_attribute_int64</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_mask.html">set_attribute_mask</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_object.html">set_attribute_object</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_status.html">set_attribute_status</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_string.html">set_attribute_string</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_stringv.html">set_attribute_stringv</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_uint32.html">set_attribute_uint32</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_attribute_uint64.html">set_attribute_uint64</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_content_type.html">set_content_type</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_display_name.html">set_display_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_edit_name.html">set_edit_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_file_type.html">set_file_type</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_icon.html">set_icon</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_is_hidden.html">set_is_hidden</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_is_symlink.html">set_is_symlink</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_modification_time.html">set_modification_time</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_name.html">set_name</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_size.html">set_size</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_sort_order.html">set_sort_order</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_symbolic_icon.html">set_symbolic_icon</a></li>
+          <li class="method"><a href="GLib.FileInfo.set_symlink_target.html">set_symlink_target</a></li>
+          <li class="method"><a href="GLib.FileInfo.unset_attribute_mask.html">unset_attribute_mask</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">FileInfo</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.FileInfo" alt="Object hierarchy for FileInfo" src="img/GLib.FileInfo.png"/>
+
+      <map id="GLib.FileInfo" name="GLib.FileInfo">
+<area shape="rect" id="node1" href="GLib.FileInfo.html" title="GLib.FileInfo" alt="" coords="5,101,128,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="10,5,123,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">FileInfo</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p>Functionality for manipulating basic metadata for files.</p>
+          <p> <span class="class">FileInfo</span> implements methods for getting information that all files should contain, and allows for 
+            manipulation of extended attributes.</p>
+          <p>See <i>GFileAttribute</i> for more information on how GIO handles file attributes.</p>
+          <p>To obtain a <span class="class">FileInfo</span> for a <a href="GLib.File.html" class="interface">File</a>, use 
+            <a href="GLib.File.query_info.html" class="abstract_method">query_info</a> (or its async variant). To obtain a <span class="class">
+              FileInfo</span> for a file input or output stream, use <a href="GLib.FileInputStream.query_info.html" class="virtual_method">query_info
+            </a> or <a href="GLib.FileOutputStream.query_info.html" class="virtual_method">query_info</a> (or their async variants).</p>
+          <p>To change the actual attributes of a file, you should then set the attribute in the <span class="class">FileInfo</span> and call 
+            <a href="GLib.File.set_attributes_from_info.html" class="abstract_method">set_attributes_from_info</a> or 
+            <a href="GLib.File.set_attributes_async.html" class="virtual_method">set_attributes_async</a> on a GFile.</p>
+          <p>However, not all attributes can be changed in the file. For instance, the actual size of a file cannot be changed via 
+            <a href="GLib.FileInfo.set_size.html" class="method">set_size</a>. You may call 
+            <a href="GLib.File.query_settable_attributes.html" class="abstract_method">query_settable_attributes</a> and 
+            <a href="GLib.File.query_writable_namespaces.html" class="abstract_method">query_writable_namespaces</a> to discover the settable 
+            attributes of a particular file at runtime.</p>
+          <p><a href="GLib.FileAttributeMatcher.html" class="class">FileAttributeMatcher</a> allows for searching through a <span class="class">
+              FileInfo</span> for attributes.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.FileInfo.FileInfo.html" class="creation_method">FileInfo</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new file info structure.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.clear_status.html" class="method">clear_status</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Clears the status information from <span class="main_keyword">this
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.copy_into.html" class="method">copy_into</a></b> (<span class="main_type"><span class="class">FileInfo</span></span> dest_info)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copies all of the <i>GFileAttribute</i> from 
+                <span class="main_keyword">this</span> to <code>dest_info</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">FileInfo</span></span> <b><a href="GLib.FileInfo.dup.html" class="method">dup</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Duplicates a file info structure.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_attribute_as_string.html" class="method">get_attribute_as_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a attribute, formated as a string.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.get_attribute_boolean.html" class="method">get_attribute_boolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a boolean attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_attribute_byte_string.html" class="method">get_attribute_byte_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a byte string attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.get_attribute_data.html" class="method">get_attribute_data</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_keyword">out</span> <span class="main_type"><a href="GLib.FileAttributeType.html" class="enum">FileAttributeType</a></span> type, <span class="main_keyword">out</span> <span class="main_keyword">void</span>* value_pp, <span class="main_keyword">out</span> <span class="main_type"><a href="GLib.FileAttributeStatus.html" class="enum">FileAttributeStatus</a></span> status)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the attribute type, value and status for an attribute key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int32.html" class="struct">int32</a></span> <b><a href="GLib.FileInfo.get_attribute_int32.html" class="method">get_attribute_int32</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a signed 32-bit integer contained within the attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int64.html" class="struct">int64</a></span> <b><a href="GLib.FileInfo.get_attribute_int64.html" class="method">get_attribute_int64</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a signed 64-bit integer contained within the attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> <b><a href="GLib.FileInfo.get_attribute_object.html" class="method">get_attribute_object</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a 
+                <a href="../gobject-2.0/GLib.Object.html" class="class">Object</a> attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileAttributeStatus.html" class="enum">FileAttributeStatus</a></span> <b><a href="GLib.FileInfo.get_attribute_status.html" class="method">get_attribute_status</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the attribute status for an attribute key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_attribute_string.html" class="method">get_attribute_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a string attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.FileInfo.get_attribute_stringv.html" class="method">get_attribute_stringv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a stringv attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileAttributeType.html" class="enum">FileAttributeType</a></span> <b><a href="GLib.FileInfo.get_attribute_type.html" class="method">get_attribute_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the attribute type for an attribute key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> <b><a href="GLib.FileInfo.get_attribute_uint32.html" class="method">get_attribute_uint32</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets an unsigned 32-bit integer contained within the attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint64.html" class="struct">uint64</a></span> <b><a href="GLib.FileInfo.get_attribute_uint64.html" class="method">get_attribute_uint64</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a unsigned 64-bit integer contained within the attribute.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_content_type.html" class="method">get_content_type</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the file's content type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.DateTime.html" class="class">DateTime</a></span> <b><a href="GLib.FileInfo.get_deletion_date.html" class="method">get_deletion_date</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the <a href="../glib-2.0/GLib.DateTime.html" class="class">
+                  DateTime</a> representing the deletion date of the file, as available in G_FILE_ATTRIBUTE_TRASH_DELETION_DATE.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_display_name.html" class="method">get_display_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a display name for a file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_edit_name.html" class="method">get_edit_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the edit name for a file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_etag.html" class="method">get_etag</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the <i>entity tag</i> for a given <span class="class">FileInfo
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.FileType.html" class="enum">FileType</a></span> <b><a href="GLib.FileInfo.get_file_type.html" class="method">get_file_type</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a file's type (whether it is a regular file, symlink, etc).
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Icon.html" class="interface">Icon</a></span> <b><a href="GLib.FileInfo.get_icon.html" class="method">get_icon</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the icon for a file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.get_is_backup.html" class="method">get_is_backup</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a file is a backup file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.get_is_hidden.html" class="method">get_is_hidden</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a file is hidden.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.get_is_symlink.html" class="method">get_is_symlink</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a file is a symlink.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.TimeVal.html" class="struct">TimeVal</a></span> <b><a href="GLib.FileInfo.get_modification_time.html" class="method">get_modification_time</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the modification time of the current <span class="main_keyword">
+                  this</span> and sets it in <code>result</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_name.html" class="method">get_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the name for a file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int64.html" class="struct">int64</a></span> <b><a href="GLib.FileInfo.get_size.html" class="method">get_size</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the file's size.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int32.html" class="struct">int32</a></span> <b><a href="GLib.FileInfo.get_sort_order.html" class="method">get_sort_order</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of the sort_order attribute from the 
+                <span class="class">FileInfo</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Icon.html" class="interface">Icon</a></span> <b><a href="GLib.FileInfo.get_symbolic_icon.html" class="method">get_symbolic_icon</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the symbolic icon for a file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.FileInfo.get_symlink_target.html" class="method">get_symlink_target</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the symlink target for a given <span class="class">FileInfo
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.has_attribute.html" class="method">has_attribute</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a file info structure has an attribute named <code>attribute
+                </code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.has_namespace.html" class="method">has_namespace</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name_space)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if a file info structure has an attribute in the specified 
+                <code>name_space</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[]? <b><a href="GLib.FileInfo.list_attributes.html" class="method">list_attributes</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name_space)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Lists the file info structure's attributes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.remove_attribute.html" class="method">remove_attribute</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes all cases of <code>attribute</code> from 
+                <span class="main_keyword">this</span> if it exists.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute.html" class="method">set_attribute</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_type"><a href="GLib.FileAttributeType.html" class="enum">FileAttributeType</a></span> type, <span class="main_keyword">void</span>* value_p)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given value, if 
+                possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_boolean.html" class="method">set_attribute_boolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_byte_string.html" class="method">set_attribute_byte_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_int32.html" class="method">set_attribute_int32</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/int32.html" class="struct">int32</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_int64.html" class="method">set_attribute_int64</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/int64.html" class="struct">int64</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_mask.html" class="method">set_attribute_mask</a></b> (<span class="main_type"><a href="GLib.FileAttributeMatcher.html" class="class">FileAttributeMatcher</a></span> mask)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>mask</code> on <span class="main_keyword">this</span> to 
+                match specific attribute types.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_object.html" class="method">set_attribute_object</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.FileInfo.set_attribute_status.html" class="method">set_attribute_status</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_type"><a href="GLib.FileAttributeStatus.html" class="enum">FileAttributeStatus</a></span> status)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the attribute status for an attribute key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_string.html" class="method">set_attribute_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_stringv.html" class="method">set_attribute_stringv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_uint32.html" class="method">set_attribute_uint32</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_attribute_uint64.html" class="method">set_attribute_uint64</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/uint64.html" class="struct">uint64</a></span> attr_value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <code>attribute</code> to contain the given <code>attr_value
+                </code>, if possible.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_content_type.html" class="method">set_content_type</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> content_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the content type attribute for a given <span class="class">
+                  FileInfo</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_display_name.html" class="method">set_display_name</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> display_name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the display name for the current <span class="class">FileInfo
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_edit_name.html" class="method">set_edit_name</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> edit_name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the edit name for the current file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_file_type.html" class="method">set_file_type</a></b> (<span class="main_type"><a href="GLib.FileType.html" class="enum">FileType</a></span> type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the file type in a <span class="class">FileInfo</span> to <code>
+                  type</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_icon.html" class="method">set_icon</a></b> (<span class="main_type"><a href="GLib.Icon.html" class="interface">Icon</a></span> icon)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the icon for a given <span class="class">FileInfo</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_is_hidden.html" class="method">set_is_hidden</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> is_hidden)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the "is_hidden" attribute in a <span class="class">FileInfo
+                </span> according to <code>is_hidden</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_is_symlink.html" class="method">set_is_symlink</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> is_symlink)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the "is_symlink" attribute in a <span class="class">FileInfo
+                </span> according to <code>is_symlink</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_modification_time.html" class="method">set_modification_time</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.TimeVal.html" class="struct">TimeVal</a></span> mtime)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <span class="main_optional_parameter">
+                  g_file_attribute_time_modified</span> attribute in the file info to the given time value.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_name.html" class="method">set_name</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the name attribute for the current <span class="class">FileInfo
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_size.html" class="method">set_size</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int64.html" class="struct">int64</a></span> size)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <span class="main_optional_parameter">
+                  g_file_attribute_standard_size</span> attribute in the file info to the given size.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_sort_order.html" class="method">set_sort_order</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int32.html" class="struct">int32</a></span> sort_order)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the sort order attribute in the file info structure.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_symbolic_icon.html" class="method">set_symbolic_icon</a></b> (<span class="main_type"><a href="GLib.Icon.html" class="interface">Icon</a></span> icon)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the symbolic icon for a given <span class="class">FileInfo</span>
+                .</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.set_symlink_target.html" class="method">set_symlink_target</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> symlink_target)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the <span class="main_optional_parameter">
+                  g_file_attribute_standard_symlink_target</span> attribute in the file info to the given symlink target.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.FileInfo.unset_attribute_mask.html" class="method">unset_attribute_mask</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unsets a mask set by 
+                <a href="GLib.FileInfo.set_attribute_mask.html" class="method">set_attribute_mask</a>, if one is set.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-129')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-129">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SimpleProxyResolver &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SimpleProxyResolver &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">SimpleProxyResolver</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.SimpleProxyResolver.default_proxy.html">default_proxy</a></li>
+          <li class="property"><a href="GLib.SimpleProxyResolver.ignore_hosts.html">ignore_hosts</a></li>
+          <li class="static_method"><a href="GLib.SimpleProxyResolver.@new.html">@new</a></li>
+          <li class="creation_method"><a href="GLib.SimpleProxyResolver.SimpleProxyResolver.html">SimpleProxyResolver</a></li>
+          <li class="method"><a href="GLib.SimpleProxyResolver.set_default_proxy.html">set_default_proxy</a></li>
+          <li class="method"><a href="GLib.SimpleProxyResolver.set_ignore_hosts.html">set_ignore_hosts</a></li>
+          <li class="method"><a href="GLib.SimpleProxyResolver.set_uri_proxy.html">set_uri_proxy</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">SimpleProxyResolver</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.SimpleProxyResolver" alt="Object hierarchy for SimpleProxyResolver" src="img/GLib.SimpleProxyResolver.png"/>
+      
+
+      <map id="GLib.SimpleProxyResolver" name="GLib.SimpleProxyResolver">
+<area shape="rect" id="node1" href="GLib.SimpleProxyResolver.html" title="GLib.SimpleProxyResolver" alt="" coords="32,101,255,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.ProxyResolver.html" title="GLib.ProxyResolver" alt="" coords="142,5,313,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">SimpleProxyResolver</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.ProxyResolver.html" class="interface">ProxyResolver</a></span>
+        </div>
+        <div class="description">
+          <p><span class="class">SimpleProxyResolver</span> is a simple <a href="GLib.ProxyResolver.html" class="interface">ProxyResolver</a> 
+            implementation that handles a single default proxy, multiple URI-scheme-specific proxies, and a list of hosts that proxies should not be 
+            used for.</p>
+          <p><span class="class">SimpleProxyResolver</span> is never the default proxy resolver, but it can be used as the base class for another 
+            proxy resolver implementation, or it can be created and used manually, such as with 
+            <a href="GLib.SocketClient.set_proxy_resolver.html" class="method">set_proxy_resolver</a>.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.SimpleProxyResolver.default_proxy.html" class="property">default_proxy</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The default proxy URI that will be used for any URI that doesn't match
+                 <a href="GLib.SimpleProxyResolver.ignore_hosts.html" class="property">ignore_hosts</a>, and doesn't match any of the schemes set with
+                 <a href="GLib.SimpleProxyResolver.set_uri_proxy.html" class="method">set_uri_proxy</a>.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.SimpleProxyResolver.ignore_hosts.html" class="property">ignore_hosts</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A list of hostnames and IP addresses that the resolver should allow 
+                direct connections to.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="GLib.ProxyResolver.html" class="interface">ProxyResolver</a></span> <b><a href="GLib.SimpleProxyResolver.@new.html" class="static_method">@new</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? default_proxy, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? ignore_hosts)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">SimpleProxyResolver</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.SimpleProxyResolver.SimpleProxyResolver.html" class="creation_method">SimpleProxyResolver</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleProxyResolver.set_default_proxy.html" class="method">set_default_proxy</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> default_proxy)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the default proxy on <span class="main_keyword">this</span>, to 
+                be used for any URIs that don't match <a href="GLib.SimpleProxyResolver.ignore_hosts.html" class="property">ignore_hosts</a> or a 
+                proxy set via <a href="GLib.SimpleProxyResolver.set_uri_proxy.html" class="method">set_uri_proxy</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleProxyResolver.set_ignore_hosts.html" class="method">set_ignore_hosts</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> ignore_hosts)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the list of ignored hosts.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleProxyResolver.set_uri_proxy.html" class="method">set_uri_proxy</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> uri_scheme, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> proxy)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a URI-scheme-specific proxy to <span class="main_keyword">this
+                </span>; URIs whose scheme matches <code>uri_scheme</code> (and which don't match 
+                <a href="GLib.SimpleProxyResolver.ignore_hosts.html" class="property">ignore_hosts</a>) will be proxied via <code>proxy</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-211')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-211">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.ProxyResolver</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-212')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-212">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="GLib.ProxyResolver.get_default.html">get_default</a></li>
+                    <li class="abstract_method"><a href="GLib.ProxyResolver.is_supported.html">is_supported</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.ProxyResolver.lookup.html">lookup</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.ProxyResolver.lookup_async.html">lookup_async</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

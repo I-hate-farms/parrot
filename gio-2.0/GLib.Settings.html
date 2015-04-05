@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Settings &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Settings &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Settings</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Settings.backend.html">backend</a></li>
+          <li class="property"><a href="GLib.Settings.delay_apply.html">delay_apply</a></li>
+          <li class="property"><a href="GLib.Settings.has_unapplied.html">has_unapplied</a></li>
+          <li class="property"><a href="GLib.Settings.path.html">path</a></li>
+          <li class="property"><span class="deprecated"><a href="GLib.Settings.schema.html">schema</a></span></li>
+          <li class="property"><a href="GLib.Settings.schema_id.html">schema_id</a></li>
+          <li class="property"><a href="GLib.Settings.settings_schema.html">settings_schema</a></li>
+          <li class="static_method"><span class="deprecated"><a href="GLib.Settings.list_relocatable_schemas.html">list_relocatable_schemas</a></span>
+          </li>
+          <li class="static_method"><span class="deprecated"><a href="GLib.Settings.list_schemas.html">list_schemas</a></span></li>
+          <li class="static_method"><a href="GLib.Settings.sync.html">sync</a></li>
+          <li class="static_method"><a href="GLib.Settings.unbind.html">unbind</a></li>
+          <li class="creation_method"><a href="GLib.Settings.Settings.html">Settings</a></li>
+          <li class="creation_method"><a href="GLib.Settings.Settings.full.html">Settings.full</a></li>
+          <li class="creation_method"><a href="GLib.Settings.Settings.with_backend.html">Settings.with_backend</a></li>
+          <li class="creation_method"><a href="GLib.Settings.Settings.with_backend_and_path.html">Settings.with_backend_and_path</a></li>
+          <li class="creation_method"><a href="GLib.Settings.Settings.with_path.html">Settings.with_path</a></li>
+          <li class="method"><a href="GLib.Settings.@get.html">@get</a></li>
+          <li class="method"><a href="GLib.Settings.@set.html">@set</a></li>
+          <li class="method"><a href="GLib.Settings.apply.html">apply</a></li>
+          <li class="method"><a href="GLib.Settings.bind.html">bind</a></li>
+          <li class="method"><a href="GLib.Settings.bind_with_mapping.html">bind_with_mapping</a></li>
+          <li class="method"><a href="GLib.Settings.bind_writable.html">bind_writable</a></li>
+          <li class="method"><a href="GLib.Settings.create_action.html">create_action</a></li>
+          <li class="method"><a href="GLib.Settings.delay.html">delay</a></li>
+          <li class="method"><a href="GLib.Settings.get_boolean.html">get_boolean</a></li>
+          <li class="method"><a href="GLib.Settings.get_child.html">get_child</a></li>
+          <li class="method"><a href="GLib.Settings.get_default_value.html">get_default_value</a></li>
+          <li class="method"><a href="GLib.Settings.get_double.html">get_double</a></li>
+          <li class="method"><a href="GLib.Settings.get_enum.html">get_enum</a></li>
+          <li class="method"><a href="GLib.Settings.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.Settings.get_has_unapplied.html">get_has_unapplied</a></li>
+          <li class="method"><a href="GLib.Settings.get_int.html">get_int</a></li>
+          <li class="method"><a href="GLib.Settings.get_mapped.html">get_mapped</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Settings.get_range.html">get_range</a></span></li>
+          <li class="method"><a href="GLib.Settings.get_string.html">get_string</a></li>
+          <li class="method"><a href="GLib.Settings.get_strv.html">get_strv</a></li>
+          <li class="method"><a href="GLib.Settings.get_uint.html">get_uint</a></li>
+          <li class="method"><a href="GLib.Settings.get_user_value.html">get_user_value</a></li>
+          <li class="method"><a href="GLib.Settings.get_value.html">get_value</a></li>
+          <li class="method"><a href="GLib.Settings.is_writable.html">is_writable</a></li>
+          <li class="method"><a href="GLib.Settings.list_children.html">list_children</a></li>
+          <li class="method"><a href="GLib.Settings.list_keys.html">list_keys</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Settings.range_check.html">range_check</a></span></li>
+          <li class="method"><a href="GLib.Settings.reset.html">reset</a></li>
+          <li class="method"><a href="GLib.Settings.revert.html">revert</a></li>
+          <li class="method"><a href="GLib.Settings.set_boolean.html">set_boolean</a></li>
+          <li class="method"><a href="GLib.Settings.set_double.html">set_double</a></li>
+          <li class="method"><a href="GLib.Settings.set_enum.html">set_enum</a></li>
+          <li class="method"><a href="GLib.Settings.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.Settings.set_int.html">set_int</a></li>
+          <li class="method"><a href="GLib.Settings.set_string.html">set_string</a></li>
+          <li class="method"><a href="GLib.Settings.set_strv.html">set_strv</a></li>
+          <li class="method"><a href="GLib.Settings.set_uint.html">set_uint</a></li>
+          <li class="method"><a href="GLib.Settings.set_value.html">set_value</a></li>
+          <li class="signal"><a href="GLib.Settings.change_event.html">change_event</a></li>
+          <li class="signal"><a href="GLib.Settings.changed.html">changed</a></li>
+          <li class="signal"><a href="GLib.Settings.writable_change_event.html">writable_change_event</a></li>
+          <li class="signal"><a href="GLib.Settings.writable_changed.html">writable_changed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Settings</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Settings" alt="Object hierarchy for Settings" src="img/GLib.Settings.png"/>
+
+      <map id="GLib.Settings" name="GLib.Settings">
+<area shape="rect" id="node1" href="GLib.Settings.html" title="GLib.Settings" alt="" coords="5,101,128,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="10,5,123,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Settings</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p>The <span class="class">Settings</span> class provides a convenient API for storing and retrieving application settings.</p>
+          <p>Reads and writes can be considered to be non-blocking. Reading settings with <span class="class">Settings</span> is typically extremely 
+            fast: on approximately the same order of magnitude (but slower than) a <a href="../glib-2.0/GLib.GenericSet.html" class="class">GenericSet
+            </a> lookup. Writing settings is also extremely fast in terms of time to return to your application, but can be extremely expensive for 
+            other threads and other processes. Many settings backends (including dconf) have lazy initialisation which means in the common case of the
+             user using their computer without modifying any settings a lot of work can be avoided. For dconf, the D-Bus service doesn't even need to 
+            be started in this case. For this reason, you should only ever modify <span class="class">Settings</span> keys in response to explicit 
+            user action. Particular care should be paid to ensure that modifications are not made during startup -- for example, when setting the 
+            initial value of preferences widgets. The built-in <a href="GLib.Settings.bind.html" class="method">bind</a> functionality is careful not 
+            to write settings in response to notify signals as a result of modifications that it makes to widgets.</p>
+          <p>When creating a GSettings instance, you have to specify a schema that describes the keys in your settings and their types and default 
+            values, as well as some other information.</p>
+          <p>Normally, a schema has as fixed path that determines where the settings are stored in the conceptual global tree of settings. However, 
+            schemas can also be 'relocatable', i.e. not equipped with a fixed path. This is useful e.g. when the schema describes an 'account', and 
+            you want to be able to store a arbitrary number of accounts.</p>
+          <p>Paths must start with and end with a forward slash character ('/') and must not contain two sequential slash characters. Paths should be 
+            chosen based on a domain name associated with the program or library to which the settings belong. Examples of paths are 
+            "/org/gtk/settings/file-chooser/" and "/ca/desrt/dconf-editor/". Paths should not start with "/apps/", "/desktop/" or "/system/" as they 
+            often did in GConf.</p>
+          <p>Unlike other configuration systems (like GConf), GSettings does not restrict keys to basic types like strings and numbers. GSettings 
+            stores values as <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a>, and allows any 
+            <a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a> for keys. Key names are restricted to lowercase characters, 
+            numbers and '-'. Furthermore, the names must begin with a lowercase character, must not end with a '-', and must not contain consecutive 
+            dashes.</p>
+          <p>Similar to GConf, the default values in GSettings schemas can be localized, but the localized values are stored in gettext catalogs and 
+            looked up with the domain that is specified in the gettext-domain attribute of the &lt;schemalist&gt; or &lt;schema&gt; elements and the 
+            category that is specified in the l10n attribute of the &lt;key&gt; element.</p>
+          <p>GSettings uses schemas in a compact binary form that is created by the <i>glib-compile-schemas</i> utility. The input is a schema 
+            description in an XML format.</p>
+          <p>A DTD for the gschema XML format can be found here: <a href="https://git.gnome.org/browse/glib/tree/gio/gschema.dtd">gschema.dtd</a></p>
+          <p>The <i>glib-compile-schemas</i> tool expects schema files to have the extension `.gschema.xml`.</p>
+          <p>At runtime, schemas are identified by their id (as specified in the id attribute of the &lt;schema&gt; element). The convention for 
+            schema ids is to use a dotted name, similar in style to a D-Bus bus name, e.g. "org.gnome.SessionManager". In particular, if the settings 
+            are for a specific service that owns a D-Bus bus name, the D-Bus bus name and schema id should match. For schemas which deal with settings
+             not associated with one named application, the id should not use StudlyCaps, e.g. "org.gnome.font-rendering".</p>
+          <p>In addition to <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> types, keys can have types that have enumerated types. 
+            These can be described by a &lt;choice&gt;, &lt;enum&gt; or &lt;flags&gt; element, as seen in the <i>example</i>. The underlying type of 
+            such a key is string, but you can use <a href="GLib.Settings.get_enum.html" class="method">get_enum</a>, 
+            <a href="GLib.Settings.set_enum.html" class="method">set_enum</a>, <a href="GLib.Settings.get_flags.html" class="method">get_flags</a>, 
+            <a href="GLib.Settings.set_flags.html" class="method">set_flags</a> access the numeric values corresponding to the string value of enum 
+            and flags keys.</p>
+          <p>An example for default value: <pre class="main_source">&lt;schemalist&gt;<br/>  &lt;schema id="org.gtk.Test" path="/org/gtk/Test/" gettext-domain="test"&gt;<br/><br/>    &lt;key name="greeting" type="s"&gt;<br/>      &lt;default l10n="messages"&gt;"Hello, earthlings"&lt;/default&gt;<br/>      &lt;summary&gt;A greeting&lt;/summary&gt;<br/>      &lt;description&gt;<br/>        Greeting of the invading martians<br/>      &lt;/description&gt;<br/>    &lt;/key&gt;<br/><br/>    &lt;key name="box" type="(ii)"&gt;<br/>      &lt;default&gt;(20,30)&lt;/default&gt;<br/>    &lt;/key&gt;<br/><br/>  &lt;/schema&gt;<br/>&lt;/schemalist&gt;</pre>
+          </p>
+          <p>An example for ranges, choices and enumerated types: <pre class="main_source">&lt;schemalist&gt;<br/><br/>  &lt;enum id="org.gtk.Test.myenum"&gt;<br/>    &lt;value nick="first" value="1"/&gt;<br/>    &lt;value nick="second" value="2"/&gt;<br/>  &lt;/enum&gt;<br/><br/>  &lt;flags id="org.gtk.Test.myflags"&gt;<br/>    &lt;value nick="flag1" value="1"/&gt;<br/>    &lt;value nick="flag2" value="2"/&gt;<br/>    &lt;value nick="flag3" value="4"/&gt;<br/>  &lt;/flags&gt;<br/><br/>  &lt;schema id="org.gtk.Test"&gt;<br/><br/>    &lt;key name="key-with-range" type="i"&gt;<br/>      &lt;range min="1" max="100"/&gt;<br/>      &lt;default&gt;10&lt;/default&gt;<br/>    &lt;/key&gt;<br/><br/>    &lt;key name="key-with-choices" type="s"&gt;<br/>      &lt;choices&gt;<br/>        &lt;choice value='Elisabeth'/&gt;<br/>        &lt;choice value='Annabeth'/&gt;<br/>        &lt;choice value='Joe'/&gt;<br/>      &lt;/choices&gt;<br/>      &lt;aliases&gt;<br/>        &lt;alias value='Anna' target='Annabeth'/&gt;<br/>        &lt;alias value='Beth' target='Elisabeth'/&gt;<br/>      &lt;/aliases&gt;<br/>      &lt;default&gt;'Joe'&lt;/default&gt;<br/>    &lt;/key&gt;<br/><br/>    &lt;key name='enumerated-key' enum='org.gtk.Test.myenum'&gt;<br/>      &lt;default&gt;'first'&lt;/default&gt;<br/>    &lt;/key&gt;<br/><br/>    &lt;key name='flags-key' flags='org.gtk.Test.myflags'&gt;<br/>      &lt;default&gt;["flag1",flag2"]&lt;/default&gt;<br/>    &lt;/key&gt;<br/>  &lt;/schema&gt;<br/>&lt;/schemalist&gt;</pre>
+          </p>
+          <h2> Vendor overrides</h2>
+          <p>Default values are defined in the schemas that get installed by an application. Sometimes, it is necessary for a vendor or distributor to
+             adjust these defaults. Since patching the XML source for the schema is inconvenient and error-prone, <i>glib-compile-schemas</i> reads 
+            so-called vendor override' files. These are keyfiles in the same directory as the XML schema sources which can override default values. 
+            The schema id serves as the group name in the key file, and the values are expected in serialized GVariant form, as in the following 
+            example: <pre class="main_source">    [org.gtk.Example]<br/>    key1='string'<br/>    key2=1.5</pre></p>
+          <p>glib-compile-schemas expects schema files to have the extension `.gschema.override`.</p>
+          <h2> Binding</h2>
+          <p>A very convenient feature of GSettings lets you bind <a href="../gobject-2.0/GLib.Object.html" class="class">Object</a> properties 
+            directly to settings, using <a href="GLib.Settings.bind.html" class="method">bind</a>. Once a GObject property has been bound to a 
+            setting, changes on either side are automatically propagated to the other side. GSettings handles details like mapping between GObject and
+             GVariant types, and preventing infinite cycles.</p>
+          <p>This makes it very easy to hook up a preferences dialog to the underlying settings. To make this even more convenient, GSettings looks 
+            for a boolean property with the name "sensitivity" and automatically binds it to the writability of the bound setting. If this 'magic' 
+            gets in the way, it can be suppressed with the <a href="GLib.SettingsBindFlags.NO_SENSITIVITY.html" class="enumvalue">NO_SENSITIVITY</a> 
+            flag.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a></span> <b><a href="GLib.Settings.backend.html" class="property">backend</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.delay_apply.html" class="property">delay_apply</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Whether the <span class="class">Settings</span> object is in 
+                'delay-apply' mode.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.has_unapplied.html" class="property">has_unapplied</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">If this property is <span class="main_optional_parameter">true</span>,
+                 the <span class="class">Settings</span> object has outstanding changes that will be applied when 
+                <a href="GLib.Settings.apply.html" class="method">apply</a> is called.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Settings.path.html" class="property">path</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The path within the backend where the settings are stored.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Settings.schema.html" class="property">schema</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description">The name of the schema that describes the types of keys for this 
+                <span class="class">Settings</span> object.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Settings.schema_id.html" class="property">schema_id</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The name of the schema that describes the types of keys for this 
+                <span class="class">Settings</span> object.</span>
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.SettingsSchema.html" class="class">SettingsSchema</a></span> <b><a href="GLib.Settings.settings_schema.html" class="property">settings_schema</a></b> { <span class="main_keyword">construct</span>; <span class="main_keyword">owned</span> <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <a href="GLib.SettingsSchema.html" class="class">SettingsSchema
+                </a> describing the types of keys for this <span class="class">Settings</span> object.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Settings.list_relocatable_schemas.html" class="static_method">list_relocatable_schemas</a></b> ()
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description"></span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Settings.list_schemas.html" class="static_method">list_schemas</a></b> ()
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description"></span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.sync.html" class="static_method">sync</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Ensures that all pending operations for the given are complete for the
+                 default backend.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.unbind.html" class="static_method">unbind</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes an existing binding for <code>property</code> on <code>object
+                </code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Settings.Settings.html" class="creation_method">Settings</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> schema_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Settings</span> object with the 
+                schema specified by <code>schema_id</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Settings.Settings.full.html" class="creation_method">Settings.full</a></b> (<span class="main_type"><a href="GLib.SettingsSchema.html" class="class">SettingsSchema</a></span> schema, <span class="main_type"><a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a></span>? backend, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Settings</span> object with a given 
+                schema, backend and path.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Settings.Settings.with_backend.html" class="creation_method">Settings.with_backend</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> schema_id, <span class="main_type"><a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a></span> backend)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Settings</span> object with the 
+                schema specified by <code>schema_id</code> and a given <a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Settings.Settings.with_backend_and_path.html" class="creation_method">Settings.with_backend_and_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> schema_id, <span class="main_type"><a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a></span> backend, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Settings</span> object with the 
+                schema specified by <code>schema_id</code> and a given <a href="GLib.SettingsBackend.html" class="class">SettingsBackend</a> and path.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Settings.Settings.with_path.html" class="creation_method">Settings.with_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> schema_id, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Settings</span> object with the 
+                relocatable schema specified by <code>schema_id</code> and a given path.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.apply.html" class="method">apply</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Applies any changes that have been made to the settings.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.bind.html" class="method">bind</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property, <span class="main_type"><a href="GLib.SettingsBindFlags.html" class="enum">SettingsBindFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Create a binding between the <code>key</code> in the 
+                <span class="main_keyword">this</span> object and the property <code>property</code> of <code>object</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.bind_with_mapping.html" class="method">bind_with_mapping</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property, <span class="main_type"><a href="GLib.SettingsBindFlags.html" class="enum">SettingsBindFlags</a></span> flags, <span class="main_type"><a href="GLib.SettingsBindGetMappingShared.html" class="delegate">SettingsBindGetMappingShared</a></span> get_mapping, <span class="main_type"><a href="GLib.SettingsBindSetMappingShared.html" class="delegate">SettingsBindSetMappingShared</a></span> set_mapping, <span class="main_keyword">void</span>* user_data, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? notify)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Create a binding between the <code>key</code> in the 
+                <span class="main_keyword">this</span> object and the property <code>property</code> of <code>object</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.bind_writable.html" class="method">bind_writable</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> inverted)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Create a binding between the writability of <code>key</code> in the 
+                <span class="main_keyword">this</span> object and the property <code>property</code> of <code>object</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.Action.html" class="interface">Action</a></span> <b><a href="GLib.Settings.create_action.html" class="method">create_action</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <a href="GLib.Action.html" class="interface">Action</a> 
+                corresponding to a given <span class="class">Settings</span> key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.delay.html" class="method">delay</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Changes the <span class="class">Settings</span> object into 
+                'delay-apply' mode.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.@get.html" class="method">@get</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.get_boolean.html" class="method">get_boolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Settings</span></span> <b><a href="GLib.Settings.get_child.html" class="method">get_child</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a child settings object which has a base path of `base-path/
+                <code>name</code>`, where `base-path` is the base path of <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.Settings.get_default_value.html" class="method">get_default_value</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the "default value" of a key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/double.html" class="struct">double</a></span> <b><a href="GLib.Settings.get_double.html" class="method">get_double</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Settings.get_enum.html" class="method">get_enum</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored in <span class="main_keyword">this
+                </span> for <code>key</code> and converts it to the enum value that it represents.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.Settings.get_flags.html" class="method">get_flags</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored in <span class="main_keyword">this
+                </span> for <code>key</code> and converts it to the flags value that it represents.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.get_has_unapplied.html" class="method">get_has_unapplied</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns whether the <span class="class">Settings</span> object has any
+                 unapplied changes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Settings.get_int.html" class="method">get_int</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.Settings.get_mapped.html" class="method">get_mapped</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="GLib.SettingsGetMapping.html" class="delegate">SettingsGetMapping</a></span> mapping)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>, subject to application-level validation/mapping.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.Settings.get_range.html" class="method">get_range</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description">Queries the range of a key.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Settings.get_string.html" class="method">get_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Settings.get_strv.html" class="method">get_strv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A convenience variant of 
+                <a href="GLib.Settings.@get.html" class="method">@get</a> for string arrays.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.Settings.get_uint.html" class="method">get_uint</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored at <code>key</code> in 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.Settings.get_user_value.html" class="method">get_user_value</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks the "user value" of a key, if there is one.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.Settings.get_value.html" class="method">get_value</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value that is stored in <span class="main_keyword">this
+                </span> for <code>key</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.is_writable.html" class="method">is_writable</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Finds out if a key can be written or not</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Settings.list_children.html" class="method">list_children</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the list of children on <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Settings.list_keys.html" class="method">list_keys</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Introspects the list of keys on <span class="main_keyword">this</span>
+                .</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.range_check.html" class="method">range_check</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> value)
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if the given <code>value</code> is of the correct type and 
+                within the permitted range for <code>key</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.reset.html" class="method">reset</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Resets <code>key</code> to its default value.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.revert.html" class="method">revert</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Reverts all non-applied changes to the settings.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.@set.html" class="method">@set</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_boolean.html" class="method">set_boolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_double.html" class="method">set_double</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/double.html" class="struct">double</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_enum.html" class="method">set_enum</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up the enumerated type nick for <code>value</code> and writes it
+                 to <code>key</code>, within <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_flags.html" class="method">set_flags</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks up the flags type nicks for the bits specified by <code>value
+                </code>, puts them in an array of strings and writes the array to <code>key</code>, within <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_int.html" class="method">set_int</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_string.html" class="method">set_string</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_strv.html" class="method">set_strv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[]? value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_uint.html" class="method">set_uint</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.set_value.html" class="method">set_value</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key, <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <code>key</code> in <span class="main_keyword">this</span> to 
+                <code>value</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Signals:</h3>
+        <ul class="navi_inline">
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.change_event.html" class="signal">change_event</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span>[]? keys)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The "change-event" signal is emitted once per change event that 
+                affects this settings object.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.changed.html" class="signal">changed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The "changed" signal is emitted when a key has potentially changed.
+              </span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Settings.writable_change_event.html" class="signal">writable_change_event</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The "writable-change-event" signal is emitted once per writability 
+                change event that affects this settings object.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Settings.writable_changed.html" class="signal">writable_changed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The "writable-changed" signal is emitted when the writability of a key
+                 has potentially changed.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-198')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-198">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

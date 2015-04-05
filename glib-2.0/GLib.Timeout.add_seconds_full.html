@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Timeout.add_seconds_full &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Timeout.add_seconds_full &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.Timeout.html">Timeout</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><a href="GLib.Timeout.add.html">add</a></li>
+          <li class="method"><a href="GLib.Timeout.add_full.html">add_full</a></li>
+          <li class="method"><a href="GLib.Timeout.add_seconds.html">add_seconds</a></li>
+          <li class="method">add_seconds_full</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">add_seconds_full</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><span class="method">add_seconds_full</span></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> priority, <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> interval, <span class="main_keyword">owned</span> <span class="main_type"><a href="GLib.SourceFunc.html" class="delegate">SourceFunc</a></span> function)
+        </div>
+        <div class="description">
+          <p>Sets a function to be called at regular intervals, with <code>priority</code>.</p>
+          <p> The function is called repeatedly until it returns <span class="main_optional_parameter">false</span>, at which point the timeout is 
+            automatically destroyed and the function will not be called again.</p>
+          <p>Unlike <code>g_timeout_add</code>, this function operates at whole second granularity. The initial starting point of the timer is 
+            determined by the implementation and the implementation is expected to group multiple timers together so that they fire all at the same 
+            time. To allow this grouping, the <code>interval</code> to the first timer is rounded and can deviate up to one second from the specified 
+            interval. Subsequent timer iterations will generally run at the specified interval.</p>
+          <p>Note that timeout functions may be delayed, due to the processing of other event sources. Thus they should not be relied on for precise 
+            timing. After each call to the timeout function, the time of the next timeout is recalculated based on the current time and the given 
+            <code>interval</code></p>
+          <p>If you want timing more precise than whole seconds, use <code>g_timeout_add</code> instead.</p>
+          <p>The grouping of timers to fire at the same time results in a more power and CPU efficient behavior so if your timer is in multiples of 
+            seconds and you don't require the first timer exactly one second from now, the use of <code>g_timeout_add_seconds</code> is preferred over
+             <code>g_timeout_add</code>.</p>
+          <p>This internally creates a main loop source using <a href="GLib.TimeoutSource.TimeoutSource.seconds.html" class="creation_method">
+              TimeoutSource.seconds</a> and attaches it to the main loop context using <a href="GLib.Source.attach.html" class="method">attach</a>. 
+            You can do these steps manually if you need greater control.</p>
+          <p>The interval given is in terms of monotonic time, not wall clock time. See <a href="GLib.get_monotonic_time.html" class="method">
+              get_monotonic_time</a>.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">priority</td>
+              <td>
+                <p>the priority of the timeout source. Typically this will be in  the range between 
+                  <a href="GLib.Priority.DEFAULT.html" class="constant">DEFAULT</a> and <a href="GLib.Priority.HIGH.html" class="constant">HIGH</a>.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">interval</td>
+              <td>
+                <p>the time between calls to the function, in seconds</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">function</td>
+              <td>
+                <p>function to call</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">data</td>
+              <td>
+                <p>data to pass to <code>function</code></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">notify</td>
+              <td>
+                <p>function to call when the timeout is removed, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>the ID (greater than 0) of the event source.</p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.Timeout.html">GLib.Timeout</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

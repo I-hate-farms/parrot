@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.NetworkMonitor.can_reach_async &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.NetworkMonitor.can_reach_async &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface"><a href="GLib.NetworkMonitor.html">NetworkMonitor</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_property"><a href="GLib.NetworkMonitor.connectivity.html">connectivity</a></li>
+          <li class="abstract_property"><a href="GLib.NetworkMonitor.network_available.html">network_available</a></li>
+          <li class="static_method"><a href="GLib.NetworkMonitor.get_default.html">get_default</a></li>
+          <li class="abstract_method"><a href="GLib.NetworkMonitor.can_reach.html">can_reach</a></li>
+          <li class="abstract_method">can_reach_async</li>
+          <li class="method"><a href="GLib.NetworkMonitor.get_connectivity.html">get_connectivity</a></li>
+          <li class="method"><a href="GLib.NetworkMonitor.get_network_available.html">get_network_available</a></li>
+          <li class="signal"><a href="GLib.NetworkMonitor.network_changed.html">network_changed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">can_reach_async</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">async</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="abstract_method">can_reach_async</span></b> (<span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span> connectable, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Asynchronously attempts to determine whether or not the host pointed to by <code>connectable</code> can be reached, without actually 
+            trying to connect to it.</p>
+          <p>For more details, see <a href="GLib.NetworkMonitor.can_reach.html" class="abstract_method">can_reach</a>.</p>
+          <p>When the operation is finished, <code>callback</code> will be called. You can then call <span class="abstract_method">can_reach_async.end
+            </span> to get the result of the operation.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.NetworkMonitor.html" class="interface">NetworkMonitor</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">connectable</td>
+              <td>
+                <p>a <a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>a <a href="GLib.Cancellable.html" class="class">Cancellable</a>, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">callback</td>
+              <td>
+                <p>a <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> to call when the  request is satisfied</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>the data to pass to callback function</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Mutex &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Mutex &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><span class="deprecated">Mutex</span></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.Mutex.Mutex.html">Mutex</a></li>
+          <li class="method"><a href="GLib.Mutex.@lock.html">@lock</a></li>
+          <li class="method"><a href="GLib.Mutex.trylock.html">trylock</a></li>
+          <li class="method"><a href="GLib.Mutex.unlock.html">unlock</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Mutex</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Mutex" alt="Object hierarchy for Mutex" src="img/GLib.Mutex.png"/>
+
+      <map id="GLib.Mutex" name="GLib.Mutex">
+<area shape="rect" id="node1" href="GLib.Mutex.html" title="GLib.Mutex" alt="" coords="5,5,117,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/>[ <span class="main_type">Deprecated</span> ( since = <span class="main_optional_parameter">"glib-2.32"</span> ,  replacement = <span class="main_optional_parameter">"Mutex (with --target-glib=2.32)"</span> ) ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Mutex</span></b>
+        </div>
+        <div class="description">
+          <p><b>Warning:</b> Mutex is deprecated. Use "Mutex (with --target-glib=2.32)".</p>
+          <p>The <span class="class">Mutex</span> struct is an opaque data structure to represent a mutex (mutual exclusion).</p>
+          <p> It can be used to protect data against shared access.</p>
+          <p>Take for example the following function: <pre class="main_source">  int<br/>  give_me_next_number (void)<br/>  {<br/>    static int current_number = 0;<br/><br/>    // now do a very complicated calculation to calculate the new<br/>    // number, this might for example be a random number generator<br/>    current_number = calc_next_number (current_number);<br/><br/>    return current_number;<br/>  }</pre>
+             It is easy to see that this won't work in a multi-threaded application. There current_number must be protected against shared access. A 
+            <span class="class">Mutex</span> can be used as a solution to this problem: <pre class="main_source">  int<br/>  give_me_next_number (void)<br/>  {<br/>    static GMutex mutex;<br/>    static int current_number = 0;<br/>    int ret_val;<br/><br/>    g_mutex_lock (&amp;mutex);<br/>    ret_val = current_number = calc_next_number (current_number);<br/>    g_mutex_unlock (&amp;mutex);<br/><br/>    return ret_val;<br/>  }</pre>
+             Notice that the <span class="class">Mutex</span> is not initialised to any particular value. Its placement in static storage ensures that
+             it will be initialised to all-zeros, which is appropriate.</p>
+          <p>If a <span class="class">Mutex</span> is placed in other contexts (eg: embedded in a struct) then it must be explicitly initialised using
+             <code>g_mutex_init</code>.</p>
+          <p>A <span class="class">Mutex</span> should only be accessed via g_mutex_ functions.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Mutex.Mutex.html" class="creation_method">Mutex</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Mutex.@lock.html" class="method">@lock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Locks <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.Mutex.trylock.html" class="method">trylock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Tries to lock <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Mutex.unlock.html" class="method">unlock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unlocks <span class="main_keyword">this</span>.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

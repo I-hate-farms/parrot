@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TlsConnection.accept_certificate &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TlsConnection.accept_certificate &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class"><a href="GLib.TlsConnection.html">TlsConnection</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.TlsConnection.base_io_stream.html">base_io_stream</a></li>
+          <li class="property"><a href="GLib.TlsConnection.certificate.html">certificate</a></li>
+          <li class="property"><a href="GLib.TlsConnection.database.html">database</a></li>
+          <li class="property"><a href="GLib.TlsConnection.interaction.html">interaction</a></li>
+          <li class="property"><a href="GLib.TlsConnection.peer_certificate.html">peer_certificate</a></li>
+          <li class="property"><a href="GLib.TlsConnection.peer_certificate_errors.html">peer_certificate_errors</a></li>
+          <li class="property"><a href="GLib.TlsConnection.rehandshake_mode.html">rehandshake_mode</a></li>
+          <li class="property"><a href="GLib.TlsConnection.require_close_notify.html">require_close_notify</a></li>
+          <li class="property"><span class="deprecated"><a href="GLib.TlsConnection.use_system_certdb.html">use_system_certdb</a></span></li>
+          <li class="creation_method"><a href="GLib.TlsConnection.TlsConnection.html">TlsConnection</a></li>
+          <li class="method"><a href="GLib.TlsConnection.emit_accept_certificate.html">emit_accept_certificate</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_certificate.html">get_certificate</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_database.html">get_database</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_interaction.html">get_interaction</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_peer_certificate.html">get_peer_certificate</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_peer_certificate_errors.html">get_peer_certificate_errors</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_rehandshake_mode.html">get_rehandshake_mode</a></li>
+          <li class="method"><a href="GLib.TlsConnection.get_require_close_notify.html">get_require_close_notify</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.TlsConnection.get_use_system_certdb.html">get_use_system_certdb</a></span></li>
+          <li class="virtual_method"><a href="GLib.TlsConnection.handshake.html">handshake</a></li>
+          <li class="virtual_method"><a href="GLib.TlsConnection.handshake_async.html">handshake_async</a></li>
+          <li class="method"><a href="GLib.TlsConnection.set_certificate.html">set_certificate</a></li>
+          <li class="method"><a href="GLib.TlsConnection.set_database.html">set_database</a></li>
+          <li class="method"><a href="GLib.TlsConnection.set_interaction.html">set_interaction</a></li>
+          <li class="method"><a href="GLib.TlsConnection.set_rehandshake_mode.html">set_rehandshake_mode</a></li>
+          <li class="method"><a href="GLib.TlsConnection.set_require_close_notify.html">set_require_close_notify</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.TlsConnection.set_use_system_certdb.html">set_use_system_certdb</a></span></li>
+          <li class="signal">accept_certificate</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">accept_certificate</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="signal">accept_certificate</span></b> (<span class="main_type"><a href="GLib.TlsCertificate.html" class="class">TlsCertificate</a></span> peer_cert, <span class="main_type"><a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a></span> errors)
+        </div>
+        <div class="description">
+          <p>Emitted during the TLS handshake after the peer certificate has been received.</p>
+          <p> You can examine <code>peer_cert</code>'s certification path by calling <a href="GLib.TlsCertificate.get_issuer.html" class="method">
+              get_issuer</a> on it.</p>
+          <p>For a client-side connection, <code>peer_cert</code> is the server's certificate, and the signal will only be emitted if the certificate 
+            was not acceptable according to <code>conn</code>'s <a href="GLib.TlsClientConnection.validation_flags.html" class="abstract_property">
+              validation_flags</a>. If you would like the certificate to be accepted despite <code>errors</code>, return 
+            <span class="main_optional_parameter">true</span> from the signal handler. Otherwise, if no handler accepts the certificate, the handshake
+             will fail with <span class="main_optional_parameter">g_tls_error_bad_certificate</span>.</p>
+          <p>For a server-side connection, <code>peer_cert</code> is the certificate presented by the client, if this was requested via the server's 
+            <a href="GLib.TlsServerConnection.authentication_mode.html" class="abstract_property">authentication_mode</a>. On the server side, the 
+            signal is always emitted when the client presents a certificate, and the certificate will only be accepted if a handler returns 
+            <span class="main_optional_parameter">true</span>.</p>
+          <p>Note that if this signal is emitted as part of asynchronous I/O in the main thread, then you should not attempt to interact with the user
+             before returning from the signal handler. If you want to let the user decide whether or not to accept the certificate, you would have to 
+            return <span class="main_optional_parameter">false</span> from the signal handler on the first attempt, and then after the connection 
+            attempt returns a <span class="main_optional_parameter">g_tls_error_handshake</span>, you can interact with the user, and if the user 
+            decides to accept the certificate, remember that fact, create a new connection, and return <span class="main_optional_parameter">true
+            </span> from the signal handler the next time.</p>
+          <p>If you are doing I/O in another thread, you do not need to worry about this, and can simply block in the signal handler until the UI 
+            thread returns an answer.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">peer_cert</td>
+              <td>
+                <p>the peer's <a href="GLib.TlsCertificate.html" class="class">TlsCertificate</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">errors</td>
+              <td>
+                <p>the problems with <code>peer_cert</code>.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> to accept <code>peer_cert</code> (which will also immediately end the signal 
+                  emission). <span class="main_optional_parameter">false</span> to allow the signal emission to continue, which will cause the 
+                  handshake to fail if no one else overrides it.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

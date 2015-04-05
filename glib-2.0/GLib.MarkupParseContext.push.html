@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MarkupParseContext.push &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MarkupParseContext.push &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.MarkupParseContext.html">MarkupParseContext</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MarkupParseContext.MarkupParseContext.html">MarkupParseContext</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.end_parse.html">end_parse</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_element.html">get_element</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_element_stack.html">get_element_stack</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_position.html">get_position</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.get_user_data.html">get_user_data</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.parse.html">parse</a></li>
+          <li class="method"><a href="GLib.MarkupParseContext.pop.html">pop</a></li>
+          <li class="method">push</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">push</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">push</span></b> (<span class="main_type"><a href="GLib.MarkupParser.html" class="struct">MarkupParser</a></span> parser, <span class="main_keyword">void</span>* user_data)
+        </div>
+        <div class="description">
+          <p>Temporarily redirects markup data to a sub-parser.</p>
+          <p>This function may only be called from the start_element handler of a <a href="GLib.MarkupParser.html" class="struct">MarkupParser</a>. It
+             must be matched with a corresponding call to <a href="GLib.MarkupParseContext.pop.html" class="method">pop</a> in the matching 
+            end_element handler (except in the case that the parser aborts due to an error).</p>
+          <p>All tags, text and other data between the matching tags is redirected to the subparser given by <code>parser</code>. <code>user_data
+            </code> is used as the user_data for that parser. <code>user_data</code> is also passed to the error callback in the event that an error 
+            occurs. This includes errors that occur in subparsers of the subparser.</p>
+          <p>The end tag matching the start tag for which this call was made is handled by the previous parser (which is given its own user_data) 
+            which is why <a href="GLib.MarkupParseContext.pop.html" class="method">pop</a> is provided to allow "one last access" to the <code>
+              user_data</code> provided to this function. In the case of error, the <code>user_data</code> provided here is passed directly to the 
+            error callback of the subparser and <a href="GLib.MarkupParseContext.pop.html" class="method">pop</a> should not be called. In either 
+            case, if <code>user_data</code> was allocated then it ought to be freed from both of these locations.</p>
+          <p>This function is not intended to be directly called by users interested in invoking subparsers. Instead, it is intended to be used by the
+             subparsers themselves to implement a higher-level interface.</p>
+          <p>As an example, see the following implementation of a simple parser that counts the number of tags encountered.</p>
+          <p><pre class="main_source">typedef struct<br/>{<br/>  gint tag_count;<br/>} CounterData;<br/><br/>static void<br/>counter_start_element (GMarkupParseContext  *context,<br/>                       const gchar          *element_name,<br/>                       const gchar         **attribute_names,<br/>                       const gchar         **attribute_values,<br/>                       gpointer              user_data,<br/>                       GError              **error)<br/>{<br/>  CounterData *data = user_data;<br/><br/>  data-&gt;tag_count++;<br/>}<br/><br/>static void<br/>counter_error (GMarkupParseContext *context,<br/>               GError              *error,<br/>               gpointer             user_data)<br/>{<br/>  CounterData *data = user_data;<br/><br/>  g_slice_free (CounterData, data);<br/>}<br/><br/>static GMarkupParser counter_subparser =<br/>{<br/>  counter_start_element,<br/>  NULL,<br/>  NULL,<br/>  NULL,<br/>  counter_error<br/>};</pre>
+          </p>
+          <p>In order to allow this parser to be easily used as a subparser, the following interface is provided:</p>
+          <p><pre class="main_source">void<br/>start_counting (GMarkupParseContext *context)<br/>{<br/>  CounterData *data = g_slice_new (CounterData);<br/><br/>  data-&gt;tag_count = 0;<br/>  g_markup_parse_context_push (context, &amp;counter_subparser, data);<br/>}<br/><br/>gint<br/>end_counting (GMarkupParseContext *context)<br/>{<br/>  CounterData *data = g_markup_parse_context_pop (context);<br/>  int result;<br/><br/>  result = data-&gt;tag_count;<br/>  g_slice_free (CounterData, data);<br/><br/>  return result;<br/>}</pre>
+          </p>
+          <p>The subparser would then be used as follows:</p>
+          <p><pre class="main_source">static void start_element (context, element_name, ...)<br/>{<br/>  if (strcmp (element_name, "count-these") == 0)<br/>    start_counting (context);<br/><br/>  // else, handle other tags...<br/>}<br/><br/>static void end_element (context, element_name, ...)<br/>{<br/>  if (strcmp (element_name, "count-these") == 0)<br/>    g_print ("Counted %d tags\n", end_counting (context));<br/><br/>  // else, handle other tags...<br/>}</pre>
+          </p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.MarkupParseContext.html" class="class">MarkupParseContext</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">parser</td>
+              <td>
+                <p>a <a href="GLib.MarkupParser.html" class="struct">MarkupParser</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>user data to pass to <a href="GLib.MarkupParser.html" class="struct">MarkupParser</a> functions</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

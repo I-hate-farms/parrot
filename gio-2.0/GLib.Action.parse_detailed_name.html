@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Action.parse_detailed_name &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Action.parse_detailed_name &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface"><a href="GLib.Action.html">Action</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_property"><a href="GLib.Action.enabled.html">enabled</a></li>
+          <li class="abstract_property"><a href="GLib.Action.name.html">name</a></li>
+          <li class="abstract_property"><a href="GLib.Action.parameter_type.html">parameter_type</a></li>
+          <li class="abstract_property"><a href="GLib.Action.state.html">state</a></li>
+          <li class="abstract_property"><a href="GLib.Action.state_type.html">state_type</a></li>
+          <li class="static_method"><a href="GLib.Action.name_is_valid.html">name_is_valid</a></li>
+          <li class="static_method">parse_detailed_name</li>
+          <li class="static_method"><a href="GLib.Action.print_detailed_name.html">print_detailed_name</a></li>
+          <li class="abstract_method"><a href="GLib.Action.activate.html">activate</a></li>
+          <li class="abstract_method"><a href="GLib.Action.change_state.html">change_state</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_enabled.html">get_enabled</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_name.html">get_name</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_parameter_type.html">get_parameter_type</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_state.html">get_state</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_state_hint.html">get_state_hint</a></li>
+          <li class="abstract_method"><a href="GLib.Action.get_state_type.html">get_state_type</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">parse_detailed_name</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="static_method">parse_detailed_name</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> detailed_name, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> action_name, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> target_value) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Parses a detailed action name into its separate name and target components.</p>
+          <p>Detailed action names can have three formats.</p>
+          <p>The first format is used to represent an action name with no target value and consists of just an action name containing no whitespace 
+            nor the characters ':', '(' or ')'. For example: "app.action".</p>
+          <p>The second format is used to represent an action with a target value that is a non-empty string consisting only of alphanumerics, plus 
+            '-' and '.'. In that case, the action name and target value are separated by a double colon ("::"). For example: "app.action:<code>
+              GAction:target</code>".</p>
+          <p>The third format is used to represent an action with any type of target value, including strings. The target value follows the action 
+            name, surrounded in parens. For example: "app.action(42)". The target value is parsed using 
+            <a href="../glib-2.0/GLib.Variant.parse.html" class="static_method">parse</a>. If a tuple-typed value is desired, it must be specified in 
+            the same way, resulting in two sets of parens, for example: "app.action((1,2,3))". A string target can be specified this way as well: 
+            "app.action('target')". For strings, this third format must be used if * target value is empty or contains characters other than 
+            alphanumerics, '-' and '.'.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">detailed_name</td>
+              <td>
+                <p>a detailed action name</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">action_name</td>
+              <td>
+                <p>the action name</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">target_value</td>
+              <td>
+                <p>the target value, or <span class="main_optional_parameter">null</span> for no target</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if successful, else <span class="main_optional_parameter">false</span> with 
+                  <span class="main_keyword">throws</span> set</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

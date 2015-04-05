@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusInterfaceSkeleton.export &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusInterfaceSkeleton.export &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class"><a href="GLib.DBusInterfaceSkeleton.html">DBusInterfaceSkeleton</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusInterfaceSkeleton.g_flags.html">g_flags</a></li>
+          <li class="creation_method"><a href="GLib.DBusInterfaceSkeleton.DBusInterfaceSkeleton.html">DBusInterfaceSkeleton</a></li>
+          <li class="method">export</li>
+          <li class="virtual_method"><a href="GLib.DBusInterfaceSkeleton.flush.html">flush</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.get_connection.html">get_connection</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.get_connections.html">get_connections</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.get_flags.html">get_flags</a></li>
+          <li class="virtual_method"><a href="GLib.DBusInterfaceSkeleton.get_info.html">get_info</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.get_object_path.html">get_object_path</a></li>
+          <li class="virtual_method"><a href="GLib.DBusInterfaceSkeleton.get_properties.html">get_properties</a></li>
+          <li class="virtual_method"><a href="GLib.DBusInterfaceSkeleton.get_vtable.html">get_vtable</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.has_connection.html">has_connection</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.unexport.html">unexport</a></li>
+          <li class="method"><a href="GLib.DBusInterfaceSkeleton.unexport_from_connection.html">unexport_from_connection</a></li>
+          <li class="signal"><a href="GLib.DBusInterfaceSkeleton.g_authorize_method.html">g_authorize_method</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">export</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="method">export</span></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Exports <span class="main_keyword">this</span> at <code>object_path</code> on <code>connection</code>.</p>
+          <p>This can be called multiple times to export the same <span class="main_keyword">this</span> onto multiple connections however the <code>
+              object_path</code> provided must be the same for all connections.</p>
+          <p>Use <a href="GLib.DBusInterfaceSkeleton.unexport.html" class="method">unexport</a> to unexport the object.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>The D-Bus interface to export.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">connection</td>
+              <td>
+                <p>A <a href="GLib.DBusConnection.html" class="class">DBusConnection</a> to export <span class="main_keyword">this</span> on.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">object_path</td>
+              <td>
+                <p>The path to export the interface at.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the interface was exported on <code>connection</code>, otherwise 
+                  <span class="main_optional_parameter">false</span> with <span class="main_keyword">throws</span> set.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

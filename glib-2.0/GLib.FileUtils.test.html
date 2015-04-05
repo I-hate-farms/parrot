@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.FileUtils.test &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.FileUtils.test &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.FileUtils.html">FileUtils</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><a href="GLib.FileUtils.chmod.html">chmod</a></li>
+          <li class="method"><a href="GLib.FileUtils.close.html">close</a></li>
+          <li class="method"><a href="GLib.FileUtils.error_from_errno.html">error_from_errno</a></li>
+          <li class="method"><a href="GLib.FileUtils.get_contents.html">get_contents</a></li>
+          <li class="method"><a href="GLib.FileUtils.get_data.html">get_data</a></li>
+          <li class="method"><a href="GLib.FileUtils.mkstemp.html">mkstemp</a></li>
+          <li class="method"><a href="GLib.FileUtils.open_tmp.html">open_tmp</a></li>
+          <li class="method"><a href="GLib.FileUtils.read_link.html">read_link</a></li>
+          <li class="method"><a href="GLib.FileUtils.remove.html">remove</a></li>
+          <li class="method"><a href="GLib.FileUtils.rename.html">rename</a></li>
+          <li class="method"><a href="GLib.FileUtils.set_contents.html">set_contents</a></li>
+          <li class="method"><a href="GLib.FileUtils.set_data.html">set_data</a></li>
+          <li class="method"><a href="GLib.FileUtils.symlink.html">symlink</a></li>
+          <li class="method">test</li>
+          <li class="method"><a href="GLib.FileUtils.unlink.html">unlink</a></li>
+          <li class="method"><a href="GLib.FileUtils.utime.html">utime</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">test</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">test</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> filename, <span class="main_type"><a href="GLib.FileTest.html" class="enum">FileTest</a></span> test)
+        </div>
+        <div class="description">
+          <p>Returns <span class="main_optional_parameter">true</span> if any of the tests in the bitfield <code>test</code> are 
+            <span class="main_optional_parameter">true</span>.</p>
+          <p> For example, `(G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR)` will return <span class="main_optional_parameter">true</span> if the file 
+            exists; the check whether it's a directory doesn't matter since the existence test is <span class="main_optional_parameter">true</span>. 
+            With the current set of available tests, there's no point passing in more than one test at a time.</p>
+          <p>Apart from <span class="main_optional_parameter">g_file_test_is_symlink</span> all tests follow symbolic links, so for a symbolic link to
+             a regular file <span class="method">test</span> will return <span class="main_optional_parameter">true</span> for both 
+            <span class="main_optional_parameter">g_file_test_is_symlink</span> and <span class="main_optional_parameter">g_file_test_is_regular
+            </span>.</p>
+          <p>Note, that for a dangling symbolic link <span class="method">test</span> will return <span class="main_optional_parameter">true</span> 
+            for <span class="main_optional_parameter">g_file_test_is_symlink</span> and <span class="main_optional_parameter">false</span> for all 
+            other flags.</p>
+          <p>You should never use <span class="method">test</span> to test whether it is safe to perform an operation, because there is always the 
+            possibility of the condition changing before you actually perform the operation. For example, you might think you could use 
+            <span class="main_optional_parameter">g_file_test_is_symlink</span> to know whether it is safe to write to a file without being tricked 
+            into writing into a different location. It doesn't work! <pre class="main_source"> // DON'T DO THIS<br/> if (!g_file_test (filename, G_FILE_TEST_IS_SYMLINK))<br/>   {<br/>     fd = g_open (filename, O_WRONLY);<br/>     // write to fd<br/>   }</pre>
+          </p>
+          <p>Another thing to note is that <span class="main_optional_parameter">g_file_test_exists</span> and <span class="main_optional_parameter">
+              g_file_test_is_executable</span> are implemented using the <code>access</code> system call. This usually doesn't matter, but if your 
+            program is setuid or setgid it means that these tests will give you the answer for the real user ID and group ID, rather than the 
+            effective user ID and group ID.</p>
+          <p>On Windows, there are no symlinks, so testing for <span class="main_optional_parameter">g_file_test_is_symlink</span> will always return 
+            <span class="main_optional_parameter">false</span>. Testing for <span class="main_optional_parameter">g_file_test_is_executable</span> 
+            will just check that the file exists and its name indicates that it is executable, checking for well-known extensions and those listed in 
+            the `PATHEXT` environment variable.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">filename</td>
+              <td>
+                <p>a filename to test in the GLib file name encoding</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">test</td>
+              <td>
+                <p>bitfield of <a href="GLib.FileTest.html" class="enum">FileTest</a> flags</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>whether a test was <span class="main_optional_parameter">true</span></p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.FileUtils.html">GLib.FileUtils</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

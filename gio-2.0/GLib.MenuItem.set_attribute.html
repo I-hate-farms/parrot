@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MenuItem.set_attribute &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MenuItem.set_attribute &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.MenuItem.html">MenuItem</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.html">MenuItem</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.from_model.html">MenuItem.from_model</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.section.html">MenuItem.section</a></li>
+          <li class="creation_method"><a href="GLib.MenuItem.MenuItem.submenu.html">MenuItem.submenu</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_attribute_value.html">get_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.get_link.html">get_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_action_and_target.html">set_action_and_target</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_action_and_target_value.html">set_action_and_target_value</a></li>
+          <li class="method">set_attribute</li>
+          <li class="method"><a href="GLib.MenuItem.set_attribute_value.html">set_attribute_value</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_detailed_action.html">set_detailed_action</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_icon.html">set_icon</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_label.html">set_label</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_link.html">set_link</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_section.html">set_section</a></li>
+          <li class="method"><a href="GLib.MenuItem.set_submenu.html">set_submenu</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">set_attribute</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">set_attribute</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? format_string, ...)
+        </div>
+        <div class="description">
+          <p>Sets or unsets an attribute on <span class="main_keyword">this</span>.</p>
+          <p>The attribute to set or unset is specified by <code>attribute</code>. This can be one of the standard attribute names 
+            <span class="main_optional_parameter">g_menu_attribute_label</span>, <span class="main_optional_parameter">g_menu_attribute_action</span>,
+             <span class="main_optional_parameter">g_menu_attribute_target</span>, or a custom attribute name. Attribute names are restricted to 
+            lowercase characters, numbers and '-'. Furthermore, the names must begin with a lowercase character, must not end with a '-', and must not
+             contain consecutive dashes.</p>
+          <p>If <code>format_string</code> is non-<span class="main_optional_parameter">null</span> then the proper position parameters are collected 
+            to create a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> instance to use as the attribute value. If it is 
+            <span class="main_optional_parameter">null</span> then the positional parameterrs are ignored and the named attribute is unset.</p>
+          <p>See also <a href="GLib.MenuItem.set_attribute_value.html" class="method">set_attribute_value</a> for an equivalent call that directly 
+            accepts a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a>.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.MenuItem.html" class="class">MenuItem</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">attribute</td>
+              <td>
+                <p>the attribute to set</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">format_string</td>
+              <td>
+                <p>a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> format string, or <span class="main_optional_parameter">null
+                  </span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">...</td>
+              <td>
+                <p>positional parameters, as per <code>format_string</code></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Markup.collect_attributes &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Markup.collect_attributes &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.Markup.html">Markup</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enum"><a href="GLib.Markup.CollectType.html">CollectType</a></li>
+          <li class="method">collect_attributes</li>
+          <li class="method"><a href="GLib.Markup.escape_text.html">escape_text</a></li>
+          <li class="method"><a href="GLib.Markup.printf_escaped.html">printf_escaped</a></li>
+          <li class="method"><a href="GLib.Markup.vprintf_escaped.html">vprintf_escaped</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">collect_attributes</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">collect_attributes</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> element_name, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] attribute_names, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] attribute_values, ...) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.MarkupError.html" class="errordomain">MarkupError</a></span>
+        </div>
+        <div class="description">
+          <p>Collects the attributes of the element from the data passed to the <a href="GLib.MarkupParser.html" class="struct">MarkupParser</a> 
+            start_element function, dealing with common error conditions and supporting boolean values.</p>
+          <p>This utility function is not required to write a parser but can save a lot of typing.</p>
+          <p>The <code>element_name</code>, <code>attribute_names</code>, <code>attribute_values</code> and <span class="main_keyword">throws</span> 
+            parameters passed to the start_element callback should be passed unmodified to this function.</p>
+          <p>Following these arguments is a list of "supported" attributes to collect. It is an error to specify multiple attributes with the same 
+            name. If any attribute not in the list appears in the <code>attribute_names</code> array then an unknown attribute error will result.</p>
+          <p>The <a href="GLib.Markup.CollectType.html" class="enum">CollectType</a> field allows specifying the type of collection to perform and if 
+            a given attribute must appear or is optional.</p>
+          <p>The attribute name is simply the name of the attribute to collect.</p>
+          <p>The pointer should be of the appropriate type (see the descriptions under <a href="GLib.Markup.CollectType.html" class="enum">CollectType
+            </a>) and may be <span class="main_optional_parameter">null</span> in case a particular attribute is to be allowed but ignored.</p>
+          <p>This function deals with issuing errors for missing attributes (of type <span class="main_optional_parameter">
+              g_markup_error_missing_attribute</span>), unknown attributes (of type <span class="main_optional_parameter">
+              g_markup_error_unknown_attribute</span>) and duplicate attributes (of type <span class="main_optional_parameter">
+              g_markup_error_invalid_content</span>) as well as parse errors for boolean-valued attributes (again of type 
+            <span class="main_optional_parameter">g_markup_error_invalid_content</span>). In all of these cases <span class="main_optional_parameter">
+              false</span> will be returned and <span class="main_keyword">throws</span> will be set as appropriate.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">element_name</td>
+              <td>
+                <p>the current tag name</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">attribute_names</td>
+              <td>
+                <p>the attribute names</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">attribute_values</td>
+              <td>
+                <p>the attribute values</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">...</td>
+              <td>
+                <p>a pointer to the storage location of the first attribute  (or <span class="main_optional_parameter">null</span>), followed by more 
+                  types names and pointers, ending  with <span class="main_optional_parameter">g_markup_collect_invalid</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">error</td>
+              <td>
+                <p>a pointer to a <a href="GLib.Error.html" class="class">Error</a> or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">first_attr</td>
+              <td>
+                <p>the name of the first attribute</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">first_type</td>
+              <td>
+                <p>the <a href="GLib.Markup.CollectType.html" class="enum">CollectType</a> of the first attribute</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if successful</p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.Markup.html">GLib.Markup</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

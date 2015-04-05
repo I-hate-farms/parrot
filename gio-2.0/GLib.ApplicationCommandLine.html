@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.ApplicationCommandLine &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.ApplicationCommandLine &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">ApplicationCommandLine</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.ApplicationCommandLine.arguments.html">arguments</a></li>
+          <li class="property"><a href="GLib.ApplicationCommandLine.is_remote.html">is_remote</a></li>
+          <li class="property"><a href="GLib.ApplicationCommandLine.options.html">options</a></li>
+          <li class="property"><a href="GLib.ApplicationCommandLine.platform_data.html">platform_data</a></li>
+          <li class="creation_method"><a href="GLib.ApplicationCommandLine.ApplicationCommandLine.html">ApplicationCommandLine</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.create_file_for_arg.html">create_file_for_arg</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_arguments.html">get_arguments</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_cwd.html">get_cwd</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_environ.html">get_environ</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_exit_status.html">get_exit_status</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_is_remote.html">get_is_remote</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_options_dict.html">get_options_dict</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.get_platform_data.html">get_platform_data</a></li>
+          <li class="virtual_method"><a href="GLib.ApplicationCommandLine.get_stdin.html">get_stdin</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.getenv.html">getenv</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.print.html">print</a></li>
+          <li class="virtual_method"><a href="GLib.ApplicationCommandLine.print_literal.html">print_literal</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.printerr.html">printerr</a></li>
+          <li class="virtual_method"><a href="GLib.ApplicationCommandLine.printerr_literal.html">printerr_literal</a></li>
+          <li class="method"><a href="GLib.ApplicationCommandLine.set_exit_status.html">set_exit_status</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">ApplicationCommandLine</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#GLib.ApplicationCommandLine" alt="Object hierarchy for ApplicationCommandLine" src="img/GLib.ApplicationCommandLine.png"/>
+      
+
+      <map id="GLib.ApplicationCommandLine" name="GLib.ApplicationCommandLine">
+<area shape="rect" id="node1" href="GLib.ApplicationCommandLine.html" title="GLib.ApplicationCommandLine" alt="" coords="5,101,264,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="78,5,191,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">ApplicationCommandLine</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p><span class="class">ApplicationCommandLine</span> represents a command-line invocation of an application.</p>
+          <p> It is created by <a href="GLib.Application.html" class="class">Application</a> and emitted in the 
+            <a href="GLib.Application.command_line.html" class="signal">command_line</a> signal and virtual function.</p>
+          <p>The class contains the list of arguments that the program was invoked with. It is also possible to query if the commandline invocation 
+            was local (ie: the current process is running in direct response to the invocation) or remote (ie: some other process forwarded the 
+            commandline to this process).</p>
+          <p>The GApplicationCommandLine object can provide the <code>argc</code> and <code>argv</code> parameters for use with the 
+            <a href="../glib-2.0/GLib.OptionContext.html" class="class">OptionContext</a> command-line parsing API, with the 
+            <a href="GLib.ApplicationCommandLine.get_arguments.html" class="method">get_arguments</a> function. See <i>gapplication-example-cmdline3.c
+            </i> for an example.</p>
+          <p>The exit status of the originally-invoked process may be set and messages can be printed to stdout or stderr of that process. The 
+            lifecycle of the originally-invoked process is tied to the lifecycle of this object (ie: the process exits when the last reference is 
+            dropped).</p>
+          <p>The main use for <span class="class">ApplicationCommandLine</span> (and the <a href="GLib.Application.command_line.html" class="signal">
+              command_line</a> signal) is 'Emacs server' like use cases: You can set the `EDITOR` environment variable to have e.g. git use your 
+            favourite editor to edit commit messages, and if you already have an instance of the editor running, the editing will happen in the 
+            running instance, instead of opening a new one. An important aspect of this use case is that the process that gets started by git does not
+             return until the editing is done.</p>
+          <p>Normally, the commandline is completely handled in the <a href="GLib.Application.command_line.html" class="signal">command_line</a> 
+            handler. The launching instance exits once the signal handler in the primary instance has returned, and the return value of the signal 
+            handler becomes the exit status of the launching instance. <pre class="main_source">static int<br/>command_line (GApplication            *application,<br/>              GApplicationCommandLine *cmdline)<br/>{<br/>  gchar **argv;<br/>  gint argc;<br/>  gint i;<br/><br/>  argv = g_application_command_line_get_arguments (cmdline, &amp;argc);<br/><br/>  g_application_command_line_print (cmdline,<br/>                                    "This text is written back\n"<br/>                                    "to stdout of the caller\n");<br/><br/>  for (i = 0; i &lt; argc; i++)<br/>    g_print ("argument %d: %s\n", i, argv[i]);<br/><br/>  g_strfreev (argv);<br/><br/>  return 0;<br/>}</pre>
+             The complete example can be found here: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-cmdline.c">
+              gapplication-example-cmdline.c</a></p>
+          <p>In more complicated cases, the handling of the comandline can be split between the launcher and the primary instance. <pre class="main_source">static gboolean<br/> test_local_cmdline (GApplication   *application,<br/>                     gchar        ***arguments,<br/>                     gint           *exit_status)<br/>{<br/>  gint i, j;<br/>  gchar **argv;<br/><br/>  argv = *arguments;<br/><br/>  i = 1;<br/>  while (argv[i])<br/>    {<br/>      if (g_str_has_prefix (argv[i], "--local-"))<br/>        {<br/>          g_print ("handling argument %s locally\n", argv[i]);<br/>          g_free (argv[i]);<br/>          for (j = i; argv[j]; j++)<br/>            argv[j] = argv[j + 1];<br/>        }<br/>      else<br/>        {<br/>          g_print ("not handling argument %s locally\n", argv[i]);<br/>          i++;<br/>        }<br/>    }<br/><br/>  *exit_status = 0;<br/><br/>  return FALSE;<br/>}<br/><br/>static void<br/>test_application_class_init (TestApplicationClass *class)<br/>{<br/>  G_APPLICATION_CLASS (class)-&gt;local_command_line = test_local_cmdline;<br/><br/>  ...<br/>}</pre>
+             In this example of split commandline handling, options that start with `--local-` are handled locally, all other options are passed to 
+            the <a href="GLib.Application.command_line.html" class="signal">command_line</a> handler which runs in the primary instance.</p>
+          <p>The complete example can be found here: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-cmdline2.c">
+              gapplication-example-cmdline2.c</a></p>
+          <p>If handling the commandline requires a lot of work, it may be better to defer it. <pre class="main_source">static gboolean<br/>my_cmdline_handler (gpointer data)<br/>{<br/>  GApplicationCommandLine *cmdline = data;<br/><br/>  // do the heavy lifting in an idle<br/><br/>  g_application_command_line_set_exit_status (cmdline, 0);<br/>  g_object_unref (cmdline); // this releases the application<br/><br/>  return G_SOURCE_REMOVE;<br/>}<br/><br/>static int<br/>command_line (GApplication            *application,<br/>              GApplicationCommandLine *cmdline)<br/>{<br/>  // keep the application running until we are done with this commandline<br/>  g_application_hold (application);<br/><br/>  g_object_set_data_full (G_OBJECT (cmdline),<br/>                          "application", application,<br/>                          (GDestroyNotify)g_application_release);<br/><br/>  g_object_ref (cmdline);<br/>  g_idle_add (my_cmdline_handler, cmdline);<br/><br/>  return 0;<br/>}</pre>
+             In this example the commandline is not completely handled before the <a href="GLib.Application.command_line.html" class="signal">
+              command_line</a> handler returns. Instead, we keep a reference to the <span class="class">ApplicationCommandLine</span> object and 
+            handle it later (in this example, in an idle). Note that it is necessary to hold the application until you are done with the commandline.
+          </p>
+          <p>The complete example can be found here: <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-cmdline3.c">
+              gapplication-example-cmdline3.c</a></p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.ApplicationCommandLine.arguments.html" class="property">arguments</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.ApplicationCommandLine.is_remote.html" class="property">is_remote</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.ApplicationCommandLine.options.html" class="property">options</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.ApplicationCommandLine.platform_data.html" class="property">platform_data</a></b> { <span class="main_keyword">construct</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.ApplicationCommandLine.ApplicationCommandLine.html" class="creation_method">ApplicationCommandLine</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.File.html" class="interface">File</a></span> <b><a href="GLib.ApplicationCommandLine.create_file_for_arg.html" class="method">create_file_for_arg</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> arg)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <a href="GLib.File.html" class="interface">File</a> 
+                corresponding to a filename that was given as part of the invocation of <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.ApplicationCommandLine.get_arguments.html" class="method">get_arguments</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the list of arguments that was passed on the command line.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.ApplicationCommandLine.get_cwd.html" class="method">get_cwd</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the working directory of the command line invocation.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.ApplicationCommandLine.get_environ.html" class="method">get_environ</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the contents of the 'environ' variable of the command line 
+                invocation, as would be returned by <a href="../glib-2.0/GLib.Environ.@get.html" class="method">@get</a>, ie as a 
+                <span class="main_optional_parameter">null</span>-terminated list of strings in the form 'NAME=VALUE'.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.ApplicationCommandLine.get_exit_status.html" class="method">get_exit_status</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the exit status of <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.ApplicationCommandLine.get_is_remote.html" class="method">get_is_remote</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if <span class="main_keyword">this</span> represents a 
+                remote invocation.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="../glib-2.0/GLib.VariantDict.html" class="class">VariantDict</a></span> <b><a href="GLib.ApplicationCommandLine.get_options_dict.html" class="method">get_options_dict</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the options there were passed to 
+                <a href="GLib.Application.command_line.html" class="signal">command_line</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>? <b><a href="GLib.ApplicationCommandLine.get_platform_data.html" class="method">get_platform_data</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the platform data associated with the invocation of 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><a href="GLib.InputStream.html" class="abstract_class">InputStream</a></span> <b><a href="GLib.ApplicationCommandLine.get_stdin.html" class="virtual_method">get_stdin</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the stdin of the invoking process.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.ApplicationCommandLine.getenv.html" class="method">getenv</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the value of a particular environment variable of the command 
+                line invocation, as would be returned by <a href="../glib-2.0/GLib.Environment.get_variable.html" class="method">get_variable</a>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.ApplicationCommandLine.print.html" class="method">print</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Formats a message and prints it using the stdout print handler in the 
+                invoking process.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.ApplicationCommandLine.print_literal.html" class="virtual_method">print_literal</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> message)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.ApplicationCommandLine.printerr.html" class="method">printerr</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Formats a message and prints it using the stderr print handler in the 
+                invoking process.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.ApplicationCommandLine.printerr_literal.html" class="virtual_method">printerr_literal</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> message)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.ApplicationCommandLine.set_exit_status.html" class="method">set_exit_status</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> exit_status)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the exit status that will be used when the invoking process 
+                exits.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-53')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-53">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

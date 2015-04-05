@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MenuModel.get_item_attribute &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MenuModel.get_item_attribute &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class"><a href="GLib.MenuModel.html">MenuModel</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MenuModel.MenuModel.html">MenuModel</a></li>
+          <li class="method">get_item_attribute</li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_attribute_value.html">get_item_attribute_value</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_attributes.html">get_item_attributes</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_link.html">get_item_link</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_links.html">get_item_links</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_n_items.html">get_n_items</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.is_mutable.html">is_mutable</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.iterate_item_attributes.html">iterate_item_attributes</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.iterate_item_links.html">iterate_item_links</a></li>
+          <li class="signal"><a href="GLib.MenuModel.items_changed.html">items_changed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">get_item_attribute</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="method">get_item_attribute</span></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format_string, ...)
+        </div>
+        <div class="description">
+          <p>Queries item at position <code>item_index</code> in <span class="main_keyword">this</span> for the attribute specified by <code>attribute
+            </code>.</p>
+          <p>If the attribute exists and matches the <a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a> corresponding to <code>
+              format_string</code> then <code>format_string</code> is used to deconstruct the value into the positional parameters and 
+            <span class="main_optional_parameter">true</span> is returned.</p>
+          <p>If the attribute does not exist, or it does exist but has the wrong type, then the positional parameters are ignored and 
+            <span class="main_optional_parameter">false</span> is returned.</p>
+          <p>This function is a mix of <a href="GLib.MenuModel.get_item_attribute_value.html" class="virtual_method">get_item_attribute_value</a> and 
+            <a href="../glib-2.0/GLib.Variant.@get.html" class="method">@get</a>, followed by a <code>g_variant_unref</code>. As such, <code>
+              format_string</code> must make a complete copy of the data (since the <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> 
+            may go away after the call to <code>g_variant_unref</code>). In particular, no '&amp;' characters are allowed in <code>format_string
+            </code>.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">item_index</td>
+              <td>
+                <p>the index of the item</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">attribute</td>
+              <td>
+                <p>the attribute to query</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">format_string</td>
+              <td>
+                <p>a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> format string</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">...</td>
+              <td>
+                <p>positional parameters, as per <code>format_string</code></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the named attribute was found with the expected  type</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

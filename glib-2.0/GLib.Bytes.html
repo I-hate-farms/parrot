@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Bytes &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Bytes &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Bytes</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Bytes.length.html">length</a></li>
+          <li class="static_method"><a href="GLib.Bytes.new_with_owner.html">new_with_owner</a></li>
+          <li class="static_method"><a href="GLib.Bytes.unref_to_array.html">unref_to_array</a></li>
+          <li class="static_method"><a href="GLib.Bytes.unref_to_data.html">unref_to_data</a></li>
+          <li class="creation_method"><a href="GLib.Bytes.Bytes.html">Bytes</a></li>
+          <li class="creation_method"><a href="GLib.Bytes.Bytes.from_bytes.html">Bytes.from_bytes</a></li>
+          <li class="creation_method"><a href="GLib.Bytes.Bytes.static.html">Bytes.static</a></li>
+          <li class="creation_method"><a href="GLib.Bytes.Bytes.take.html">Bytes.take</a></li>
+          <li class="creation_method"><a href="GLib.Bytes.Bytes.with_free_func.html">Bytes.with_free_func</a></li>
+          <li class="method"><a href="GLib.Bytes.@get.html">@get</a></li>
+          <li class="method"><a href="GLib.Bytes.compare.html">compare</a></li>
+          <li class="method"><a href="GLib.Bytes.get_data.html">get_data</a></li>
+          <li class="method"><a href="GLib.Bytes.get_size.html">get_size</a></li>
+          <li class="method"><a href="GLib.Bytes.hash.html">hash</a></li>
+          <li class="method"><a href="GLib.Bytes.slice.html">slice</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Bytes</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Bytes" alt="Object hierarchy for Bytes" src="img/GLib.Bytes.png"/>
+
+      <map id="GLib.Bytes" name="GLib.Bytes">
+<area shape="rect" id="node1" href="GLib.Bytes.html" title="GLib.Bytes" alt="" coords="5,5,112,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Bytes</span></b>
+        </div>
+        <div class="description">
+          <p>A simple refcounted data type representing an immutable sequence of zero or more bytes from an unspecified origin.</p>
+          <p>The purpose of a <span class="class">Bytes</span> is to keep the memory region that it holds alive for as long as anyone holds a 
+            reference to the bytes. When the last reference count is dropped, the memory is released. Multiple unrelated callers can use byte data in 
+            the <span class="class">Bytes</span> without coordinating their activities, resting assured that the byte data will not change or move 
+            while they hold a reference.</p>
+          <p>A <span class="class">Bytes</span> can come from many different origins that may have different procedures for freeing the memory region.
+             Examples are memory from <a href="GLib.malloc.html" class="method">malloc</a>, from memory slices, from a 
+            <a href="GLib.MappedFile.html" class="class">MappedFile</a> or memory from other allocators.</p>
+          <p><span class="class">Bytes</span> work well as keys in <a href="GLib.GenericSet.html" class="class">GenericSet</a>. Use <code>
+              g_bytes_equal</code> and <a href="GLib.Bytes.hash.html" class="method">hash</a> as parameters to <code>g_hash_table_new</code> or 
+            <a href="GLib.GenericSet.GenericSet.html" class="creation_method">GenericSet</a>. <span class="class">Bytes</span> can also be used as 
+            keys in a <a href="GLib.Tree.html" class="class">Tree</a> by passing the <a href="GLib.Bytes.compare.html" class="method">compare</a> 
+            function to <code>g_tree_new</code>.</p>
+          <p>The data pointed to by this bytes must not be modified. For a mutable array of bytes see <a href="GLib.ByteArray.html" class="class">
+              ByteArray</a>. Use <a href="GLib.Bytes.unref_to_array.html" class="static_method">unref_to_array</a> to create a mutable array for a 
+            <span class="class">Bytes</span> sequence. To create an immutable <span class="class">Bytes</span> from a mutable 
+            <a href="GLib.ByteArray.html" class="class">ByteArray</a>, use the <a href="GLib.ByteArray.free_to_bytes.html" class="static_method">
+              free_to_bytes</a> function.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.Bytes.length.html" class="property">length</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Bytes</span></span> <b><a href="GLib.Bytes.new_with_owner.html" class="static_method">new_with_owner</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] data, <span class="main_keyword">owned</span> <span class="main_type"><span>T</span></span> owner = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">Bytes</span> from <code>data</code>.
+              </span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] <b><a href="GLib.Bytes.unref_to_data.html" class="static_method">unref_to_data</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><span class="class">Bytes</span></span> bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unreferences the bytes, and returns a pointer the same byte data 
+                contents.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="GLib.ByteArray.html" class="class">ByteArray</a></span> <b><a href="GLib.Bytes.unref_to_array.html" class="static_method">unref_to_array</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><span class="class">Bytes</span></span> bytes)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Unreferences the bytes, and returns a new mutable 
+                <a href="GLib.ByteArray.html" class="class">ByteArray</a> containing the same byte data.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Bytes.Bytes.html" class="creation_method">Bytes</a></b> (<span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Bytes</span> from <code>data</code>.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Bytes.Bytes.take.html" class="creation_method">Bytes.take</a></b> (<span class="main_keyword">owned</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Bytes</span> from <code>data</code>.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Bytes.Bytes.static.html" class="creation_method">Bytes.static</a></b> (<span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Bytes</span> from static data.
+              </span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Bytes.Bytes.with_free_func.html" class="creation_method">Bytes.with_free_func</a></b> (<span class="main_keyword">owned</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] data, <span class="main_type"><a href="GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? free_func = <b><a href="GLib.g_free.html" class="field">g_free</a></b>)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Bytes.Bytes.from_bytes.html" class="creation_method">Bytes.from_bytes</a></b> (<span class="main_type"><span class="class">Bytes</span></span> bytes, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> offset, <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> length)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">Bytes</span> which is a subsection of 
+                another <span class="class">Bytes</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] <b><a href="GLib.Bytes.get_data.html" class="method">get_data</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the byte data in the <span class="class">Bytes</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> <b><a href="GLib.Bytes.get_size.html" class="method">get_size</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the size of the byte data in the <span class="class">Bytes</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.Bytes.hash.html" class="method">hash</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates an integer hash code for the byte data in the 
+                <span class="class">Bytes</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> <b><a href="GLib.Bytes.compare.html" class="method">compare</a></b> (<span class="main_type"><span class="class">Bytes</span></span> bytes2)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares the two <span class="class">Bytes</span> values.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span> <b><a href="GLib.Bytes.@get.html" class="method">@get</a></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> index)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Bytes</span></span> <b><a href="GLib.Bytes.slice.html" class="method">slice</a></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> start, <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> end)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

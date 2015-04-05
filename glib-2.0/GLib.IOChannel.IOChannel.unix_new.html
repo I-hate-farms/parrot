@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.IOChannel.IOChannel.unix_new &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.IOChannel.IOChannel.unix_new &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.IOChannel.html">IOChannel</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.IOChannel.IOChannel.file.html">IOChannel.file</a></li>
+          <li class="creation_method">IOChannel.unix_new</li>
+          <li class="creation_method"><a href="GLib.IOChannel.IOChannel.win32_messages.html">IOChannel.win32_messages</a></li>
+          <li class="creation_method"><a href="GLib.IOChannel.IOChannel.win32_new_fd.html">IOChannel.win32_new_fd</a></li>
+          <li class="creation_method"><a href="GLib.IOChannel.IOChannel.win32_socket.html">IOChannel.win32_socket</a></li>
+          <li class="method"><a href="GLib.IOChannel.add_watch.html">add_watch</a></li>
+          <li class="method"><a href="GLib.IOChannel.add_watch_full.html">add_watch_full</a></li>
+          <li class="method"><a href="GLib.IOChannel.create_watch.html">create_watch</a></li>
+          <li class="method"><a href="GLib.IOChannel.flush.html">flush</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_buffer_condition.html">get_buffer_condition</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_buffer_size.html">get_buffer_size</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_buffered.html">get_buffered</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_close_on_unref.html">get_close_on_unref</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_encoding.html">get_encoding</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.IOChannel.get_line_term.html">get_line_term</a></li>
+          <li class="method"><a href="GLib.IOChannel.init.html">init</a></li>
+          <li class="method"><a href="GLib.IOChannel.read_chars.html">read_chars</a></li>
+          <li class="method"><a href="GLib.IOChannel.read_line.html">read_line</a></li>
+          <li class="method"><a href="GLib.IOChannel.read_line_string.html">read_line_string</a></li>
+          <li class="method"><a href="GLib.IOChannel.read_to_end.html">read_to_end</a></li>
+          <li class="method"><a href="GLib.IOChannel.read_unichar.html">read_unichar</a></li>
+          <li class="method"><a href="GLib.IOChannel.seek_position.html">seek_position</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_buffer_size.html">set_buffer_size</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_buffered.html">set_buffered</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_close_on_unref.html">set_close_on_unref</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_encoding.html">set_encoding</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.IOChannel.set_line_term.html">set_line_term</a></li>
+          <li class="method"><a href="GLib.IOChannel.shutdown.html">shutdown</a></li>
+          <li class="method"><a href="GLib.IOChannel.unix_get_fd.html">unix_get_fd</a></li>
+          <li class="method"><a href="GLib.IOChannel.write_chars.html">write_chars</a></li>
+          <li class="method"><a href="GLib.IOChannel.write_unichar.html">write_unichar</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">IOChannel.unix_new</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <b><span class="creation_method">IOChannel.unix_new</span></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> fd)
+        </div>
+        <div class="description">
+          <p>Creates a new <a href="GLib.IOChannel.html" class="class">IOChannel</a> given a file descriptor.</p>
+          <p> On UNIX systems this works for plain files, pipes, and sockets.</p>
+          <p>The returned <a href="GLib.IOChannel.html" class="class">IOChannel</a> has a reference count of 1.</p>
+          <p>The default encoding for <a href="GLib.IOChannel.html" class="class">IOChannel</a> is UTF-8. If your application is reading output from a
+             command using via pipe, you may need to set the encoding to the encoding of the current locale (see 
+            <a href="GLib.get_charset.html" class="method">get_charset</a>) with the <a href="GLib.IOChannel.set_encoding.html" class="method">
+              set_encoding</a> function.</p>
+          <p>If you want to read raw binary data without interpretation, then call the <a href="GLib.IOChannel.set_encoding.html" class="method">
+              set_encoding</a> function with <span class="main_optional_parameter">null</span> for the encoding argument.</p>
+          <p>This function is available in GLib on Windows, too, but you should avoid using it on Windows. The domain of file descriptors and sockets 
+            overlap. There is no way for GLib to know which one you mean in case the argument you pass to this function happens to be both a valid 
+            file descriptor and socket. If that happens a warning is issued, and GLib assumes that it is the file descriptor you mean.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">fd</td>
+              <td>
+                <p>a file descriptor.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>a new <a href="GLib.IOChannel.html" class="class">IOChannel</a>.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

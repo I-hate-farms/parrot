@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Subprocess.communicate &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Subprocess.communicate &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Subprocess.html">Subprocess</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Subprocess.argv.html">argv</a></li>
+          <li class="property"><a href="GLib.Subprocess.flags.html">flags</a></li>
+          <li class="creation_method"><a href="GLib.Subprocess.Subprocess.html">Subprocess</a></li>
+          <li class="creation_method"><a href="GLib.Subprocess.Subprocess.newv.html">Subprocess.newv</a></li>
+          <li class="method">communicate</li>
+          <li class="method"><a href="GLib.Subprocess.communicate_async.html">communicate_async</a></li>
+          <li class="method"><a href="GLib.Subprocess.communicate_utf8.html">communicate_utf8</a></li>
+          <li class="method"><a href="GLib.Subprocess.communicate_utf8_async.html">communicate_utf8_async</a></li>
+          <li class="method"><a href="GLib.Subprocess.force_exit.html">force_exit</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_exit_status.html">get_exit_status</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_identifier.html">get_identifier</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_if_exited.html">get_if_exited</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_if_signaled.html">get_if_signaled</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_status.html">get_status</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_stderr_pipe.html">get_stderr_pipe</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_stdin_pipe.html">get_stdin_pipe</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_stdout_pipe.html">get_stdout_pipe</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_successful.html">get_successful</a></li>
+          <li class="method"><a href="GLib.Subprocess.get_term_sig.html">get_term_sig</a></li>
+          <li class="method"><a href="GLib.Subprocess.send_signal.html">send_signal</a></li>
+          <li class="method"><a href="GLib.Subprocess.wait.html">wait</a></li>
+          <li class="method"><a href="GLib.Subprocess.wait_async.html">wait_async</a></li>
+          <li class="method"><a href="GLib.Subprocess.wait_check.html">wait_check</a></li>
+          <li class="method"><a href="GLib.Subprocess.wait_check_async.html">wait_check_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">communicate</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="method">communicate</span></b> (<span class="main_type"><a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a></span>? stdin_buf, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a></span> stdout_buf, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a></span> stderr_buf) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Communicate with the subprocess until it terminates, and all input and output has been completed.</p>
+          <p>If <code>stdin_buf</code> is given, the subprocess must have been created with <span class="main_optional_parameter">
+              g_subprocess_flags_stdin_pipe</span>. The given data is fed to the stdin of the subprocess and the pipe is closed (ie: EOF).</p>
+          <p>At the same time (as not to cause blocking when dealing with large amounts of data), if <span class="main_optional_parameter">
+              g_subprocess_flags_stdout_pipe</span> or <span class="main_optional_parameter">g_subprocess_flags_stderr_pipe</span> were used, reads 
+            from those streams. The data that was read is returned in <code>stdout</code> and/or the <code>stderr</code>.</p>
+          <p>If the subprocess was created with <span class="main_optional_parameter">g_subprocess_flags_stdout_pipe</span>, <code>stdout_buf</code> 
+            will contain the data read from stdout. Otherwise, for subprocesses not created with <span class="main_optional_parameter">
+              g_subprocess_flags_stdout_pipe</span>, <code>stdout_buf</code> will be set to <span class="main_optional_parameter">null</span>. Similar
+             provisions apply to <code>stderr_buf</code> and <span class="main_optional_parameter">g_subprocess_flags_stderr_pipe</span>.</p>
+          <p>As usual, any output variable may be given as <span class="main_optional_parameter">null</span> to ignore it.</p>
+          <p>If you desire the stdout and stderr data to be interleaved, create the subprocess with <span class="main_optional_parameter">
+              g_subprocess_flags_stdout_pipe</span> and <span class="main_optional_parameter">g_subprocess_flags_stderr_merge</span>. The merged 
+            result will be returned in <code>stdout_buf</code> and <code>stderr_buf</code> will be set to <span class="main_optional_parameter">null
+            </span>.</p>
+          <p>In case of any error (including cancellation), <span class="main_optional_parameter">false</span> will be returned with 
+            <span class="main_keyword">throws</span> set. Some or all of the stdin data may have been written. Any stdout or stderr data that has been
+             read will be discarded. None of the out variables (aside from <span class="main_keyword">throws</span>) will have been set to anything in
+             particular and should not be inspected.</p>
+          <p>In the case that <span class="main_optional_parameter">true</span> is returned, the subprocess has exited and the exit status inspection 
+            APIs (eg: <a href="GLib.Subprocess.get_if_exited.html" class="method">get_if_exited</a>, 
+            <a href="GLib.Subprocess.get_exit_status.html" class="method">get_exit_status</a>) may be used.</p>
+          <p>You should not attempt to use any of the subprocess pipes after starting this function, since they may be left in strange states, even if
+             the operation was cancelled. You should especially not attempt to interact with the pipes while the operation is in progress (either from
+             another thread or if using the asynchronous version).</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Subprocess.html" class="class">Subprocess</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">stdin_buf</td>
+              <td>
+                <p>data to send to the stdin of the subprocess, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>a <a href="GLib.Cancellable.html" class="class">Cancellable</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">stdout_buf</td>
+              <td>
+                <p>data read from the subprocess stdout</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">stderr_buf</td>
+              <td>
+                <p>data read from the subprocess stderr</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if successful</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

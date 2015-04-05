@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.VariantType &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.VariantType &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">VariantType</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.VariantType.string_is_valid.html">string_is_valid</a></li>
+          <li class="static_method"><a href="GLib.VariantType.string_scan.html">string_scan</a></li>
+          <li class="creation_method"><a href="GLib.VariantType.VariantType.html">VariantType</a></li>
+          <li class="creation_method"><a href="GLib.VariantType.VariantType.array.html">VariantType.array</a></li>
+          <li class="creation_method"><a href="GLib.VariantType.VariantType.dict_entry.html">VariantType.dict_entry</a></li>
+          <li class="creation_method"><a href="GLib.VariantType.VariantType.maybe.html">VariantType.maybe</a></li>
+          <li class="creation_method"><a href="GLib.VariantType.VariantType.tuple.html">VariantType.tuple</a></li>
+          <li class="method"><a href="GLib.VariantType.dup_string.html">dup_string</a></li>
+          <li class="method"><a href="GLib.VariantType.element.html">element</a></li>
+          <li class="method"><a href="GLib.VariantType.equal.html">equal</a></li>
+          <li class="method"><a href="GLib.VariantType.first.html">first</a></li>
+          <li class="method"><a href="GLib.VariantType.get_string_length.html">get_string_length</a></li>
+          <li class="method"><a href="GLib.VariantType.hash.html">hash</a></li>
+          <li class="method"><a href="GLib.VariantType.is_array.html">is_array</a></li>
+          <li class="method"><a href="GLib.VariantType.is_basic.html">is_basic</a></li>
+          <li class="method"><a href="GLib.VariantType.is_container.html">is_container</a></li>
+          <li class="method"><a href="GLib.VariantType.is_definite.html">is_definite</a></li>
+          <li class="method"><a href="GLib.VariantType.is_dict_entry.html">is_dict_entry</a></li>
+          <li class="method"><a href="GLib.VariantType.is_maybe.html">is_maybe</a></li>
+          <li class="method"><a href="GLib.VariantType.is_subtype_of.html">is_subtype_of</a></li>
+          <li class="method"><a href="GLib.VariantType.is_tuple.html">is_tuple</a></li>
+          <li class="method"><a href="GLib.VariantType.is_variant.html">is_variant</a></li>
+          <li class="method"><a href="GLib.VariantType.key.html">key</a></li>
+          <li class="method"><a href="GLib.VariantType.n_items.html">n_items</a></li>
+          <li class="method"><a href="GLib.VariantType.next.html">next</a></li>
+          <li class="method"><a href="GLib.VariantType.peek_string.html">peek_string</a></li>
+          <li class="method"><a href="GLib.VariantType.value.html">value</a></li>
+          <li class="field"><a href="GLib.VariantType.ANY.html">ANY</a></li>
+          <li class="field"><a href="GLib.VariantType.ARRAY.html">ARRAY</a></li>
+          <li class="field"><a href="GLib.VariantType.BASIC.html">BASIC</a></li>
+          <li class="field"><a href="GLib.VariantType.BOOLEAN.html">BOOLEAN</a></li>
+          <li class="field"><a href="GLib.VariantType.BYTE.html">BYTE</a></li>
+          <li class="field"><a href="GLib.VariantType.BYTESTRING.html">BYTESTRING</a></li>
+          <li class="field"><a href="GLib.VariantType.BYTESTRING_ARRAY.html">BYTESTRING_ARRAY</a></li>
+          <li class="field"><a href="GLib.VariantType.DICTIONARY.html">DICTIONARY</a></li>
+          <li class="field"><a href="GLib.VariantType.DICT_ENTRY.html">DICT_ENTRY</a></li>
+          <li class="field"><a href="GLib.VariantType.DOUBLE.html">DOUBLE</a></li>
+          <li class="field"><a href="GLib.VariantType.HANDLE.html">HANDLE</a></li>
+          <li class="field"><a href="GLib.VariantType.INT16.html">INT16</a></li>
+          <li class="field"><a href="GLib.VariantType.INT32.html">INT32</a></li>
+          <li class="field"><a href="GLib.VariantType.INT64.html">INT64</a></li>
+          <li class="field"><a href="GLib.VariantType.MAYBE.html">MAYBE</a></li>
+          <li class="field"><a href="GLib.VariantType.OBJECT_PATH.html">OBJECT_PATH</a></li>
+          <li class="field"><a href="GLib.VariantType.OBJECT_PATH_ARRAY.html">OBJECT_PATH_ARRAY</a></li>
+          <li class="field"><a href="GLib.VariantType.SIGNATURE.html">SIGNATURE</a></li>
+          <li class="field"><a href="GLib.VariantType.STRING.html">STRING</a></li>
+          <li class="field"><a href="GLib.VariantType.STRING_ARRAY.html">STRING_ARRAY</a></li>
+          <li class="field"><a href="GLib.VariantType.TUPLE.html">TUPLE</a></li>
+          <li class="field"><a href="GLib.VariantType.UINT16.html">UINT16</a></li>
+          <li class="field"><a href="GLib.VariantType.UINT32.html">UINT32</a></li>
+          <li class="field"><a href="GLib.VariantType.UINT64.html">UINT64</a></li>
+          <li class="field"><a href="GLib.VariantType.UNIT.html">UNIT</a></li>
+          <li class="field"><a href="GLib.VariantType.VARDICT.html">VARDICT</a></li>
+          <li class="field"><a href="GLib.VariantType.VARIANT.html">VARIANT</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">VariantType</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.VariantType" alt="Object hierarchy for VariantType" src="img/GLib.VariantType.png"/>
+
+      <map id="GLib.VariantType" name="GLib.VariantType">
+<area shape="rect" id="node1" href="GLib.VariantType.html" title="GLib.VariantType" alt="" coords="5,5,160,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/>[ <span class="main_type">Immutable</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">VariantType</span></b>
+        </div>
+        <div class="description">
+          <p>This section introduces the GVariant type system.</p>
+          <p> It is based, in large part, on the D-Bus type system, with two major changes and some minor lifting of restrictions. The 
+            <a href="http://dbus.freedesktop.org/doc/dbus-specification.html">D-Bus specification</a>, therefore, provides a significant amount of 
+            information that is useful when working with GVariant.</p>
+          <p>The first major change with respect to the D-Bus type system is the introduction of maybe (or "nullable") types. Any type in GVariant can
+             be converted to a maybe type, in which case, "nothing" (or "null") becomes a valid value. Maybe types have been added by introducing the 
+            character "m" to type strings.</p>
+          <p>The second major change is that the GVariant type system supports the concept of "indefinite types" -- types that are less specific than 
+            the normal types found in D-Bus. For example, it is possible to speak of "an array of any type" in GVariant, where the D-Bus type system 
+            would require you to speak of "an array of integers" or "an array of strings". Indefinite types have been added by introducing the 
+            characters "*", "?" and "r" to type strings.</p>
+          <p>Finally, all arbitrary restrictions relating to the complexity of types are lifted along with the restriction that dictionary entries may
+             only appear nested inside of arrays.</p>
+          <p>Just as in D-Bus, GVariant types are described with strings ("type strings"). Subject to the differences mentioned above, these strings 
+            are of the same form as those found in DBus. Note, however: D-Bus always works in terms of messages and therefore individual type strings 
+            appear nowhere in its interface. Instead, "signatures" are a concatenation of the strings of the type of each argument in a message. 
+            GVariant deals with single values directly so GVariant type strings always describe the type of exactly one value. This means that a D-Bus
+             signature string is generally not a valid GVariant type string -- except in the case that it is the signature of a message containing 
+            exactly one argument.</p>
+          <p>An indefinite type is similar in spirit to what may be called an abstract type in other type systems. No value can exist that has an 
+            indefinite type as its type, but values can exist that have types that are subtypes of indefinite types. That is to say, 
+            <a href="GLib.Variant.get_type.html" class="method">get_type</a> will never return an indefinite type, but calling 
+            <a href="GLib.Variant.is_of_type.html" class="method">is_of_type</a> with an indefinite type may return 
+            <span class="main_optional_parameter">true</span>. For example, you cannot have a value that represents "an array of no particular type", 
+            but you can have an "array of integers" which certainly matches the type of "an array of no particular type", since "array of integers" is
+             a subtype of "array of no particular type".</p>
+          <p>This is similar to how instances of abstract classes may not directly exist in other type systems, but instances of their non-abstract 
+            subtypes may. For example, in GTK, no object that has the type of <code>GtkBin</code> can exist (since <code>GtkBin</code> is an abstract 
+            class), but a <code>GtkWindow</code> can certainly be instantiated, and you would say that the <code>GtkWindow</code> is a <code>GtkBin
+            </code> (since <code>GtkWindow</code> is a subclass of <code>GtkBin</code>).</p>
+          <h2> GVariant Type Strings</h2>
+          <p>A GVariant type string can be any of the following:</p>
+          <ul>
+            <li>any basic type string (listed below)</li>
+            <li>"v", "r" or "*"</li>
+            <li>one of the characters 'a' or 'm', followed by another type string</li>
+            <li>the character '(', followed by a concatenation of zero or more other  type strings, followed by the character ')'</li>
+            <li>the character '{', followed by a basic type string (see below),  followed by another type string, followed by the character '}'</li>
+          </ul>
+          <p>A basic type string describes a basic type (as per <a href="GLib.VariantType.is_basic.html" class="method">is_basic</a>) and is always a 
+            single character in length. The valid basic type strings are "b", "y", "n", "q", "i", "u", "x", "t", "h", "d", "s", "o", "g" and "?".</p>
+          <p>The above definition is recursive to arbitrary depth. "aaaaai" and "(ui(nq((y)))s)" are both valid type strings, as is "a(aa(ui)(qna{ya(
+            yd)}))".</p>
+          <p>The meaning of each of the characters is as follows: - `b`: the type string of <span class="main_optional_parameter">
+              g_variant_type_boolean</span>; a boolean value. - `y`: the type string of <span class="main_optional_parameter">g_variant_type_byte
+            </span>; a byte. - `n`: the type string of <span class="main_optional_parameter">g_variant_type_int16</span>; a signed 16 bit integer. - 
+            `q`: the type string of <span class="main_optional_parameter">g_variant_type_uint16</span>; an unsigned 16 bit integer. - `i`: the type 
+            string of <span class="main_optional_parameter">g_variant_type_int32</span>; a signed 32 bit integer. - `u`: the type string of 
+            <span class="main_optional_parameter">g_variant_type_uint32</span>; an unsigned 32 bit integer. - `x`: the type string of 
+            <span class="main_optional_parameter">g_variant_type_int64</span>; a signed 64 bit integer. - `t`: the type string of 
+            <span class="main_optional_parameter">g_variant_type_uint64</span>; an unsigned 64 bit integer. - `h`: the type string of 
+            <span class="main_optional_parameter">g_variant_type_handle</span>; a signed 32 bit value  that, by convention, is used as an index into 
+            an array of file  descriptors that are sent alongside a D-Bus message. - `d`: the type string of <span class="main_optional_parameter">
+              g_variant_type_double</span>; a double precision  floating point value. - `s`: the type string of <span class="main_optional_parameter">
+              g_variant_type_string</span>; a string. - `o`: the type string of <span class="main_optional_parameter">g_variant_type_object_path
+            </span>; a string in the form  of a D-Bus object path. - `g`: the type string of <span class="main_optional_parameter">
+              g_variant_type_string</span>; a string in the form of  a D-Bus type signature. - `?`: the type string of 
+            <span class="main_optional_parameter">g_variant_type_basic</span>; an indefinite type that  is a supertype of any of the basic types. - 
+            `v`: the type string of <span class="main_optional_parameter">g_variant_type_variant</span>; a container type that  contain any other type
+             of value. - `a`: used as a prefix on another type string to mean an array of that  type; the type string "ai", for example, is the type 
+            of an array of  signed 32-bit integers. - `m`: used as a prefix on another type string to mean a "maybe", or  "nullable", version of that 
+            type; the type string "ms", for example,  is the type of a value that maybe contains a string, or maybe contains  nothing. - `()`: used to
+             enclose zero or more other concatenated type strings to  create a tuple type; the type string "(is)", for example, is the type of  a pair
+             of an integer and a string. - `r`: the type string of <span class="main_optional_parameter">g_variant_type_tuple</span>; an indefinite 
+            type that is  a supertype of any tuple type, regardless of the number of items. - `{}`: used to enclose a basic type string concatenated 
+            with another type  string to create a dictionary entry type, which usually appears inside of  an array to form a dictionary; the type 
+            string "a{sd}", for example, is  the type of a dictionary that maps strings to double precision floating  point values.</p>
+          <p>The first type (the basic type) is the key type and the second type is  the value type. The reason that the first type is restricted to 
+            being a  basic type is so that it can easily be hashed. - `*`: the type string of <span class="main_optional_parameter">g_variant_type_any
+            </span>; the indefinite type that is  a supertype of all types. Note that, as with all type strings, this  character represents exactly 
+            one type. It cannot be used inside of tuples  to mean "any number of items".</p>
+          <p>Any type string of a container that contains an indefinite type is, itself, an indefinite type. For example, the type string "a*" (
+            corresponding to <span class="main_optional_parameter">g_variant_type_array</span>) is an indefinite type that is a supertype of every 
+            array type. "(*s)" is a supertype of all tuples that contain exactly two items where the second item is a string.</p>
+          <p>"a{?*}" is an indefinite type that is a supertype of all arrays containing dictionary entries where the key is any basic type and the 
+            value is any type at all. This is, by definition, a dictionary, so this type string corresponds to <span class="main_optional_parameter">
+              g_variant_type_dictionary</span>. Note that, due to the restriction that the key of a dictionary entry must be a basic type, "{**}" is 
+            not a valid type string.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.string_is_valid.html" class="static_method">string_is_valid</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> type_string)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <code>type_string</code> is a valid GVariant type string.
+              </span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.string_scan.html" class="static_method">string_scan</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> type_string, <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>* limit, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>* endptr)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Scan for a single complete and valid GVariant type string in <code>
+                  string</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantType.VariantType.html" class="creation_method">VariantType</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> type_string)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">VariantType</span> corresponding to 
+                the type string given by <code>type_string</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantType.VariantType.array.html" class="creation_method">VariantType.array</a></b> (<span class="main_type"><span class="class">VariantType</span></span> element)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs the type corresponding to an array of elements of the type 
+                <code>type</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantType.VariantType.maybe.html" class="creation_method">VariantType.maybe</a></b> (<span class="main_type"><span class="class">VariantType</span></span> element)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs the type corresponding to a maybe instance containing type 
+                <code>type</code> or Nothing.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantType.VariantType.tuple.html" class="creation_method">VariantType.tuple</a></b> (<span class="main_type"><span class="class">VariantType</span></span>[] items)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs a new tuple type, from <code>items</code>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.VariantType.VariantType.dict_entry.html" class="creation_method">VariantType.dict_entry</a></b> (<span class="main_type"><span class="class">VariantType</span></span> key, <span class="main_type"><span class="class">VariantType</span></span> value)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructs the type corresponding to a dictionary entry with a key of 
+                type <code>key</code> and a value of type <code>value</code>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> <b><a href="GLib.VariantType.get_string_length.html" class="method">get_string_length</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the length of the type string corresponding to the given 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="char.html" class="struct">char</a></span>* <b><a href="GLib.VariantType.peek_string.html" class="method">peek_string</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the type string corresponding to the given 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.VariantType.dup_string.html" class="method">dup_string</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns a newly-allocated copy of the type string corresponding to 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_definite.html" class="method">is_definite</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is 
+                definite (ie: not indefinite).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_container.html" class="method">is_container</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is a 
+                container type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_basic.html" class="method">is_basic</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is a 
+                basic type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_maybe.html" class="method">is_maybe</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is a 
+                maybe type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_array.html" class="method">is_array</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is an 
+                array type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_tuple.html" class="method">is_tuple</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is a 
+                tuple type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_dict_entry.html" class="method">is_dict_entry</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is a 
+                dictionary entry type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_variant.html" class="method">is_variant</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines if the given <span class="main_keyword">this</span> is the 
+                variant type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint.html" class="struct">uint</a></span> <b><a href="GLib.VariantType.hash.html" class="method">hash</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Hashes <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.equal.html" class="method">equal</a></b> (<span class="main_type"><span class="class">VariantType</span></span> other)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Compares <span class="main_keyword">this</span> and <code>type2</code>
+                 for equality.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.VariantType.is_subtype_of.html" class="method">is_subtype_of</a></b> (<span class="main_type"><span class="class">VariantType</span></span> supertype)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is a subtype of 
+                <code>supertype</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.element.html" class="method">element</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the element type of an array or maybe type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.first.html" class="method">first</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the first item type of a tuple or dictionary entry type.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.next.html" class="method">next</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the next item type of a tuple or dictionary entry type.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.n_items.html" class="method">n_items</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the number of items contained in a tuple or dictionary 
+                entry type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.key.html" class="method">key</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the key type of a dictionary entry type.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.value.html" class="method">value</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Determines the value type of a dictionary entry type.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.BOOLEAN.html" class="field">BOOLEAN</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.BYTE.html" class="field">BYTE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.INT16.html" class="field">INT16</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.UINT16.html" class="field">UINT16</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.INT32.html" class="field">INT32</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.UINT32.html" class="field">UINT32</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.INT64.html" class="field">INT64</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.UINT64.html" class="field">UINT64</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.HANDLE.html" class="field">HANDLE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.DOUBLE.html" class="field">DOUBLE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.STRING.html" class="field">STRING</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.OBJECT_PATH.html" class="field">OBJECT_PATH</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.SIGNATURE.html" class="field">SIGNATURE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.VARIANT.html" class="field">VARIANT</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.UNIT.html" class="field">UNIT</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.ANY.html" class="field">ANY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.BASIC.html" class="field">BASIC</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.MAYBE.html" class="field">MAYBE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.ARRAY.html" class="field">ARRAY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.TUPLE.html" class="field">TUPLE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.DICT_ENTRY.html" class="field">DICT_ENTRY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.DICTIONARY.html" class="field">DICTIONARY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.STRING_ARRAY.html" class="field">STRING_ARRAY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.OBJECT_PATH_ARRAY.html" class="field">OBJECT_PATH_ARRAY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.BYTESTRING.html" class="field">BYTESTRING</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.BYTESTRING_ARRAY.html" class="field">BYTESTRING_ARRAY</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">VariantType</span></span> <b><a href="GLib.VariantType.VARDICT.html" class="field">VARDICT</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

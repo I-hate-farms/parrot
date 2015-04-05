@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SocketClient.event &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SocketClient.event &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.SocketClient.html">SocketClient</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.SocketClient.enable_proxy.html">enable_proxy</a></li>
+          <li class="property"><a href="GLib.SocketClient.family.html">family</a></li>
+          <li class="property"><a href="GLib.SocketClient.local_address.html">local_address</a></li>
+          <li class="property"><a href="GLib.SocketClient.protocol.html">protocol</a></li>
+          <li class="property"><a href="GLib.SocketClient.proxy_resolver.html">proxy_resolver</a></li>
+          <li class="property"><a href="GLib.SocketClient.timeout.html">timeout</a></li>
+          <li class="property"><a href="GLib.SocketClient.tls.html">tls</a></li>
+          <li class="property"><a href="GLib.SocketClient.tls_validation_flags.html">tls_validation_flags</a></li>
+          <li class="property"><a href="GLib.SocketClient.type.html">type</a></li>
+          <li class="creation_method"><a href="GLib.SocketClient.SocketClient.html">SocketClient</a></li>
+          <li class="method"><a href="GLib.SocketClient.add_application_proxy.html">add_application_proxy</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect.html">connect</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_async.html">connect_async</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_host.html">connect_to_host</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_host_async.html">connect_to_host_async</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_service.html">connect_to_service</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_service_async.html">connect_to_service_async</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_uri.html">connect_to_uri</a></li>
+          <li class="method"><a href="GLib.SocketClient.connect_to_uri_async.html">connect_to_uri_async</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_enable_proxy.html">get_enable_proxy</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_family.html">get_family</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_local_address.html">get_local_address</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_protocol.html">get_protocol</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_proxy_resolver.html">get_proxy_resolver</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_socket_type.html">get_socket_type</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_timeout.html">get_timeout</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_tls.html">get_tls</a></li>
+          <li class="method"><a href="GLib.SocketClient.get_tls_validation_flags.html">get_tls_validation_flags</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_enable_proxy.html">set_enable_proxy</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_family.html">set_family</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_local_address.html">set_local_address</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_protocol.html">set_protocol</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_proxy_resolver.html">set_proxy_resolver</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_socket_type.html">set_socket_type</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_timeout.html">set_timeout</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_tls.html">set_tls</a></li>
+          <li class="method"><a href="GLib.SocketClient.set_tls_validation_flags.html">set_tls_validation_flags</a></li>
+          <li class="signal">event</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">event</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><span class="signal">event</span></b> (<span class="main_type"><a href="GLib.SocketClientEvent.html" class="enum">SocketClientEvent</a></span> event, <span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span> connectable, <span class="main_type"><a href="GLib.IOStream.html" class="abstract_class">IOStream</a></span> connection)
+        </div>
+        <div class="description">
+          <p>Emitted when <code>client</code>'s activity on <code>connectable</code> changes state.</p>
+          <p> Among other things, this can be used to provide progress information about a network connection in the UI. The meanings of the different
+             <code>event</code> values are as follows:</p>
+          <ul>
+            <li><span class="main_optional_parameter">g_socket_client_resolving</span>: <code>client</code> is about to look up <code>connectable
+              </code>  in DNS. <code>connection</code> will be <span class="main_optional_parameter">null</span>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_resolved</span>: <code>client</code> has successfully resolved  <code>
+                connectable</code> in DNS. <code>connection</code> will be <span class="main_optional_parameter">null</span>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_connecting</span>: <code>client</code> is about to make a connection  to a 
+              remote host; either a proxy server or the destination server  itself. <code>connection</code> is the 
+              <a href="GLib.SocketConnection.html" class="class">SocketConnection</a>, which is not yet  connected. Since GLib 2.40, you can access 
+              the remote  address via <a href="GLib.SocketConnection.get_remote_address.html" class="method">get_remote_address</a>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_connected</span>: <code>client</code> has successfully connected  to a remote 
+              host. <code>connection</code> is the connected <a href="GLib.SocketConnection.html" class="class">SocketConnection</a>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_proxy_negotiating</span>: <code>client</code> is about to negotiate  with a 
+              proxy to get it to connect to <code>connectable</code>. <code>connection</code> is  the 
+              <a href="GLib.SocketConnection.html" class="class">SocketConnection</a> to the proxy server.</li>
+            <li><span class="main_optional_parameter">g_socket_client_proxy_negotiated</span>: <code>client</code> has negotiated a  connection to 
+              <code>connectable</code> through a proxy server. <code>connection</code> is  the stream returned from 
+              <a href="GLib.Proxy.connect.html" class="abstract_method">connect</a>, which may or may not  be a 
+              <a href="GLib.SocketConnection.html" class="class">SocketConnection</a>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_tls_handshaking</span>: <code>client</code> is about to begin a TLS  handshake. 
+              <code>connection</code> is a <a href="GLib.TlsClientConnection.html" class="interface">TlsClientConnection</a>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_tls_handshaked</span>: <code>client</code> has successfully completed  the TLS 
+              handshake. <code>connection</code> is a <a href="GLib.TlsClientConnection.html" class="interface">TlsClientConnection</a>.</li>
+            <li><span class="main_optional_parameter">g_socket_client_complete</span>: <code>client</code> has either successfully connected  to 
+              <code>connectable</code> (in which case <code>connection</code> is the <a href="GLib.SocketConnection.html" class="class">
+                SocketConnection</a>  that it will be returning to the caller) or has failed (in which  case <code>connection</code> is 
+              <span class="main_optional_parameter">null</span> and the client is about to return an error).</li>
+          </ul>
+          <p>Each event except <span class="main_optional_parameter">g_socket_client_complete</span> may be emitted multiple times (or not at all) for
+             a given connectable (in particular, if <code>client</code> ends up attempting to connect to more than one address). However, if <code>
+              client</code> emits the <span class="signal">event</span> signal at all for a given connectable, that it will always emit it with 
+            <span class="main_optional_parameter">g_socket_client_complete</span> when it is done.</p>
+          <p>Note that there may be additional <a href="GLib.SocketClientEvent.html" class="enum">SocketClientEvent</a> values in the future; 
+            unrecognized <code>event</code> values should be ignored.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">event</td>
+              <td>
+                <p>the event that is occurring</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">connectable</td>
+              <td>
+                <p>the <a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a> that <code>event</code> is occurring on</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">connection</td>
+              <td>
+                <p>the current representation of the connection</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

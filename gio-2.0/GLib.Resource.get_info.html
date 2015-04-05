@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Resource.get_info &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Resource.get_info &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Resource.html">Resource</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Resource.load.html">load</a></li>
+          <li class="creation_method"><a href="GLib.Resource.Resource.from_data.html">Resource.from_data</a></li>
+          <li class="method"><a href="GLib.Resource.@ref.html">@ref</a></li>
+          <li class="method"><a href="GLib.Resource._register.html">_register</a></li>
+          <li class="method"><a href="GLib.Resource._unregister.html">_unregister</a></li>
+          <li class="method"><a href="GLib.Resource.enumerate_children.html">enumerate_children</a></li>
+          <li class="method">get_info</li>
+          <li class="method"><a href="GLib.Resource.lookup_data.html">lookup_data</a></li>
+          <li class="method"><a href="GLib.Resource.open_stream.html">open_stream</a></li>
+          <li class="method"><a href="GLib.Resource.unref.html">unref</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">get_info</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="method">get_info</span></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path, <span class="main_type"><a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></span> lookup_flags, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/size_t.html" class="struct">size_t</a></span> size, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Looks for a file at the specified <code>path</code> in the resource and if found returns information about it.</p>
+          <p><code>lookup_flags</code> controls the behaviour of the lookup.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>A <a href="GLib.Resource.html" class="class">Resource</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">path</td>
+              <td>
+                <p>A pathname inside the resource</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">lookup_flags</td>
+              <td>
+                <p>A <a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">size</td>
+              <td>
+                <p>a location to place the length of the contents of the file,  or <span class="main_optional_parameter">null</span> if the length is 
+                  not needed</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>a location to place the flags about the file,  or <span class="main_optional_parameter">null</span> if the length is not needed</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the file was found. <span class="main_optional_parameter">false</span> if 
+                  there were errors</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

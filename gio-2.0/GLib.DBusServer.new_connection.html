@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.DBusServer.new_connection &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.DBusServer.new_connection &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.DBusServer.html">DBusServer</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.DBusServer.active.html">active</a></li>
+          <li class="property"><a href="GLib.DBusServer.address.html">address</a></li>
+          <li class="property"><a href="GLib.DBusServer.authentication_observer.html">authentication_observer</a></li>
+          <li class="property"><a href="GLib.DBusServer.client_address.html">client_address</a></li>
+          <li class="property"><a href="GLib.DBusServer.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.DBusServer.guid.html">guid</a></li>
+          <li class="creation_method"><a href="GLib.DBusServer.DBusServer.html">DBusServer</a></li>
+          <li class="creation_method"><a href="GLib.DBusServer.DBusServer.sync.html">DBusServer.sync</a></li>
+          <li class="method"><a href="GLib.DBusServer.get_client_address.html">get_client_address</a></li>
+          <li class="method"><a href="GLib.DBusServer.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.DBusServer.get_guid.html">get_guid</a></li>
+          <li class="method"><a href="GLib.DBusServer.is_active.html">is_active</a></li>
+          <li class="method"><a href="GLib.DBusServer.start.html">start</a></li>
+          <li class="method"><a href="GLib.DBusServer.stop.html">stop</a></li>
+          <li class="signal">new_connection</li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">new_connection</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="signal">new_connection</span></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection)
+        </div>
+        <div class="description">
+          <p>Emitted when a new authenticated connection has been made.</p>
+          <p> Use <a href="GLib.DBusConnection.get_peer_credentials.html" class="method">get_peer_credentials</a> to figure out what identity (if any)
+            , was authenticated.</p>
+          <p>If you want to accept the connection, take a reference to the <code>connection</code> object and return 
+            <span class="main_optional_parameter">true</span>. When you are done with the connection call 
+            <a href="GLib.DBusConnection.close.html" class="method">close</a> and give up your reference. Note that the other peer may disconnect at 
+            any time - a typical thing to do when accepting a connection is to listen to the <code>GDBusConnection::closed</code> signal.</p>
+          <p>If <a href="GLib.DBusServer.flags.html" class="property">flags</a> contains <span class="main_optional_parameter">
+              g_dbus_server_flags_run_in_thread</span> then the signal is emitted in a new thread dedicated to the connection. Otherwise the signal is
+             emitted in the <i>thread-default main context</i> of the thread that <code>server</code> was constructed in.</p>
+          <p>You are guaranteed that signal handlers for this signal runs before incoming messages on <code>connection</code> are processed. This 
+            means that it's suitable to call <a href="GLib.DBusConnection.register_object.html" class="method">register_object</a> or similar from the
+             signal handler.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">connection</td>
+              <td>
+                <p>A <a href="GLib.DBusConnection.html" class="class">DBusConnection</a> for the new connection.</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> to claim <code>connection</code>, <span class="main_optional_parameter">false
+                  </span> to let other handlers run.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Cancellable.make_pollfd &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Cancellable.make_pollfd &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Cancellable.html">Cancellable</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Cancellable.get_current.html">get_current</a></li>
+          <li class="creation_method"><a href="GLib.Cancellable.Cancellable.html">Cancellable</a></li>
+          <li class="method"><a href="GLib.Cancellable.cancel.html">cancel</a></li>
+          <li class="method"><a href="GLib.Cancellable.connect.html">connect</a></li>
+          <li class="method"><a href="GLib.Cancellable.disconnect.html">disconnect</a></li>
+          <li class="method"><a href="GLib.Cancellable.get_fd.html">get_fd</a></li>
+          <li class="method"><a href="GLib.Cancellable.is_cancelled.html">is_cancelled</a></li>
+          <li class="method">make_pollfd</li>
+          <li class="method"><a href="GLib.Cancellable.pop_current.html">pop_current</a></li>
+          <li class="method"><a href="GLib.Cancellable.push_current.html">push_current</a></li>
+          <li class="method"><a href="GLib.Cancellable.release_fd.html">release_fd</a></li>
+          <li class="method"><a href="GLib.Cancellable.reset.html">reset</a></li>
+          <li class="method"><a href="GLib.Cancellable.set_error_if_cancelled.html">set_error_if_cancelled</a></li>
+          <li class="method"><a href="GLib.Cancellable.source_new.html">source_new</a></li>
+          <li class="signal"><a href="GLib.Cancellable.cancelled.html">cancelled</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">make_pollfd</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="method">make_pollfd</span></b> (<span class="main_type"><a href="../glib-2.0/GLib.PollFD.html" class="struct">PollFD</a></span> pollfd)
+        </div>
+        <div class="description">
+          <p>Creates a <a href="../glib-2.0/GLib.PollFD.html" class="struct">PollFD</a> corresponding to <span class="main_keyword">this</span>; this 
+            can be passed to <code>g_poll</code> and used to poll for cancellation.</p>
+          <p> This is useful both for unix systems without a native poll and for portability to windows.</p>
+          <p>When this function returns <span class="main_optional_parameter">true</span>, you should use 
+            <a href="GLib.Cancellable.release_fd.html" class="method">release_fd</a> to free up resources allocated for the <code>pollfd</code>. After
+             a <span class="main_optional_parameter">false</span> return, do not call <a href="GLib.Cancellable.release_fd.html" class="method">
+              release_fd</a>.</p>
+          <p>If this function returns <span class="main_optional_parameter">false</span>, either no <span class="main_keyword">this</span> was given 
+            or resource limits prevent this function from allocating the necessary structures for polling. (On Linux, you will likely have reached the
+             maximum number of file descriptors.) The suggested way to handle these cases is to ignore the <span class="main_keyword">this</span>.</p>
+          <p>You are not supposed to read from the fd yourself, just check for readable status. Reading to unset the readable status is done with 
+            <a href="GLib.Cancellable.reset.html" class="method">reset</a>.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Cancellable.html" class="class">Cancellable</a> or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">pollfd</td>
+              <td>
+                <p>a pointer to a <a href="../glib-2.0/GLib.PollFD.html" class="struct">PollFD</a></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if <code>pollfd</code> was successfully initialized, 
+                  <span class="main_optional_parameter">false</span> on  failure to prepare the cancellable.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

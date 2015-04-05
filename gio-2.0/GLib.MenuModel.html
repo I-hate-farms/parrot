@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.MenuModel &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.MenuModel &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class">MenuModel</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.MenuModel.MenuModel.html">MenuModel</a></li>
+          <li class="method"><a href="GLib.MenuModel.get_item_attribute.html">get_item_attribute</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_attribute_value.html">get_item_attribute_value</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_attributes.html">get_item_attributes</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_link.html">get_item_link</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_item_links.html">get_item_links</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.get_n_items.html">get_n_items</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.is_mutable.html">is_mutable</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.iterate_item_attributes.html">iterate_item_attributes</a></li>
+          <li class="virtual_method"><a href="GLib.MenuModel.iterate_item_links.html">iterate_item_links</a></li>
+          <li class="signal"><a href="GLib.MenuModel.items_changed.html">items_changed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">MenuModel</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.MenuModel" alt="Object hierarchy for MenuModel" src="img/GLib.MenuModel.png"/>
+
+      <map id="GLib.MenuModel" name="GLib.MenuModel">
+<area shape="rect" id="node1" href="GLib.MenuModel.html" title="GLib.MenuModel" alt="" coords="5,101,160,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="26,5,139,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">class</span> <b><span class="abstract_class">MenuModel</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p><span class="abstract_class">MenuModel</span> represents the contents of a menu -- an ordered list of menu items.</p>
+          <p> The items are associated with actions, which can be activated through them. Items can be grouped in sections, and may have submenus 
+            associated with them. Both items and sections usually have some representation data, such as labels or icons. The type of the associated 
+            action (ie whether it is stateful, and what kind of state it has) can influence the representation of the item.</p>
+          <p>The conceptual model of menus in <span class="abstract_class">MenuModel</span> is hierarchical: sections and submenus are again 
+            represented by <span class="abstract_class">MenuModel</span>s. Menus themselves do not define their own roles. Rather, the role of a 
+            particular <span class="abstract_class">MenuModel</span> is defined by the item that references it (or, in the case of the 'root' menu, is
+             defined by the context in which it is used).</p>
+          <p>As an example, consider the visible portions of this menu:</p>
+          <h2> An example menu # {<code>menu</code>-example}</h2>
+          <p>![](menu-example.png)</p>
+          <p>There are 8 "menus" visible in the screenshot: one menubar, two submenus and 5 sections:</p>
+          <ul>
+            <li>the toplevel menubar (containing 4 items)</li>
+            <li>the View submenu (containing 3 sections)</li>
+            <li>the first section of the View submenu (containing 2 items)</li>
+            <li>the second section of the View submenu (containing 1 item)</li>
+            <li>the final section of the View submenu (containing 1 item)</li>
+            <li>the Highlight Mode submenu (containing 2 sections)</li>
+            <li>the Sources section (containing 2 items)</li>
+            <li>the Markup section (containing 2 items)</li>
+          </ul>
+          <p>The <i>example</i> illustrates the conceptual connection between these 8 menus. Each large block in the figure represents a menu and the 
+            smaller blocks within the large block represent items in that menu. Some items contain references to other menus.</p>
+          <h2> A menu example # {<code>menu</code>-model}</h2>
+          <p>![](menu-model.png)</p>
+          <p>Notice that the separators visible in the <i>example</i> appear nowhere in the <i>menu model</i>. This is because separators are not 
+            explicitly represented in the menu model. Instead, a separator is inserted between any two non-empty sections of a menu. Section items can
+             have labels just like any other item. In that case, a display system may show a section header instead of a separator.</p>
+          <p>The motivation for this abstract model of application controls is that modern user interfaces tend to make these controls available 
+            outside the application. Examples include global menus, jumplists, dash boards, etc. To support such uses, it is necessary to 'export' 
+            information about actions and their representation in menus, which is exactly what the <i>GActionGroup exporter</i> and the <i>GMenuModel 
+              exporter</i> do for <a href="GLib.ActionGroup.html" class="interface">ActionGroup</a> and <span class="abstract_class">MenuModel</span>.
+             The client-side counterparts to make use of the exported information are <a href="GLib.DBusActionGroup.html" class="class">
+              DBusActionGroup</a> and <a href="GLib.DBusMenuModel.html" class="class">DBusMenuModel</a>.</p>
+          <p>The API of <span class="abstract_class">MenuModel</span> is very generic, with iterators for the attributes and links of an item, see 
+            <a href="GLib.MenuModel.iterate_item_attributes.html" class="virtual_method">iterate_item_attributes</a> and 
+            <a href="GLib.MenuModel.iterate_item_links.html" class="virtual_method">iterate_item_links</a>. The 'standard' attributes and link types 
+            have predefined names: <span class="main_optional_parameter">g_menu_attribute_label</span>, <span class="main_optional_parameter">
+              g_menu_attribute_action</span>, <span class="main_optional_parameter">g_menu_attribute_target</span>, 
+            <span class="main_optional_parameter">g_menu_link_section</span> and <span class="main_optional_parameter">g_menu_link_submenu</span>.</p>
+          <p>Items in a <span class="abstract_class">MenuModel</span> represent active controls if they refer to an action that can get activated when
+             the user interacts with the menu item. The reference to the action is encoded by the string id in the 
+            <span class="main_optional_parameter">g_menu_attribute_action</span> attribute. An action id uniquely identifies an action in an action 
+            group. Which action group(s) provide actions depends on the context in which the menu model is used. E.g. when the model is exported as 
+            the application menu of a <code>GtkApplication</code>, actions can be application-wide or window-specific (and thus come from two 
+            different action groups). By convention, the application-wide actions have names that start with "app.", while the names of 
+            window-specific actions start with "win.".</p>
+          <p>While a wide variety of stateful actions is possible, the following is the minimum that is expected to be supported by all users of 
+            exported menu information: - an action with no parameter type and no state - an action with no parameter type and boolean state - an 
+            action with string parameter type and string state</p>
+          <h2> Stateless</h2>
+          <p>A stateless action typically corresponds to an ordinary menu item.</p>
+          <p>Selecting such a menu item will activate the action (with no parameter).</p>
+          <h2> Boolean State</h2>
+          <p>An action with a boolean state will most typically be used with a "toggle" or "switch" menu item. The state can be set directly, but 
+            activating the action (with no parameter) results in the state being toggled.</p>
+          <p>Selecting a toggle menu item will activate the action. The menu item should be rendered as "checked" when the state is true.</p>
+          <h2> String Parameter and State</h2>
+          <p>Actions with string parameters and state will most typically be used to represent an enumerated choice over the items available for a 
+            group of radio menu items. Activating the action with a string parameter is equivalent to setting that parameter as the state.</p>
+          <p>Radio menu items, in addition to being associated with the action, will have a target value. Selecting that menu item will result in 
+            activation of the action with the target value as the parameter. The menu item should be rendered as "selected" when the state of the 
+            action is equal to the target value of the menu item.</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known sub-classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-173')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-173">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.DBusMenuModel.html">DBusMenuModel</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.Menu.html">Menu</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                </ul>
+              </div>
+            </div>
+          </div><br/>
+          <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+          </div>
+          <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+          </div>
+          <h2 class="main_title">Content:</h2>
+          <h3 class="main_title">Creation methods:</h3>
+          <ul class="navi_inline">
+            <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.MenuModel.MenuModel.html" class="creation_method">MenuModel</a></b> ()
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.MenuModel.get_item_attribute.html" class="method">get_item_attribute</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format_string, ...)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Queries item at position <code>item_index</code> in 
+                  <span class="main_keyword">this</span> for the attribute specified by <code>attribute</code>.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> <b><a href="GLib.MenuModel.get_item_attribute_value.html" class="virtual_method">get_item_attribute_value</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> attribute, <span class="main_type"><a href="../glib-2.0/GLib.VariantType.html" class="class">VariantType</a></span>? expected_type)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Queries the item at position <code>item_index</code> in 
+                  <span class="main_keyword">this</span> for the attribute specified by <code>attribute</code>.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.MenuModel.get_item_attributes.html" class="virtual_method">get_item_attributes</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.HashTable.html" class="class">HashTable</a></span>&lt;<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>,<span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span>&gt;? attributes)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets all the attributes associated with the item in the menu model.
+                </span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><span class="abstract_class">MenuModel</span></span> <b><a href="GLib.MenuModel.get_item_link.html" class="virtual_method">get_item_link</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> link)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Queries the item at position <code>item_index</code> in 
+                  <span class="main_keyword">this</span> for the link specified by <code>link</code>.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.MenuModel.get_item_links.html" class="virtual_method">get_item_links</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index, <span class="main_keyword">out</span> <span class="main_type"><a href="../glib-2.0/GLib.HashTable.html" class="class">HashTable</a></span>&lt;<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>,<span class="main_type"><span class="abstract_class">MenuModel</span></span>&gt; links)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets all the links associated with the item in the menu model.
+                </span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.MenuModel.get_n_items.html" class="virtual_method">get_n_items</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Query the number of items in <span class="main_keyword">this</span>.
+                </span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.MenuModel.is_mutable.html" class="virtual_method">is_mutable</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Queries if <span class="main_keyword">this</span> is mutable.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><a href="GLib.MenuAttributeIter.html" class="abstract_class">MenuAttributeIter</a></span> <b><a href="GLib.MenuModel.iterate_item_attributes.html" class="virtual_method">iterate_item_attributes</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Creates a 
+                  <a href="GLib.MenuAttributeIter.html" class="abstract_class">MenuAttributeIter</a> to iterate over the attributes of the item at 
+                  position <code>item_index</code> in <span class="main_keyword">this</span>.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><a href="GLib.MenuLinkIter.html" class="abstract_class">MenuLinkIter</a></span> <b><a href="GLib.MenuModel.iterate_item_links.html" class="virtual_method">iterate_item_links</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> item_index)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Creates a <a href="GLib.MenuLinkIter.html" class="abstract_class">
+                    MenuLinkIter</a> to iterate over the links of the item at position <code>item_index</code> in <span class="main_keyword">this
+                  </span>.</span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Signals:</h3>
+          <ul class="navi_inline">
+            <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.MenuModel.items_changed.html" class="signal">items_changed</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> position, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> removed, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> added)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Emitted when a change has occured to the menu.</span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Inherited Members:</h3>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class GLib.Object</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-174')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-174">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                    <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                    <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

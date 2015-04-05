@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.IOStream &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.IOStream &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class">IOStream</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.IOStream.closed.html">closed</a></li>
+          <li class="abstract_property"><a href="GLib.IOStream.input_stream.html">input_stream</a></li>
+          <li class="abstract_property"><a href="GLib.IOStream.output_stream.html">output_stream</a></li>
+          <li class="creation_method"><a href="GLib.IOStream.IOStream.html">IOStream</a></li>
+          <li class="method"><a href="GLib.IOStream.clear_pending.html">clear_pending</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.close.html">close</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.close_async.html">close_async</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.get_input_stream.html">get_input_stream</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.get_output_stream.html">get_output_stream</a></li>
+          <li class="method"><a href="GLib.IOStream.has_pending.html">has_pending</a></li>
+          <li class="method"><a href="GLib.IOStream.is_closed.html">is_closed</a></li>
+          <li class="method"><a href="GLib.IOStream.set_pending.html">set_pending</a></li>
+          <li class="method"><a href="GLib.IOStream.splice_async.html">splice_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">IOStream</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.IOStream" alt="Object hierarchy for IOStream" src="img/GLib.IOStream.png"/>
+
+      <map id="GLib.IOStream" name="GLib.IOStream">
+<area shape="rect" id="node1" href="GLib.IOStream.html" title="GLib.IOStream" alt="" coords="4,101,139,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="15,5,128,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">class</span> <b><span class="abstract_class">IOStream</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>
+        </div>
+        <div class="description">
+          <p>GIOStream represents an object that has both read and write streams.</p>
+          <p> Generally the two streams acts as separate input and output streams, but they share some common resources and state. For instance, for 
+            seekable streams they may use the same position in both streams.</p>
+          <p>Examples of <span class="abstract_class">IOStream</span> objects are <a href="GLib.SocketConnection.html" class="class">SocketConnection
+            </a> which represents a two-way network connection, and <a href="GLib.FileIOStream.html" class="class">FileIOStream</a> which represent a 
+            file handle opened in read-write mode.</p>
+          <p>To do the actual reading and writing you need to get the substreams with 
+            <a href="GLib.IOStream.get_input_stream.html" class="virtual_method">get_input_stream</a> and 
+            <a href="GLib.IOStream.get_output_stream.html" class="virtual_method">get_output_stream</a>.</p>
+          <p>The <span class="abstract_class">IOStream</span> object owns the input and the output streams, not the other way around, so keeping the 
+            substreams alive will not keep the <span class="abstract_class">IOStream</span> object alive. If the <span class="abstract_class">IOStream
+            </span> object is freed it will be closed, thus closing the substream, so even if the substreams stay alive they will always just return a
+             <span class="main_optional_parameter">g_io_error_closed</span> for all operations.</p>
+          <p>To close a stream use <a href="GLib.IOStream.close.html" class="virtual_method">close</a> which will close the common stream object and 
+            also the individual substreams. You can also close the substreams themselves. In most cases this only marks the substream as closed, so 
+            further I/O on it fails but common state in the <span class="abstract_class">IOStream</span> may still be open. However, some streams may 
+            support "half-closed" states where one direction of the stream is actually shut down.</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known sub-classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-146')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-146">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.FileIOStream.html">FileIOStream</a></li>
+                  <li class="class"><a href="GLib.SimpleIOStream.html">SimpleIOStream</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.SocketConnection.html">SocketConnection</a></li>
+                  <li class="class"><a href="GLib.TcpConnection.html">TcpConnection</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="GLib.TcpWrapperConnection.html">TcpWrapperConnection</a></li>
+                  <li class="abstract_class"><a href="GLib.TlsConnection.html">TlsConnection</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><br/>
+          <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+          </div>
+          <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+          </div>
+          <h2 class="main_title">Content:</h2>
+          <h3 class="main_title">Properties:</h3>
+          <ul class="navi_inline">
+            <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.closed.html" class="property">closed</a></b> { <span class="main_keyword">get</span>; }
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+            <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="GLib.InputStream.html" class="abstract_class">InputStream</a></span> <b><a href="GLib.IOStream.input_stream.html" class="abstract_property">input_stream</a></b> { <span class="main_keyword">get</span>; }
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+            <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><a href="GLib.OutputStream.html" class="abstract_class">OutputStream</a></span> <b><a href="GLib.IOStream.output_stream.html" class="abstract_property">output_stream</a></b> { <span class="main_keyword">get</span>; }
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <h3 class="main_title">Creation methods:</h3>
+          <ul class="navi_inline">
+            <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <b><a href="GLib.IOStream.IOStream.html" class="creation_method">IOStream</a></b> ()
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.IOStream.clear_pending.html" class="method">clear_pending</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Clears the pending flag on <span class="main_keyword">this</span>.
+                </span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.close.html" class="virtual_method">close</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Closes the stream, releasing resources related to it.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">async</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.close_async.html" class="virtual_method">close_async</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> io_priority = DEFAULT, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Requests an asynchronous close of the stream, releasing resources 
+                  related to it.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.InputStream.html" class="abstract_class">InputStream</a></span> <b><a href="GLib.IOStream.get_input_stream.html" class="virtual_method">get_input_stream</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets the input stream for this object.</span>
+              </div></li>
+            <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.OutputStream.html" class="abstract_class">OutputStream</a></span> <b><a href="GLib.IOStream.get_output_stream.html" class="virtual_method">get_output_stream</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Gets the output stream for this object.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.has_pending.html" class="method">has_pending</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Checks if a stream has pending actions.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.is_closed.html" class="method">is_closed</a></b> ()
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Checks if a stream is closed.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.set_pending.html" class="method">set_pending</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span> to have actions pending.
+                </span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.IOStream.splice_async.html" class="method">splice_async</a></b> (<span class="main_type"><span class="abstract_class">IOStream</span></span> stream2, <span class="main_type"><a href="GLib.IOStreamSpliceFlags.html" class="enum">IOStreamSpliceFlags</a></span> flags, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> io_priority = DEFAULT, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Asyncronously splice the output stream of 
+                  <span class="main_keyword">this</span> to the input stream of <code>stream2</code>, and splice the output stream of <code>stream2
+                  </code> to the input stream of <span class="main_keyword">this</span>.</span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Inherited Members:</h3>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class GLib.Object</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-147')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-147">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                    <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                    <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                    <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                    <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                    <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

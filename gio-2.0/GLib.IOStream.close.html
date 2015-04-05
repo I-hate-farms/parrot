@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.IOStream.close &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.IOStream.close &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class"><a href="GLib.IOStream.html">IOStream</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.IOStream.closed.html">closed</a></li>
+          <li class="abstract_property"><a href="GLib.IOStream.input_stream.html">input_stream</a></li>
+          <li class="abstract_property"><a href="GLib.IOStream.output_stream.html">output_stream</a></li>
+          <li class="creation_method"><a href="GLib.IOStream.IOStream.html">IOStream</a></li>
+          <li class="method"><a href="GLib.IOStream.clear_pending.html">clear_pending</a></li>
+          <li class="virtual_method">close</li>
+          <li class="virtual_method"><a href="GLib.IOStream.close_async.html">close_async</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.get_input_stream.html">get_input_stream</a></li>
+          <li class="virtual_method"><a href="GLib.IOStream.get_output_stream.html">get_output_stream</a></li>
+          <li class="method"><a href="GLib.IOStream.has_pending.html">has_pending</a></li>
+          <li class="method"><a href="GLib.IOStream.is_closed.html">is_closed</a></li>
+          <li class="method"><a href="GLib.IOStream.set_pending.html">set_pending</a></li>
+          <li class="method"><a href="GLib.IOStream.splice_async.html">splice_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">close</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><span class="virtual_method">close</span></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.IOError.html" class="errordomain">IOError</a></span>
+        </div>
+        <div class="description">
+          <p>Closes the stream, releasing resources related to it.</p>
+          <p> This will also closes the individual input and output streams, if they are not already closed.</p>
+          <p>Once the stream is closed, all other operations will return <span class="main_optional_parameter">g_io_error_closed</span>. Closing a 
+            stream multiple times will not return an error.</p>
+          <p>Closing a stream will automatically flush any outstanding buffers in the stream.</p>
+          <p>Streams will be automatically closed when the last reference is dropped, but you might want to call this function to make sure resources 
+            are released as early as possible.</p>
+          <p>Some streams might keep the backing store of the stream (e.g. a file descriptor) open after the stream is closed. See the documentation 
+            for the individual stream for details.</p>
+          <p>On failure the first error that happened will be reported, but the close operation will finish as much as possible. A stream that failed 
+            to close will still return <span class="main_optional_parameter">g_io_error_closed</span> for all operations. Still, it is important to 
+            check and report the error to the user, otherwise there might be a loss of data as all data might not be written.</p>
+          <p>If <code>cancellable</code> is not NULL, then the operation can be cancelled by triggering the cancellable object from another thread. If
+             the operation was cancelled, the error <span class="main_optional_parameter">g_io_error_cancelled</span> will be returned. Cancelling a 
+            close will still leave the stream closed, but some streams can use a faster close that doesn't block to e.g. check errors.</p>
+          <p>The default implementation of this method just calls close on the individual input/output streams.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.IOStream.html" class="abstract_class">IOStream</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>optional <a href="GLib.Cancellable.html" class="class">Cancellable</a> object, <span class="main_optional_parameter">null</span> to
+                   ignore</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> on success, <span class="main_optional_parameter">false</span> on failure</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

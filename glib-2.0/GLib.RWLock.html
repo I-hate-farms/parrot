@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.RWLock &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.RWLock &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="struct">RWLock</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.RWLock.RWLock.html">RWLock</a></li>
+          <li class="method"><a href="GLib.RWLock.reader_lock.html">reader_lock</a></li>
+          <li class="method"><a href="GLib.RWLock.reader_trylock.html">reader_trylock</a></li>
+          <li class="method"><a href="GLib.RWLock.reader_unlock.html">reader_unlock</a></li>
+          <li class="method"><a href="GLib.RWLock.writer_lock.html">writer_lock</a></li>
+          <li class="method"><a href="GLib.RWLock.writer_trylock.html">writer_trylock</a></li>
+          <li class="method"><a href="GLib.RWLock.writer_unlock.html">writer_unlock</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">RWLock</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.RWLock" alt="Object hierarchy for RWLock" src="img/GLib.RWLock.png"/>
+
+      <map id="GLib.RWLock" name="GLib.RWLock">
+<area shape="rect" id="node1" href="GLib.RWLock.html" title="GLib.RWLock" alt="" coords="5,5,136,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">struct</span> <b><span class="struct">RWLock</span></b>
+        </div>
+        <div class="description">
+          <p>The GRWLock struct is an opaque data structure to represent a reader-writer lock.</p>
+          <p> It is similar to a <a href="GLib.Mutex.html" class="class">Mutex</a> in that it allows multiple threads to coordinate access to a shared
+             resource.</p>
+          <p>The difference to a mutex is that a reader-writer lock discriminates between read-only ('reader') and full ('writer') access. While only 
+            one thread at a time is allowed write access (by holding the 'writer' lock via <a href="GLib.RWLock.writer_lock.html" class="method">
+              writer_lock</a>), multiple threads can gain simultaneous read-only access (by holding the 'reader' lock via 
+            <a href="GLib.RWLock.reader_lock.html" class="method">reader_lock</a>).</p>
+          <p>Here is an example for an array with access functions: <pre class="main_source">  GRWLock lock;<br/>  GPtrArray *array;<br/><br/>  gpointer<br/>  my_array_get (guint index)<br/>  {<br/>    gpointer retval = NULL;<br/><br/>    if (!array)<br/>      return NULL;<br/><br/>    g_rw_lock_reader_lock (&amp;lock);<br/>    if (index &lt; array-&gt;len)<br/>      retval = g_ptr_array_index (array, index);<br/>    g_rw_lock_reader_unlock (&amp;lock);<br/><br/>    return retval;<br/>  }<br/><br/>  void<br/>  my_array_set (guint index, gpointer data)<br/>  {<br/>    g_rw_lock_writer_lock (&amp;lock);<br/><br/>    if (!array)<br/>      array = g_ptr_array_new ();<br/><br/>    if (index &gt;= array-&gt;len)<br/>      g_ptr_array_set_size (array, index+1);<br/>    g_ptr_array_index (array, index) = data;<br/><br/>    g_rw_lock_writer_unlock (&amp;lock);<br/>  }</pre>
+             This example shows an array which can be accessed by many readers (the <code>my_array_get</code> function) simultaneously, whereas the 
+            writers (the <code>my_array_set</code> function) will only be allowed one at a time and only if no readers currently access the array. 
+            This is because of the potentially dangerous resizing of the array. Using these functions is fully multi-thread safe now.</p>
+          <p>If a <span class="struct">RWLock</span> is allocated in static storage then it can be used without initialisation. Otherwise, you should 
+            call <a href="GLib.RWLock.RWLock.html" class="creation_method">RWLock</a> on it and <code>g_rw_lock_clear</code> when done.</p>
+          <p>A GRWLock should only be accessed with the g_rw_lock_ functions.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.RWLock.RWLock.html" class="creation_method">RWLock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Initializes a <span class="struct">RWLock</span> so that it can be 
+                used.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.RWLock.writer_lock.html" class="method">writer_lock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Obtain a write lock on <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.RWLock.writer_trylock.html" class="method">writer_trylock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Tries to obtain a write lock on <span class="main_keyword">this</span>
+                .</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.RWLock.writer_unlock.html" class="method">writer_unlock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Release a write lock on <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.RWLock.reader_lock.html" class="method">reader_lock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Obtain a read lock on <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><a href="GLib.RWLock.reader_trylock.html" class="method">reader_trylock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Tries to obtain a read lock on <span class="main_keyword">this</span> 
+                and returns <span class="main_optional_parameter">true</span> if the read lock was successfully obtained.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.RWLock.reader_unlock.html" class="method">reader_unlock</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Release a read lock on <span class="main_keyword">this</span>.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

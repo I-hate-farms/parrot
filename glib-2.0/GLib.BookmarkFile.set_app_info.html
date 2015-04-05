@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.BookmarkFile.set_app_info &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.BookmarkFile.set_app_info &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.BookmarkFile.html">BookmarkFile</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.BookmarkFile.BookmarkFile.html">BookmarkFile</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.add_application.html">add_application</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.add_group.html">add_group</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_added.html">get_added</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_app_info.html">get_app_info</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_applications.html">get_applications</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_description.html">get_description</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_groups.html">get_groups</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_icon.html">get_icon</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_is_private.html">get_is_private</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_mime_type.html">get_mime_type</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_modified.html">get_modified</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_size.html">get_size</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_title.html">get_title</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_uris.html">get_uris</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.get_visited.html">get_visited</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.has_application.html">has_application</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.has_group.html">has_group</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.has_item.html">has_item</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.load_from_data.html">load_from_data</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.load_from_data_dirs.html">load_from_data_dirs</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.load_from_file.html">load_from_file</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.move_item.html">move_item</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.remove_application.html">remove_application</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.remove_group.html">remove_group</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.remove_item.html">remove_item</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_added.html">set_added</a></li>
+          <li class="method">set_app_info</li>
+          <li class="method"><a href="GLib.BookmarkFile.set_description.html">set_description</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_groups.html">set_groups</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_icon.html">set_icon</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_is_private.html">set_is_private</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_mime_type.html">set_mime_type</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_modified.html">set_modified</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_title.html">set_title</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.set_visited.html">set_visited</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.to_data.html">to_data</a></li>
+          <li class="method"><a href="GLib.BookmarkFile.to_file.html">to_file</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">set_app_info</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">set_app_info</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> uri, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> name, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> exec, <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> count, <span class="main_basic_type"><a href="time_t.html" class="struct">time_t</a></span> stamp) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.BookmarkFileError.html" class="errordomain">BookmarkFileError</a></span>
+        </div>
+        <div class="description">
+          <p>Sets the meta-data of application <code>name</code> inside the list of applications that have registered a bookmark for <code>uri</code> 
+            inside <span class="main_keyword">this</span>.</p>
+          <p>You should rarely use this function; use <a href="GLib.BookmarkFile.add_application.html" class="method">add_application</a> and 
+            <a href="GLib.BookmarkFile.remove_application.html" class="method">remove_application</a> instead.</p>
+          <p><code>name</code> can be any UTF-8 encoded string used to identify an application. <code>exec</code> can have one of these two modifiers:
+             "%f", which will be expanded as the local file name retrieved from the bookmark's URI; "%u", which will be expanded as the bookmark's 
+            URI. The expansion is done automatically when retrieving the stored command line using the 
+            <a href="GLib.BookmarkFile.get_app_info.html" class="method">get_app_info</a> function. <code>count</code> is the number of times the 
+            application has registered the bookmark; if is &lt; 0, the current registration count will be increased by one, if is 0, the application 
+            with <code>name</code> will be removed from the list of registered applications. <code>stamp</code> is the Unix time of the last 
+            registration; if it is -1, the current time will be used.</p>
+          <p>If you try to remove an application by setting its registration count to zero, and no bookmark for <code>uri</code> is found, 
+            <span class="main_optional_parameter">false</span> is returned and <span class="main_keyword">throws</span> is set to 
+            <a href="GLib.BookmarkFileError.URI_NOT_FOUND.html" class="errorcode">URI_NOT_FOUND</a>; similarly, in the event that no application 
+            <code>name</code> has registered a bookmark for <code>uri</code>, <span class="main_optional_parameter">false</span> is returned and error
+             is set to <a href="GLib.BookmarkFileError.APP_NOT_REGISTERED.html" class="errorcode">APP_NOT_REGISTERED</a>. Otherwise, if no bookmark 
+            for <code>uri</code> is found, one is created.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.BookmarkFile.html" class="class">BookmarkFile</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">uri</td>
+              <td>
+                <p>a valid URI</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">name</td>
+              <td>
+                <p>an application's name</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">exec</td>
+              <td>
+                <p>an application's command line</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">count</td>
+              <td>
+                <p>the number of registrations done for this application</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">stamp</td>
+              <td>
+                <p>the time of the last registration for this application</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> if the application's meta-data was successfully  changed.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

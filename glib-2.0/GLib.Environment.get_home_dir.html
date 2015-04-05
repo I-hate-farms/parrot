@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Environment.get_home_dir &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Environment.get_home_dir &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.Environment.html">Environment</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><span class="deprecated"><a href="GLib.Environment.atexit.html">atexit</a></span></li>
+          <li class="method"><a href="GLib.Environment.find_program_in_path.html">find_program_in_path</a></li>
+          <li class="method"><a href="GLib.Environment.get_application_name.html">get_application_name</a></li>
+          <li class="method"><a href="GLib.Environment.get_current_dir.html">get_current_dir</a></li>
+          <li class="method">get_home_dir</li>
+          <li class="method"><a href="GLib.Environment.get_host_name.html">get_host_name</a></li>
+          <li class="method"><a href="GLib.Environment.get_prgname.html">get_prgname</a></li>
+          <li class="method"><a href="GLib.Environment.get_real_name.html">get_real_name</a></li>
+          <li class="method"><a href="GLib.Environment.get_system_config_dirs.html">get_system_config_dirs</a></li>
+          <li class="method"><a href="GLib.Environment.get_system_data_dirs.html">get_system_data_dirs</a></li>
+          <li class="method"><a href="GLib.Environment.get_tmp_dir.html">get_tmp_dir</a></li>
+          <li class="method"><a href="GLib.Environment.get_user_cache_dir.html">get_user_cache_dir</a></li>
+          <li class="method"><a href="GLib.Environment.get_user_config_dir.html">get_user_config_dir</a></li>
+          <li class="method"><a href="GLib.Environment.get_user_data_dir.html">get_user_data_dir</a></li>
+          <li class="method"><a href="GLib.Environment.get_user_name.html">get_user_name</a></li>
+          <li class="method"><a href="GLib.Environment.get_user_special_dir.html">get_user_special_dir</a></li>
+          <li class="method"><a href="GLib.Environment.get_variable.html">get_variable</a></li>
+          <li class="method"><a href="GLib.Environment.list_variables.html">list_variables</a></li>
+          <li class="method"><a href="GLib.Environment.set_application_name.html">set_application_name</a></li>
+          <li class="method"><a href="GLib.Environment.set_current_dir.html">set_current_dir</a></li>
+          <li class="method"><a href="GLib.Environment.set_prgname.html">set_prgname</a></li>
+          <li class="method"><a href="GLib.Environment.set_variable.html">set_variable</a></li>
+          <li class="method"><a href="GLib.Environment.unset_variable.html">unset_variable</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">get_home_dir</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><span class="method">get_home_dir</span></b> ()
+        </div>
+        <div class="description">
+          <p>Gets the current user's home directory.</p>
+          <p>As with most UNIX tools, this function will return the value of the `HOME` environment variable if it is set to an existing absolute path
+             name, falling back to the `passwd` file in the case that it is unset.</p>
+          <p>If the path given in `HOME` is non-absolute, does not exist, or is not a directory, the result is undefined.</p>
+          <p>Before version 2.36 this function would ignore the `HOME` environment variable, taking the value from the `passwd` database instead. This
+             was changed to increase the compatibility of GLib with other programs (and the XDG basedir specification) and to increase testability of 
+            programs based on GLib (by making it easier to run them from test frameworks).</p>
+          <p>If your program has a strong requirement for either the new or the old behaviour (and if you don't wish to increase your GLib dependency 
+            to ensure that the new behaviour is in effect) then you should either directly check the `HOME` environment variable yourself or unset it 
+            before calling any functions in GLib.</p>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>the current user's home directory</p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.Environment.html">GLib.Environment</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

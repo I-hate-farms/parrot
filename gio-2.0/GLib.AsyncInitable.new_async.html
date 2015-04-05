@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.AsyncInitable.new_async &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.AsyncInitable.new_async &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface"><a href="GLib.AsyncInitable.html">AsyncInitable</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method">new_async</li>
+          <li class="static_method"><a href="GLib.AsyncInitable.new_valist_async.html">new_valist_async</a></li>
+          <li class="static_method"><a href="GLib.AsyncInitable.newv_async.html">newv_async</a></li>
+          <li class="virtual_method"><a href="GLib.AsyncInitable.init_async.html">init_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">new_async</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> <b><span class="static_method">new_async</span></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Type.html" class="struct">Type</a></span> object_type, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> io_priority = DEFAULT, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable, ...) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Helper function for constructing <a href="GLib.AsyncInitable.html" class="interface">AsyncInitable</a> object.</p>
+          <p> This is similar to <a href="../gobject-2.0/GLib.Object.@new.html" class="static_method">@new</a> but also initializes the object 
+            asynchronously.</p>
+          <p>When the initialization is finished, <code>callback</code> will be called. You can then call <span class="static_method">new_async.end
+            </span> to get the new object and check for any errors.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">object_type</td>
+              <td>
+                <p>a <a href="../gobject-2.0/GLib.Type.html" class="struct">Type</a> supporting <a href="GLib.AsyncInitable.html" class="interface">
+                    AsyncInitable</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">io_priority</td>
+              <td>
+                <p>the <i>I/O priority</i> of the operation</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>optional <a href="GLib.Cancellable.html" class="class">Cancellable</a> object, <span class="main_optional_parameter">null</span> to
+                   ignore.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">...</td>
+              <td>
+                <p>the value of the first property, followed by other property  value pairs, and ended by <span class="main_optional_parameter">null
+                  </span>.</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">callback</td>
+              <td>
+                <p>a <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a> to call when the initialization is  finished</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">first_property_name</td>
+              <td>
+                <p>the name of the first property, or <span class="main_optional_parameter">null</span> if no  properties</p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>the data to pass to callback function</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

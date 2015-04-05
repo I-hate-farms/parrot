@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SimpleAsyncResult &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SimpleAsyncResult &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">SimpleAsyncResult</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.SimpleAsyncResult.is_valid.html">is_valid</a></li>
+          <li class="static_method"><a href="GLib.SimpleAsyncResult.report_gerror_in_idle.html">report_gerror_in_idle</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.html">SimpleAsyncResult</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.error.html">SimpleAsyncResult.error</a></li>
+          <li class="creation_method"><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.from_error.html">SimpleAsyncResult.from_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.complete.html">complete</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.complete_in_idle.html">complete_in_idle</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gboolean.html">get_op_res_gboolean</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gpointer.html">get_op_res_gpointer</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_op_res_gssize.html">get_op_res_gssize</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.get_source_tag.html">get_source_tag</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.propagate_error.html">propagate_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.run_in_thread.html">run_in_thread</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_check_cancellable.html">set_check_cancellable</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_error.html">set_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_error_va.html">set_error_va</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_from_error.html">set_from_error</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_handle_cancellation.html">set_handle_cancellation</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gboolean.html">set_op_res_gboolean</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gpointer.html">set_op_res_gpointer</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.set_op_res_gssize.html">set_op_res_gssize</a></li>
+          <li class="method"><a href="GLib.SimpleAsyncResult.take_error.html">take_error</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">SimpleAsyncResult</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.SimpleAsyncResult" alt="Object hierarchy for SimpleAsyncResult" src="img/GLib.SimpleAsyncResult.png"/>
+      
+
+      <map id="GLib.SimpleAsyncResult" name="GLib.SimpleAsyncResult">
+<area shape="rect" id="node1" href="GLib.SimpleAsyncResult.html" title="GLib.SimpleAsyncResult" alt="" coords="117,101,325,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.AsyncResult.html" title="GLib.AsyncResult" alt="" coords="143,5,300,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">SimpleAsyncResult</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span>, <span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span>
+        </div>
+        <div class="description">
+          <p>As of GLib 2.36, <span class="class">SimpleAsyncResult</span> is deprecated in favor of <a href="GLib.Task.html" class="class">Task</a>, 
+            which provides a simpler API.</p>
+          <p><span class="class">SimpleAsyncResult</span> implements <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a>.</p>
+          <p>GSimpleAsyncResult handles <a href="GLib.AsyncReadyCallback.html" class="delegate">AsyncReadyCallback</a>s, error reporting, operation 
+            cancellation and the final state of an operation, completely transparent to the application. Results can be returned as a pointer e.g. for
+             functions that return data that is collected asynchronously, a boolean value for checking the success or failure of an operation, or a 
+            <a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a> for operations which return the number of bytes modified by the operation; 
+            all of the simple return cases are covered.</p>
+          <p>Most of the time, an application will not need to know of the details of this API; it is handled transparently, and any necessary 
+            operations are handled by <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a>'s interface. However, if implementing a new 
+            GIO module, for writing language bindings, or for complex applications that need better control of how asynchronous operations are 
+            completed, it is important to understand this functionality.</p>
+          <p>GSimpleAsyncResults are tagged with the calling function to ensure that asynchronous functions and their finishing functions are used 
+            together correctly.</p>
+          <p>To create a new <span class="class">SimpleAsyncResult</span>, call 
+            <a href="GLib.SimpleAsyncResult.SimpleAsyncResult.html" class="creation_method">SimpleAsyncResult</a>. If the result needs to be created 
+            for a <a href="../glib-2.0/GLib.Error.html" class="class">Error</a>, use 
+            <a href="GLib.SimpleAsyncResult.SimpleAsyncResult.from_error.html" class="creation_method">SimpleAsyncResult.from_error</a> or <code>
+              g_simple_async_result_new_take_error</code>. If a <a href="../glib-2.0/GLib.Error.html" class="class">Error</a> is not available (e.g. 
+            the asynchronous operation's doesn't take a <a href="../glib-2.0/GLib.Error.html" class="class">Error</a> argument), but the result still 
+            needs to be created for an error condition, use <a href="GLib.SimpleAsyncResult.SimpleAsyncResult.error.html" class="creation_method">
+              SimpleAsyncResult.error</a> (or <a href="GLib.SimpleAsyncResult.set_error_va.html" class="method">set_error_va</a> if your application 
+            or binding requires passing a variable argument list directly), and the error can then be propagated through the use of 
+            <a href="GLib.SimpleAsyncResult.propagate_error.html" class="method">propagate_error</a>.</p>
+          <p>An asynchronous operation can be made to ignore a cancellation event by calling 
+            <a href="GLib.SimpleAsyncResult.set_handle_cancellation.html" class="method">set_handle_cancellation</a> with a <span class="class">
+              SimpleAsyncResult</span> for the operation and <span class="main_optional_parameter">false</span>. This is useful for operations that 
+            are dangerous to cancel, such as close (which would cause a leak if cancelled before being run).</p>
+          <p>GSimpleAsyncResult can integrate into GLib's event loop, <a href="../glib-2.0/GLib.MainLoop.html" class="class">MainLoop</a>, or it can 
+            use <a href="../glib-2.0/GLib.Thread.html" class="class">Thread</a>s. <a href="GLib.SimpleAsyncResult.complete.html" class="method">
+              complete</a> will finish an I/O task directly from the point where it is called. 
+            <a href="GLib.SimpleAsyncResult.complete_in_idle.html" class="method">complete_in_idle</a> will finish it from an idle handler in the <i>
+              thread-default main context</i> . <a href="GLib.SimpleAsyncResult.run_in_thread.html" class="method">run_in_thread</a> will run the job 
+            in a separate thread and then deliver the result to the thread-default main context.</p>
+          <p>To set the results of an asynchronous function, <a href="GLib.SimpleAsyncResult.set_op_res_gpointer.html" class="method">
+              set_op_res_gpointer</a>, <a href="GLib.SimpleAsyncResult.set_op_res_gboolean.html" class="method">set_op_res_gboolean</a>, and 
+            <a href="GLib.SimpleAsyncResult.set_op_res_gssize.html" class="method">set_op_res_gssize</a> are provided, setting the operation's result 
+            to a gpointer, gboolean, or gssize, respectively.</p>
+          <p>Likewise, to get the result of an asynchronous function, <a href="GLib.SimpleAsyncResult.get_op_res_gpointer.html" class="method">
+              get_op_res_gpointer</a>, <a href="GLib.SimpleAsyncResult.get_op_res_gboolean.html" class="method">get_op_res_gboolean</a>, and 
+            <a href="GLib.SimpleAsyncResult.get_op_res_gssize.html" class="method">get_op_res_gssize</a> are provided, getting the operation's result 
+            as a gpointer, gboolean, and gssize, respectively.</p>
+          <p>For the details of the requirements implementations must respect, see <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a>. 
+            A typical implementation of an asynchronous operation using GSimpleAsyncResult looks something like this:</p>
+          <p><pre class="main_source">static void<br/>baked_cb (Cake    *cake,<br/>          gpointer user_data)<br/>{<br/>  // In this example, this callback is not given a reference to the cake,<br/>  // so the GSimpleAsyncResult has to take a reference to it.<br/>  GSimpleAsyncResult *result = user_data;<br/><br/>  if (cake == NULL)<br/>    g_simple_async_result_set_error (result,<br/>                                     BAKER_ERRORS,<br/>                                     BAKER_ERROR_NO_FLOUR,<br/>                                     "Go to the supermarket");<br/>  else<br/>    g_simple_async_result_set_op_res_gpointer (result,<br/>                                               g_object_ref (cake),<br/>                                               g_object_unref);<br/><br/><br/>  // In this example, we assume that baked_cb is called as a callback from<br/>  // the mainloop, so it's safe to complete the operation synchronously here.<br/>  // If, however, _baker_prepare_cake () might call its callback without<br/>  // first returning to the mainloop — inadvisable, but some APIs do so —<br/>  // we would need to use g_simple_async_result_complete_in_idle().<br/>  g_simple_async_result_complete (result);<br/>  g_object_unref (result);<br/>}<br/><br/>void<br/>baker_bake_cake_async (Baker              *self,<br/>                       guint               radius,<br/>                       GAsyncReadyCallback callback,<br/>                       gpointer            user_data)<br/>{<br/>  GSimpleAsyncResult *simple;<br/>  Cake               *cake;<br/><br/>  if (radius &lt; 3)<br/>    {<br/>      g_simple_async_report_error_in_idle (G_OBJECT (self),<br/>                                           callback,<br/>                                           user_data,<br/>                                           BAKER_ERRORS,<br/>                                           BAKER_ERROR_TOO_SMALL,<br/>                                           "%ucm radius cakes are silly",<br/>                                           radius);<br/>      return;<br/>    }<br/><br/>  simple = g_simple_async_result_new (G_OBJECT (self),<br/>                                      callback,<br/>                                      user_data,<br/>                                      baker_bake_cake_async);<br/>  cake = _baker_get_cached_cake (self, radius);<br/><br/>  if (cake != NULL)<br/>    {<br/>      g_simple_async_result_set_op_res_gpointer (simple,<br/>                                                 g_object_ref (cake),<br/>                                                 g_object_unref);<br/>      g_simple_async_result_complete_in_idle (simple);<br/>      g_object_unref (simple);<br/>      // Drop the reference returned by _baker_get_cached_cake();<br/>      // the GSimpleAsyncResult has taken its own reference.<br/>      g_object_unref (cake);<br/>      return;<br/>    }<br/><br/>  _baker_prepare_cake (self, radius, baked_cb, simple);<br/>}<br/><br/>Cake *<br/>baker_bake_cake_finish (Baker        *self,<br/>                        GAsyncResult *result,<br/>                        GError      **error)<br/>{<br/>  GSimpleAsyncResult *simple;<br/>  Cake               *cake;<br/><br/>  g_return_val_if_fail (g_simple_async_result_is_valid (result,<br/>                                                        G_OBJECT (self),<br/>                                                        baker_bake_cake_async),<br/>                        NULL);<br/><br/>  simple = (GSimpleAsyncResult *) result;<br/><br/>  if (g_simple_async_result_propagate_error (simple, error))<br/>    return NULL;<br/><br/>  cake = CAKE (g_simple_async_result_get_op_res_gpointer (simple));<br/>  return g_object_ref (cake);<br/>}</pre>
+          </p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.SimpleAsyncResult.is_valid.html" class="static_method">is_valid</a></b> (<span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span> result, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source, <span class="main_keyword">void</span>* source_tag)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Ensures that the data passed to the _finish function of an async 
+                operation is consistent.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.report_gerror_in_idle.html" class="static_method">report_gerror_in_idle</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? object, <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.html" class="creation_method">SimpleAsyncResult</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object, <span class="main_keyword">void</span>* source_tag)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">SimpleAsyncResult</span>.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.error.html" class="creation_method">SimpleAsyncResult.error</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object, <span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> domain, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> code, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">SimpleAsyncResult</span> with a set 
+                error.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.SimpleAsyncResult.SimpleAsyncResult.from_error.html" class="creation_method">SimpleAsyncResult.from_error</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object, <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">SimpleAsyncResult</span> from an error 
+                condition.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.complete.html" class="method">complete</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Completes an asynchronous I/O job immediately.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.complete_in_idle.html" class="method">complete_in_idle</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Completes an asynchronous function in an idle handler in the <i>
+                  thread-default main context</i> of the thread that <span class="main_keyword">this</span> was initially created in (and re-pushes 
+                that context around the invocation of the callback).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.SimpleAsyncResult.get_op_res_gboolean.html" class="method">get_op_res_gboolean</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the operation result boolean from within the asynchronous result.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><span>T</span></span> <b><a href="GLib.SimpleAsyncResult.get_op_res_gpointer.html" class="method">get_op_res_gpointer</a></b>&lt;<b><span>T</span></b>&gt; ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a pointer result as returned by the asynchronous function.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.SimpleAsyncResult.get_op_res_gssize.html" class="method">get_op_res_gssize</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets a gssize from the asynchronous result.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.SimpleAsyncResult.get_source_tag.html" class="method">get_source_tag</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the source tag for the <span class="class">SimpleAsyncResult
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.SimpleAsyncResult.propagate_error.html" class="method">propagate_error</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Propagates an error from within the simple asynchronous result to a 
+                given destination.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.run_in_thread.html" class="method">run_in_thread</a></b> (<span class="main_type"><a href="GLib.SimpleAsyncThreadFunc.html" class="delegate">SimpleAsyncThreadFunc</a></span> func, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> io_priority = <b><a href="../glib-2.0/GLib.Priority.DEFAULT.html" class="constant">DEFAULT</a></b>, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Runs the asynchronous job in a separate thread and then calls 
+                <a href="GLib.SimpleAsyncResult.complete_in_idle.html" class="method">complete_in_idle</a> on <span class="main_keyword">this</span> 
+                to return the result to the appropriate main loop.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_check_cancellable.html" class="method">set_check_cancellable</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? check_cancellable)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets a <a href="GLib.Cancellable.html" class="class">Cancellable</a> 
+                to check before dispatching results.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_error.html" class="method">set_error</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> domain, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> code, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets an error within the asynchronous result without a 
+                <a href="../glib-2.0/GLib.Error.html" class="class">Error</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_error_va.html" class="method">set_error_va</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Quark.html" class="struct">Quark</a></span> domain, <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> code, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> format, <span class="main_type"><a href="../glib-2.0/va_list.html" class="struct">va_list</a></span> args)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets an error within the asynchronous result without a 
+                <a href="../glib-2.0/GLib.Error.html" class="class">Error</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_from_error.html" class="method">set_from_error</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the result from a 
+                <a href="../glib-2.0/GLib.Error.html" class="class">Error</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_handle_cancellation.html" class="method">set_handle_cancellation</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> handle_cancellation)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets whether to handle cancellation within the asynchronous operation.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_op_res_gboolean.html" class="method">set_op_res_gboolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> op_res)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the operation result to a boolean within the asynchronous result.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_op_res_gpointer.html" class="method">set_op_res_gpointer</a></b>&lt;<b><span>T</span></b>&gt; (<span class="main_keyword">owned</span> <span class="main_type"><span>T</span></span> op_res)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the operation result within the asynchronous result to a pointer.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.set_op_res_gssize.html" class="method">set_op_res_gssize</a></b> (<span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> op_res)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the operation result within the asynchronous result to the given 
+                <code>op_res</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SimpleAsyncResult.take_error.html" class="method">take_error</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the result from <code>error</code>, and takes over the caller's 
+                ownership of <code>error</code>, so the caller does not need to free it any more.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-205')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-205">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.AsyncResult</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-206')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-206">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.AsyncResult.get_source_object.html">get_source_object</a></li>
+                    <li class="abstract_method"><a href="GLib.AsyncResult.get_user_data.html">get_user_data</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.AsyncResult.is_tagged.html">is_tagged</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="GLib.AsyncResult.legacy_propagate_error.html">legacy_propagate_error</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>

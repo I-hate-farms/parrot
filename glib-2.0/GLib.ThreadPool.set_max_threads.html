@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.ThreadPool.set_max_threads &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.ThreadPool.set_max_threads &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.ThreadPool.html">ThreadPool</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.ThreadPool.free.html">free</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.get_max_idle_time.html">get_max_idle_time</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.get_max_unused_threads.html">get_max_unused_threads</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.get_num_unused_threads.html">get_num_unused_threads</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.set_max_idle_time.html">set_max_idle_time</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.set_max_unused_threads.html">set_max_unused_threads</a></li>
+          <li class="static_method"><a href="GLib.ThreadPool.stop_unused_threads.html">stop_unused_threads</a></li>
+          <li class="creation_method"><span class="deprecated"><a href="GLib.ThreadPool.ThreadPool.html">ThreadPool</a></span></li>
+          <li class="creation_method"><a href="GLib.ThreadPool.ThreadPool.with_owned_data.html">ThreadPool.with_owned_data</a></li>
+          <li class="method"><a href="GLib.ThreadPool.add.html">add</a></li>
+          <li class="method"><a href="GLib.ThreadPool.get_max_threads.html">get_max_threads</a></li>
+          <li class="method"><a href="GLib.ThreadPool.get_num_threads.html">get_num_threads</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.ThreadPool.push.html">push</a></span></li>
+          <li class="method">set_max_threads</li>
+          <li class="method"><a href="GLib.ThreadPool.set_sort_function.html">set_sort_function</a></li>
+          <li class="method"><a href="GLib.ThreadPool.unprocessed.html">unprocessed</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">set_max_threads</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">set_max_threads</span></b> (<span class="main_basic_type"><a href="int.html" class="struct">int</a></span> max_threads) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.ThreadError.html" class="errordomain">ThreadError</a></span>
+        </div>
+        <div class="description">
+          <p>Sets the maximal allowed number of threads for <span class="main_keyword">this</span>.</p>
+          <p> A value of -1 means that the maximal number of threads is unlimited. If <span class="main_keyword">this</span> is an exclusive thread 
+            pool, setting the maximal number of threads to -1 is not allowed.</p>
+          <p>Setting <code>max_threads</code> to 0 means stopping all work for <span class="main_keyword">this</span>. It is effectively frozen until 
+            <code>max_threads</code> is set to a non-zero value again.</p>
+          <p>A thread is never terminated while calling <code>func</code>, as supplied by 
+            <a href="GLib.ThreadPool.ThreadPool.with_owned_data.html" class="creation_method">ThreadPool.with_owned_data</a>. Instead the maximal 
+            number of threads only has effect for the allocation of new threads in <a href="GLib.ThreadPool.add.html" class="method">add</a>. A new 
+            thread is allocated, whenever the number of currently running threads in <span class="main_keyword">this</span> is smaller than the 
+            maximal number.</p>
+          <p><span class="main_keyword">throws</span> can be <span class="main_optional_parameter">null</span> to ignore errors, or non-
+            <span class="main_optional_parameter">null</span> to report errors. An error can only occur when a new thread couldn't be created.</p>
+          <p>Before version 2.32, this function did not return a success status.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.ThreadPool.html" class="class">ThreadPool</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">max_threads</td>
+              <td>
+                <p>a new maximal number of threads for <span class="main_keyword">this</span>,  or -1 for unlimited</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> on success, <span class="main_optional_parameter">false</span> if an error 
+                  occurred</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

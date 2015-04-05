@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Application &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Application &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Application</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Application.action_group.html">action_group</a></li>
+          <li class="property"><a href="GLib.Application.application_id.html">application_id</a></li>
+          <li class="property"><a href="GLib.Application.flags.html">flags</a></li>
+          <li class="property"><a href="GLib.Application.inactivity_timeout.html">inactivity_timeout</a></li>
+          <li class="property"><a href="GLib.Application.is_busy.html">is_busy</a></li>
+          <li class="property"><a href="GLib.Application.is_registered.html">is_registered</a></li>
+          <li class="property"><a href="GLib.Application.is_remote.html">is_remote</a></li>
+          <li class="property"><a href="GLib.Application.resource_base_path.html">resource_base_path</a></li>
+          <li class="static_method"><a href="GLib.Application.get_default.html">get_default</a></li>
+          <li class="static_method"><a href="GLib.Application.id_is_valid.html">id_is_valid</a></li>
+          <li class="creation_method"><a href="GLib.Application.Application.html">Application</a></li>
+          <li class="method"><a href="GLib.Application.add_main_option.html">add_main_option</a></li>
+          <li class="method"><a href="GLib.Application.add_main_option_entries.html">add_main_option_entries</a></li>
+          <li class="method"><a href="GLib.Application.add_option_group.html">add_option_group</a></li>
+          <li class="virtual_method"><a href="GLib.Application.add_platform_data.html">add_platform_data</a></li>
+          <li class="virtual_method"><a href="GLib.Application.after_emit.html">after_emit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.before_emit.html">before_emit</a></li>
+          <li class="method"><a href="GLib.Application.bind_busy_property.html">bind_busy_property</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_register.html">dbus_register</a></li>
+          <li class="virtual_method"><a href="GLib.Application.dbus_unregister.html">dbus_unregister</a></li>
+          <li class="method"><a href="GLib.Application.get_application_id.html">get_application_id</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_connection.html">get_dbus_connection</a></li>
+          <li class="method"><a href="GLib.Application.get_dbus_object_path.html">get_dbus_object_path</a></li>
+          <li class="method"><a href="GLib.Application.get_flags.html">get_flags</a></li>
+          <li class="method"><a href="GLib.Application.get_inactivity_timeout.html">get_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.get_is_busy.html">get_is_busy</a></li>
+          <li class="method"><a href="GLib.Application.get_is_registered.html">get_is_registered</a></li>
+          <li class="method"><a href="GLib.Application.get_is_remote.html">get_is_remote</a></li>
+          <li class="method"><a href="GLib.Application.get_resource_base_path.html">get_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.hold.html">hold</a></li>
+          <li class="virtual_method"><a href="GLib.Application.local_command_line.html">local_command_line</a></li>
+          <li class="method"><a href="GLib.Application.mark_busy.html">mark_busy</a></li>
+          <li class="method"><a href="GLib.Application.quit.html">quit</a></li>
+          <li class="virtual_method"><a href="GLib.Application.quit_mainloop.html">quit_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.register.html">register</a></li>
+          <li class="method"><a href="GLib.Application.release.html">release</a></li>
+          <li class="method"><a href="GLib.Application.run.html">run</a></li>
+          <li class="virtual_method"><a href="GLib.Application.run_mainloop.html">run_mainloop</a></li>
+          <li class="method"><a href="GLib.Application.send_notification.html">send_notification</a></li>
+          <li class="method"><span class="deprecated"><a href="GLib.Application.set_action_group.html">set_action_group</a></span></li>
+          <li class="method"><a href="GLib.Application.set_application_id.html">set_application_id</a></li>
+          <li class="method"><a href="GLib.Application.set_default.html">set_default</a></li>
+          <li class="method"><a href="GLib.Application.set_flags.html">set_flags</a></li>
+          <li class="method"><a href="GLib.Application.set_inactivity_timeout.html">set_inactivity_timeout</a></li>
+          <li class="method"><a href="GLib.Application.set_resource_base_path.html">set_resource_base_path</a></li>
+          <li class="method"><a href="GLib.Application.unbind_busy_property.html">unbind_busy_property</a></li>
+          <li class="method"><a href="GLib.Application.unmark_busy.html">unmark_busy</a></li>
+          <li class="method"><a href="GLib.Application.withdraw_notification.html">withdraw_notification</a></li>
+          <li class="signal"><a href="GLib.Application.activate.html">activate</a></li>
+          <li class="signal"><a href="GLib.Application.command_line.html">command_line</a></li>
+          <li class="signal"><a href="GLib.Application.handle_local_options.html">handle_local_options</a></li>
+          <li class="signal"><a href="GLib.Application.open.html">open</a></li>
+          <li class="signal"><a href="GLib.Application.shutdown.html">shutdown</a></li>
+          <li class="signal"><a href="GLib.Application.startup.html">startup</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Application</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Application" alt="Object hierarchy for Application" src="img/GLib.Application.png"/>
+
+      <map id="GLib.Application" name="GLib.Application">
+<area shape="rect" id="node1" href="GLib.Application.html" title="GLib.Application" alt="" coords="147,101,297,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.ActionGroup.html" title="GLib.ActionGroup" alt="" coords="143,5,301,53"/>
+<area shape="rect" id="node4" href="GLib.ActionMap.html" title="GLib.ActionMap" alt="" coords="327,5,475,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Application</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.ActionGroup.html" class="interface">ActionGroup</a></span>, <span class="main_type"><a href="GLib.ActionMap.html" class="interface">ActionMap</a></span>
+        </div>
+        <div class="description">
+          <p>A <span class="class">Application</span> is the foundation of an application.</p>
+          <p> It wraps some low-level platform-specific services and is intended to act as the foundation for higher-level application classes such as
+             <code>GtkApplication</code> or <code>MxApplication</code>. In general, you should not use this class outside of a higher level framework.
+          </p>
+          <p>GApplication provides convenient life cycle management by maintaining a "use count" for the primary application instance. The use count 
+            can be changed using <a href="GLib.Application.hold.html" class="method">hold</a> and 
+            <a href="GLib.Application.release.html" class="method">release</a>. If it drops to zero, the application exits. Higher-level classes such 
+            as <code>GtkApplication</code> employ the use count to ensure that the application stays alive as long as it has any opened windows.</p>
+          <p>Another feature that GApplication (optionally) provides is process uniqueness. Applications can make use of this functionality by 
+            providing a unique application ID. If given, only one application with this ID can be running at a time per session. The session concept 
+            is platform-dependent, but corresponds roughly to a graphical desktop login. When your application is launched again, its arguments are 
+            passed through platform communication to the already running program. The already running instance of the program is called the "primary 
+            instance"; for non-unique applications this is the always the current instance. On Linux, the D-Bus session bus is used for communication.
+          </p>
+          <p>The use of <span class="class">Application</span> differs from some other commonly-used uniqueness libraries (such as libunique) in 
+            important ways. The application is not expected to manually register itself and check if it is the primary instance. Instead, the <code>
+              main</code> function of a <span class="class">Application</span> should do very little more than instantiating the application instance,
+             possibly connecting signal handlers, then calling <a href="GLib.Application.run.html" class="method">run</a>. All checks for uniqueness 
+            are done internally. If the application is the primary instance then the startup signal is emitted and the mainloop runs. If the 
+            application is not the primary instance then a signal is sent to the primary instance and 
+            <a href="GLib.Application.run.html" class="method">run</a> promptly returns. See the code examples below.</p>
+          <p>If used, the expected form of an application identifier is very close to that of of a 
+            <a href="http://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-interface">DBus bus name</a>. Examples include: 
+            "com.example.MyApp", "org.example.internal-apps.Calculator". For details on valid application identifiers, see 
+            <a href="GLib.Application.id_is_valid.html" class="static_method">id_is_valid</a>.</p>
+          <p>On Linux, the application identifier is claimed as a well-known bus name on the user's session bus. This means that the uniqueness of 
+            your application is scoped to the current session. It also means that your application may provide additional services (through 
+            registration of other object paths) at that bus name. The registration of these object paths should be done with the shared GDBus session 
+            bus. Note that due to the internal architecture of GDBus, method calls can be dispatched at any time (even if a main loop is not running).
+             For this reason, you must ensure that any object paths that you wish to register are registered before <span class="class">Application
+            </span> attempts to acquire the bus name of your application (which happens in <a href="GLib.Application.register.html" class="method">
+              register</a>). Unfortunately, this means that you cannot use <a href="GLib.Application.get_is_remote.html" class="method">get_is_remote
+            </a> to decide if you want to register object paths.</p>
+          <p>GApplication also implements the <a href="GLib.ActionGroup.html" class="interface">ActionGroup</a> and 
+            <a href="GLib.ActionMap.html" class="interface">ActionMap</a> interfaces and lets you easily export actions by adding them with 
+            <a href="GLib.ActionMap.add_action.html" class="abstract_method">add_action</a>. When invoking an action by calling 
+            <a href="GLib.ActionGroup.activate_action.html" class="abstract_method">activate_action</a> on the application, it is always invoked in 
+            the primary instance. The actions are also exported on the session bus, and GIO provides the 
+            <a href="GLib.DBusActionGroup.html" class="class">DBusActionGroup</a> wrapper to conveniently access them remotely. GIO provides a 
+            <a href="GLib.DBusMenuModel.html" class="class">DBusMenuModel</a> wrapper for remote access to exported 
+            <a href="GLib.MenuModel.html" class="abstract_class">MenuModel</a>s.</p>
+          <p>There is a number of different entry points into a GApplication:</p>
+          <ul>
+            <li>via 'Activate' (i.e. just starting the application)</li>
+            <li>via 'Open' (i.e. opening some files)</li>
+            <li>by handling a command-line</li>
+            <li>via activating an action</li>
+          </ul>
+          <p>The <a href="GLib.Application.startup.html" class="signal">startup</a> signal lets you handle the application initialization for all of 
+            these in a single place.</p>
+          <p>Regardless of which of these entry points is used to start the application, GApplication passes some "platform data from the launching 
+            instance to the primary instance, in the form of a <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> dictionary mapping 
+            strings to variants. To use platform data, override the <code>before_emit</code> or <code>after_emit</code> virtual functions in your 
+            <span class="class">Application</span> subclass. When dealing with <a href="GLib.ApplicationCommandLine.html" class="class">
+              ApplicationCommandLine</a> objects, the platform data is directly available via 
+            <a href="GLib.ApplicationCommandLine.get_cwd.html" class="method">get_cwd</a>, 
+            <a href="GLib.ApplicationCommandLine.get_environ.html" class="method">get_environ</a> and 
+            <a href="GLib.ApplicationCommandLine.get_platform_data.html" class="method">get_platform_data</a>.</p>
+          <p>As the name indicates, the platform data may vary depending on the operating system, but it always includes the current directory (key 
+            "cwd"), and optionally the environment (ie the set of environment variables and their values) of the calling process (key "environ"). The 
+            environment is only added to the platform data if the <span class="main_optional_parameter">g_application_send_environment</span> flag is 
+            set. <span class="class">Application</span> subclasses can add their own platform data by overriding the <code>add_platform_data</code> 
+            virtual function. For instance, <code>GtkApplication</code> adds startup notification data in this way.</p>
+          <p>To parse commandline arguments you may handle the <a href="GLib.Application.command_line.html" class="signal">command_line</a> signal or 
+            override the <code>local_command_line</code> vfunc, to parse them in either the primary instance or the local instance, respectively.</p>
+          <p>For an example of opening files with a GApplication, see 
+            <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-open.c">gapplication-example-open.c</a>.</p>
+          <p>For an example of using actions with GApplication, see 
+            <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-actions.c">gapplication-example-actions.c</a>.</p>
+          <p>For an example of using extra D-Bus hooks with GApplication, see 
+            <a href="https://git.gnome.org/browse/glib/tree/gio/tests/gapplication-example-dbushooks.c">gapplication-example-dbushooks.c</a>.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.ActionGroup.html" class="interface">ActionGroup</a></span> <b><a href="GLib.Application.action_group.html" class="property">action_group</a></b> { <span class="main_keyword">set</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Application.application_id.html" class="property">application_id</a></b> { <span class="main_keyword">construct</span> <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.ApplicationFlags.html" class="enum">ApplicationFlags</a></span> <b><a href="GLib.Application.flags.html" class="property">flags</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.Application.inactivity_timeout.html" class="property">inactivity_timeout</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.is_busy.html" class="property">is_busy</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.is_registered.html" class="property">is_registered</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.is_remote.html" class="property">is_remote</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Application.resource_base_path.html" class="property">resource_base_path</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">weak</span> <span class="main_type"><span class="class">Application</span></span> <b><a href="GLib.Application.get_default.html" class="static_method">get_default</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns the default <span class="class">Application</span> instance 
+                for this process.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.id_is_valid.html" class="static_method">id_is_valid</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> application_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <code>application_id</code> is a valid application 
+                identifier.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Application.Application.html" class="creation_method">Application</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? application_id, <span class="main_type"><a href="GLib.ApplicationFlags.html" class="enum">ApplicationFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Application</span> instance.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.add_main_option.html" class="method">add_main_option</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> long_name, <span class="main_basic_type"><a href="../glib-2.0/char.html" class="struct">char</a></span> short_name, <span class="main_type"><a href="../glib-2.0/GLib.OptionFlags.html" class="enum">OptionFlags</a></span> flags, <span class="main_type"><a href="../glib-2.0/GLib.OptionArg.html" class="enum">OptionArg</a></span> arg, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> description, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? arg_description)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Add an option to be handled by <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.add_main_option_entries.html" class="method">add_main_option_entries</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.OptionEntry.html" class="struct">OptionEntry</a></span>[] entries)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds main option entries to be handled by <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.add_option_group.html" class="method">add_option_group</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.OptionGroup.html" class="class">OptionGroup</a></span> group)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a <a href="../glib-2.0/GLib.OptionGroup.html" class="class">
+                  OptionGroup</a> to the commandline handling of <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.add_platform_data.html" class="virtual_method">add_platform_data</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.VariantBuilder.html" class="class">VariantBuilder</a></span> builder)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.after_emit.html" class="virtual_method">after_emit</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> platform_data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.before_emit.html" class="virtual_method">before_emit</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a></span> platform_data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.bind_busy_property.html" class="method">bind_busy_property</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.dbus_register.html" class="virtual_method">dbus_register</a></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.dbus_unregister.html" class="virtual_method">dbus_unregister</a></b> (<span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> connection, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> object_path)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Application.get_application_id.html" class="method">get_application_id</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the unique identifier for <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.DBusConnection.html" class="class">DBusConnection</a></span> <b><a href="GLib.Application.get_dbus_connection.html" class="method">get_dbus_connection</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the <a href="GLib.DBusConnection.html" class="class">
+                  DBusConnection</a> being used by the application, or <span class="main_optional_parameter">null</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.Application.get_dbus_object_path.html" class="method">get_dbus_object_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the D-Bus object path being used by the application, or 
+                <span class="main_optional_parameter">null</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.ApplicationFlags.html" class="enum">ApplicationFlags</a></span> <b><a href="GLib.Application.get_flags.html" class="method">get_flags</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the flags for <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> <b><a href="GLib.Application.get_inactivity_timeout.html" class="method">get_inactivity_timeout</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the current inactivity timeout for the application.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.get_is_busy.html" class="method">get_is_busy</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.get_is_registered.html" class="method">get_is_registered</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is registered.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.get_is_remote.html" class="method">get_is_remote</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span> is remote.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? <b><a href="GLib.Application.get_resource_base_path.html" class="method">get_resource_base_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the resource base path of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.hold.html" class="method">hold</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Increases the use count of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.local_command_line.html" class="virtual_method">local_command_line</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] arguments, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> exit_status)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">This virtual function is always invoked in the local instance.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.mark_busy.html" class="method">mark_busy</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Increases the busy count of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.quit.html" class="method">quit</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Immediately quits the application.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.quit_mainloop.html" class="virtual_method">quit_mainloop</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Application.register.html" class="method">register</a></b> (<span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Attempts registration of the application.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.release.html" class="method">release</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Decrease the use count of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Application.run.html" class="method">run</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[]? argv = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Runs the application.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.run_mainloop.html" class="virtual_method">run_mainloop</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.send_notification.html" class="method">send_notification</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? id, <span class="main_type"><a href="GLib.Notification.html" class="class">Notification</a></span> notification)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sends a notification on behalf of <span class="main_keyword">this
+                </span> to the desktop shell.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="deprecated"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_action_group.html" class="method">set_action_group</a></b> (<span class="main_type"><a href="GLib.ActionGroup.html" class="interface">ActionGroup</a></span>? action_group)
+              </span></span>
+            <div class="leaf_brief_description"><span class="brief_description">This used to be how actions were associated with a 
+                <span class="class">Application</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_application_id.html" class="method">set_application_id</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? application_id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the unique identifier for <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_default.html" class="method">set_default</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets or unsets the default application for the process, as returned by
+                 <a href="GLib.Application.get_default.html" class="static_method">get_default</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_flags.html" class="method">set_flags</a></b> (<span class="main_type"><a href="GLib.ApplicationFlags.html" class="enum">ApplicationFlags</a></span> flags)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the flags for <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_inactivity_timeout.html" class="method">set_inactivity_timeout</a></b> (<span class="main_basic_type"><a href="../glib-2.0/uint.html" class="struct">uint</a></span> inactivity_timeout)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the current inactivity timeout for the application.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.set_resource_base_path.html" class="method">set_resource_base_path</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>? resource_path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets (or unsets) the base resource path of <span class="main_keyword">
+                  this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.unbind_busy_property.html" class="method">unbind_busy_property</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span> object, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> property)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.unmark_busy.html" class="method">unmark_busy</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Decreases the busy count of <span class="main_keyword">this</span>.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.withdraw_notification.html" class="method">withdraw_notification</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> id)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Withdraws a notification that was sent with 
+                <a href="GLib.Application.send_notification.html" class="method">send_notification</a>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Signals:</h3>
+        <ul class="navi_inline">
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.activate.html" class="signal">activate</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">activate</span> signal is emitted on the 
+                primary instance when an activation occurs.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Application.command_line.html" class="signal">command_line</a></b> (<span class="main_type"><a href="GLib.ApplicationCommandLine.html" class="class">ApplicationCommandLine</a></span> command_line)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">command_line</span> signal is emitted on the 
+                primary instance when a commandline is not handled locally.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Application.handle_local_options.html" class="signal">handle_local_options</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.VariantDict.html" class="class">VariantDict</a></span> options)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">handle_local_options</span> signal is emitted
+                 on the local instance after the parsing of the commandline options has occurred.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.open.html" class="signal">open</a></b> (<span class="main_type"><a href="GLib.File.html" class="interface">File</a></span>[] files, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> hint)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">open</span> signal is emitted on the primary 
+                instance when there are files to open.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.shutdown.html" class="signal">shutdown</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">shutdown</span> signal is emitted only on the
+                 registered primary instance immediately after the main loop terminates.</span>
+            </div></li>
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="GLib.Application.startup.html" class="signal">startup</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="signal">startup</span> signal is emitted on the 
+                primary instance immediately after registration.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-50')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-50">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.ActionGroup</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-51')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-51">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.ActionGroup.activate_action.html">activate_action</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.change_action_state.html">change_action_state</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.get_action_enabled.html">get_action_enabled</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.get_action_parameter_type.html">get_action_parameter_type</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state.html">get_action_state</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state_hint.html">get_action_state_hint</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.get_action_state_type.html">get_action_state_type</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.has_action.html">has_action</a></li>
+                    <li class="abstract_method"><a href="GLib.ActionGroup.list_actions.html">list_actions</a></li>
+                    <li class="virtual_method"><a href="GLib.ActionGroup.query_action.html">query_action</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="signal"><a href="GLib.ActionGroup.action_added.html">action_added</a></li>
+                    <li class="signal"><a href="GLib.ActionGroup.action_enabled_changed.html">action_enabled_changed</a></li>
+                    <li class="signal"><a href="GLib.ActionGroup.action_removed.html">action_removed</a></li>
+                    <li class="signal"><a href="GLib.ActionGroup.action_state_changed.html">action_state_changed</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from interface GLib.ActionMap</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-52')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-52">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.ActionMap.add_action.html">add_action</a></li>
+                      <li class="method"><a href="GLib.ActionMap.add_action_entries.html">add_action_entries</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.ActionMap.lookup_action.html">lookup_action</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="abstract_method"><a href="GLib.ActionMap.remove_action.html">remove_action</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+          </div>
+        </body>
+      </html>

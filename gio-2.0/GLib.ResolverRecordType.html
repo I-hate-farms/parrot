@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.ResolverRecordType &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.ResolverRecordType &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enum">ResolverRecordType</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.MX.html">MX</a></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.NS.html">NS</a></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.SOA.html">SOA</a></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.SRV.html">SRV</a></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.TXT.html">TXT</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">ResolverRecordType</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">enum</span> <b><span class="enum">ResolverRecordType</span></b>
+        </div>
+        <div class="description">
+          <p>The type of record that <a href="GLib.Resolver.lookup_records.html" class="virtual_method">lookup_records</a> or 
+            <a href="GLib.Resolver.lookup_records_async.html" class="virtual_method">lookup_records_async</a> should retrieve.</p>
+          <p> The records are returned as lists of <a href="../glib-2.0/GLib.Variant.html" class="class">Variant</a> tuples. Each record type has 
+            different values in the variant tuples returned.</p>
+          <p><span class="main_optional_parameter">g_resolver_record_srv</span> records are returned as variants with the signature '(qqqs)', 
+            containing a guint16 with the priority, a guint16 with the weight, a guint16 with the port, and a string of the hostname.</p>
+          <p><span class="main_optional_parameter">g_resolver_record_mx</span> records are returned as variants with the signature '(qs)', 
+            representing a guint16 with the preference, and a string containing the mail exchanger hostname.</p>
+          <p><span class="main_optional_parameter">g_resolver_record_txt</span> records are returned as variants with the signature '(as)', 
+            representing an array of the strings in the text record.</p>
+          <p><span class="main_optional_parameter">g_resolver_record_soa</span> records are returned as variants with the signature '(ssuuuuu)', 
+            representing a string containing the primary name server, a string containing the administrator, the serial as a guint32, the refresh 
+            interval as guint32, the retry interval as a guint32, the expire timeout as a guint32, and the ttl as a guint32.</p>
+          <p><span class="main_optional_parameter">g_resolver_record_ns</span> records are returned as variants with the signature '(s)', representing
+             a string of the hostname of the name server.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Enum values:</h3>
+        <ul class="navi_inline">
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.SRV.html">SRV</a> - <span class="brief_description">lookup DNS SRV records for a 
+              domain</span></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.MX.html">MX</a> - <span class="brief_description">lookup DNS MX records for a domain
+            </span></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.TXT.html">TXT</a> - <span class="brief_description">lookup DNS TXT records for a name
+            </span></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.SOA.html">SOA</a> - <span class="brief_description">lookup DNS SOA records for a zone
+            </span></li>
+          <li class="enumvalue"><a href="GLib.ResolverRecordType.NS.html">NS</a> - <span class="brief_description">lookup DNS NS records for a domain
+            </span></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

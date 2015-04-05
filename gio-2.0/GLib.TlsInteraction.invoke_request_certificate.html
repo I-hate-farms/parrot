@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TlsInteraction.invoke_request_certificate &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TlsInteraction.invoke_request_certificate &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.TlsInteraction.html">TlsInteraction</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="GLib.TlsInteraction.TlsInteraction.html">TlsInteraction</a></li>
+          <li class="virtual_method"><a href="GLib.TlsInteraction.ask_password.html">ask_password</a></li>
+          <li class="virtual_method"><a href="GLib.TlsInteraction.ask_password_async.html">ask_password_async</a></li>
+          <li class="method"><a href="GLib.TlsInteraction.invoke_ask_password.html">invoke_ask_password</a></li>
+          <li class="method">invoke_request_certificate</li>
+          <li class="virtual_method"><a href="GLib.TlsInteraction.request_certificate.html">request_certificate</a></li>
+          <li class="virtual_method"><a href="GLib.TlsInteraction.request_certificate_async.html">request_certificate_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">invoke_request_certificate</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.TlsInteractionResult.html" class="enum">TlsInteractionResult</a></span> <b><span class="method">invoke_request_certificate</span></b> (<span class="main_type"><a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a></span> connection, <span class="main_type"><a href="GLib.TlsCertificateRequestFlags.html" class="enum">TlsCertificateRequestFlags</a></span> flags, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Invoke the interaction to ask the user to choose a certificate to use with the connection.</p>
+          <p> It invokes this interaction in the main loop, specifically the <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>
+             returned by <a href="../glib-2.0/GLib.MainContext.get_thread_default.html" class="static_method">get_thread_default</a> when the 
+            interaction is created. This is called by called by <a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a> when the 
+            peer requests a certificate during the handshake.</p>
+          <p>Derived subclasses usually implement a certificate selector, although they may also choose to provide a certificate from elsewhere. 
+            Alternatively the user may abort this certificate request, which may or may not abort the TLS connection.</p>
+          <p>The implementation can either be a synchronous (eg: modal dialog) or an asynchronous one (eg: modeless dialog). This function will take 
+            care of calling which ever one correctly.</p>
+          <p>If the interaction is cancelled by the cancellation object, or by the user then <span class="main_optional_parameter">
+              g_tls_interaction_failed</span> will be returned with an error that contains a <span class="main_optional_parameter">
+              g_io_error_cancelled</span> error code. Certain implementations may not support immediate cancellation.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.TlsInteraction.html" class="class">TlsInteraction</a> object</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">connection</td>
+              <td>
+                <p>a <a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a> object</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>flags providing more information about the request</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>an optional <a href="GLib.Cancellable.html" class="class">Cancellable</a> cancellation object</p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>The status of the certificate request interaction.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

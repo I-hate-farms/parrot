@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Process.spawn_sync &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Process.spawn_sync &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.Process.html">Process</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="method"><a href="GLib.Process.@signal.html">@signal</a></li>
+          <li class="method"><a href="GLib.Process.abort.html">abort</a></li>
+          <li class="method"><a href="GLib.Process.check_exit_status.html">check_exit_status</a></li>
+          <li class="method"><a href="GLib.Process.close_pid.html">close_pid</a></li>
+          <li class="method"><a href="GLib.Process.core_dump.html">core_dump</a></li>
+          <li class="method"><a href="GLib.Process.exit.html">exit</a></li>
+          <li class="method"><a href="GLib.Process.exit_status.html">exit_status</a></li>
+          <li class="method"><a href="GLib.Process.if_continued.html">if_continued</a></li>
+          <li class="method"><a href="GLib.Process.if_exited.html">if_exited</a></li>
+          <li class="method"><a href="GLib.Process.if_signaled.html">if_signaled</a></li>
+          <li class="method"><a href="GLib.Process.if_stopped.html">if_stopped</a></li>
+          <li class="method"><a href="GLib.Process.raise.html">raise</a></li>
+          <li class="method"><a href="GLib.Process.spawn_async.html">spawn_async</a></li>
+          <li class="method"><a href="GLib.Process.spawn_async_with_pipes.html">spawn_async_with_pipes</a></li>
+          <li class="method"><a href="GLib.Process.spawn_command_line_async.html">spawn_command_line_async</a></li>
+          <li class="method"><a href="GLib.Process.spawn_command_line_sync.html">spawn_command_line_sync</a></li>
+          <li class="method">spawn_sync</li>
+          <li class="method"><a href="GLib.Process.stop_sig.html">stop_sig</a></li>
+          <li class="method"><a href="GLib.Process.term_sig.html">term_sig</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">spawn_sync</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="bool.html" class="struct">bool</a></span> <b><span class="method">spawn_sync</span></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span>? working_directory, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[] argv, <span class="main_basic_type"><a href="string.html" class="class">string</a></span>[]? envp, <span class="main_type"><a href="GLib.SpawnFlags.html" class="enum">SpawnFlags</a></span> _flags, <span class="main_type"><a href="GLib.SpawnChildSetupFunc.html" class="delegate">SpawnChildSetupFunc</a></span>? child_setup, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> standard_output = <span class="main_optional_parameter">null</span>, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> standard_error = <span class="main_optional_parameter">null</span>, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="int.html" class="struct">int</a></span> exit_status = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="GLib.SpawnError.html" class="errordomain">SpawnError</a></span>
+        </div>
+        <div class="description">
+          <p>Executes a child synchronously (waits for the child to exit before returning).</p>
+          <p> All output from the child is stored in <code>standard_output</code> and <code>standard_error</code>, if those parameters are non-
+            <span class="main_optional_parameter">null</span>. Note that you must set the <span class="main_optional_parameter">
+              g_spawn_stdout_to_dev_null</span> and <span class="main_optional_parameter">g_spawn_stderr_to_dev_null</span> flags when passing 
+            <span class="main_optional_parameter">null</span> for <code>standard_output</code> and <code>standard_error</code>.</p>
+          <p>If <code>exit_status</code> is non-<span class="main_optional_parameter">null</span>, the platform-specific exit status of the child is 
+            stored there; see the documentation of <a href="GLib.Process.check_exit_status.html" class="method">check_exit_status</a> for how to use 
+            and interpret this. Note that it is invalid to pass <span class="main_optional_parameter">g_spawn_do_not_reap_child</span> in <code>flags
+            </code>.</p>
+          <p>If an error occurs, no data is returned in <code>standard_output</code>, <code>standard_error</code>, or <code>exit_status</code>.</p>
+          <p>This function calls <a href="GLib.Process.spawn_async_with_pipes.html" class="method">spawn_async_with_pipes</a> internally; see that 
+            function for full details on the other parameters and details on how these functions work on Windows.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">working_directory</td>
+              <td>
+                <p>child's current working directory, or <span class="main_optional_parameter">null</span> to inherit parent's</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">argv</td>
+              <td>
+                <p>child's argument vector</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">envp</td>
+              <td>
+                <p>child's environment, or <span class="main_optional_parameter">null</span> to inherit parent's</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">child_setup</td>
+              <td>
+                <p>function to run in the child just before <code>exec</code></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">standard_output</td>
+              <td>
+                <p>return location for child output, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">standard_error</td>
+              <td>
+                <p>return location for child error messages, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">exit_status</td>
+              <td>
+                <p>return location for child exit status, as returned by <code>waitpid</code>, or <span class="main_optional_parameter">null</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>flags from <a href="GLib.SpawnFlags.html" class="enum">SpawnFlags</a></p>
+              </td>
+            </tr>
+            <tr class="main_parameter_table_unknown_parameter">
+              <td class="main_parameter_table_name">user_data</td>
+              <td>
+                <p>user data for <code>child_setup</code></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p><span class="main_optional_parameter">true</span> on success, <span class="main_optional_parameter">false</span> if an error was 
+                  set</p>
+              </td>
+            </tr>
+          </table>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.Process.html">GLib.Process</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

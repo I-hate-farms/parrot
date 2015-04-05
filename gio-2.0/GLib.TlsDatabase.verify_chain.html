@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TlsDatabase.verify_chain &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TlsDatabase.verify_chain &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_class"><a href="GLib.TlsDatabase.html">TlsDatabase</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="constant"><a href="GLib.TlsDatabase.PURPOSE_AUTHENTICATE_CLIENT.html">PURPOSE_AUTHENTICATE_CLIENT</a></li>
+          <li class="constant"><a href="GLib.TlsDatabase.PURPOSE_AUTHENTICATE_SERVER.html">PURPOSE_AUTHENTICATE_SERVER</a></li>
+          <li class="creation_method"><a href="GLib.TlsDatabase.TlsDatabase.html">TlsDatabase</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.create_certificate_handle.html">create_certificate_handle</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificate_for_handle.html">lookup_certificate_for_handle</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificate_for_handle_async.html">lookup_certificate_for_handle_async</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificate_issuer.html">lookup_certificate_issuer</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificate_issuer_async.html">lookup_certificate_issuer_async</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificates_issued_by.html">lookup_certificates_issued_by</a></li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.lookup_certificates_issued_by_async.html">lookup_certificates_issued_by_async</a></li>
+          <li class="virtual_method">verify_chain</li>
+          <li class="virtual_method"><a href="GLib.TlsDatabase.verify_chain_async.html">verify_chain_async</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">verify_chain</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">virtual</span> <span class="main_type"><a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a></span> <b><span class="virtual_method">verify_chain</span></b> (<span class="main_type"><a href="GLib.TlsCertificate.html" class="class">TlsCertificate</a></span> chain, <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> purpose, <span class="main_type"><a href="GLib.SocketConnectable.html" class="interface">SocketConnectable</a></span>? identity, <span class="main_type"><a href="GLib.TlsInteraction.html" class="class">TlsInteraction</a></span>? interaction, <span class="main_type"><a href="GLib.TlsDatabaseVerifyFlags.html" class="enum">TlsDatabaseVerifyFlags</a></span> flags, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+        </div>
+        <div class="description">
+          <p>Verify's a certificate chain after looking up and adding any missing certificates to the chain.</p>
+          <p><code>chain</code> is a chain of <a href="GLib.TlsCertificate.html" class="class">TlsCertificate</a> objects each pointing to the next 
+            certificate in the chain by its <span class="main_optional_parameter">issuer</span> property. The chain may initially consist of one or 
+            more certificates. After the verification process is complete, <code>chain</code> may be modified by adding missing certificates, or 
+            removing extra certificates. If a certificate anchor was found, then it is added to the <code>chain</code>.</p>
+          <p><code>purpose</code> describes the purpose (or usage) for which the certificate is being used. Typically <code>purpose</code> will be set
+             to <a href="GLib.TLS_DATABASE_PURPOSE_AUTHENTICATE_SERVER.html" class="constant">TLS_DATABASE_PURPOSE_AUTHENTICATE_SERVER</a> which means
+             that the certificate is being used to authenticate a server (and we are acting as the client).</p>
+          <p>The <code>identity</code> is used to check for pinned certificates (trust exceptions) in the database. These will override the normal 
+            verification process on a host by host basis.</p>
+          <p>Currently there are no <code>flags</code>, and <span class="main_optional_parameter">g_tls_database_verify_none</span> should be used.
+          </p>
+          <p>This function can block, use <a href="GLib.TlsDatabase.verify_chain_async.html" class="virtual_method">verify_chain_async</a> to perform 
+            the verification operation asynchronously.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.TlsDatabase.html" class="abstract_class">TlsDatabase</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">chain</td>
+              <td>
+                <p>a <a href="GLib.TlsCertificate.html" class="class">TlsCertificate</a> chain</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">purpose</td>
+              <td>
+                <p>the purpose that this certificate chain will be used for.</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">identity</td>
+              <td>
+                <p>the expected peer identity</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">interaction</td>
+              <td>
+                <p>used to interact with the user if necessary</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">flags</td>
+              <td>
+                <p>additional verify flags</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>a <a href="GLib.Cancellable.html" class="class">Cancellable</a>, or <span class="main_optional_parameter">null</span></p>
+              </td>
+            </tr>
+          </table>
+          <h2 class="main_title">Returns:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td>
+                <p>the appropriate <a href="GLib.TlsCertificateFlags.html" class="enum">TlsCertificateFlags</a> which represents the result of 
+                  verification.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

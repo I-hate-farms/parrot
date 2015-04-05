@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Resource &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Resource &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Resource</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.Resource.load.html">load</a></li>
+          <li class="creation_method"><a href="GLib.Resource.Resource.from_data.html">Resource.from_data</a></li>
+          <li class="method"><a href="GLib.Resource.@ref.html">@ref</a></li>
+          <li class="method"><a href="GLib.Resource._register.html">_register</a></li>
+          <li class="method"><a href="GLib.Resource._unregister.html">_unregister</a></li>
+          <li class="method"><a href="GLib.Resource.enumerate_children.html">enumerate_children</a></li>
+          <li class="method"><a href="GLib.Resource.get_info.html">get_info</a></li>
+          <li class="method"><a href="GLib.Resource.lookup_data.html">lookup_data</a></li>
+          <li class="method"><a href="GLib.Resource.open_stream.html">open_stream</a></li>
+          <li class="method"><a href="GLib.Resource.unref.html">unref</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Resource</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Resource" alt="Object hierarchy for Resource" src="img/GLib.Resource.png"/>
+
+      <map id="GLib.Resource" name="GLib.Resource">
+<area shape="rect" id="node1" href="GLib.Resource.html" title="GLib.Resource" alt="" coords="5,5,136,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Resource</span></b>
+        </div>
+        <div class="description">
+          <p>Applications and libraries often contain binary or textual data that is really part of the application, rather than user data.</p>
+          <p> For instance <code>GtkBuilder</code> .ui files, splashscreen images, GMenu markup xml, CSS files, icons, etc. These are often shipped as
+             files in `$datadir/appname`, or manually included as literal strings in the code.</p>
+          <p>The <span class="class">Resource</span> API and the <i>glib-compile-resources</i> program provide a convenient and efficient alternative 
+            to this which has some nice properties. You maintain the files as normal files, so its easy to edit them, but during the build the files 
+            are combined into a binary bundle that is linked into the executable. This means that loading the resource files are efficient (as they 
+            are already in memory, shared with other instances) and simple (no need to check for things like I/O errors or locate the files in the 
+            filesystem). It also makes it easier to create relocatable applications.</p>
+          <p>Resource files can also be marked as compressed. Such files will be included in the resource bundle in a compressed form, but will be 
+            automatically uncompressed when the resource is used. This is very useful e.g. for larger text files that are parsed once (or rarely) and 
+            then thrown away.</p>
+          <p>Resource files can also be marked to be preprocessed, by setting the value of the `preprocess` attribute to a comma-separated list of 
+            preprocessing options. The only options currently supported are:</p>
+          <p>`xml-stripblanks` which will use the xmllint command to strip ignorable whitespace from the xml file. For this to work, the `XMLLINT` 
+            environment variable must be set to the full path to the xmllint executable, or xmllint must be in the `PATH`; otherwise the preprocessing
+             step is skipped.</p>
+          <p>`to-pixdata` which will use the gdk-pixbuf-pixdata command to convert images to the GdkPixdata format, which allows you to create pixbufs
+             directly using the data inside the resource file, rather than an (uncompressed) copy if it. For this, the gdk-pixbuf-pixdata program must
+             be in the PATH, or the `GDK_PIXBUF_PIXDATA` environment variable must be set to the full path to the gdk-pixbuf-pixdata executable; 
+            otherwise the resource compiler will abort.</p>
+          <p>Resource bundles are created by the <i>glib-compile-resources</i> program which takes an xml file that describes the bundle, and a set of
+             files that the xml references. These are combined into a binary resource bundle.</p>
+          <p>An example resource description: <pre class="main_source">&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br/>&lt;gresources&gt;<br/>  &lt;gresource prefix="/org/gtk/Example"&gt;<br/>    &lt;file&gt;data/splashscreen.png&lt;/file&gt;<br/>    &lt;file compressed="true"&gt;dialog.ui&lt;/file&gt;<br/>    &lt;file preprocess="xml-stripblanks"&gt;menumarkup.xml&lt;/file&gt;<br/>  &lt;/gresource&gt;<br/>&lt;/gresources&gt;</pre>
+          </p>
+          <p>This will create a resource bundle with the following files: <pre class="main_source">/org/gtk/Example/data/splashscreen.png<br/>/org/gtk/Example/dialog.ui<br/>/org/gtk/Example/menumarkup.xml</pre>
+          </p>
+          <p>Note that all resources in the process share the same namespace, so use java-style path prefixes (like in the above example) to avoid 
+            conflicts.</p>
+          <p>You can then use <i>glib-compile-resources</i> to compile the xml to a binary bundle that you can load with 
+            <a href="GLib.Resource.load.html" class="static_method">load</a>. However, its more common to use the --generate-source and 
+            --generate-header arguments to create a source file and header to link directly into your application.</p>
+          <p>Once a <span class="class">Resource</span> has been created and registered all the data in it can be accessed globally in the process by 
+            using API calls like <a href="GLib.resources_open_stream.html" class="method">resources_open_stream</a> to stream the data or 
+            <a href="GLib.resources_lookup_data.html" class="method">resources_lookup_data</a> to get a direct pointer to the data. You can also use 
+            uris like "resource:///org/gtk/Example/data/splashscreen.png" with <a href="GLib.File.html" class="interface">File</a> to access the 
+            resource data.</p>
+          <p>There are two forms of the generated source, the default version uses the compiler support for constructor and destructor functions (
+            where available) to automatically create and register the <span class="class">Resource</span> on startup or library load time. If you pass
+             --manual-register two functions to register/unregister the resource is instead created. This requires an explicit initialization call in 
+            your application/library, but it works on all platforms, even on the minor ones where this is not available. (Constructor support is 
+            available for at least Win32, MacOS and Linux.)</p>
+          <p>Note that resource data can point directly into the data segment of e.g. a library, so if you are unloading libraries during runtime you 
+            need to be very careful with keeping around pointers to data from a resource, as this goes away when the library is unloaded. However, in 
+            practice this is not generally a problem, since most resource accesses is for your own resources, and resource data is often used once, 
+            during parsing, and then released.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Resource</span></span> <b><a href="GLib.Resource.load.html" class="static_method">load</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> filename) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Loads a binary resource bundle and creates a <span class="class">
+                  Resource</span> representation of it, allowing you to query it for data.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Resource.Resource.from_data.html" class="creation_method">Resource.from_data</a></b> (<span class="main_type"><a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a></span> data) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a GResource from a reference to the binary resource bundle.
+              </span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Resource._register.html" class="method">_register</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Resource._unregister.html" class="method">_unregister</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span>[] <b><a href="GLib.Resource.enumerate_children.html" class="method">enumerate_children</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path, <span class="main_type"><a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></span> lookup_flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Returns all the names of children at the specified <code>path</code> 
+                in the resource.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Resource.get_info.html" class="method">get_info</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path, <span class="main_type"><a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></span> lookup_flags, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/size_t.html" class="struct">size_t</a></span> size, <span class="main_keyword">out</span> <span class="main_basic_type"><a href="../glib-2.0/uint32.html" class="struct">uint32</a></span> flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks for a file at the specified <code>path</code> in the resource 
+                and if found returns information about it.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a></span> <b><a href="GLib.Resource.lookup_data.html" class="method">lookup_data</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path, <span class="main_type"><a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></span> lookup_flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks for a file at the specified <code>path</code> in the resource 
+                and returns a <a href="../glib-2.0/GLib.Bytes.html" class="class">Bytes</a> that lets you directly access the data in memory.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="GLib.InputStream.html" class="abstract_class">InputStream</a></span> <b><a href="GLib.Resource.open_stream.html" class="method">open_stream</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> path, <span class="main_type"><a href="GLib.ResourceLookupFlags.html" class="enum">ResourceLookupFlags</a></span> lookup_flags) <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Looks for a file at the specified <code>path</code> in the resource 
+                and returns a <a href="GLib.InputStream.html" class="abstract_class">InputStream</a> that lets you read the data.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Resource</span></span> <b><a href="GLib.Resource.@ref.html" class="method">@ref</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Atomically increments the reference count of <code>array</code> by 
+                one.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Resource.unref.html" class="method">unref</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Atomically decrements the reference count of 
+                <span class="main_keyword">this</span> by one.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

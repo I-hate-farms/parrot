@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Task.return_pointer &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Task.return_pointer &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="GLib.Task.html">Task</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Task.completed.html">completed</a></li>
+          <li class="static_method"><a href="GLib.Task.is_valid.html">is_valid</a></li>
+          <li class="static_method"><a href="GLib.Task.report_error.html">report_error</a></li>
+          <li class="creation_method"><a href="GLib.Task.Task.html">Task</a></li>
+          <li class="method"><a href="GLib.Task.get_cancellable.html">get_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.get_check_cancellable.html">get_check_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.get_completed.html">get_completed</a></li>
+          <li class="method"><a href="GLib.Task.get_context.html">get_context</a></li>
+          <li class="method"><a href="GLib.Task.get_priority.html">get_priority</a></li>
+          <li class="method"><a href="GLib.Task.get_return_on_cancel.html">get_return_on_cancel</a></li>
+          <li class="method"><a href="GLib.Task.get_source_tag.html">get_source_tag</a></li>
+          <li class="method"><a href="GLib.Task.get_task_data.html">get_task_data</a></li>
+          <li class="method"><a href="GLib.Task.had_error.html">had_error</a></li>
+          <li class="method"><a href="GLib.Task.propagate_boolean.html">propagate_boolean</a></li>
+          <li class="method"><a href="GLib.Task.propagate_int.html">propagate_int</a></li>
+          <li class="method"><a href="GLib.Task.propagate_pointer.html">propagate_pointer</a></li>
+          <li class="method"><a href="GLib.Task.return_boolean.html">return_boolean</a></li>
+          <li class="method"><a href="GLib.Task.return_error.html">return_error</a></li>
+          <li class="method"><a href="GLib.Task.return_error_if_cancelled.html">return_error_if_cancelled</a></li>
+          <li class="method"><a href="GLib.Task.return_int.html">return_int</a></li>
+          <li class="method">return_pointer</li>
+          <li class="method"><a href="GLib.Task.set_check_cancellable.html">set_check_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.set_priority.html">set_priority</a></li>
+          <li class="method"><a href="GLib.Task.set_return_on_cancel.html">set_return_on_cancel</a></li>
+          <li class="method"><a href="GLib.Task.set_source_tag.html">set_source_tag</a></li>
+          <li class="method"><a href="GLib.Task.set_task_data.html">set_task_data</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">return_pointer</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><span class="method">return_pointer</span></b> (<span class="main_keyword">void</span>* result, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? result_destroy)
+        </div>
+        <div class="description">
+          <p>Sets <span class="main_keyword">this</span>'s result to <code>result</code> and completes the task.</p>
+          <p> If <code>result</code> is not <span class="main_optional_parameter">null</span>, then <code>result_destroy</code> will be used to free 
+            <code>result</code> if the caller does not take ownership of it with <a href="GLib.Task.propagate_pointer.html" class="method">
+              propagate_pointer</a>.</p>
+          <p>"Completes the task" means that for an ordinary asynchronous task it will either invoke the task's callback, or else queue that callback 
+            to be invoked in the proper <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>, or in the next iteration of the 
+            current <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>. For a task run via <code>g_task_run_in_thread</code> or
+             <code>g_task_run_in_thread_sync</code>, calling this method will save <code>result</code> to be returned to the caller later, but the 
+            task will not actually be completed until the <a href="GLib.TaskThreadFunc.html" class="delegate">TaskThreadFunc</a> exits.</p>
+          <p>Note that since the task may be completed before returning from <span class="method">return_pointer</span>, you cannot assume that <code>
+              result</code> is still valid after calling this, unless you are still holding another reference on it.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">this</td>
+              <td>
+                <p>a <a href="GLib.Task.html" class="class">Task</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">result</td>
+              <td>
+                <p>the pointer result of a task  function</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">result_destroy</td>
+              <td>
+                <p>a <a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a> function.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

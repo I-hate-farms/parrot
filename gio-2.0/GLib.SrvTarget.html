@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.SrvTarget &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.SrvTarget &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">SrvTarget</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="GLib.SrvTarget.list_sort.html">list_sort</a></li>
+          <li class="creation_method"><a href="GLib.SrvTarget.SrvTarget.html">SrvTarget</a></li>
+          <li class="method"><a href="GLib.SrvTarget.copy.html">copy</a></li>
+          <li class="method"><a href="GLib.SrvTarget.free.html">free</a></li>
+          <li class="method"><a href="GLib.SrvTarget.get_hostname.html">get_hostname</a></li>
+          <li class="method"><a href="GLib.SrvTarget.get_port.html">get_port</a></li>
+          <li class="method"><a href="GLib.SrvTarget.get_priority.html">get_priority</a></li>
+          <li class="method"><a href="GLib.SrvTarget.get_weight.html">get_weight</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">SrvTarget</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.SrvTarget" alt="Object hierarchy for SrvTarget" src="img/GLib.SrvTarget.png"/>
+
+      <map id="GLib.SrvTarget" name="GLib.SrvTarget">
+<area shape="rect" id="node1" href="GLib.SrvTarget.html" title="GLib.SrvTarget" alt="" coords="5,5,141,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">SrvTarget</span></b>
+        </div>
+        <div class="description">
+          <p>SRV (service) records are used by some network protocols to provide service-specific aliasing and load-balancing.</p>
+          <p> For example, XMPP (Jabber) uses SRV records to locate the XMPP server for a domain; rather than connecting directly to "example.com" or 
+            assuming a specific server hostname like "xmpp.example.com", an XMPP client would look up the "xmpp-client" SRV record for "example.com", 
+            and then connect to whatever host was pointed to by that record.</p>
+          <p>You can use <a href="GLib.Resolver.lookup_service.html" class="method">lookup_service</a> or 
+            <a href="GLib.Resolver.lookup_service_async.html" class="method">lookup_service_async</a> to find the <span class="class">SrvTarget</span>
+            s for a given service. However, if you are simply planning to connect to the remote service, you can use 
+            <a href="GLib.NetworkService.html" class="class">NetworkService</a>'s <a href="GLib.SocketConnectable.html" class="interface">
+              SocketConnectable</a> interface and not need to worry about <span class="class">SrvTarget</span> at all.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="class">SrvTarget</span></span>&gt; <b><a href="GLib.SrvTarget.list_sort.html" class="static_method">list_sort</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><a href="../glib-2.0/GLib.List.html" class="class">List</a></span>&lt;<span class="main_type"><span class="class">SrvTarget</span></span>&gt; targets)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sorts <code>targets</code> in place according to the algorithm in RFC 
+                2782.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.SrvTarget.SrvTarget.html" class="creation_method">SrvTarget</a></b> (<span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> hostname, <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> port, <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> priority, <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> weight)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">SrvTarget</span> with the given 
+                parameters.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">SrvTarget</span></span> <b><a href="GLib.SrvTarget.copy.html" class="method">copy</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copies <span class="main_keyword">this</span></span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.SrvTarget.free.html" class="method">free</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Frees <span class="main_keyword">this</span></span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><a href="../glib-2.0/string.html" class="class">string</a></span> <b><a href="GLib.SrvTarget.get_hostname.html" class="method">get_hostname</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s hostname (in ASCII form;
+                 if you are going to present this to the user, you should use <code>g_hostname_is_ascii_encoded</code> to check if it contains encoded
+                 Unicode segments, and use <code>g_hostname_to_unicode</code> to convert it if it does.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> <b><a href="GLib.SrvTarget.get_port.html" class="method">get_port</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s port</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> <b><a href="GLib.SrvTarget.get_priority.html" class="method">get_priority</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s priority.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/uint16.html" class="struct">uint16</a></span> <b><a href="GLib.SrvTarget.get_weight.html" class="method">get_weight</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s weight.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

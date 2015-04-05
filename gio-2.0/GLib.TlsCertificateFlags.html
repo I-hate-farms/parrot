@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.TlsCertificateFlags &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.TlsCertificateFlags &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enum">TlsCertificateFlags</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.BAD_IDENTITY.html">BAD_IDENTITY</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.EXPIRED.html">EXPIRED</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.GENERIC_ERROR.html">GENERIC_ERROR</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.INSECURE.html">INSECURE</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.NOT_ACTIVATED.html">NOT_ACTIVATED</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.REVOKED.html">REVOKED</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.UNKNOWN_CA.html">UNKNOWN_CA</a></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.VALIDATE_ALL.html">VALIDATE_ALL</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">TlsCertificateFlags</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Flags</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">enum</span> <b><span class="enum">TlsCertificateFlags</span></b>
+        </div>
+        <div class="description">
+          <p>A set of flags describing TLS certification validation.</p>
+          <p> This can be used to set which validation steps to perform (eg, with 
+            <a href="GLib.TlsClientConnection.set_validation_flags.html" class="method">set_validation_flags</a>), or to describe why a particular 
+            certificate was rejected (eg, in <a href="GLib.TlsConnection.accept_certificate.html" class="signal">accept_certificate</a>).</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Enum values:</h3>
+        <ul class="navi_inline">
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.UNKNOWN_CA.html">UNKNOWN_CA</a> - <span class="brief_description">The signing 
+              certificate authority is  not known.</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.BAD_IDENTITY.html">BAD_IDENTITY</a> - <span class="brief_description">The 
+              certificate does not match the  expected identity of the site that it was retrieved from.</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.NOT_ACTIVATED.html">NOT_ACTIVATED</a> - <span class="brief_description">The 
+              certificate's activation time  is still in the future</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.EXPIRED.html">EXPIRED</a> - <span class="brief_description">The certificate has 
+              expired</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.REVOKED.html">REVOKED</a> - <span class="brief_description">The certificate has been
+               revoked  according to the <a href="GLib.TlsConnection.html" class="abstract_class">TlsConnection</a>'s certificate revocation list.
+            </span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.INSECURE.html">INSECURE</a> - <span class="brief_description">The certificate's 
+              algorithm is  considered insecure.</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.GENERIC_ERROR.html">GENERIC_ERROR</a> - <span class="brief_description">Some other 
+              error occurred validating  the certificate</span></li>
+          <li class="enumvalue"><a href="GLib.TlsCertificateFlags.VALIDATE_ALL.html">VALIDATE_ALL</a> - <span class="brief_description">the 
+              combination of all of the above  flags</span></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

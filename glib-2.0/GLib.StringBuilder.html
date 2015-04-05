@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.StringBuilder &ndash; glib-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.StringBuilder &ndash; glib-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">glib-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">StringBuilder</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.StringBuilder.data.html">data</a></li>
+          <li class="static_method"><a href="GLib.StringBuilder.free_to_bytes.html">free_to_bytes</a></li>
+          <li class="creation_method"><a href="GLib.StringBuilder.StringBuilder.html">StringBuilder</a></li>
+          <li class="creation_method"><a href="GLib.StringBuilder.StringBuilder.sized.html">StringBuilder.sized</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append.html">append</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append_c.html">append_c</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append_len.html">append_len</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append_printf.html">append_printf</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append_unichar.html">append_unichar</a></li>
+          <li class="method"><a href="GLib.StringBuilder.append_vprintf.html">append_vprintf</a></li>
+          <li class="method"><a href="GLib.StringBuilder.assign.html">assign</a></li>
+          <li class="method"><a href="GLib.StringBuilder.erase.html">erase</a></li>
+          <li class="method"><a href="GLib.StringBuilder.insert.html">insert</a></li>
+          <li class="method"><a href="GLib.StringBuilder.insert_len.html">insert_len</a></li>
+          <li class="method"><a href="GLib.StringBuilder.insert_unichar.html">insert_unichar</a></li>
+          <li class="method"><a href="GLib.StringBuilder.overwrite.html">overwrite</a></li>
+          <li class="method"><a href="GLib.StringBuilder.overwrite_len.html">overwrite_len</a></li>
+          <li class="method"><a href="GLib.StringBuilder.prepend.html">prepend</a></li>
+          <li class="method"><a href="GLib.StringBuilder.prepend_c.html">prepend_c</a></li>
+          <li class="method"><a href="GLib.StringBuilder.prepend_len.html">prepend_len</a></li>
+          <li class="method"><a href="GLib.StringBuilder.prepend_unichar.html">prepend_unichar</a></li>
+          <li class="method"><a href="GLib.StringBuilder.printf.html">printf</a></li>
+          <li class="method"><a href="GLib.StringBuilder.truncate.html">truncate</a></li>
+          <li class="method"><a href="GLib.StringBuilder.vprintf.html">vprintf</a></li>
+          <li class="field"><a href="GLib.StringBuilder.allocated_len.html">allocated_len</a></li>
+          <li class="field"><a href="GLib.StringBuilder.len.html">len</a></li>
+          <li class="field"><a href="GLib.StringBuilder.str.html">str</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">StringBuilder</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.StringBuilder" alt="Object hierarchy for StringBuilder" src="img/GLib.StringBuilder.png"/>
+
+      <map id="GLib.StringBuilder" name="GLib.StringBuilder">
+<area shape="rect" id="node1" href="GLib.StringBuilder.html" title="GLib.StringBuilder" alt="" coords="5,5,168,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition">[ <span class="main_type">Compact</span> ]<br/><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">StringBuilder</span></b>
+        </div>
+        <div class="description">
+          <p>The GString struct contains the public fields of a GString.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">glib-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="uint8.html" class="struct">uint8</a></span>[] <b><a href="GLib.StringBuilder.data.html" class="property">data</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><a href="GLib.Bytes.html" class="class">Bytes</a></span> <b><a href="GLib.StringBuilder.free_to_bytes.html" class="static_method">free_to_bytes</a></b> (<span class="main_type"><span class="class">StringBuilder</span></span> str)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Transfers ownership of the contents of <span class="main_keyword">this
+                </span> to a newly allocated <a href="GLib.Bytes.html" class="class">Bytes</a>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.StringBuilder.StringBuilder.html" class="creation_method">StringBuilder</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> init = <span class="main_optional_parameter">""</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">StringBuilder</span>, initialized 
+                with the given string.</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.StringBuilder.StringBuilder.sized.html" class="creation_method">StringBuilder.sized</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> dfl_size)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">StringBuilder</span>, with enough 
+                space for <code>dfl_size</code> bytes.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.assign.html" class="method">assign</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> rval)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copies the bytes from a string into a <span class="class">
+                  StringBuilder</span>, destroying any previous contents.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.append.html" class="method">append</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a string onto the end of a <span class="class">StringBuilder
+                </span>, expanding it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.append_c.html" class="method">append_c</a></b> (<span class="main_basic_type"><a href="char.html" class="struct">char</a></span> c)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a byte onto the end of a <span class="class">StringBuilder</span>
+                , expanding it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.append_unichar.html" class="method">append_unichar</a></b> (<span class="main_basic_type"><a href="unichar.html" class="struct">unichar</a></span> wc)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a Unicode character into UTF-8, and appends it to the string.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.append_len.html" class="method">append_len</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> val, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Appends <code>len</code> bytes of <code>val</code> to 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.prepend.html" class="method">prepend</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a string on to the start of a <span class="class">StringBuilder
+                </span>, expanding it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.prepend_c.html" class="method">prepend_c</a></b> (<span class="main_basic_type"><a href="char.html" class="struct">char</a></span> c)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a byte onto the start of a <span class="class">StringBuilder
+                </span>, expanding it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.prepend_unichar.html" class="method">prepend_unichar</a></b> (<span class="main_basic_type"><a href="unichar.html" class="struct">unichar</a></span> wc)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a Unicode character into UTF-8, and prepends it to the 
+                string.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.prepend_len.html" class="method">prepend_len</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> val, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Prepends <code>len</code> bytes of <code>val</code> to 
+                <span class="main_keyword">this</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.insert.html" class="method">insert</a></b> (<span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> pos, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Inserts a copy of a string into a <span class="class">StringBuilder
+                </span>, expanding it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.insert_len.html" class="method">insert_len</a></b> (<span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> pos, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> val, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Inserts <code>len</code> bytes of <code>val</code> into 
+                <span class="main_keyword">this</span> at <code>pos</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.insert_unichar.html" class="method">insert_unichar</a></b> (<span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> pos, <span class="main_basic_type"><a href="unichar.html" class="struct">unichar</a></span> wc)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts a Unicode character into UTF-8, and insert it into the string
+                 at the given position.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.overwrite.html" class="method">overwrite</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> pos, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Overwrites part of a string, lengthening it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.overwrite_len.html" class="method">overwrite_len</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> pos, <span class="main_basic_type"><a href="string.html" class="class">string</a></span> val, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Overwrites part of a string, lengthening it if necessary.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.erase.html" class="method">erase</a></b> (<span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> pos = <span class="main_optional_parameter">0</span>, <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> len = -<span class="main_optional_parameter">1</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Removes <code>len</code> bytes from a <span class="class">
+                  StringBuilder</span>, starting at position <code>pos</code>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_type"><span class="class">StringBuilder</span></span> <b><a href="GLib.StringBuilder.truncate.html" class="method">truncate</a></b> (<span class="main_basic_type"><a href="size_t.html" class="struct">size_t</a></span> len = <span class="main_optional_parameter">0</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Cuts off the end of the GString, leaving the first <code>len</code> 
+                bytes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.StringBuilder.printf.html" class="method">printf</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Writes a formatted string into a <span class="class">StringBuilder
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.StringBuilder.append_printf.html" class="method">append_printf</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, ...)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Appends a formatted string onto the end of a <span class="class">
+                  StringBuilder</span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.StringBuilder.vprintf.html" class="method">vprintf</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, <span class="main_type"><a href="va_list.html" class="struct">va_list</a></span> args)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Writes a formatted string into a <span class="class">StringBuilder
+                </span>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.StringBuilder.append_vprintf.html" class="method">append_vprintf</a></b> (<span class="main_basic_type"><a href="string.html" class="class">string</a></span> format, <span class="main_type"><a href="va_list.html" class="struct">va_list</a></span> args)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Appends a formatted string onto the end of a <span class="class">
+                  StringBuilder</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="string.html" class="class">string</a></span> <b><a href="GLib.StringBuilder.str.html" class="field">str</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.StringBuilder.len.html" class="field">len</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.StringBuilder.allocated_len.html" class="field">allocated_len</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

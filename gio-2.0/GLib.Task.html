@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>GLib.Task &ndash; gio-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">GLib.Task &ndash; gio-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">gio-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="GLib.html">GLib</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Task</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="property"><a href="GLib.Task.completed.html">completed</a></li>
+          <li class="static_method"><a href="GLib.Task.is_valid.html">is_valid</a></li>
+          <li class="static_method"><a href="GLib.Task.report_error.html">report_error</a></li>
+          <li class="creation_method"><a href="GLib.Task.Task.html">Task</a></li>
+          <li class="method"><a href="GLib.Task.get_cancellable.html">get_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.get_check_cancellable.html">get_check_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.get_completed.html">get_completed</a></li>
+          <li class="method"><a href="GLib.Task.get_context.html">get_context</a></li>
+          <li class="method"><a href="GLib.Task.get_priority.html">get_priority</a></li>
+          <li class="method"><a href="GLib.Task.get_return_on_cancel.html">get_return_on_cancel</a></li>
+          <li class="method"><a href="GLib.Task.get_source_tag.html">get_source_tag</a></li>
+          <li class="method"><a href="GLib.Task.get_task_data.html">get_task_data</a></li>
+          <li class="method"><a href="GLib.Task.had_error.html">had_error</a></li>
+          <li class="method"><a href="GLib.Task.propagate_boolean.html">propagate_boolean</a></li>
+          <li class="method"><a href="GLib.Task.propagate_int.html">propagate_int</a></li>
+          <li class="method"><a href="GLib.Task.propagate_pointer.html">propagate_pointer</a></li>
+          <li class="method"><a href="GLib.Task.return_boolean.html">return_boolean</a></li>
+          <li class="method"><a href="GLib.Task.return_error.html">return_error</a></li>
+          <li class="method"><a href="GLib.Task.return_error_if_cancelled.html">return_error_if_cancelled</a></li>
+          <li class="method"><a href="GLib.Task.return_int.html">return_int</a></li>
+          <li class="method"><a href="GLib.Task.return_pointer.html">return_pointer</a></li>
+          <li class="method"><a href="GLib.Task.set_check_cancellable.html">set_check_cancellable</a></li>
+          <li class="method"><a href="GLib.Task.set_priority.html">set_priority</a></li>
+          <li class="method"><a href="GLib.Task.set_return_on_cancel.html">set_return_on_cancel</a></li>
+          <li class="method"><a href="GLib.Task.set_source_tag.html">set_source_tag</a></li>
+          <li class="method"><a href="GLib.Task.set_task_data.html">set_task_data</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Task</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#GLib.Task" alt="Object hierarchy for Task" src="img/GLib.Task.png"/>
+
+      <map id="GLib.Task" name="GLib.Task">
+<area shape="rect" id="node1" href="GLib.Task.html" title="GLib.Task" alt="" coords="91,101,191,149"/>
+<area shape="rect" id="node2" href="../gobject-2.0/GLib.Object.html" title="GLib.Object" alt="" coords="5,5,117,53"/>
+<area shape="rect" id="node3" href="GLib.AsyncResult.html" title="GLib.AsyncResult" alt="" coords="143,5,300,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Task</span></b> : <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>, <span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span>
+        </div>
+        <div class="description">
+          <p>A <span class="class">Task</span> represents and manages a cancellable "task".</p>
+          <h2> Asynchronous operations</h2>
+          <p>The most common usage of <span class="class">Task</span> is as a <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a>, to 
+            manage data during an asynchronous operation. You call <a href="GLib.Task.Task.html" class="creation_method">Task</a> in the "start" 
+            method, followed by <a href="GLib.Task.set_task_data.html" class="method">set_task_data</a> and the like if you need to keep some 
+            additional data associated with the task, and then pass the task object around through your asynchronous operation. Eventually, you will 
+            call a method such as <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a> or 
+            <a href="GLib.Task.return_error.html" class="method">return_error</a>, which will save the value you give it and then invoke the task's 
+            callback function (waiting until the next iteration of the main loop first, if necessary). The caller will pass the <span class="class">
+              Task</span> back to the operation's finish function (as a <a href="GLib.AsyncResult.html" class="interface">AsyncResult</a>), and you 
+            can use <a href="GLib.Task.propagate_pointer.html" class="method">propagate_pointer</a> or the like to extract the return value.</p>
+          <p>Here is an example for using GTask as a GAsyncResult: <pre class="main_source">    typedef struct {<br/>      CakeFrostingType frosting;<br/>      char *message;<br/>    } DecorationData;<br/><br/>    static void<br/>    decoration_data_free (DecorationData *decoration)<br/>    {<br/>      g_free (decoration-&gt;message);<br/>      g_slice_free (DecorationData, decoration);<br/>    }<br/><br/>    static void<br/>    baked_cb (Cake     *cake,<br/>              gpointer  user_data)<br/>    {<br/>      GTask *task = user_data;<br/>      DecorationData *decoration = g_task_get_task_data (task);<br/>      GError *error = NULL;<br/><br/>      if (cake == NULL)<br/>        {<br/>          g_task_return_new_error (task, BAKER_ERROR, BAKER_ERROR_NO_FLOUR,<br/>                                   "Go to the supermarket");<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      if (!cake_decorate (cake, decoration-&gt;frosting, decoration-&gt;message, &amp;error))<br/>        {<br/>          g_object_unref (cake);<br/>          // g_task_return_error() takes ownership of error<br/>          g_task_return_error (task, error);<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      g_task_return_pointer (task, cake, g_object_unref);<br/>      g_object_unref (task);<br/>    }<br/><br/>    void<br/>    baker_bake_cake_async (Baker               *self,<br/>                           guint                radius,<br/>                           CakeFlavor           flavor,<br/>                           CakeFrostingType     frosting,<br/>                           const char          *message,<br/>                           GCancellable        *cancellable,<br/>                           GAsyncReadyCallback  callback,<br/>                           gpointer             user_data)<br/>    {<br/>      GTask *task;<br/>      DecorationData *decoration;<br/>      Cake  *cake;<br/><br/>      task = g_task_new (self, cancellable, callback, user_data);<br/>      if (radius &lt; 3)<br/>        {<br/>          g_task_return_new_error (task, BAKER_ERROR, BAKER_ERROR_TOO_SMALL,<br/>                                   "%ucm radius cakes are silly",<br/>                                   radius);<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      cake = _baker_get_cached_cake (self, radius, flavor, frosting, message);<br/>      if (cake != NULL)<br/>        {<br/>          // _baker_get_cached_cake() returns a reffed cake<br/>          g_task_return_pointer (task, cake, g_object_unref);<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      decoration = g_slice_new (DecorationData);<br/>      decoration-&gt;frosting = frosting;<br/>      decoration-&gt;message = g_strdup (message);<br/>      g_task_set_task_data (task, decoration, (GDestroyNotify) decoration_data_free);<br/><br/>      _baker_begin_cake (self, radius, flavor, cancellable, baked_cb, task);<br/>    }<br/><br/>    Cake *<br/>    baker_bake_cake_finish (Baker         *self,<br/>                            GAsyncResult  *result,<br/>                            GError       **error)<br/>    {<br/>      g_return_val_if_fail (g_task_is_valid (result, self), NULL);<br/><br/>      return g_task_propagate_pointer (G_TASK (result), error);<br/>    }</pre>
+          </p>
+          <h2> Chained asynchronous operations</h2>
+          <p><span class="class">Task</span> also tries to simplify asynchronous operations that internally chain together several smaller 
+            asynchronous operations. <a href="GLib.Task.get_cancellable.html" class="method">get_cancellable</a>, 
+            <a href="GLib.Task.get_context.html" class="method">get_context</a>, and <a href="GLib.Task.get_priority.html" class="method">get_priority
+            </a> allow you to get back the task's <a href="GLib.Cancellable.html" class="class">Cancellable</a>, 
+            <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>, and <i>I/O priority</i> when starting a new subtask, so you 
+            don't have to keep track of them yourself. <code>g_task_attach_source</code> simplifies the case of waiting for a source to fire (
+            automatically using the correct <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a> and priority).</p>
+          <p>Here is an example for chained asynchronous operations:  <pre class="main_source">    typedef struct {<br/>      Cake *cake;<br/>      CakeFrostingType frosting;<br/>      char *message;<br/>    } BakingData;<br/><br/>    static void<br/>    decoration_data_free (BakingData *bd)<br/>    {<br/>      if (bd-&gt;cake)<br/>        g_object_unref (bd-&gt;cake);<br/>      g_free (bd-&gt;message);<br/>      g_slice_free (BakingData, bd);<br/>    }<br/><br/>    static void<br/>    decorated_cb (Cake         *cake,<br/>                  GAsyncResult *result,<br/>                  gpointer      user_data)<br/>    {<br/>      GTask *task = user_data;<br/>      GError *error = NULL;<br/><br/>      if (!cake_decorate_finish (cake, result, &amp;error))<br/>        {<br/>          g_object_unref (cake);<br/>          g_task_return_error (task, error);<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      // baking_data_free() will drop its ref on the cake, so we have to<br/>      // take another here to give to the caller.<br/>      g_task_return_pointer (result, g_object_ref (cake), g_object_unref);<br/>      g_object_unref (task);<br/>    }<br/><br/>    static void<br/>    decorator_ready (gpointer user_data)<br/>    {<br/>      GTask *task = user_data;<br/>      BakingData *bd = g_task_get_task_data (task);<br/><br/>      cake_decorate_async (bd-&gt;cake, bd-&gt;frosting, bd-&gt;message,<br/>                           g_task_get_cancellable (task),<br/>                           decorated_cb, task);<br/>    }<br/><br/>    static void<br/>    baked_cb (Cake     *cake,<br/>              gpointer  user_data)<br/>    {<br/>      GTask *task = user_data;<br/>      BakingData *bd = g_task_get_task_data (task);<br/>      GError *error = NULL;<br/><br/>      if (cake == NULL)<br/>        {<br/>          g_task_return_new_error (task, BAKER_ERROR, BAKER_ERROR_NO_FLOUR,<br/>                                   "Go to the supermarket");<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      bd-&gt;cake = cake;<br/><br/>      // Bail out now if the user has already cancelled<br/>      if (g_task_return_error_if_cancelled (task))<br/>        {<br/>          g_object_unref (task);<br/>          return;<br/>        }<br/><br/>      if (cake_decorator_available (cake))<br/>        decorator_ready (task);<br/>      else<br/>        {<br/>          GSource *source;<br/><br/>          source = cake_decorator_wait_source_new (cake);<br/>          // Attach @source to @task's GMainContext and have it call<br/>          // decorator_ready() when it is ready.<br/>          g_task_attach_source (task, source,<br/>                                G_CALLBACK (decorator_ready));<br/>          g_source_unref (source);<br/>        }<br/>    }<br/><br/>    void<br/>    baker_bake_cake_async (Baker               *self,<br/>                           guint                radius,<br/>                           CakeFlavor           flavor,<br/>                           CakeFrostingType     frosting,<br/>                           const char          *message,<br/>                           gint                 priority,<br/>                           GCancellable        *cancellable,<br/>                           GAsyncReadyCallback  callback,<br/>                           gpointer             user_data)<br/>    {<br/>      GTask *task;<br/>      BakingData *bd;<br/><br/>      task = g_task_new (self, cancellable, callback, user_data);<br/>      g_task_set_priority (task, priority);<br/><br/>      bd = g_slice_new0 (BakingData);<br/>      bd-&gt;frosting = frosting;<br/>      bd-&gt;message = g_strdup (message);<br/>      g_task_set_task_data (task, bd, (GDestroyNotify) baking_data_free);<br/><br/>      _baker_begin_cake (self, radius, flavor, cancellable, baked_cb, task);<br/>    }<br/><br/>    Cake *<br/>    baker_bake_cake_finish (Baker         *self,<br/>                            GAsyncResult  *result,<br/>                            GError       **error)<br/>    {<br/>      g_return_val_if_fail (g_task_is_valid (result, self), NULL);<br/><br/>      return g_task_propagate_pointer (G_TASK (result), error);<br/>    }</pre>
+          </p>
+          <h2> Asynchronous operations from synchronous ones</h2>
+          <p>You can use <code>g_task_run_in_thread</code> to turn a synchronous operation into an asynchronous one, by running it in a thread which 
+            will then dispatch the result back to the caller's <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a> when it 
+            completes.</p>
+          <p>Running a task in a thread:  <pre class="main_source">    typedef struct {<br/>      guint radius;<br/>      CakeFlavor flavor;<br/>      CakeFrostingType frosting;<br/>      char *message;<br/>    } CakeData;<br/><br/>    static void<br/>    cake_data_free (CakeData *cake_data)<br/>    {<br/>      g_free (cake_data-&gt;message);<br/>      g_slice_free (CakeData, cake_data);<br/>    }<br/><br/>    static void<br/>    bake_cake_thread (GTask         *task,<br/>                      gpointer       source_object,<br/>                      gpointer       task_data,<br/>                      GCancellable  *cancellable)<br/>    {<br/>      Baker *self = source_object;<br/>      CakeData *cake_data = task_data;<br/>      Cake *cake;<br/>      GError *error = NULL;<br/><br/>      cake = bake_cake (baker, cake_data-&gt;radius, cake_data-&gt;flavor,<br/>                        cake_data-&gt;frosting, cake_data-&gt;message,<br/>                        cancellable, &amp;error);<br/>      if (cake)<br/>        g_task_return_pointer (task, cake, g_object_unref);<br/>      else<br/>        g_task_return_error (task, error);<br/>    }<br/><br/>    void<br/>    baker_bake_cake_async (Baker               *self,<br/>                           guint                radius,<br/>                           CakeFlavor           flavor,<br/>                           CakeFrostingType     frosting,<br/>                           const char          *message,<br/>                           GCancellable        *cancellable,<br/>                           GAsyncReadyCallback  callback,<br/>                           gpointer             user_data)<br/>    {<br/>      CakeData *cake_data;<br/>      GTask *task;<br/><br/>      cake_data = g_slice_new (CakeData);<br/>      cake_data-&gt;radius = radius;<br/>      cake_data-&gt;flavor = flavor;<br/>      cake_data-&gt;frosting = frosting;<br/>      cake_data-&gt;message = g_strdup (message);<br/>      task = g_task_new (self, cancellable, callback, user_data);<br/>      g_task_set_task_data (task, cake_data, (GDestroyNotify) cake_data_free);<br/>      g_task_run_in_thread (task, bake_cake_thread);<br/>      g_object_unref (task);<br/>    }<br/><br/>    Cake *<br/>    baker_bake_cake_finish (Baker         *self,<br/>                            GAsyncResult  *result,<br/>                            GError       **error)<br/>    {<br/>      g_return_val_if_fail (g_task_is_valid (result, self), NULL);<br/><br/>      return g_task_propagate_pointer (G_TASK (result), error);<br/>    }</pre>
+          </p>
+          <h2> Adding cancellability to uncancellable tasks</h2>
+          <p>Finally, <code>g_task_run_in_thread</code> and <code>g_task_run_in_thread_sync</code> can be used to turn an uncancellable operation into
+             a cancellable one. If you call <a href="GLib.Task.set_return_on_cancel.html" class="method">set_return_on_cancel</a>, passing 
+            <span class="main_optional_parameter">true</span>, then if the task's <a href="GLib.Cancellable.html" class="class">Cancellable</a> is 
+            cancelled, it will return control back to the caller immediately, while allowing the task thread to continue running in the background (
+            and simply discarding its result when it finally does finish). Provided that the task thread is careful about how it uses locks and other 
+            externally-visible resources, this allows you to make "GLib-friendly" asynchronous and cancellable synchronous variants of blocking APIs.
+          </p>
+          <p>Cancelling a task:  <pre class="main_source">    static void<br/>    bake_cake_thread (GTask         *task,<br/>                      gpointer       source_object,<br/>                      gpointer       task_data,<br/>                      GCancellable  *cancellable)<br/>    {<br/>      Baker *self = source_object;<br/>      CakeData *cake_data = task_data;<br/>      Cake *cake;<br/>      GError *error = NULL;<br/><br/>      cake = bake_cake (baker, cake_data-&gt;radius, cake_data-&gt;flavor,<br/>                        cake_data-&gt;frosting, cake_data-&gt;message,<br/>                        &amp;error);<br/>      if (error)<br/>        {<br/>          g_task_return_error (task, error);<br/>          return;<br/>        }<br/><br/>      // If the task has already been cancelled, then we don't want to add<br/>      // the cake to the cake cache. Likewise, we don't  want to have the<br/>      // task get cancelled in the middle of updating the cache.<br/>      // g_task_set_return_on_cancel() will return %TRUE here if it managed<br/>      // to disable return-on-cancel, or %FALSE if the task was cancelled<br/>      // before it could.<br/>      if (g_task_set_return_on_cancel (task, FALSE))<br/>        {<br/>          // If the caller cancels at this point, their<br/>          // GAsyncReadyCallback won't be invoked until we return,<br/>          // so we don't have to worry that this code will run at<br/>          // the same time as that code does. But if there were<br/>          // other functions that might look at the cake cache,<br/>          // then we'd probably need a GMutex here as well.<br/>          baker_add_cake_to_cache (baker, cake);<br/>          g_task_return_pointer (task, cake, g_object_unref);<br/>        }<br/>    }<br/><br/>    void<br/>    baker_bake_cake_async (Baker               *self,<br/>                           guint                radius,<br/>                           CakeFlavor           flavor,<br/>                           CakeFrostingType     frosting,<br/>                           const char          *message,<br/>                           GCancellable        *cancellable,<br/>                           GAsyncReadyCallback  callback,<br/>                           gpointer             user_data)<br/>    {<br/>      CakeData *cake_data;<br/>      GTask *task;<br/><br/>      cake_data = g_slice_new (CakeData);<br/><br/>      ...<br/><br/>      task = g_task_new (self, cancellable, callback, user_data);<br/>      g_task_set_task_data (task, cake_data, (GDestroyNotify) cake_data_free);<br/>      g_task_set_return_on_cancel (task, TRUE);<br/>      g_task_run_in_thread (task, bake_cake_thread);<br/>    }<br/><br/>    Cake *<br/>    baker_bake_cake_sync (Baker               *self,<br/>                          guint                radius,<br/>                          CakeFlavor           flavor,<br/>                          CakeFrostingType     frosting,<br/>                          const char          *message,<br/>                          GCancellable        *cancellable,<br/>                          GError             **error)<br/>    {<br/>      CakeData *cake_data;<br/>      GTask *task;<br/>      Cake *cake;<br/><br/>      cake_data = g_slice_new (CakeData);<br/><br/>      ...<br/><br/>      task = g_task_new (self, cancellable, NULL, NULL);<br/>      g_task_set_task_data (task, cake_data, (GDestroyNotify) cake_data_free);<br/>      g_task_set_return_on_cancel (task, TRUE);<br/>      g_task_run_in_thread_sync (task, bake_cake_thread);<br/><br/>      cake = g_task_propagate_pointer (task, error);<br/>      g_object_unref (task);<br/>      return cake;<br/>    }</pre>
+          </p>
+          <h2> Porting from GSimpleAsyncResult</h2>
+          <p><span class="class">Task</span>'s API attempts to be simpler than <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult
+            </a>'s in several ways: - You can save task-specific data with <a href="GLib.Task.set_task_data.html" class="method">set_task_data</a>, 
+            and  retrieve it later with <a href="GLib.Task.get_task_data.html" class="method">get_task_data</a>. This replaces the  abuse of 
+            <a href="GLib.SimpleAsyncResult.set_op_res_gpointer.html" class="method">set_op_res_gpointer</a> for the same  purpose with 
+            <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a>. - In addition to the task data, <span class="class">Task</span>
+             also keeps track of the  <i>priority</i>, <a href="GLib.Cancellable.html" class="class">Cancellable</a>, and  
+            <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a> associated with the task, so tasks that consist of  a chain of 
+            simpler asynchronous operations will have easy access  to those values when starting each sub-task. - 
+            <a href="GLib.Task.return_error_if_cancelled.html" class="method">return_error_if_cancelled</a> provides simplified  handling for 
+            cancellation. In addition, cancellation  overrides any other <span class="class">Task</span> return value by default, like  
+            <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a> does when  
+            <a href="GLib.SimpleAsyncResult.set_check_cancellable.html" class="method">set_check_cancellable</a> is called.  (You can use 
+            <a href="GLib.Task.set_check_cancellable.html" class="method">set_check_cancellable</a> to turn off that  behavior.) On the other hand, 
+            <code>g_task_run_in_thread</code>  guarantees that it will always run your  `task_func`, even if the task's 
+            <a href="GLib.Cancellable.html" class="class">Cancellable</a>  is already cancelled before the task gets a chance to run;  you can start 
+            your `task_func` with a  <a href="GLib.Task.return_error_if_cancelled.html" class="method">return_error_if_cancelled</a> check if you need
+             the  old behavior. - The "return" methods (eg, <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a>)  automatically 
+            cause the task to be "completed" as well, and  there is no need to worry about the "complete" vs "complete  in idle" distinction. (
+            <span class="class">Task</span> automatically figures out  whether the task's callback can be invoked directly, or  if it needs to be sent
+             to another <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>, or delayed  until the next iteration of the current
+             <a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a>.) - The "finish" functions for <span class="class">Task</span>
+            -based operations are generally  much simpler than <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a> ones, 
+            normally consisting  of only a single call to <a href="GLib.Task.propagate_pointer.html" class="method">propagate_pointer</a> or the like.
+              Since <a href="GLib.Task.propagate_pointer.html" class="method">propagate_pointer</a> "steals" the return value from  the 
+            <span class="class">Task</span>, it is not necessary to juggle pointers around to  prevent it from being freed twice. - With 
+            <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a>, it was common to call  
+            <a href="GLib.SimpleAsyncResult.propagate_error.html" class="method">propagate_error</a> from the  `_finish()` wrapper function, and have 
+             virtual method implementations only deal with successful  returns. This behavior is deprecated, because it makes it  difficult for a 
+            subclass to chain to a parent class's async  methods. Instead, the wrapper function should just be a  simple wrapper, and the virtual 
+            method should call an  appropriate `g_task_propagate_` function.  Note that wrapper methods can now use  
+            <a href="GLib.AsyncResult.legacy_propagate_error.html" class="method">legacy_propagate_error</a> to do old-style  
+            <a href="GLib.SimpleAsyncResult.html" class="class">SimpleAsyncResult</a> error-returning behavior, and  
+            <a href="GLib.AsyncResult.is_tagged.html" class="abstract_method">is_tagged</a> to check if a result is tagged as  having come from the 
+            `_async()` wrapper  function (for "short-circuit" results, such as when passing  0 to 
+            <a href="GLib.InputStream.read_async.html" class="virtual_method">read_async</a>).</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="GLib.html">GLib</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">gio-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Properties:</h3>
+        <ul class="navi_inline">
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.completed.html" class="property">completed</a></b> { <span class="main_keyword">get</span>; }
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.is_valid.html" class="static_method">is_valid</a></b> (<span class="main_type"><a href="GLib.AsyncResult.html" class="interface">AsyncResult</a></span> result, <span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks that <code>result</code> is a <span class="class">Task</span>, 
+                and that <code>source_object</code> is its source object (or that <code>source_object</code> is <span class="main_optional_parameter">
+                  null</span> and <code>result</code> has no source object).</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">async</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.report_error.html" class="static_method">report_error</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object, <span class="main_keyword">void</span>* source_tag, <span class="main_keyword">owned</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">Task</span> and then immediately calls 
+                <a href="GLib.Task.return_error.html" class="method">return_error</a> on it.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="GLib.Task.Task.html" class="creation_method">Task</a></b> (<span class="main_type"><a href="../gobject-2.0/GLib.Object.html" class="class">Object</a></span>? source_object, <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span>? cancellable = <span class="main_optional_parameter">null</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a <span class="class">Task</span> acting on <code>
+                  source_object</code>, which will eventually be used to invoke <code>callback</code> in the current <i>thread-default main context
+                </i>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="GLib.Cancellable.html" class="class">Cancellable</a></span> <b><a href="GLib.Task.get_cancellable.html" class="method">get_cancellable</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s 
+                <a href="GLib.Cancellable.html" class="class">Cancellable</a></span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.get_check_cancellable.html" class="method">get_check_cancellable</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s check-cancellable flag.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.get_completed.html" class="method">get_completed</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">weak</span> <span class="main_type"><a href="../glib-2.0/GLib.MainContext.html" class="class">MainContext</a></span> <b><a href="GLib.Task.get_context.html" class="method">get_context</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the <a href="../glib-2.0/GLib.MainContext.html" class="class">
+                  MainContext</a> that <span class="main_keyword">this</span> will return its result in (that is, the context that was the <i>
+                  thread-default main context</i> at the point when <span class="main_keyword">this</span> was created).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> <b><a href="GLib.Task.get_priority.html" class="method">get_priority</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s priority</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.get_return_on_cancel.html" class="method">get_return_on_cancel</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s return-on-cancel flag.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.Task.get_source_tag.html" class="method">get_source_tag</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s source tag.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.Task.get_task_data.html" class="method">get_task_data</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets <span class="main_keyword">this</span>'s `task_data`.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.had_error.html" class="method">had_error</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Tests if <span class="main_keyword">this</span> resulted in an error.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.propagate_boolean.html" class="method">propagate_boolean</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the result of <span class="main_keyword">this</span> as a 
+                <a href="../glib-2.0/bool.html" class="struct">bool</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> <b><a href="GLib.Task.propagate_int.html" class="method">propagate_int</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the result of <span class="main_keyword">this</span> as an 
+                integer (<a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a>).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span>* <b><a href="GLib.Task.propagate_pointer.html" class="method">propagate_pointer</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets the result of <span class="main_keyword">this</span> as a 
+                pointer, and transfers ownership of that value to the caller.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.return_boolean.html" class="method">return_boolean</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> result)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s result to <code>result
+                </code> and completes the task (see <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a> for more discussion of 
+                exactly what this means).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.return_error.html" class="method">return_error</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><a href="../glib-2.0/GLib.Error.html" class="class">Error</a></span> error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s result to <code>error
+                </code> (which <span class="main_keyword">this</span> assumes ownership of) and completes the task (see 
+                <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a> for more discussion of exactly what this means).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.return_error_if_cancelled.html" class="method">return_error_if_cancelled</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Checks if <span class="main_keyword">this</span>'s 
+                <a href="GLib.Cancellable.html" class="class">Cancellable</a> has been cancelled, and if so, sets <span class="main_keyword">this
+                </span>'s error accordingly and completes the task (see <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a> for 
+                more discussion of exactly what this means).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.return_int.html" class="method">return_int</a></b> (<span class="main_basic_type"><a href="../glib-2.0/ssize_t.html" class="struct">ssize_t</a></span> result)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s result to <code>result
+                </code> and completes the task (see <a href="GLib.Task.return_pointer.html" class="method">return_pointer</a> for more discussion of 
+                exactly what this means).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.return_pointer.html" class="method">return_pointer</a></b> (<span class="main_keyword">void</span>* result, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? result_destroy)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s result to <code>result
+                </code> and completes the task.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.set_check_cancellable.html" class="method">set_check_cancellable</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> check_cancellable)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets or clears <span class="main_keyword">this</span>'s 
+                check-cancellable flag.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.set_priority.html" class="method">set_priority</a></b> (<span class="main_basic_type"><a href="../glib-2.0/int.html" class="struct">int</a></span> priority)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s priority.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> <b><a href="GLib.Task.set_return_on_cancel.html" class="method">set_return_on_cancel</a></b> (<span class="main_basic_type"><a href="../glib-2.0/bool.html" class="struct">bool</a></span> return_on_cancel)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets or clears <span class="main_keyword">this</span>'s 
+                return-on-cancel flag.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.set_source_tag.html" class="method">set_source_tag</a></b> (<span class="main_keyword">void</span>* source_tag)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s source tag.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="GLib.Task.set_task_data.html" class="method">set_task_data</a></b> (<span class="main_keyword">void</span>* task_data, <span class="main_type"><a href="../glib-2.0/GLib.DestroyNotify.html" class="delegate">DestroyNotify</a></span>? task_data_destroy)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets <span class="main_keyword">this</span>'s task data (freeing the 
+                existing task data, if any).</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-234')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-234">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.@new.html">@new</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.newv.html">newv</a></li>
+                  <li class="static_method"><a href="../gobject-2.0/GLib.Object.new_valist.html">new_valist</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_type.html">get_type</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_class.html">get_class</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@ref.html">@ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.unref.html">unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.ref_sink.html">ref_sink</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_ref.html">weak_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.weak_unref.html">weak_unref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_weak_pointer.html">add_weak_pointer</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_weak_pointer.html">remove_weak_pointer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@get.html">@get</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.@set.html">@set</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_property.html">get_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_property.html">set_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_data.html">get_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data.html">set_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_data_full.html">set_data_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_data.html">steal_data</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.get_qdata.html">get_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata.html">set_qdata</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.set_qdata_full.html">set_qdata_full</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.steal_qdata.html">steal_qdata</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.freeze_notify.html">freeze_notify</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.thaw_notify.html">thaw_notify</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.dispose.html">dispose</a></li>
+                  <li class="virtual_method"><a href="../gobject-2.0/GLib.Object.constructed.html">constructed</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.notify_property.html">notify_property</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.connect.html">connect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.disconnect.html">disconnect</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.add_toggle_ref.html">add_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.remove_toggle_ref.html">remove_toggle_ref</a></li>
+                  <li class="method"><a href="../gobject-2.0/GLib.Object.bind_property.html">bind_property</a></li>
+                  <li class="signal"><a href="../gobject-2.0/GLib.Object.notify.html">notify</a></li>
+                  <li class="field"><a href="../gobject-2.0/GLib.Object.ref_count.html">ref_count</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from interface GLib.AsyncResult</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-235')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-235">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.AsyncResult.get_source_object.html">get_source_object</a></li>
+                    <li class="abstract_method"><a href="GLib.AsyncResult.get_user_data.html">get_user_data</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="abstract_method"><a href="GLib.AsyncResult.is_tagged.html">is_tagged</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="method"><a href="GLib.AsyncResult.legacy_propagate_error.html">legacy_propagate_error</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+        </div>
+      </body>
+    </html>
