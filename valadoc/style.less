@@ -1,0 +1,250 @@
+@darkPrimaryColor:  		#689F38;
+@primaryColor:      		#8BC34A;
+@accentColor:       		#CDDC39;
+@backgroundColor:			#fff;
+@secondaryBackgroundColor:	#f7f7f7;
+@dividerColor:				#ccc;
+@textColor: 				#333;
+
+/* even worse dark theme styles. not ready yet.
+@darkPrimaryColor:			#1B5E20;
+@primaryColor:				#33691E;
+@secondaryBackgroundColor:	#424242;
+@backgroundColor: 			#212121;
+@dividerColor:				#000;
+@textColor: 				#eee;*/
+
+@sidebar_width: 260px;
+
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
+
+// CARL propostion to hide the package and namespace name in the class page
+// They are not that useful: so either hide them or pick a style that downplay their importance
+// For now, I'm experimenting with hiding them
+// Feel free the remove this 
+
+.namespace_note{
+	display: none;
+}
+.package_note{
+	display: none;
+}
+
+// defines a value for the colorscheme in a way that it is picked up everywhere
+.colorscheme_val(@identifier, @color) {
+	.main_@{identifier},
+	.main_@{identifier} a,
+	.site_content .main_@{identifier} a,
+	.site_content .main_@{identifier} a:visited {
+		color: @color;
+	}
+}
+
+// from bootstrap
+.clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+
+	}
+	&:after {
+		clear: both;
+
+	}
+}
+
+// output css for a sink
+.sink() {
+	background-color: #f5f5f5;
+	color: #333;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+// define an icon mapping
+.assign_image(@type, @icon: @type) {
+	li.@{type} {
+		// list-style-image: url('@{icon}.png');
+		list-style-type: none;
+
+		&:before {
+			content: "";
+			background-image: url('@{icon}.png');
+			padding-right: 18px;
+			margin-right: 5px;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+}
+
+.colorscheme_val(keyword, #FF8F00);
+.colorscheme_val(basic_type, #1976D2);
+.colorscheme_val(type, #7B1FA2);
+
+.assign_image(errorcode);
+.assign_image(enumvalue);
+.assign_image(abstract_class, abstractclass);
+.assign_image(abstract_method, abstractmethod);
+.assign_image(creation_method, constructor);
+.assign_image(static_method, staticmethod);
+.assign_image(package_index, packages);
+.assign_image(virtual_method, virtualmethod);
+.assign_image(errordomain);
+.assign_image(namespace);
+.assign_image(method);
+.assign_image(struct);
+.assign_image(interface);
+.assign_image(field);
+.assign_image(class);
+.assign_image(enum);
+.assign_image(property);
+.assign_image(abstract_property, abstractproperty);
+.assign_image(virtual_property, virtualproperty);
+.assign_image(delegate);
+.assign_image(signal);
+.assign_image(package);
+.assign_image(constant);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: @textColor;
+	background-color: @backgroundColor;
+	font-family: 'Source Sans Pro';
+}
+
+// FIXME not needed in our layout, throw it away
+.site_header, .navi_hr, .main_hr, h2.main_title, h1.main_title, .site_footer {
+	display: none;
+}
+
+// top bar (and sidebar)
+.site_navigation {
+	.clearfix();
+
+	background-color: @primaryColor;
+	border-bottom: 1px solid @darkPrimaryColor;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+	.navi_main {
+		@height: 32px;
+		@inner_padding: 6px;
+
+		float: left;
+		height: @height;
+		padding-left: @inner_padding + 6px;
+		margin: 0;
+		line-height: @height;
+		padding-right: @height / 2 + @inner_padding;
+		background-color: @primaryColor;
+		position: relative;
+
+		&, a {
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		&:after, &:before {
+			content: "";
+			position: absolute;
+			display: block;
+			border-style: solid;
+		}
+		&:before {
+			border-color: transparent transparent transparent @darkPrimaryColor;
+			border-width: @height / 2;
+			top: 0;
+			right: -@height / 2;
+		}
+		&:after {
+			border-color: transparent transparent transparent @primaryColor;
+			border-width: @height / 2 - 2;
+			top: 2px;
+			right: -@height / 2 + 4px;
+		}
+
+		// this is our sidebar
+		&:last-child {
+			@top: 32px;
+			@padding: 32px;
+
+			background-color: @secondaryBackgroundColor;
+			border-right: 1px solid @dividerColor;
+			&, a {
+				color: @textColor;
+				font-weight: normal;
+				font-family: monospace;
+				text-shadow: none;
+				text-decoration: none;
+			}
+
+			z-index: -1;
+			padding: (@top + 6px) @padding @padding @padding;
+			overflow: auto;
+			width: @sidebar_width;
+			position: fixed;
+			display: block;
+			left: 0;
+			height: 100%;
+
+			&:before, &:after { border-width: 0; }
+		}
+	}
+}
+
+.site_content {
+	@description_color: #7a7a7a;
+	// Stay on top with scrollbar being handled properly
+	position:absolute;
+	top: 33px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow-y:scroll;   
+
+	padding: 32px;
+	margin-left: @sidebar_width;
+
+	a:visited, a {
+		color: @darkPrimaryColor;
+	}
+
+	.main_diagram {
+		float: right;
+		margin: 32px;
+	}
+
+	.main_code_definition {
+		.sink();
+
+		.main_keyword {
+			color: inherit;
+		}
+	}
+
+	.description {
+	}
+
+	// function definitions etc
+	.leaf_brief_description {
+		border-left: 4px solid #eee;
+		margin: 8px 0;
+		padding: 0px 20px;
+		color: @description_color;
+	}
+	.brief_description {
+		color: @description_color;
+	}
+
+	.leaf_code_definition {
+		font-family: monospace;
+	}
+}
